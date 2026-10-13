@@ -2,7 +2,7 @@
 
 **Stage: alpha** · next: beta, ~15 points (60% → 75% ready for real work) and ~150–230 h away
 
-> **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-13 · **Change:** trivial (progress log: paragraph borders, picture lines and the page bottom; previously trivial: progress log: space after a page break; previously trivial: progress log: symbol fonts, #776; previously trivial: the save prompt answers from the keyboard, #861; previously trivial: table column and row markers on the rulers, #700; previously trivial: table borders and the resize handle drag on the page, #217; previously trivial: formatting revisions landed, #41; previously trivial: Draw tab ink, #307, and Draw Table and Eraser, #303, landed: catalog 402/434; previously minor: readiness table with hours per audience; full number back to the additive weighted sum, 60%; mainstream and essentials numbers added; alpha gate checked; previously major: full re-measure against Word for Mac 16.113.4; restructured to the craftrules progress-docs standard) · **Target:** Microsoft Word (Microsoft 365) for Mac 16.113.4
+> **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-13 · **Change:** trivial (progress log: table row margins and splitting; previously trivial: progress log: paragraph borders, picture lines and the page bottom; previously trivial: progress log: space after a page break; previously trivial: progress log: symbol fonts, #776; previously trivial: the save prompt answers from the keyboard, #861; previously trivial: table column and row markers on the rulers, #700; previously trivial: table borders and the resize handle drag on the page, #217; previously trivial: formatting revisions landed, #41; previously trivial: Draw tab ink, #307, and Draw Table and Eraser, #303, landed: catalog 402/434; previously minor: readiness table with hours per audience; full number back to the additive weighted sum, 60%; mainstream and essentials numbers added; alpha gate checked; previously major: full re-measure against Word for Mac 16.113.4; restructured to the craftrules progress-docs standard) · **Target:** Microsoft Word (Microsoft 365) for Mac 16.113.4
 
 > **Printing update:** 2026-10-12 · direct desktop printing through craft-print; details below.
 
@@ -135,6 +135,7 @@ Ranked, to beta (detail and remaining milestones in [docs/roadmap.md](docs/roadm
 
 | Date | What landed |
 |---|---|
+| 2026-10-13 | Tables break across pages like Word's: a cell without its own margins lines up with its neighbours, exact row heights include the bottom margin, and a row whose margin doesn't fit at a page bottom is split with widow control instead of moving to the next page whole |
 | 2026-10-13 | Pages break where Word breaks them in more documents: paragraph borders take room below and above the text (headings with rules no longer sit 1.5–6 pt too high, boxed paragraphs form one box), a line holding only a picture is no taller than the picture, and the extra leading of 1.15 or double spacing may hang into the bottom margin as in Word, so the last line of a page no longer moves on early |
 | 2026-10-13 | A paragraph that ends with a page break keeps its space after on the page before, as in Word: the next page no longer starts up to a line too low, and a page break before right after it no longer leaves a blank page |
 | 2026-10-12 | Text boxes from older Word files (VML) keep their internal margins, Resize shape to fit text and vertical alignment, so letterhead address blocks and form headers sit where Word puts them instead of 7 pt in and 4 pt down. Hidden drawings stay hidden (they were drawn as empty boxes) and are kept on save |
@@ -277,6 +278,7 @@ Ranked, to beta (detail and remaining milestones in [docs/roadmap.md](docs/roadm
 
 | Date | Change | Summary |
 |---|---|---|
+| 2026-10-13 | trivial | Progress log: table row margins and splitting |
 | 2026-10-13 | trivial | Progress log: paragraph borders, picture lines and the page bottom |
 | 2026-10-13 | trivial | Progress log: space after a page break |
 | 2026-10-12 | trivial | Progress log: VML text box margins, fit and alignment; hidden drawings |

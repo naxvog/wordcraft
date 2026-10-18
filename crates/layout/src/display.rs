@@ -908,16 +908,13 @@ fn lines(
             let synth_italic = st.synth_italic || ins_mark == Some(InsertMark::Italic);
             // Text effects draw the letters from their outlines; the glyphs stay, invisible, for
             // the PDF's text. Not for colour glyphs (no outlines), top-to-bottom text with upright
-            // characters (their outlines would lie on their side), `#` deletion marks, or WordArt
-            // in revision colours.
+            // characters (their outlines would lie on their side), or `#` deletion marks; text in
+            // revision colours keeps only the legacy effects, not WordArt's.
             let upright = down && text.chars().any(upright_in_vertical);
-            let art = (!upright
-                && !glyphs.is_empty()
-                && del_mark != Some(DeleteMark::Hash)
-                && (rc.text_effects.is_none() || ins.is_none() && del.is_none()))
-            .then(|| crate::wordart::run_effects(rc, color))
-            .flatten()
-            .filter(|_| !st.face.has_color_glyphs());
+            let art = (!upright && !glyphs.is_empty() && del_mark != Some(DeleteMark::Hash))
+                .then(|| crate::wordart::run_effects(rc, color, ins.is_none() && del.is_none()))
+                .flatten()
+                .filter(|_| !st.face.has_color_glyphs());
             let has_art = art.is_some();
             if let Some(mut fx) = art {
                 if synth_bold {

@@ -204,9 +204,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 5458,
@@ -220,9 +218,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 6003,
@@ -303,9 +299,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 672,
@@ -1059,9 +1053,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 1489,
@@ -1121,24 +1113,6 @@
 "mine": false,
 "conflicts": [],
 "render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 1518,
-"title": "Objects: text in a freely rotated text box turns with the box",
-"author": "dkhlapov",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "b01cbfaae2cee9a3a43aab74293412dfa60ce0de",
-"mine": false,
-"conflicts": [
-"crates/layout/src/display/page.rs",
-"crates/layout/src/hit.rs",
-"crates/pdf/src/exporter.rs"
-],
-"render": true,
 "allowed": false,
 "risky": [],
 "stale": []
@@ -1350,11 +1324,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "f692abfde8e86c25cb2ed6b285c6823d408dd8b8",
+"head": "f4281944c1e87c15a07eaa2fb191eff503fbff2e",
 "mine": false,
-"conflicts": [
-"crates/engine/src/session/documents.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -1638,12 +1610,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "035301f356922e88ca2f94c6036c0e9c5cfe3a74",
+"head": "583b0f7a8a53f08163041639970046dcd010888f",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/paste.rs",
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -1655,7 +1624,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a6563d97cc43ded3a3af26a99517fae21aa2f059",
+"head": "302762ca7b5fc158ec25399f892233e05505492f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13685,7 +13654,7 @@
 "author": "cloutier",
 "assoc": "NONE",
 "draft": false,
-"head": "883b0bdd6a5609b5bec36f42f3f0ce472f019d69",
+"head": "1016db741ec12e2bcb43f9fd5b3ed11a483abac1",
 "mine": false,
 "conflicts": [],
 "render": false,

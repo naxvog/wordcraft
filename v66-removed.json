@@ -343,5 +343,10 @@
 "n": 5974,
 "title": "Objects: use cell origin when unaligning page-anchored float (#5970)",
 "state": "CLOSED"
+},
+{
+"n": 1518,
+"title": "Objects: text in a freely rotated text box turns with the box",
+"state": "CLOSED"
 }
 ]

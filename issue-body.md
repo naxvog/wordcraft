@@ -1,6 +1,6 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-08 23:15 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-08 23:54 UTC.
 
 ## Summary for reviewers
 
@@ -69,8 +69,8 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 3 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 3 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 323 PRs benched (74 change the score), 195 of them stale; 49 queued for the
-next round; 97 waiting for a person to look before they're built; 399 conflict with `main`.
+**Coverage:** 323 PRs benched (74 change the score), 193 of them stale; 47 queued for the
+next round; 97 waiting for a person to look before they're built; 396 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -184,7 +184,7 @@ same fixtures (see *Combined branch*).
 | #2714 | finwarman | Preserve equation size and superscript ink bounds | -0.013 | -0.003 | +0 | 1 (0↑ 1↓) | – | pendulum_mechanics_oscillation_lab -13.6 | `661a79054`, today |
 | #4864 | cyfung1031 | Read w:textAlignment and w:adjustLineHeightInTable; honour the grid in table cells | -0.026 | +0.003 | +0 | 4 (1↑ 2↓) | physical_therapy_comparison_table +58.4 | center-body-list-height-center-space0 -43.3, center-body-list-height-center-space1 -42.8 | `e0d8312fb`, today ⚠ stale: main changed display/lines.rs, para.rs |
 | #2604 | finwarman | Choose justified breaks by spacing cost | -0.037 | -0.036 | +0 | 3 (1↑ 1↓) | squeeze-threshold-after-space +3.9 | czech_village_budget_commentary -43.9 | `661a79054`, today ⚠ stale: main changed para.rs |
-| #1630 | Morzilla | Tables without w:tblGrid take their grid from the cells, and widths wider than the page are squeezed like Word | -0.038 | -0.034 | +0 | 3 (0↑ 3↓) | – | parish_housing_data_profile -35.9, victorian_universal_design_policy -2.7, russian_construction_org_council_minutes -2.0 | `661a79054`, today ⚠ stale: main changed table.rs |
+| #1630 | Morzilla | Tables without w:tblGrid take their grid from the cells, and widths wider than the page are squeezed like Word | -0.038 | -0.034 | +0 | 3 (0↑ 3↓) | – | parish_housing_data_profile -35.9, victorian_universal_design_policy -2.7, russian_construction_org_council_minutes -2.0 | `4b0d39959`, today |
 | #4436 | dfgodvan | Layout: line height of an inline picture in multiple line spacing, as in Word | -0.044 | +0.070 | -2 | 21 (7↑ 5↓) | picture-mark-leading-compat15-line480 +42.8, czech_village_budget_commentary +22.1, brazilian_logistics_study +22.0 (+4 more) | picture-mark-leading-mark22-line360-text0 -41.2, picture-mark-leading-compat14-line480 -39.3, picture-mark-leading-mark28-line480-text0 -39.3 (+2 more) | `e919982fa`, 3 d ago ⚠ stale: main changed flow.rs, para/lines.rs |
 | #2578 | finwarman | Reserve page-colour clearance in initial header stories | -0.113 | -0.090 | -1 | 2 (0↑ 2↓) | – | traditional_skills_job_form -65.5, czech_village_council_minutes_2025 -55.8 | `e919982fa`, 3 d ago ⚠ stale: main changed page.rs, pass.rs |
 
@@ -217,12 +217,12 @@ they overlap or interact. 206 fixtures change (166↑ 19↓). Regressions over 0
 
 ## Not benched
 
-- **Code conflicts with `main`** (399 PRs): not rerun until rebased.
+- **Code conflicts with `main`** (396 PRs): not rerun until rebased.
 - **Waiting for a look before they're built** (97): #4649, #4652, #1217, #1292, #1493, #1713, #1926, #1948, #2120, #2815, #3337, #3878, #4136, #5113, #5158, #5331, #5357, #5778, #5791, #6039 change
   build scripts, cargo config or dependencies; 77 more are from authors without a merged PR yet.
-- **Change no rendering file** (94): not benched.
+- **Change no rendering file** (96): not benched.
 - **Doesn't build once merged with `main`:** #1292, #2783, #2876, #3160, #3520, #4265, #4408, #4640, #4645, #5570, #675.
-- **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974.
+- **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974, #1518.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output
   (#3083, #4300), `/Suspects` in `/MarkInfo` (#3410), tracked-change colours with markup
   (#5232, #5233), the numeral display mode (#4461), embedded objects (#5393), Arabic chart text (#4199),

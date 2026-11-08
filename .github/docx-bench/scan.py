@@ -1,27 +1,20 @@
-"""usage: scan.py [--all] [--top N]
+"""usage: scan.py [--all]
 Refreshes the PR list from GitHub and decides what the next bench round reruns. Writes:
   <VER>-prs.json     every candidate PR (touches a layout/rendering/reading crate): title, author, author_association,
-                     head, draft, conflicts with main (code, or only docs = main_side), render (changes a file that can
+                     head, draft, conflicts with main in code, render (changes a file that can
                      move the score), risky (reasons a person must look first), allowed (allow.txt covers its head),
                      stale (reasons its run no longer reflects the PR on today's main)
   <VER>-removed.json PRs that left the list (merged or closed)
   <VER>-todo.txt     PRs to bench now: benchable and gated through, and never benched, or with new commits, or stale
                      against main while their run changed fixtures
 --all also benches PRs that change no rendering file (a safety net for the RENDER filter, once per suite version)."""
-import json, os, re, subprocess, sys
+import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # run with -I, which leaves the script's dir out
 from benchlib import B, GH, VER, REPO, NONCLI, TRUSTED, git, render_files, risky, allowed, stale, load, delta, run_base
 
 ALL = '--all' in sys.argv
 CORE = ('crates/layout/', 'crates/render/', 'crates/pdf/', 'crates/fonts/src/', 'crates/docx/src/', 'crates/doc/src/',
-        'crates/metafile/', 'crates/geom/')
-UI = re.compile(r'(?i)\b(ui|ribbon|dialog|caret|cursor|selection|click|drag|scroll|keyboard|shortcut|hover|tooltip|menu|pane|'
-                r'screen reader|accessib|ime|typing|backspace|undo|ruler|zoom|android|windows|macos|linux|web|wasm|mcp|perf|'
-                r'speed|faster|cache|memory|panic|crash|overflow|hostile|bound|limit|refuse|cap )')
-GOOD = re.compile(r'(?i)(layout|table|font|docx|render|pdf|picture|image|border|list|number|text box|shape|metafile|wmf|emf|'
-                  r'hyphen|equation|field|footnote|endnote|header|footer|section|column|spacing|indent|tab|wrap|float|chart|'
-                  r'smartart|wordart|shading|underline|line break|justif|kerning|east asian|cjk|rtl|bidi|arabic|thai|page|vml|'
-                  r'drawing|text|line)')
+        'crates/metafile/', 'crates/geom/', 'crates/engine/src/')
 
 
 def code(f):
@@ -33,13 +26,13 @@ def gh(*a):
 
 
 subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin', 'main'], check=True)
+# shortcut: GitHub lists at most 100 files per PR here; a bigger PR whose rendering changes all sit past the first 100
+# is missed. Upgrade to `gh api repos/.../pulls/N/files --paginate` for PRs with 100 files if that ever matters.
 P = json.loads(gh('pr', 'list', '-R', GH, '--state', 'open', '--limit', '3000',
                   '--json', 'number,title,author,isDraft,headRefOid,files'))
 assoc = dict(l.split() for l in gh('api', '--paginate', f'repos/{GH}/pulls?state=open&per_page=100',
                                    '--jq', '.[] | "\\(.number) \\(.author_association)"').splitlines())
-cand = [p for p in P if any(f['path'].startswith(CORE) and code(f['path']) for f in p['files'])
-        or (any(f['path'].startswith('crates/engine/src/') and code(f['path']) for f in p['files'])
-            and GOOD.search(p['title']) and not UI.search(p['title']))]
+cand = [p for p in P if any(f['path'].startswith(CORE) and code(f['path']) for f in p['files'])]
 
 old_path = f'{B}/{VER}-prs.json'
 old = {q['n']: q for q in json.load(open(old_path))} if os.path.exists(old_path) else {}
@@ -62,8 +55,10 @@ for p in cand:
     conf = [f for f in out if f and not f.endswith('.md')]
     q = dict(n=n, title=p['title'], author=p['author']['login'], assoc=assoc.get(str(n), 'NONE'), draft=p['isDraft'],
              head=head, mine=p['author']['login'] == 'naxvog',
-             conflicts=[f for f in conf if not NONCLI.search(f)], main_side=[f for f in conf if NONCLI.search(f)],
-             render=bool(render_files([f['path'] for f in p['files']])), risky=risky(n), allowed=allowed(n, head))
+             conflicts=[f for f in conf if not NONCLI.search(f)],
+             render=bool(render_files([f['path'] for f in p['files']])), allowed=allowed(n, head),
+             # the gate reads the fetched branch: if it moved after GitHub listed it, the listed head wasn't checked
+             risky=risky(n) if git('rev-parse', f'pr/{n}').strip() == head else ['head moved during the scan'])
     run = load(f'{VER}-pr{n}')
     q['stale'] = stale(n, head) if run else []
     gated = (q['assoc'] in TRUSTED and not q['risky']) or q['allowed']

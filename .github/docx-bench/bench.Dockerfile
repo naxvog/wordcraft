@@ -1,60 +1,24 @@
-# Scoring image of the docxide-pdf bench (docxide's own Dockerfile without the dev user, Node and Claude Code):
-# mutool, Python and the fonts the scores depend on. Same as the local wc-bench image; toolchain pinned to match.
+# The bench image: builds wordcraft-cli and scores the docxide-pdf suite (mutool, Python, the fonts the scores depend
+# on). Derived from docxide's Dockerfile, as the local wc-bench image is; the base image and the Ubuntu archive are
+# pinned (digest, snapshot) so a rebuild after a cache eviction gives the same packages and the same scores.
 # Microsoft's core fonts are installed at build time under their EULA: never push this image to a public registry.
-FROM ubuntu:24.04
+FROM ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852
+ARG SNAPSHOT=20261108T000000Z
 
-
-# System dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl \
-    git \
-    ca-certificates \
-    build-essential \
-    pkg-config \
-    libssl-dev \
-    mupdf-tools \
-    python3 \
-    python3-pip \
-    python3-venv \
-    fontconfig \
-    fonts-liberation \
-    fonts-dejavu \
-    fonts-noto-core \
-    fonts-freefont-ttf \
-    fonts-crosextra-caladea \
-    fonts-crosextra-carlito \
-    fonts-croscore \
-    fonts-open-sans \
-    fonts-urw-base35 \
-    fonts-noto-cjk \
-    fonts-ipafont-gothic \
-    fonts-ipafont-mincho \
-    fonts-wqy-zenhei \
-    fonts-wqy-microhei \
-    fonts-nanum \
-    fonts-lato \
-    fonts-stix \
-    bubblewrap \
-    socat \
+RUN apt-get update --snapshot ${SNAPSHOT} && apt-get install -y --no-install-recommends \
+    curl git ca-certificates build-essential pkg-config libssl-dev mupdf-tools python3 fontconfig \
+    fonts-liberation fonts-dejavu fonts-noto-core fonts-freefont-ttf fonts-crosextra-caladea fonts-crosextra-carlito \
+    fonts-croscore fonts-open-sans fonts-urw-base35 fonts-noto-cjk fonts-ipafont-gothic fonts-ipafont-mincho \
+    fonts-wqy-zenhei fonts-wqy-microhei fonts-nanum fonts-lato fonts-stix \
     && rm -rf /var/lib/apt/lists/*
 
-# Microsoft core fonts: Arial, Verdana, Times New Roman, Courier New, Georgia,
-# Comic Sans, Impact, Trebuchet MS, Webdings, Andale Mono (requires EULA acceptance)
-# Use ports.ubuntu.com for arm64, archive.ubuntu.com for amd64
-RUN ARCH=$(dpkg --print-architecture) \
-    && if [ "$ARCH" = "amd64" ] || [ "$ARCH" = "i386" ]; then \
-         REPO="http://archive.ubuntu.com/ubuntu"; \
-       else \
-         REPO="http://ports.ubuntu.com/ubuntu-ports"; \
-       fi \
-    && echo "deb ${REPO} noble multiverse" \
-        > /etc/apt/sources.list.d/multiverse.list \
-    && apt-get update \
-    && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" \
-        | debconf-set-selections \
+# Microsoft core fonts: Arial, Verdana, Times New Roman, Courier New, Georgia, Comic Sans, Impact, Trebuchet MS,
+# Webdings, Andale Mono (EULA accepted below)
+RUN echo "deb http://archive.ubuntu.com/ubuntu noble multiverse" > /etc/apt/sources.list.d/multiverse.list \
+    && apt-get update --snapshot ${SNAPSHOT} \
+    && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
     && apt-get install -y --no-install-recommends ttf-mscorefonts-installer \
     && rm -rf /var/lib/apt/lists/*
-
 
 # Fontconfig aliases: map common Microsoft font names to metrically-identical free substitutes.
 # Carlito = Calibri (identical metrics), Caladea = Cambria, Liberation = Arial/TNR/Courier New.
@@ -93,7 +57,6 @@ RUN mkdir -p /etc/fonts/conf.d \
 EOF
 
 RUN fc-cache -f
-RUN apt-get update && apt-get install -y --no-install-recommends time && rm -rf /var/lib/apt/lists/*
 ENV RUSTUP_HOME=/opt/rustup CARGO_HOME=/opt/cargo PATH=/opt/cargo/bin:$PATH
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.99.0 --profile minimal
 WORKDIR /work

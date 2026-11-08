@@ -29,7 +29,7 @@ def fx(lst, k=3):
 
 def md(s):
     """PR titles and logins are the PR author's text: no table breaks, mentions, links, images or HTML."""
-    return re.sub(r'([\\`*_\[\]<>!|~])', r'\\\1', s).replace('@', '@\u200b')
+    return re.sub(r'([\\`*_\[\]<>!|~&])', r'\\\1', s).replace('@', '@\u200b')
 
 
 def age(run):
@@ -72,9 +72,12 @@ def lst(name, f):
 
 
 # --- summary: merge next = the combined branch without known bad interactions, in its merge order
-excl_run = f'{VER}-combined-excl' if load(f'{VER}-combined-excl') else f'{VER}-combined'
-excl = lst(f'{VER}-combined-excl', 'excluded') if excl_run.endswith('excl') else []
-order = [n for n in lst(excl_run, 'merged') if n in by_n and by_n[n][1]['ssim'] > 0.0005]
+# the combined run behind "Merge next": the one without known bad interactions, if it was measured on today's baseline
+# and merged something; otherwise the list falls back to the measured PRs and claims no combined total
+cur = [r for r in (f'{VER}-combined-excl', f'{VER}-combined') if load(r) and run_base(r) == base_run and lst(r, 'merged')]
+excl_run = cur[0] if cur else None
+excl = lst(excl_run, 'excluded') if excl_run else []
+order = [n for n in lst(excl_run, 'merged') if n in by_n and by_n[n][1]['ssim'] > 0.0005] if excl_run else []
 if not order:
     order = [str(q['n']) for q, d in measured if d['ssim'] > 0.0005 and not q['conflicts']]
 # positive and mergeable, but not in the combined branch (rebased or new since it was built)
@@ -123,8 +126,7 @@ def srow(n, mark=''):
 SHEAD = ('| PR | Author | What it changes | SSIM Δ | Fixtures | Worst fixture | CI | Review | Size | Measured on `main` |\n'
          '|---|---|---|---|---|---|---|---|---|---|')
 now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
-comb = load(excl_run)
-cd = delta(bases.setdefault(run_base(excl_run), load(run_base(excl_run))), comb) if comb else None
+cd = delta(base, load(excl_run)) if excl_run else None
 gap = dm['ssim'] - bm['ssim']
 out = [f"""This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
@@ -136,7 +138,7 @@ rendering, fonts, DOCX reading or PDF export does to that score. It's regenerate
 ({gap:.1f} points ahead)."""
        + (f""" Merging the {len(order)} PRs below, in this order, gives **{bm['ssim'] + cd['ssim']:.2f} ({cd['ssim']:+.2f})**,
 measured on one branch with all of them merged (see *Combined branch*)."""
-          if cd and run_base(excl_run) == base_run else '') + f"""
+          if cd else '') + f"""
 
 ### Merge next
 
@@ -180,7 +182,7 @@ next round; {len(gated)} waiting for a person to look before they're built; {len
   `WORDCRAFT_CLI=<wordcraft-cli> cargo test --release --test suite wordcraft_comparison -- --nocapture`.
   It converts every fixture with `wordcraft-cli convert`, rasterises at 150 dpi with mutool and scores each page
   with the suite's own Jaccard (ink overlap) and SSIM.
-- **Line match / drift:** [textcmp.py and drift.py]({GIST}) compare the text lines of both PDFs.
+- **Line match:** [textcmp.py]({GIST}) compares the text lines of both PDFs.
 - **Scores** are means over all fixtures, strict: a page WordCraft doesn't produce counts as 0. Deltas are in
   percentage points of that mean, so a fix that perfects one fixture moves it by at most ~0.1.
 - **Per PR:** the PR is merged into the round's baseline (`main` at the start of the round) and the whole suite is

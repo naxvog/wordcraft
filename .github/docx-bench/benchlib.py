@@ -27,22 +27,13 @@ def names(a, b):
     return tuple(git('diff', '--name-only', a, b).split())
 
 
-@functools.lru_cache(None)
-def main_packages():
-    return set(re.findall(r'^name = "([^"]+)"', git('show', 'origin/main:Cargo.lock'), re.M))
-
-
 def render_files(files):
     return [f for f in files if RENDER.match(f) and not TESTS.search(f)]
 
 
-def crates(files):
-    return {f.split('/')[1] for f in files}
-
-
-def pr_files(n, upto='origin/main'):
-    """Files PR n changes against its merge base with `upto`."""
-    mb = git('merge-base', f'pr/{n}', upto).strip()
+def pr_files(n):
+    """Files PR n changes against its merge base with main."""
+    mb = git('merge-base', f'pr/{n}', 'origin/main').strip()
     return git('diff', '--name-only', mb, f'pr/{n}').split() if mb else []
 
 
@@ -53,13 +44,14 @@ def risky(n):
         return ['no merge base with main']
     files = git('diff', '--name-only', mb, f'pr/{n}').split()
     why = [f for f in files if RISKY.search(f)]
-    tomls = [f for f in files if f.endswith('Cargo.toml')]
-    if tomls and re.search(r'^\+\s*proc-macro\s*=\s*true', git('diff', mb, f'pr/{n}', '--', *tomls), re.M):
-        why.append('new proc-macro crate')
+    # any manifest change: dependencies, [patch], `build = ...`, proc macros all live there (10 of ~280 PRs touch one)
+    why += [f'changes {f}' for f in files if f.endswith('Cargo.toml')]
     if 'Cargo.lock' in files:
-        new = sorted(set(re.findall(r'^\+name = "([^"]+)"', git('diff', mb, f'pr/{n}', '--', 'Cargo.lock'), re.M)) - main_packages())
+        def pkgs(rev):
+            return set(re.findall(r'^name = "(.+)"\nversion = "(.+)"(?:\nsource = "(.+)")?', git('show', f'{rev}:Cargo.lock'), re.M))
+        new = sorted(f'{a} {b}' for a, b, _ in pkgs(f'pr/{n}') - pkgs(mb))
         if new:
-            why.append('new dependencies: ' + ', '.join(new))
+            why.append('new packages in Cargo.lock: ' + ', '.join(new[:6]) + (' …' if len(new) > 6 else ''))
     return why
 
 
@@ -102,7 +94,7 @@ def pr_head(n):
     return open(p).read().strip() if os.path.exists(p) else None
 
 
-def stale(n, head, main='origin/main'):
+def stale(n, head):
     """Why PR n's run no longer reflects the PR on today's main (empty if it still does)."""
     run = f'{VER}-pr{n}'
     why = []
@@ -112,7 +104,7 @@ def stale(n, head, main='origin/main'):
     bc = run_commit(run_base(run))
     if bc:
         # file level: main touches crates/layout almost daily, so a crate-level test would rerun every PR every day
-        both = sorted(set(render_files(names(bc, main))) & set(render_files(pr_files(n))))
+        both = sorted(set(render_files(names(bc, 'origin/main'))) & set(render_files(pr_files(n))))
         if both:
             why.append('main changed ' + ', '.join(f.split('/src/')[-1] for f in both[:3]) + (' …' if len(both) > 3 else ''))
     return why

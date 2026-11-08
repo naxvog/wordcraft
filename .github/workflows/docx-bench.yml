@@ -58,6 +58,7 @@ jobs:
           MAX: ${{ inputs.max }}
         run: |
           [[ $MAX =~ ^[0-9]+$ ]] || { echo "max must be a number"; exit 1; }
+          (( MAX > 256 )) && MAX=256   # GitHub's limit for one matrix
           python3 -I .github/docx-bench/scan.py $ALL
           base=v66-main-$(git -C wc rev-parse --short=9 origin/main)
           {
@@ -124,7 +125,7 @@ jobs:
 
   combine:
     needs: [plan, baseline, bench]
-    if: always() && needs.plan.result == 'success' && (needs.plan.outputs.need_base == 'true' || needs.plan.outputs.todo != '[]')
+    if: ${{ !cancelled() && needs.plan.result == 'success' && (needs.plan.outputs.need_base == 'true' || needs.plan.outputs.todo != '[]') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     strategy:
@@ -145,10 +146,11 @@ jobs:
       - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}'}
         run: |
           mkdir -p art
-          python3 -I .github/docx-bench/collect.py art dx/tests/fixtures
+          python3 -I .github/docx-bench/collect.py art
           [ -f "state/runs/$BASE/wordcraft_comparison.json" ] || { echo "no baseline run for $BASE"; exit 1; }
           echo "$BASE" > state/current-main
           ex=; [ "$VARIANT" = combined-excl ] && ex=$(cat state/v66-exclude.txt 2>/dev/null)
+          [ "$VARIANT" = combined-excl ] && [ -z "$ex" ] && { echo "v66-exclude.txt is empty: same as combined"; exit 0; }
           .github/docx-bench/combine.sh "v66-$VARIANT" $ex
       - if: always()
         uses: actions/upload-artifact@v4
@@ -156,7 +158,7 @@ jobs:
 
   publish:
     needs: [plan, baseline, bench, combine]
-    if: always() && needs.plan.result == 'success'
+    if: ${{ !cancelled() && needs.plan.result == 'success' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:
@@ -166,8 +168,6 @@ jobs:
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
       - uses: actions/checkout@v4
         with: {ref: bench-results, path: state}
-      - uses: actions/checkout@v4
-        with: {repository: naxvog/docxide-pdf, ref: '${{ env.DOCXIDE_REF }}', path: dx, sparse-checkout: tests/fixtures, persist-credentials: false}
       - uses: actions/download-artifact@v4
         with: {pattern: 'run-*', path: art}
       - uses: actions/download-artifact@v4
@@ -178,7 +178,7 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           mkdir -p art
-          python3 -I .github/docx-bench/collect.py art dx/tests/fixtures
+          python3 -I .github/docx-bench/collect.py art
           [ -f "state/runs/$BASE/wordcraft_comparison.json" ] && echo "$BASE" > state/current-main
           # what this round didn't get to stays queued for the next one
           ls art | sed -n 's/^run-v66-pr//p' > done.txt

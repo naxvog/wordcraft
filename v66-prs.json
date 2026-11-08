@@ -7,14 +7,8 @@
 "draft": false,
 "head": "dd4ef8d0f2807fb5b908f6c0f995df9824b20356",
 "mine": true,
-"conflicts": [
-"crates/layout/src/balloons.rs",
-"crates/layout/src/lib.rs",
-"crates/layout/src/para.rs"
-],
-"main_side": [
-"crates/layout/src/tests.rs"
-],
+"conflicts": [],
+"main_side": [],
 "render": true,
 "risky": [],
 "allowed": false,
@@ -28,11 +22,7 @@
 "draft": false,
 "head": "8c689e9730229d78d815c51712503ac65373065f",
 "mine": true,
-"conflicts": [
-"crates/layout/src/display.rs",
-"crates/layout/src/lib.rs",
-"crates/render/src/lib.rs"
-],
+"conflicts": [],
 "main_side": [],
 "render": true,
 "risky": [],
@@ -156,7 +146,7 @@
 "author": "naxvog",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8c47f547132433d19e2de9b7a081252fa9622efd",
+"head": "de04a1fc7c473183d382f6fc3d470fe9968a374d",
 "mine": true,
 "conflicts": [],
 "main_side": [],
@@ -164,6 +154,7 @@
 "risky": [],
 "allowed": false,
 "stale": [
+"new commits",
 "main changed table.rs"
 ]
 },
@@ -1271,24 +1262,10 @@
 "author": "pattalkslaw-del",
 "assoc": "NONE",
 "draft": false,
-"head": "84c752d39307b2b13ff522a8b308d6d2b3f93278",
+"head": "42bd629f73beba2a6a08927d034eed280b845955",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"crates/doc/src/settings.rs",
-"crates/engine/src/cmd/para/styles.rs",
-"crates/engine/src/session/documents.rs",
-"crates/layout/src/para/proof.rs",
-"crates/pdf/src/lib.rs",
-"crates/proof/src/lib.rs"
-],
-"main_side": [
-"crates/engine/src/tests.rs",
-"crates/ui-egui/src/app/commands.rs",
-"crates/ui-egui/src/app/prefs.rs",
-"crates/ui-egui/src/options.rs",
-"crates/ui-egui/src/window_ui.rs"
-],
+"conflicts": [],
+"main_side": [],
 "render": true,
 "risky": [
 "xtask/src/layers.rs",
@@ -4248,7 +4225,7 @@
 "author": "vangel76",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3e62a6040010eea2be8068c560f2f69caee61528",
+"head": "52d16685071b3bd755a4648e2368d718ef7d6bac",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -4548,12 +4525,10 @@
 "author": "vangel76",
 "assoc": "CONTRIBUTOR",
 "draft": true,
-"head": "e89d0d461f9ac739e75f11f0ce76d73bd50bae4c",
+"head": "3c6ff5df2902e92e5032c2cff1e2e9b63202ddf3",
 "mine": false,
 "conflicts": [],
-"main_side": [
-"crates/ui-egui/src/canvas.rs"
-],
+"main_side": [],
 "render": true,
 "risky": [],
 "allowed": false,
@@ -6878,7 +6853,7 @@
 "author": "pattalkslaw-del",
 "assoc": "NONE",
 "draft": false,
-"head": "9c28b9673172b80e51a1232448d64bf78b47faf8",
+"head": "534d3fe55f094da777668e5c7a35a71565c3753f",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -9482,15 +9457,16 @@
 "author": "Bitslay",
 "assoc": "NONE",
 "draft": false,
-"head": "472346a021d882441989e40c91095c2dda6064e3",
+"head": "9993020d31133d2c9bb0c6db416b0a568df0f873",
 "mine": false,
 "conflicts": [],
 "main_side": [],
-"render": false,
+"render": true,
 "risky": [],
 "allowed": false,
 "stale": [
-"new commits"
+"new commits",
+"main changed pass.rs"
 ]
 },
 {
@@ -10441,7 +10417,7 @@
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "294e60c3ad6bce18cec4c93b297389b1493a5127",
+"head": "ff4e71a1714552245cc1d97924bf1f6dee7321ca",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -10722,7 +10698,7 @@
 "author": "scks1",
 "assoc": "NONE",
 "draft": false,
-"head": "77b7681f37e2e034ee773044b90f4d4291824e6e",
+"head": "f8d79699251abd24f585bf9e4077f2f126e6ade9",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -11463,14 +11439,16 @@
 "author": "Bra1nZ",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1a1f14f70b68793ffcef6b7fc867e0b2c796ce65",
+"head": "c2757178498ac57af90222f77b949467ab1b0fcb",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": true,
 "risky": [],
 "allowed": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5494,
@@ -11771,14 +11749,16 @@
 "author": "marcwgls",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "66fd852890257cfeda1b51d0c8b7493d31869b1d",
+"head": "e1b7553b9d2fecad81347c5da14f47fd6225288b",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": false,
 "risky": [],
 "allowed": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5613,
@@ -11946,14 +11926,16 @@
 "author": "Bra1nZ",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7892ef403e988df3238b9cc647a4e87237638967",
+"head": "902aa14ab33af6216c5aa8b7732c148021cfaf20",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": true,
 "risky": [],
 "allowed": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5670,
@@ -12028,7 +12010,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7b107881baf7c72bef28c50d6c5059d2049ffc67",
+"head": "89f67939ca99ff0fcd919eef9f857fc67185478e",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12045,7 +12027,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "101a3cbfbe2b4b0043c5763e0bcd3495e04a1f32",
+"head": "d32466c783331e91f9ac32eef1ea96cfe7483c84",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12062,7 +12044,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "2c554610cc61d230e423fed3cc2309735d59181c",
+"head": "26d6a0f67149fe36b4d16eb539d212860d6de43b",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12079,7 +12061,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "567bd226fd0e00e9b8b60c71c53c85e663a3c9cf",
+"head": "6b5d3a294a07b189eee19c119f4d64206041453d",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12096,7 +12078,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "44bcd1aaa341aa5fa422d03c1320578862b3bdd4",
+"head": "8ffef24d663cf6bf20d55adff2d8dc981a4d2b76",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12460,7 +12442,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0a2b8ebb0f7e8de559a76aadc6930af955fa7751",
+"head": "8de68da8537e64eab9df439459a957249fe2e2b6",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12477,14 +12459,16 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "c29204216fe5c8bdabef47fa71c0eb4b957e4f19",
+"head": "031f12e2a826601424831aa3ad6bb6b7fb2303ad",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": false,
 "risky": [],
 "allowed": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5870,
@@ -12596,11 +12580,9 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "05e2fca7cd59744a512548ac7ef1f6aefd150cc9",
+"head": "2fee0a182afedc9a633cf955f6e3f8b09c877db1",
 "mine": false,
-"conflicts": [
-"crates/layout/src/para/lines.rs"
-],
+"conflicts": [],
 "main_side": [],
 "render": true,
 "risky": [],
@@ -12687,7 +12669,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7927ea08711a2cf70338ed5de9eadcd04fa04e0d",
+"head": "1c7fef71731469471e716d83db7b3ebc0bea1d90",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12704,14 +12686,16 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "17175bc80042cfe2e3b00d9dc2d2a93f6dfdc2b7",
+"head": "35028586d945f741cdca03f10645fdb7cdaf6c19",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": false,
 "risky": [],
 "allowed": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5917,
@@ -12719,14 +12703,16 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9fbd49caa529b3dff2794ce2e41e2a11f2ba6ee4",
+"head": "53301fdc08f036b256f734fbf511baf35a62279a",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": true,
 "risky": [],
 "allowed": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5918,
@@ -12734,7 +12720,7 @@
 "author": "Bra1nZ",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7d234808a5165abb5d44f4a9046ec6b2b7719953",
+"head": "fbeb3bbda24aae331b3eb9e50033f0d724055bf3",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12751,7 +12737,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "79f1e511a7606901d1cdc983dd43139e5b9f12dd",
+"head": "5ed3dd8417dc57eb1633bb5df53a251a4df1b201",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -12999,7 +12985,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ed17fb94d7baf6c1ac6e50e051b409ad05a23e16",
+"head": "924a70ba8b64441d56e01fff6fed02a6345ce2d5",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -13007,6 +12993,7 @@
 "risky": [],
 "allowed": false,
 "stale": [
+"new commits",
 "main changed lib.rs"
 ]
 },
@@ -13066,12 +13053,10 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1363a908f4714d77cda4fdeab2a08554c65b364a",
+"head": "9f13dcc0cf78f3b151e14635c90f2d5246e79d88",
 "mine": false,
 "conflicts": [],
-"main_side": [
-"crates/ui-egui/src/app/frame.rs"
-],
+"main_side": [],
 "render": false,
 "risky": [],
 "allowed": false,
@@ -13128,7 +13113,7 @@
 "author": "avariiiiiiiiii",
 "assoc": "NONE",
 "draft": false,
-"head": "1d55860682c7f1c5501291f755caa12b6db5bfd5",
+"head": "ef07e6edbe2eca1edbe628b48d543cc97bf12b73",
 "mine": false,
 "conflicts": [],
 "main_side": [],
@@ -13143,11 +13128,146 @@
 "author": "avariiiiiiiiii",
 "assoc": "NONE",
 "draft": false,
-"head": "66cabc57d7ec1f84c69ff3426fa468e5c136af33",
+"head": "96a152c2b6713657f14c4ede0bb6a18543ad32e3",
 "mine": false,
 "conflicts": [],
 "main_side": [],
 "render": false,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6030,
+"title": "Tables: Word gives a table nothing from Normal Table, and Table Grid is based on it",
+"author": "pakiat",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "a1d416e331df57a3ded08dc7aa6cc887c5f35061",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6033,
+"title": "DOCX: save and load tracked revision marks around equations (#6011)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "0b7cfa86fea71cd20608788f3a339a5c8e37a777",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6035,
+"title": "DOCX: preserve namespaces in retained InkML and MathML",
+"author": "10230equals3000",
+"assoc": "NONE",
+"draft": false,
+"head": "cc2b121da4af24cca8dfc5afff7e00cdd8917b0e",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6036,
+"title": "Render: isolate native ink widths and mask clipping",
+"author": "10230equals3000",
+"assoc": "NONE",
+"draft": false,
+"head": "3c61b3f5c2b1f62b3ac74a617dee366dfa0b6b33",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6037,
+"title": "DOCX: decode and place bounded native InkML previews",
+"author": "10230equals3000",
+"assoc": "NONE",
+"draft": false,
+"head": "9f17a6c4d46be272627e6dafab5773e2eda88282",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6039,
+"title": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6005)",
+"author": "benandez",
+"assoc": "MEMBER",
+"draft": false,
+"head": "44e188d8c00c38fc49108b5c8c763f7767865014",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6040,
+"title": "Use Diagram and Decorative Text display names",
+"author": "FredApps",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "6272c9a4dadee57bc28e2ee6601552a7ef46ad3f",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": false,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6049,
+"title": "Line numbers appear beside every column and keep their Word formatting",
+"author": "vangel76",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "bce47689ad5a639431c61084534f672095e8a420",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
+"risky": [],
+"allowed": false,
+"stale": []
+},
+{
+"n": 6051,
+"title": "Text boxes inside a group can be edited",
+"author": "vangel76",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "37e891544d062a509457d1af4e65f00a76f67351",
+"mine": false,
+"conflicts": [],
+"main_side": [],
+"render": true,
 "risky": [],
 "allowed": false,
 "stale": []

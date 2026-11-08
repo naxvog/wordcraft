@@ -1,0 +1,347 @@
+[
+{
+"n": 1579,
+"title": "Thai, Lao and Khmer wrap between dictionary words (#1548)",
+"state": "CLOSED"
+},
+{
+"n": 1809,
+"title": "fix(docx): roundtrip w:dirty on field begin markers",
+"state": "CLOSED"
+},
+{
+"n": 2415,
+"title": "Layout: a paragraph running into a column of another width is broken for it",
+"state": "CLOSED"
+},
+{
+"n": 3082,
+"title": "Page borders honour w:offsetFrom and measure from the text by default (#3073)",
+"state": "CLOSED"
+},
+{
+"n": 3984,
+"title": "Layout: a line of only pictures takes no descent; multiple spacing adds its share",
+"state": "CLOSED"
+},
+{
+"n": 4267,
+"title": "#4250: a float anchored on a later page of a long paragraph is drawn there",
+"state": "CLOSED"
+},
+{
+"n": 4297,
+"title": "#4262: a shape dropped just after a page break stays on the new page",
+"state": "CLOSED"
+},
+{
+"n": 2437,
+"title": "Layout: reserve flow space below bottom paragraph borders",
+"state": "CLOSED"
+},
+{
+"n": 2495,
+"title": "Center fitting merge labels in the first table fragment",
+"state": "CLOSED"
+},
+{
+"n": 2670,
+"title": "Shapes, pictures and text boxes inside a drawing canvas are selected and moved on their own (#2637)",
+"state": "CLOSED"
+},
+{
+"n": 3241,
+"title": "Layout: Times and Courier take Times New Roman's and Courier New's line spacing",
+"state": "CLOSED"
+},
+{
+"n": 3915,
+"title": "Align ordinary tabs with paragraph alignment",
+"state": "CLOSED"
+},
+{
+"n": 4307,
+"title": "Layout: justified lines keep the width of the spaces before their first character",
+"state": "CLOSED"
+},
+{
+"n": 4837,
+"title": "Avoid repeated text-box lookups during page drawing (#3614)",
+"state": "CLOSED"
+},
+{
+"n": 5632,
+"title": "DOCX: VML text boxes keep their text direction",
+"state": "CLOSED"
+},
+{
+"n": 5633,
+"title": "DOCX: percentage shading patterns (pct5 \u2026 pct95)",
+"state": "CLOSED"
+},
+{
+"n": 5684,
+"title": "Layout: avoid repeated text-box lookups during page drawing (#4837)",
+"state": "MERGED"
+},
+{
+"n": 4249,
+"title": "Mailings: detect CSV delimiters across multiline quoted headers",
+"state": "CLOSED"
+},
+{
+"n": 5666,
+"title": "Collapsible headings: fold arrow, Collapsed by default, w15:collapsed (#1745)",
+"state": "CLOSED"
+},
+{
+"n": 3187,
+"title": "Status bar live count choice: words, characters, or characters without spaces (#2797)",
+"state": "CLOSED"
+},
+{
+"n": 1448,
+"title": "Home \u203a Font: a collapsed caret no longer means the whole word, and the Font box follows the text's script",
+"state": "CLOSED"
+},
+{
+"n": 3141,
+"title": "#2797: the status bar keeps a character count beside the word count",
+"state": "CLOSED"
+},
+{
+"n": 3883,
+"title": "doc: decode numeric XML references in legacy form labels",
+"state": "CLOSED"
+},
+{
+"n": 4189,
+"title": "#4181: a click just outside a floating table skips its turned cell text",
+"state": "CLOSED"
+},
+{
+"n": 4938,
+"title": "Equations: \\int + Space waits for its limits, so _x^y decorates the operator (#4917)",
+"state": "CLOSED"
+},
+{
+"n": 5448,
+"title": "Layout: a turned inline picture with no recorded room for the turn keeps its line to its frame, as in Word",
+"state": "MERGED"
+},
+{
+"n": 5442,
+"title": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge",
+"state": "MERGED"
+},
+{
+"n": 5450,
+"title": "Layout: contextual spacing drops the space after a cell's last Normal paragraph",
+"state": "MERGED"
+},
+{
+"n": 5346,
+"title": "DOCX: a VML text box keeps its text direction (layout-flow) (#5193)",
+"state": "MERGED"
+},
+{
+"n": 5347,
+"title": "Layout: a picture in a paragraph whose hidden mark closes a section keeps its room (#5288)",
+"state": "MERGED"
+},
+{
+"n": 5348,
+"title": "Layout: a line can break after a hyphen before a slash, like Word (#3408)",
+"state": "MERGED"
+},
+{
+"n": 5437,
+"title": "Layout: no line break between a full stop and an opening parenthesis",
+"state": "MERGED"
+},
+{
+"n": 5440,
+"title": "Layout: an empty paragraph after a leading floating table takes no space before",
+"state": "MERGED"
+},
+{
+"n": 5456,
+"title": "Layout: a nested table's Can't Split row moves on with its outer row",
+"state": "MERGED"
+},
+{
+"n": 4579,
+"title": "fix(fields): quoted-argument backslash escapes; body PAGE in a cardinal-text section",
+"state": "MERGED"
+},
+{
+"n": 5055,
+"title": "Lists: a numFmt none level shows its literal text, so RESPONSE: labels the paragraph (#4985)",
+"state": "MERGED"
+},
+{
+"n": 5392,
+"title": "Preserve paragraph text direction in DOCX",
+"state": "MERGED"
+},
+{
+"n": 5655,
+"title": "DOCX: paragraph indents and spacing beyond 16 bits wrap as in Word",
+"state": "MERGED"
+},
+{
+"n": 5678,
+"title": "East Asian typography: compress punctuation to fit a line, balance half-width spaces (gap 17)",
+"state": "CLOSED"
+},
+{
+"n": 5691,
+"title": "Arabic letters join across a change of formatting (#4093)",
+"state": "MERGED"
+},
+{
+"n": 5119,
+"title": "Compound files with spare FAT sectors open again, so password-protected .docx files open (#5109)",
+"state": "CLOSED"
+},
+{
+"n": 5287,
+"title": "Layout: a page break before applies at a continuous section's top mid-page",
+"state": "MERGED"
+},
+{
+"n": 5343,
+"title": "Layout: look at the text after a decimal tab once, not once per cluster",
+"state": "MERGED"
+},
+{
+"n": 5410,
+"title": "DOCX import: look relationships up by id through an index",
+"state": "MERGED"
+},
+{
+"n": 5452,
+"title": "PDF export: leave the author out when personal information is removed",
+"state": "MERGED"
+},
+{
+"n": 5697,
+"title": "Shapes in Strict Open XML documents open (#3548)",
+"state": "MERGED"
+},
+{
+"n": 4702,
+"title": "Shading on text selected inside a paragraph shades the text, so No Color takes off an orange shading (#4685)",
+"state": "MERGED"
+},
+{
+"n": 5533,
+"title": "Table Sort: reject invalid column selectors (#5531)",
+"state": "MERGED"
+},
+{
+"n": 5594,
+"title": "Output counts locked SEQ fields, and not tracked-deleted ones, as Word does",
+"state": "MERGED"
+},
+{
+"n": 5295,
+"title": "Pictures: a linked picture shows its link on hover and follows it on Ctrl+click; DOCX keeps the link on the drawing (#5267)",
+"state": "MERGED"
+},
+{
+"n": 5411,
+"title": "DOCX import: refuse to carry parts named like WordCraft's bookkeeping",
+"state": "MERGED"
+},
+{
+"n": 5729,
+"title": "ODT: watermark and odd/even page changes to a file are saved (gap 19)",
+"state": "MERGED"
+},
+{
+"n": 5734,
+"title": "Track Changes: resolving away an empty paragraph with a section break keeps the next paragraph's properties (#5667)",
+"state": "MERGED"
+},
+{
+"n": 5761,
+"title": "picture.change: keep the width and take the new picture's aspect ratio",
+"state": "MERGED"
+},
+{
+"n": 5784,
+"title": "Numbering: Thai numbers are drawn in Thai digits (part of #5757)",
+"state": "MERGED"
+},
+{
+"n": 5788,
+"title": "layout: line numbers take the \"Line Number\" style, not a fixed 10 pt grey",
+"state": "MERGED"
+},
+{
+"n": 5796,
+"title": "Layout: a picture lowered past its height lowers its line as far, as in Word",
+"state": "MERGED"
+},
+{
+"n": 5802,
+"title": "Layout: superscript and subscript text at 0.65 of its size rounded to the half point",
+"state": "MERGED"
+},
+{
+"n": 5811,
+"title": "DOCX: nested block-level content controls stay block-level when a bookmark follows them, so Word opens the file",
+"state": "MERGED"
+},
+{
+"n": 5830,
+"title": "doc: encrypted .docx opens again \u2014 the CFB guard refuses only more FAT sectors than the file has (#5109)",
+"state": "MERGED"
+},
+{
+"n": 5851,
+"title": "DOCX: resolve LibreOffice font fallback lists to first installed family (#5843)",
+"state": "MERGED"
+},
+{
+"n": 5459,
+"title": "Pictures: measure PNGs from their chunk headers, not the decoder's header read",
+"state": "MERGED"
+},
+{
+"n": 5414,
+"title": "DOCX save: collect an embedded object's relationship ids in a set",
+"state": "MERGED"
+},
+{
+"n": 5453,
+"title": "Render: skip drawing paths far past every canvas before flattening",
+"state": "MERGED"
+},
+{
+"n": 5426,
+"title": "Export: refuse links holding characters the writers drop",
+"state": "MERGED"
+},
+{
+"n": 2783,
+"title": "#2729: Layout tests use pinned bundled fonts",
+"state": "MERGED"
+},
+{
+"n": 3195,
+"title": "Pointer zoom stretches page rasters until it stops",
+"state": "MERGED"
+},
+{
+"n": 3197,
+"title": "Dark-theme interface text on Linux no longer looks semi-bold",
+"state": "MERGED"
+},
+{
+"n": 5974,
+"title": "Objects: use cell origin when unaligning page-anchored float (#5970)",
+"state": "CLOSED"
+}
+]

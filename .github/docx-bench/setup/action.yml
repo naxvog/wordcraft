@@ -1,0 +1,47 @@
+name: docx bench setup
+description: >
+  Checks out storytold/wordcraft at the round's baseline commit (wc/), the docxide-pdf suite (dx/) and craft-fonts
+  (fonts/), builds the two images from the GitHub Actions cache, restores the cargo cache (read only: jobs that
+  run PR code never save it) and builds the harness before any PR code runs (harness.txt).
+inputs:
+  ref:
+    description: storytold/wordcraft commit
+    required: true
+  save-images:
+    description: also write the image layers to the cache (jobs without a matrix)
+    default: 'false'
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+      with: {repository: storytold/wordcraft, ref: '${{ inputs.ref }}', path: wc, fetch-depth: 0, persist-credentials: false}
+    - uses: actions/checkout@v4
+      with: {repository: naxvog/docxide-pdf, ref: '${{ env.DOCXIDE_REF }}', path: dx, persist-credentials: false}
+    - uses: actions/checkout@v4
+      with: {repository: storytold/craft-fonts, ref: '${{ env.FONTS_REF }}', path: fonts, persist-credentials: false}
+    - shell: bash
+      run: curl -fsSL "$GIST/textcmp.py" -o dx/textcmp.py
+    - uses: docker/setup-buildx-action@v3
+    - uses: docker/build-push-action@v6
+      with:
+        context: .github/docx-bench
+        file: .github/docx-bench/build.Dockerfile
+        tags: docx-build
+        load: true
+        cache-from: type=gha,scope=docx-build
+        cache-to: ${{ inputs.save-images == 'true' && 'type=gha,scope=docx-build,mode=max' || '' }}
+    - uses: docker/build-push-action@v6
+      with:
+        context: .github/docx-bench
+        file: .github/docx-bench/bench.Dockerfile
+        tags: docx-bench
+        load: true
+        cache-from: type=gha,scope=docx-bench
+        cache-to: ${{ inputs.save-images == 'true' && 'type=gha,scope=docx-bench,mode=max' || '' }}
+    - uses: actions/cache/restore@v4
+      with:
+        path: ~/c
+        key: docx-cargo-v2-${{ hashFiles('wc/Cargo.lock', 'dx/Cargo.lock') }}
+        restore-keys: docx-cargo-v2-
+    - shell: bash
+      run: .github/docx-bench/harness.sh > harness.txt && cat harness.txt

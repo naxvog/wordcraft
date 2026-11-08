@@ -1,18 +1,25 @@
-name: docx bench (baseline trial)
+name: docx bench
 
-# Trial of the docxide-pdf bench on GitHub's free runners: scores one storytold/wordcraft commit (no PR code) with
-# the same images, harness and pins as the local bench, so its numbers can be compared one to one with a local
-# run of the same commit. Started by hand:
-#   gh workflow run docx-bench.yml -R naxvog/wordcraft -f ref=<storytold/wordcraft commit>
-# Results: the `results` artifact (wordcraft_comparison, textcmp and drift JSON) and the job summary.
+# PR score tracking for storytold/wordcraft#5711 with the docxide-pdf suite, on GitHub's free runners. A round:
+#   plan      scan.py: open PRs, what to bench (new, new commits, stale against main), the gate. Runs no PR code.
+#   baseline  main at the round's commit, when it has no run yet. The only job that saves the cargo cache.
+#   bench     one job per PR, 16 at a time: merged into the baseline, built and scored without network (pr.sh)
+#   combine   every PR that raised the score merged together, with and without v66-exclude.txt (combine.sh)
+#   publish   checks the results (collect.py), commits them to the bench-results branch, renders issue-body.md
+# State (runs, PR list, allow.txt, v66-exclude.txt, v66-notes.md) lives in the bench-results branch.
+# Start a round: gh workflow run docx-bench.yml -R naxvog/wordcraft [-f max=N] [-f all=true]
+# Then post the issue from your machine: .github/docx-bench/post-issue.sh
 
 on:
   workflow_dispatch:
     inputs:
-      ref:
-        description: storytold/wordcraft commit to bench
-        required: true
-        default: 661a790540de039b6902b5cc9ffe5d49024bf3c7
+      max:
+        description: Most PRs to bench this round
+        default: '60'
+      all:
+        description: Also bench PRs that change no rendering file
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -25,122 +32,161 @@ env:
   DOCXIDE_REF: d7afc499c1c302502097fa36cc59df17b5a51f8b   # naxvog/docxide-pdf wordcraft-comparison (harness + fixtures)
   FONTS_REF: abb83316d96aa59c1cf64784289e378fe9fa5695     # storytold/craft-fonts (CRAFT_FONTS_DIR)
   GIST: https://gist.githubusercontent.com/naxvog/54e2039e999cdeacfc0ed59b8da3c6e6/raw/69fd1eff58d0937e943fa2dacce535135da43dce
+  BENCH_STATE: ${{ github.workspace }}/state
+  BENCH_REPO: ${{ github.workspace }}/wc
 
 jobs:
-  baseline:
+  plan:
     runs-on: ubuntu-24.04
-    timeout-minutes: 150
+    timeout-minutes: 30
+    outputs:
+      main: ${{ steps.plan.outputs.main }}
+      base: ${{ steps.plan.outputs.base }}
+      need_base: ${{ steps.plan.outputs.need_base }}
+      todo: ${{ steps.plan.outputs.todo }}
     steps:
-      # (no disk cleanup: the documented 14 GB is the guarantee, the runner's root had 86 GB free; a run peaks at ~11 GB)
-      - run: df -h / | tail -1
-
       - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .github/docx-bench
-          persist-credentials: false
+        with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
       - uses: actions/checkout@v4
-        with:
-          repository: storytold/wordcraft
-          ref: ${{ inputs.ref }}
-          path: wc
-          persist-credentials: false
+        with: {ref: bench-results, path: state, persist-credentials: false}
       - uses: actions/checkout@v4
-        with:
-          repository: naxvog/docxide-pdf
-          ref: ${{ env.DOCXIDE_REF }}
-          path: dx
-          persist-credentials: false
-      - uses: actions/checkout@v4
-        with:
-          repository: storytold/craft-fonts
-          ref: ${{ env.FONTS_REF }}
-          path: fonts
-          persist-credentials: false
-      - name: Line match and drift scripts
+        with: {repository: storytold/wordcraft, path: wc, fetch-depth: 0, persist-credentials: false}
+      - id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ALL: ${{ inputs.all && '--all' || '' }}
+          MAX: ${{ inputs.max }}
         run: |
-          curl -fsSL "$GIST/textcmp.py" -o dx/textcmp.py
-          curl -fsSL "$GIST/drift.py" -o dx/drift.py
-
-      - uses: docker/setup-buildx-action@v3
-      - name: Build image
-        uses: docker/build-push-action@v6
-        with:
-          context: .github/docx-bench
-          file: .github/docx-bench/build.Dockerfile
-          tags: docx-build
-          load: true
-          cache-from: type=gha,scope=docx-build
-          cache-to: type=gha,scope=docx-build,mode=max
-      - name: Bench image
-        uses: docker/build-push-action@v6
-        with:
-          context: .github/docx-bench
-          file: .github/docx-bench/bench.Dockerfile
-          tags: docx-bench
-          load: true
-          cache-from: type=gha,scope=docx-bench
-          cache-to: type=gha,scope=docx-bench,mode=max
-
-      # cargo registry, git checkouts and both target dirs; containers run as root, so the last step hands them back
-      - uses: actions/cache@v4
-        with:
-          path: ~/c
-          key: docx-bench-cargo-${{ hashFiles('wc/Cargo.lock', 'dx/Cargo.lock') }}
-          restore-keys: docx-bench-cargo-
-
-      - name: Build wordcraft-cli
-        run: |
-          mkdir -p ~/c/registry ~/c/git ~/c/wc-target ~/c/dx-target
-          C="-v $HOME/c/registry:/opt/cargo/registry -v $HOME/c/git:/opt/cargo/git"
-          docker run --rm $C -v "$PWD/wc":/src:ro -w /src docx-build cargo fetch -q --locked
-          # no network while building: the same isolation PR builds will get
-          docker run --rm --network=none $C -v "$PWD/wc":/src:ro -v "$PWD/fonts":/fonts:ro -v $HOME/c/wc-target:/target \
-            -e CARGO_TARGET_DIR=/target -e CARGO_NET_OFFLINE=true -e CRAFT_FONTS_DIR=/fonts -e CARGO_PROFILE_DEV_DEBUG=0 \
-            -w /src docx-build bash -c '
-              pk=$(cargo metadata --no-deps --format-version 1 | python3 -c "import json,sys; print(\" \".join(\"-p \"+p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))")
-              cargo clean -q $pk && cargo build -q -p wordcraft-cli && mkdir -p /target/fx && cp /target/debug/wordcraft-cli /target/fx/'
-
-      - name: Build the harness
-        run: |
-          docker run --rm -v "$PWD/dx":/docxide:ro -v $HOME/c/registry:/opt/cargo/registry -v $HOME/c/git:/opt/cargo/git \
-            -v $HOME/c/dx-target:/target -w /docxide docx-bench bash -c \
-            'CARGO_TARGET_DIR=/target cargo test -q --release --test suite --no-run --message-format=json 2>/dev/null' \
-            | python3 -c 'import json,sys; print([m["executable"] for m in map(json.loads, sys.stdin) if m.get("reason") == "compiler-artifact" and m.get("executable") and m["target"]["name"] == "suite"][-1])' \
-            > harness.txt
-          cat harness.txt
-
-      - name: Score the suite
-        run: |
-          mkdir -p out
-          docker run --rm --network=none -v "$PWD/dx":/docxide:ro -v "$PWD/out":/docxide/tests/output \
-            -v $HOME/c/dx-target:/target:ro -v $HOME/c/wc-target:/wcpr:ro -w /docxide docx-bench bash -c "
-            WORDCRAFT_CLI=/wcpr/fx/wordcraft-cli $(cat harness.txt) wordcraft_comparison --nocapture 2>&1 | grep -E 'wrote|panicked|^  (docxide-pdf|WordCraft) '
-            python3 textcmp.py && python3 drift.py"
-          mkdir -p results && cp out/wordcraft_comparison.json out/textcmp.json out/drift.json results/
-          echo "${{ inputs.ref }}" > results/commit
-          df -h / | tail -1
-
-      - name: Summary
-        run: |
-          python3 - >> "$GITHUB_STEP_SUMMARY" <<'EOF'
-          import json, statistics as st
-          R = [r for r in json.load(open('results/wordcraft_comparison.json')) if r['group'] != 'private']
-          T = {t['name']: t for t in json.load(open('results/textcmp.json'))}
-          print('| engine | SSIM | Jaccard | pages matching | line match |\n|---|---|---|---|---|')
-          for e in ('wordcraft', 'docxide'):
-              lm = [T[r['name']][e]['line_match'] for r in R if T.get(r['name'], {}).get(e)]
-              print(f"| {e} | {st.mean((r[e]['ssim_strict'] or 0) * 100 for r in R):.3f} | "
-                    f"{st.mean((r[e]['jaccard_strict'] or 0) * 100 for r in R):.3f} | "
-                    f"{sum(r[e]['pages'] == r['ref_pages'] for r in R)}/{len(R)} | {st.mean(lm) * 100:.2f} |")
-          EOF
-          cat "$GITHUB_STEP_SUMMARY"
-
+          [[ $MAX =~ ^[0-9]+$ ]] || { echo "max must be a number"; exit 1; }
+          python3 -I .github/docx-bench/scan.py $ALL
+          base=v66-main-$(git -C wc rev-parse --short=9 origin/main)
+          {
+            echo "main=$(git -C wc rev-parse origin/main)"
+            echo "base=$base"
+            [ -f "state/runs/$base/wordcraft_comparison.json" ] && echo need_base=false || echo need_base=true
+            echo -n "todo="
+            head -n "$MAX" state/v66-todo.txt | python3 -c 'import json, sys
+          heads = {str(q["n"]): q["head"] for q in json.load(open("state/v66-prs.json"))}
+          print(json.dumps([{"pr": l.strip(), "head": heads[l.strip()]} for l in sys.stdin if l.strip()]))'
+          } >> "$GITHUB_OUTPUT"
+          tail -4 "$GITHUB_OUTPUT" | cut -c1-300
       - uses: actions/upload-artifact@v4
         with:
-          name: results
-          path: results/
-          retention-days: 14
+          name: plan
+          path: |
+            state/v66-prs.json
+            state/v66-removed.json
+            state/v66-todo.txt
+          retention-days: 7
 
-      - name: Hand the caches back to the runner user
-        if: always()
-        run: sudo chown -R "$(id -u):$(id -g)" ~/c
+  baseline:
+    needs: plan
+    if: needs.plan.outputs.need_base == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
+      - uses: ./.github/docx-bench/setup
+        with: {ref: '${{ needs.plan.outputs.main }}', save-images: 'true'}
+      - env: {BASE: '${{ needs.plan.outputs.base }}'}
+        run: |
+          . .github/docx-bench/lib.sh
+          .github/docx-bench/score.sh wc "run/$BASE"
+          meta "run/$BASE" name="$BASE" commit="$(g rev-parse HEAD)" status=ok
+      - uses: actions/cache/save@v4
+        with:
+          path: ~/c
+          key: docx-cargo-v2-${{ hashFiles('wc/Cargo.lock', 'dx/Cargo.lock') }}
+      - uses: actions/upload-artifact@v4
+        with: {name: 'run-${{ needs.plan.outputs.base }}', path: 'run/${{ needs.plan.outputs.base }}', retention-days: 7}
+
+  bench:
+    needs: plan
+    if: needs.plan.outputs.todo != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.todo) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
+      - uses: ./.github/docx-bench/setup
+        with: {ref: '${{ needs.plan.outputs.main }}'}
+      - env: {PR: '${{ matrix.pr }}', HEAD: '${{ matrix.head }}', BASE: '${{ needs.plan.outputs.base }}'}
+        run: .github/docx-bench/pr.sh "$PR" "$HEAD" "$BASE"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: {name: 'run-v66-pr${{ matrix.pr }}', path: 'run/v66-pr${{ matrix.pr }}', retention-days: 7}
+
+  combine:
+    needs: [plan, baseline, bench]
+    if: always() && needs.plan.result == 'success' && (needs.plan.outputs.need_base == 'true' || needs.plan.outputs.todo != '[]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [combined, combined-excl]
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
+      - uses: actions/checkout@v4
+        with: {ref: bench-results, path: state, persist-credentials: false}
+      - uses: ./.github/docx-bench/setup
+        with: {ref: '${{ needs.plan.outputs.main }}', save-images: 'true'}
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'run-*', path: art}
+      - uses: actions/download-artifact@v4
+        with: {name: plan, path: state}
+      - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}'}
+        run: |
+          mkdir -p art
+          python3 -I .github/docx-bench/collect.py art dx/tests/fixtures
+          [ -f "state/runs/$BASE/wordcraft_comparison.json" ] || { echo "no baseline run for $BASE"; exit 1; }
+          echo "$BASE" > state/current-main
+          ex=; [ "$VARIANT" = combined-excl ] && ex=$(cat state/v66-exclude.txt 2>/dev/null)
+          .github/docx-bench/combine.sh "v66-$VARIANT" $ex
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: {name: 'run-v66-${{ matrix.variant }}', path: 'run/v66-${{ matrix.variant }}', retention-days: 7}
+
+  publish:
+    needs: [plan, baseline, bench, combine]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
+      - uses: actions/checkout@v4
+        with: {ref: bench-results, path: state}
+      - uses: actions/checkout@v4
+        with: {repository: naxvog/docxide-pdf, ref: '${{ env.DOCXIDE_REF }}', path: dx, sparse-checkout: tests/fixtures, persist-credentials: false}
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'run-*', path: art}
+      - uses: actions/download-artifact@v4
+        with: {name: plan, path: state}
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          BASE: ${{ needs.plan.outputs.base }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          mkdir -p art
+          python3 -I .github/docx-bench/collect.py art dx/tests/fixtures
+          [ -f "state/runs/$BASE/wordcraft_comparison.json" ] && echo "$BASE" > state/current-main
+          # what this round didn't get to stays queued for the next one
+          ls art | sed -n 's/^run-v66-pr//p' > done.txt
+          grep -vxFf done.txt state/v66-todo.txt > todo.txt || true
+          mv todo.txt state/v66-todo.txt
+          python3 -I .github/docx-bench/issue.py > state/issue-body.md
+          cd state
+          git add -A
+          git -c user.name=docx-bench -c user.email=docx-bench@users.noreply.github.com commit -qm "Round $RUN_URL"
+          git push -q origin HEAD:bench-results
+          git show --stat HEAD | tail -3

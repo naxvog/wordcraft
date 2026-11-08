@@ -1,0 +1,149 @@
+name: docx bench (baseline trial)
+
+# Trial of the docxide-pdf bench on GitHub's free runners: scores one storytold/wordcraft commit (no PR code) with
+# the same images, harness and pins as the local bench, so its numbers can be compared one to one with a local
+# run of the same commit. Started by hand:
+#   gh workflow run docx-bench.yml -R naxvog/wordcraft -f ref=<storytold/wordcraft commit>
+# Results: the `results` artifact (wordcraft_comparison, textcmp and drift JSON) and the job summary.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: storytold/wordcraft commit to bench
+        required: true
+        default: 661a790540de039b6902b5cc9ffe5d49024bf3c7
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docx-bench
+  cancel-in-progress: false
+
+env:
+  DOCXIDE_REF: d7afc499c1c302502097fa36cc59df17b5a51f8b   # naxvog/docxide-pdf wordcraft-comparison (harness + fixtures)
+  FONTS_REF: abb83316d96aa59c1cf64784289e378fe9fa5695     # storytold/craft-fonts (CRAFT_FONTS_DIR)
+  GIST: https://gist.githubusercontent.com/naxvog/54e2039e999cdeacfc0ed59b8da3c6e6/raw/69fd1eff58d0937e943fa2dacce535135da43dce
+
+jobs:
+  baseline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - name: Free disk space
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h / | tail -1
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/docx-bench
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: storytold/wordcraft
+          ref: ${{ inputs.ref }}
+          path: wc
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: naxvog/docxide-pdf
+          ref: ${{ env.DOCXIDE_REF }}
+          path: dx
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: storytold/craft-fonts
+          ref: ${{ env.FONTS_REF }}
+          path: fonts
+          persist-credentials: false
+      - name: Line match and drift scripts
+        run: |
+          curl -fsSL "$GIST/textcmp.py" -o dx/textcmp.py
+          curl -fsSL "$GIST/drift.py" -o dx/drift.py
+
+      - uses: docker/setup-buildx-action@v3
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .github/docx-bench
+          file: .github/docx-bench/build.Dockerfile
+          tags: docx-build
+          load: true
+          cache-from: type=gha,scope=docx-build
+          cache-to: type=gha,scope=docx-build,mode=max
+      - name: Bench image
+        uses: docker/build-push-action@v6
+        with:
+          context: .github/docx-bench
+          file: .github/docx-bench/bench.Dockerfile
+          tags: docx-bench
+          load: true
+          cache-from: type=gha,scope=docx-bench
+          cache-to: type=gha,scope=docx-bench,mode=max
+
+      # cargo registry, git checkouts and both target dirs; containers run as root, so the last step hands them back
+      - uses: actions/cache@v4
+        with:
+          path: ~/c
+          key: docx-bench-cargo-${{ hashFiles('wc/Cargo.lock', 'dx/Cargo.lock') }}
+          restore-keys: docx-bench-cargo-
+
+      - name: Build wordcraft-cli
+        run: |
+          mkdir -p ~/c/registry ~/c/git ~/c/wc-target ~/c/dx-target
+          C="-v $HOME/c/registry:/opt/cargo/registry -v $HOME/c/git:/opt/cargo/git"
+          docker run --rm $C -v "$PWD/wc":/src:ro -w /src docx-build cargo fetch -q --locked
+          # no network while building: the same isolation PR builds will get
+          docker run --rm --network=none $C -v "$PWD/wc":/src:ro -v "$PWD/fonts":/fonts:ro -v $HOME/c/wc-target:/target \
+            -e CARGO_TARGET_DIR=/target -e CARGO_NET_OFFLINE=true -e CRAFT_FONTS_DIR=/fonts -e CARGO_PROFILE_DEV_DEBUG=0 \
+            -w /src docx-build bash -c '
+              pk=$(cargo metadata --no-deps --format-version 1 | python3 -c "import json,sys; print(\" \".join(\"-p \"+p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))")
+              cargo clean -q $pk && cargo build -q -p wordcraft-cli && mkdir -p /target/fx && cp /target/debug/wordcraft-cli /target/fx/'
+
+      - name: Build the harness
+        run: |
+          docker run --rm -v "$PWD/dx":/docxide:ro -v $HOME/c/registry:/opt/cargo/registry -v $HOME/c/git:/opt/cargo/git \
+            -v $HOME/c/dx-target:/target -w /docxide docx-bench bash -c \
+            'CARGO_TARGET_DIR=/target cargo test -q --release --test suite --no-run --message-format=json 2>/dev/null' \
+            | python3 -c 'import json,sys; print([m["executable"] for m in map(json.loads, sys.stdin) if m.get("reason") == "compiler-artifact" and m.get("executable") and m["target"]["name"] == "suite"][-1])' \
+            > harness.txt
+          cat harness.txt
+
+      - name: Score the suite
+        run: |
+          mkdir -p out
+          docker run --rm --network=none -v "$PWD/dx":/docxide:ro -v "$PWD/out":/docxide/tests/output \
+            -v $HOME/c/dx-target:/target:ro -v $HOME/c/wc-target:/wcpr:ro -w /docxide docx-bench bash -c "
+            WORDCRAFT_CLI=/wcpr/fx/wordcraft-cli $(cat harness.txt) wordcraft_comparison --nocapture 2>&1 | grep -E 'wrote|panicked|^  (docxide-pdf|WordCraft) '
+            python3 textcmp.py && python3 drift.py"
+          mkdir -p results && cp out/wordcraft_comparison.json out/textcmp.json out/drift.json results/
+          echo "${{ inputs.ref }}" > results/commit
+          df -h / | tail -1
+
+      - name: Summary
+        run: |
+          python3 - >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          import json, statistics as st
+          R = [r for r in json.load(open('results/wordcraft_comparison.json')) if r['group'] != 'private']
+          T = {t['name']: t for t in json.load(open('results/textcmp.json'))}
+          print('| engine | SSIM | Jaccard | pages matching | line match |\n|---|---|---|---|---|')
+          for e in ('wordcraft', 'docxide'):
+              lm = [T[r['name']][e]['line_match'] for r in R if T.get(r['name'], {}).get(e)]
+              print(f"| {e} | {st.mean((r[e]['ssim_strict'] or 0) * 100 for r in R):.3f} | "
+                    f"{st.mean((r[e]['jaccard_strict'] or 0) * 100 for r in R):.3f} | "
+                    f"{sum(r[e]['pages'] == r['ref_pages'] for r in R)}/{len(R)} | {st.mean(lm) * 100:.2f} |")
+          EOF
+          cat "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: results/
+          retention-days: 14
+
+      - name: Hand the caches back to the runner user
+        if: always()
+        run: sudo chown -R "$(id -u):$(id -g)" ~/c

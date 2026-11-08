@@ -31,11 +31,8 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 150
     steps:
-      - name: Free disk space
-        run: |
-          df -h / | tail -1
-          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
-          df -h / | tail -1
+      # (no disk cleanup: the documented 14 GB is the guarantee, the runner's root had 86 GB free; a run peaks at ~11 GB)
+      - run: df -h / | tail -1
 
       - uses: actions/checkout@v4
         with:

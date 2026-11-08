@@ -5,17 +5,20 @@
 FROM ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852
 ARG SNAPSHOT=20261108T000000Z
 
-RUN apt-get update --snapshot ${SNAPSHOT} && apt-get install -y --no-install-recommends \
-    curl git ca-certificates build-essential pkg-config libssl-dev mupdf-tools python3 fontconfig \
+# the snapshot archive is HTTPS-only: certificates come from the live archive first (they don't affect any score);
+# after that every apt call reads the snapshot
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates \
+    && echo "APT::Snapshot \"${SNAPSHOT}\";" > /etc/apt/apt.conf.d/50snapshot \
+    && apt-get update && apt-get install -y --no-install-recommends \
+    curl git build-essential pkg-config libssl-dev mupdf-tools python3 fontconfig \
     fonts-liberation fonts-dejavu fonts-noto-core fonts-freefont-ttf fonts-crosextra-caladea fonts-crosextra-carlito \
     fonts-croscore fonts-open-sans fonts-urw-base35 fonts-noto-cjk fonts-ipafont-gothic fonts-ipafont-mincho \
     fonts-wqy-zenhei fonts-wqy-microhei fonts-nanum fonts-lato fonts-stix \
     && rm -rf /var/lib/apt/lists/*
 
 # Microsoft core fonts: Arial, Verdana, Times New Roman, Courier New, Georgia, Comic Sans, Impact, Trebuchet MS,
-# Webdings, Andale Mono (EULA accepted below)
-RUN echo "deb http://archive.ubuntu.com/ubuntu noble multiverse" > /etc/apt/sources.list.d/multiverse.list \
-    && apt-get update --snapshot ${SNAPSHOT} \
+# Webdings, Andale Mono (EULA accepted below), from multiverse, which Ubuntu's default sources already include
+RUN apt-get update \
     && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
     && apt-get install -y --no-install-recommends ttf-mscorefonts-installer \
     && rm -rf /var/lib/apt/lists/*

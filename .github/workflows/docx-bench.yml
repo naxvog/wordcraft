@@ -45,11 +45,11 @@ jobs:
       need_base: ${{ steps.plan.outputs.need_base }}
       todo: ${{ steps.plan.outputs.todo }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {ref: bench-results, path: state, persist-credentials: false}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {repository: storytold/wordcraft, path: wc, fetch-depth: 0, persist-credentials: false}
       - id: plan
         env:
@@ -71,7 +71,7 @@ jobs:
           print(json.dumps([{"pr": l.strip(), "head": heads[l.strip()]} for l in sys.stdin if l.strip()]))'
           } >> "$GITHUB_OUTPUT"
           tail -4 "$GITHUB_OUTPUT" | cut -c1-300
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: plan
           path: |
@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
       - uses: ./.github/docx-bench/setup
         with: {ref: '${{ needs.plan.outputs.main }}', save-images: 'true'}
@@ -95,11 +95,11 @@ jobs:
           . .github/docx-bench/lib.sh
           .github/docx-bench/score.sh wc "run/$BASE"
           meta "run/$BASE" name="$BASE" commit="$(g rev-parse HEAD)" status=ok
-      - uses: actions/cache/save@v4
+      - uses: actions/cache/save@v6
         with:
           path: ~/c
           key: docx-cargo-v2-${{ hashFiles('wc/Cargo.lock', 'dx/Cargo.lock') }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with: {name: 'run-${{ needs.plan.outputs.base }}', path: 'run/${{ needs.plan.outputs.base }}', retention-days: 7}
 
   bench:
@@ -113,14 +113,14 @@ jobs:
       matrix:
         include: ${{ fromJSON(needs.plan.outputs.todo) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
       - uses: ./.github/docx-bench/setup
         with: {ref: '${{ needs.plan.outputs.main }}'}
       - env: {PR: '${{ matrix.pr }}', HEAD: '${{ matrix.head }}', BASE: '${{ needs.plan.outputs.base }}'}
         run: .github/docx-bench/pr.sh "$PR" "$HEAD" "$BASE"
       - if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with: {name: 'run-v66-pr${{ matrix.pr }}', path: 'run/v66-pr${{ matrix.pr }}', retention-days: 7}
 
   combine:
@@ -133,15 +133,15 @@ jobs:
       matrix:
         variant: [combined, combined-excl]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {ref: bench-results, path: state, persist-credentials: false}
       - uses: ./.github/docx-bench/setup
         with: {ref: '${{ needs.plan.outputs.main }}', save-images: 'true'}
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with: {pattern: 'run-*', path: art}
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with: {name: plan, path: state}
       - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}'}
         run: |
@@ -153,7 +153,7 @@ jobs:
           [ "$VARIANT" = combined-excl ] && [ -z "$ex" ] && { echo "v66-exclude.txt is empty: same as combined"; exit 0; }
           .github/docx-bench/combine.sh "v66-$VARIANT" $ex
       - if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with: {name: 'run-v66-${{ matrix.variant }}', path: 'run/v66-${{ matrix.variant }}', retention-days: 7}
 
   publish:
@@ -164,13 +164,13 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: {ref: bench-results, path: state}
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with: {pattern: 'run-*', path: art}
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with: {name: plan, path: state}
       - env:
           GH_TOKEN: ${{ github.token }}

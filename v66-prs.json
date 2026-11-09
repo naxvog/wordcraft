@@ -1171,9 +1171,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 1647,
@@ -1640,13 +1638,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3d9dab50a2f427e55a3b37e03cc9efcd529ed28d",
+"head": "34f706be2295cc08666d1f8759972d201cfe89d7",
 "mine": false,
-"conflicts": [
-"crates/engine/Cargo.toml",
-"crates/engine/src/cmd/mailings/recipients.rs",
-"crates/formats/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -1661,14 +1655,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7a89487c4ac16eb20db14486455f5ab7bf87f290",
+"head": "97cbb436b690f2d013c23b4620cc44c41e26ad8d",
 "mine": false,
-"conflicts": [
-"crates/docx/src/write/embed.rs",
-"crates/engine/src/cmd/file.rs",
-"crates/engine/src/io.rs",
-"crates/engine/src/io_ext.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -1698,7 +1687,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3bdbc0d7ee50739d659d4c943c8410ddf7e99cdc",
+"head": "b92caf0ae2c25dc86c50b0c99be391bd8075ab53",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -1714,13 +1703,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "fc9928d9c1e0f11a144f290f07eabe64c344eaa4",
+"head": "dd748e5d809b4171978dcbba4a3a5c252f13fc36",
 "mine": false,
-"conflicts": [
-"crates/docbin/src/lib.rs",
-"crates/docx/src/read/story/fields.rs",
-"crates/engine/src/cmd/references/fields.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -2294,7 +2279,9 @@
 "draft": false,
 "head": "afff9befb2825921ae413d7ac78bc81c8a5b14de",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.toml"
+],
 "render": true,
 "allowed": false,
 "risky": [
@@ -2959,10 +2946,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed fontdb.rs, fontdb/names.rs"
-]
+"stale": []
 },
 {
 "n": 2356,
@@ -5824,7 +5808,9 @@
 "draft": true,
 "head": "94d9fcbfdcf5328046eab4b041bdbc76f8b6504a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.toml"
+],
 "render": true,
 "allowed": false,
 "risky": [
@@ -6115,12 +6101,9 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "b4aa1a80c15699dfa0e45cc64ec0661b7de44d6b",
+"head": "f8c66b2b95139d4d5e75496d356c61ea58ac63d4",
 "mine": false,
-"conflicts": [
-"crates/doc/src/locale_number.rs",
-"crates/engine/src/cmd/table_formula.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -6969,13 +6952,14 @@
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0994b2379ebf6ece3eca54545697e46bcd7d5b7f",
+"head": "4cf3d5563eb6d3202de1820a612510ea5d14a403",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed para/paragraph.rs"
 ]
 },
@@ -8409,6 +8393,7 @@
 "head": "b2ed4eb69b94c2bd9a6b90aca6d1b00b0e795192",
 "mine": false,
 "conflicts": [
+"Cargo.toml",
 "crates/docx/src/write/embed.rs",
 "crates/docx/src/xml.rs",
 "crates/formats/src/sheet/xlsx.rs"
@@ -10248,13 +10233,14 @@
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "541a66a5ab38567d5081da802189aafe92454cec",
+"head": "4d74d2c02e1c60518e648cf3b8aea6ef3d9f8c77",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed fields.rs, lib.rs, para/paragraph.rs"
 ]
 },
@@ -10547,17 +10533,18 @@
 },
 {
 "n": 5181,
-"title": "Tables: a percentage-width table from Word 2013 ends its outer borders at its width",
+"title": "Tables: a percentage-width table from Word 2013 takes its share after its outer borders",
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0c044483f782cfe63de5a78008805406d5b65bd0",
+"head": "17b9729675c3be1483797067ed593de71b7eb9b2",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed table.rs"
 ]
 },
@@ -11002,11 +10989,9 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8858dbc65b37e38a097774ef22ce437ba6e89fef",
+"head": "cc42b95dfa74504041240e8f2fdefac5a472dfa2",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/objects/picture.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [
@@ -11083,12 +11068,9 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "2279f1037e68211fbd5d613afb0a897ad13ce8cc",
+"head": "a760e58ae4885ced4a46bbb92bc1e933b6e9fe79",
 "mine": false,
-"conflicts": [
-"crates/docbin/src/lib.rs",
-"crates/engine/src/io.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -11229,7 +11211,7 @@
 "author": "sungkhum",
 "assoc": "NONE",
 "draft": false,
-"head": "a37e4ef5982ab200ab8d0951e2c126da59fea6ed",
+"head": "3614efb419b078bdadb9ed289d132df8c726c008",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11359,13 +11341,14 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "2dd0694c26f82942db52124ee7afa1a4014d8de8",
+"head": "4cf92e065862eb4fe6b2f89d271728d267f5b960",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed display/lines.rs"
 ]
 },
@@ -12656,7 +12639,7 @@
 "author": "copoka",
 "assoc": "NONE",
 "draft": true,
-"head": "fec9a9a89341dafb9a8cc42e3597b2db43fb515a",
+"head": "da4f531e2411662c8d71fd95fdc71056ce0bd4f4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12664,14 +12647,16 @@
 "risky": [
 "xtask/src/layers.rs",
 "changes apps/collab-server/Cargo.toml",
+"changes apps/wordcraft-web/Cargo.toml",
 "changes crates/collab-app/Cargo.toml",
 "changes crates/collab-client/Cargo.toml",
 "changes crates/collab-doc/Cargo.toml",
 "changes crates/collab-engine/Cargo.toml",
+"changes crates/collab-web/Cargo.toml",
 "changes crates/collab-ws/Cargo.toml",
 "changes crates/collab/Cargo.toml",
 "changes crates/ui-egui/Cargo.toml",
-"new packages in Cargo.lock: axum 0.8.9, axum-core 0.5.6, base16ct 0.2.0, crypto-bigint 0.5.5, curve25519-dalek 4.1.3, curve25519-dalek-derive 0.1.1 \u2026"
+"new packages in Cargo.lock: axum 0.8.9, axum-core 0.5.6, base16ct 0.2.0, craft-web-host 0.1.0, crypto-bigint 0.5.5, curve25519-dalek 4.1.3 \u2026"
 ],
 "stale": []
 },
@@ -12775,7 +12760,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8d8214fe002ec7de0c07682d7e7c8d7a426efd30",
+"head": "1ce0ef9cce6ddebbb2141df7c7ff95d6eae21cda",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12791,13 +12776,15 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8ab7f86fc035a70ef5971427519888fc7c5f865a",
+"head": "678180045b6f5e953c3c2b17cca4dcfedf2f396a",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5880,
@@ -13024,14 +13011,15 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "53301fdc08f036b256f734fbf511baf35a62279a",
+"head": "a366da42a3ed452789f1fe1b9bced9d49d5ba85b",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits"
+"new commits",
+"main changed lib.rs"
 ]
 },
 {
@@ -13056,7 +13044,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "5ed3dd8417dc57eb1633bb5df53a251a4df1b201",
+"head": "b5510d078ae64dd6c68a53fb65553a7c2dc2577d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13353,7 +13341,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d3648e7b23d54174211fdc85c4ed19787f0805e1",
+"head": "a6aa65fbbcf2e9458ffca9723c3d410f004e76ca",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13398,13 +13386,14 @@
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "cd9faaa3e5c73c052af013967a8cb699ac32fe49",
+"head": "0c3faec910877e22f8f26a47c27ee82412e5fb6b",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed table.rs"
 ]
 },
@@ -13442,7 +13431,7 @@
 "author": "chamber074",
 "assoc": "NONE",
 "draft": false,
-"head": "3264e3333450e56a14921034b757dbc58f263276",
+"head": "2afab9e0f6d9a1b4817159237d56b01102737a62",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13568,7 +13557,7 @@
 "author": "10230equals3000",
 "assoc": "NONE",
 "draft": false,
-"head": "3c61b3f5c2b1f62b3ac74a617dee366dfa0b6b33",
+"head": "0c221cae40a56baadcdd4fafe4eaba7ef05af8cc",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13582,7 +13571,7 @@
 "author": "10230equals3000",
 "assoc": "NONE",
 "draft": false,
-"head": "9f17a6c4d46be272627e6dafab5773e2eda88282",
+"head": "b680a3aa25c581a2bdb89062e134f9885bee928f",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13596,7 +13585,7 @@
 "author": "benandez",
 "assoc": "MEMBER",
 "draft": false,
-"head": "44e188d8c00c38fc49108b5c8c763f7767865014",
+"head": "2c99020d1bf372c3ec944c78022c71e616de7144",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13658,6 +13647,50 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6061,
+"title": "Shape text: typing with a shape selected types into it (#5911)",
+"author": "LimaLuma-gme",
+"assoc": "NONE",
+"draft": false,
+"head": "191d6feed8e5e23fdb46aaccfc7914c8e9bc9ed2",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6066,
+"title": "Add Support Thai Language#1",
+"author": "veevie55",
+"assoc": "NONE",
+"draft": false,
+"head": "5bb729bc44abade035545e235e35a6dbb49a6ebd",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [
+"crates/fonts/build.rs"
+],
+"stale": []
+},
+{
+"n": 6077,
+"title": "fix(layout): keep hit test within clicked table cell bounds (#6067)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "bda0ceda4172e4a04f71a3db1d5fc22cfb2a2000",
+"mine": false,
+"conflicts": [],
+"render": true,
 "allowed": false,
 "risky": [],
 "stale": []

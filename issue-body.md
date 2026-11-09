@@ -1,10 +1,10 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-08 23:54 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-09 05:14 UTC.
 
 ## Summary for reviewers
 
-`main` 4b0d39959 scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
+`main` 7b8c0ba5e scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
 (13.6 points ahead). Merging the 21 PRs below, in this order, gives **77.43 (+3.73)**,
 measured on one branch with all of them merged (see *Combined branch*).
 
@@ -24,11 +24,11 @@ next round.
 | #5808 | kevinj24fr | Layout: an exactly spaced line puts its baseline 0.8 of its height down | **+0.153** | 6↑ 1↓ | continued-gap-cell-after0-before4 -2.8 | ✅ | changes requested | +72 −8 | `661a79054`, today |
 | #4840 | ro-legal-docx | Layout: continue oversized cantSplit rows across pages | **+0.141** | 3↑ 0↓ | – | ✅ | – | +470 −7 | `661a79054`, today |
 | #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | **+0.098** | 3↑ 0↓ | – | ✅ | – | +198 −2 | `661a79054`, today |
-| #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | **+0.055** | 6↑ 0↓ | – | ✅ | – | +336 −21 | `729cd0a5f`, 1 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs |
+| #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | **+0.055** | 6↑ 0↓ | – | ✅ | – | +336 −21 | `729cd0a5f`, 2 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs |
 | #3823 | naxvog | Layout: in older documents, tabs behind a float keep their text on the row | **+0.040** | 1↑ 0↓ | – | ✅ | – | +200 −8 | `661a79054`, today |
 | #4065 | jpc7k1 | Layout: a long note referenced on a paragraph's last lines continues below them, as in Word (#3820) | **+0.030** | 1↑ 0↓ | – | ✅ | – | +123 −16 | `661a79054`, today |
 | #2834 | finwarman | Keep empty row continuations with their labels | **+0.014** | 1↑ 0↓ | – | ✅ | – | +506 −5 | `661a79054`, today ⚠ stale: main changed table.rs |
-| #2465 | finwarman | Retain minimum heights on split-row continuations | **+0.010** | 1↑ 0↓ | – | ✅ | changes requested | +179 −14 | `661a79054`, today ⚠ stale: main changed table.rs |
+| #2465 | finwarman | Retain minimum heights on split-row continuations | **+0.010** | 1↑ 0↓ | – | ✅ | changes requested | +179 −14 | `7b8c0ba5e`, today |
 | #1757 | naxvog | Borders: lines meet in closed corners, as in Word | **+0.008** | 2↑ 0↓ | – | ✅ | – | +147 −54 | `4b0d39959`, today |
 | #5850 | batistalucasv | layout: wrap field results across multiple lines within margins (#5838) | **+0.006** | 4↑ 0↓ | – | ✅ | changes requested | +795 −50 | `661a79054`, today ⚠ stale: main changed para.rs, para/paragraph.rs |
 | #2674 | finwarman | Reserve font math leading in equation line metrics | **+0.006** | 1↑ 1↓ | pendulum_mechanics_oscillation_lab -1.8 | ✅ | – | +229 −9 | `e919982fa`, 3 d ago ⚠ stale: main changed math.rs |
@@ -69,8 +69,8 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 3 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 3 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 323 PRs benched (74 change the score), 193 of them stale; 47 queued for the
-next round; 97 waiting for a person to look before they're built; 396 conflict with `main`.
+**Coverage:** 325 PRs benched (74 change the score), 193 of them stale; 50 queued for the
+next round; 100 waiting for a person to look before they're built; 391 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -99,7 +99,7 @@ next round; 97 waiting for a person to look before they're built; 396 conflict w
   not installed, so WordCraft draws those documents in metric-compatible substitutes (Carlito, Caladea, …) while
   Word's references use the originals. docxide-pdf runs in the same container without its private font set.
 
-| `main` 4b0d39959 | SSIM | Jaccard | Pages matching | Line match |
+| `main` 7b8c0ba5e | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
 | WordCraft | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | docxide-pdf (for reference) | 87.34 | 70.90 | 1055/1073 | 93.9 |
@@ -123,7 +123,7 @@ same fixtures (see *Combined branch*).
 | #3787 | cyril265 | Layout: a page break at the end of the document or of a section starts no blank page | +0.105 | +0.089 | +2 | 2 (2↑ 0↓) | geneva_waste_facility_permit_request +63.4, stem_partnerships_guide +49.3 | – | `e919982fa`, 3 d ago ⚠ stale: main changed ctx.rs, flow.rs |
 | #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | +0.098 | +0.114 | +0 | 3 (3↑ 0↓) | continuous-context-frame1-same1-ctx1 +48.3, continuous-context-frame0-same1-ctx1 +28.5, continuous-context-after-same1-ctx1 +28.5 | – | `661a79054`, today |
 | #5095 | dfgodvan | Layout: keep with next lets the last line's leading run into the bottom margin, as when the line is placed | +0.079 | +0.065 | +0 | 3 (3↑ 0↓) | case49 +43.4, case4 +39.6, uk_commercial_lease_template +1.6 | – | `e919982fa`, 3 d ago ⚠ stale: main changed flow.rs |
-| #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | +0.055 | +0.050 | +0 | 6 (6↑ 0↓) | czech_council_resolutions_2023 +31.3, ukrainian_municipal_heating_resolution +19.2, uk_commercial_lease_template +4.4 (+3 more) | – | `729cd0a5f`, 1 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs |
+| #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | +0.055 | +0.050 | +0 | 6 (6↑ 0↓) | czech_council_resolutions_2023 +31.3, ukrainian_municipal_heating_resolution +19.2, uk_commercial_lease_template +4.4 (+3 more) | – | `729cd0a5f`, 2 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs |
 | #4845 | jpc7k1 | Layout: a justified line with a tab shrinks the spaces after its last tab, as Word does | +0.054 | +0.048 | +0 | 5 (5↑ 0↓) | czech_council_resolutions_2023 +31.5, ukrainian_municipal_heating_resolution +19.5, uk_commercial_lease_template +4.4 (+2 more) | – | `e919982fa`, 3 d ago ⚠ stale: main changed para/lines.rs |
 | #1172 | naxvog | Layout: picture-only lines keep no descent, line spacing may hang into the bottom margin, paragraph border groups take between borders and end at page breaks | +0.050 | +0.050 | +0 | 4 (3↑ 1↓) | case49 +43.4, case4 +39.6, uk_commercial_lease_template +1.6 | lithuanian_excise_tax_amendment -30.7 | `4b0d39959`, today |
 | #3790 | cyril265 | Layout: text before a floating table or shape on its page wraps around it | +0.050 | +0.019 | +0 | 2 (2↑ 0↓) | full-width-float-empty-anchor +37.5, bosch_software_ai_announcement +15.6 | – | `e919982fa`, 3 d ago ⚠ stale: main changed ctx.rs, floats.rs, flow.rs … |
@@ -135,7 +135,7 @@ same fixtures (see *Combined branch*).
 | #4619 | Harrison-Booth | Fonts: report a missing Word core font with no metric twin | +0.024 | +0.012 | +1 | 1 (1↑ 0↓) | arabic_rice_benefits_article +25.4 | – | `e919982fa`, 3 d ago ⚠ stale: main changed word.rs |
 | #5176 | pakiat | Tables: a percentage-width table before Word 2013 adds its outer cell margins | +0.015 | +0.011 | +0 | 5 (4↑ 0↓) | chinese_costume_design_course +9.2, zimbabwe_broadcasting_corporation_judgment +3.5, zimbabwe_gold_mining_judgment +2.5 (+1 more) | – | `661a79054`, today ⚠ stale: new commits; main changed table.rs |
 | #2834 | finwarman | Keep empty row continuations with their labels | +0.014 | +0.000 | +0 | 1 (1↑ 0↓) | japanese_hr_consultation_application +14.8 | – | `661a79054`, today ⚠ stale: main changed table.rs |
-| #2465 | finwarman | Retain minimum heights on split-row continuations | +0.010 | +0.008 | +0 | 1 (1↑ 0↓) | master_thesis_learning_agreement +10.4 | – | `661a79054`, today ⚠ stale: main changed table.rs |
+| #2465 | finwarman | Retain minimum heights on split-row continuations | +0.010 | +0.008 | +0 | 1 (1↑ 0↓) | master_thesis_learning_agreement +10.4 | – | `7b8c0ba5e`, today |
 | #1757 | naxvog | Borders: lines meet in closed corners, as in Word | +0.008 | +0.004 | +0 | 7 (2↑ 0↓) | paragraph-border-styles +6.6, cell-paragraph-bottom-wide +1.1 | – | `4b0d39959`, today |
 | #3604 | dpkruse | #3009: a paragraph opening with a page or column break moves once, whatever it keeps | +0.007 | +0.007 | +1 | 1 (1↑ 0↓) | carbon_farming_initiative_rule +7.6 | – | `e919982fa`, 3 d ago ⚠ stale: main changed flow.rs, para.rs |
 | #5850 | batistalucasv | layout: wrap field results across multiple lines within margins (#5838) | +0.006 | +0.005 | +0 | 4 (4↑ 0↓) | clean_energy_regulator_act +2.4, carbon_farming_initiative_rule +2.3, wa_child_services_regulations +0.7 (+1 more) | – | `661a79054`, today ⚠ stale: main changed para.rs, para/paragraph.rs |
@@ -160,23 +160,23 @@ same fixtures (see *Combined branch*).
 | #3462 | midasdf | Layout: hanging punctuation (overflowPunct) and line-start punctuation compression (topLinePunct) | +0.000 | +0.001 | +0 | 2 (0↑ 0↓) | – | – | `661a79054`, today ⚠ stale: main changed kinsoku.rs, para.rs, para/paragraph.rs |
 | #4186 | Silvertree2010 | Draw in-front-of-text pictures above tables laid out after them | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today |
 | #5102 | VoiceLessQ | Text boxes keep a line while its text ends inside the box (#5059) | +0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today |
-| #2708 | finwarman | Honor nested display fraction sizing | +0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 2 d ago ⚠ stale: main changed math.rs |
+| #2708 | finwarman | Honor nested display fraction sizing | +0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 3 d ago ⚠ stale: main changed math.rs |
 | #3828 | arc-uri-el | fix(docx): write and read a turned object's effect extent as Word does | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 3 d ago ⚠ stale: main changed read/story/drawing.rs, write/embed.rs, write/story/drawing.rs |
 | #4867 | cyfung1031 | #4859: multiple line spacing on a document grid | +0.000 | +0.001 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today |
 | #4638 | arcanii | Fonts: Japanese text falls back to a Japanese font, not a Chinese one | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today |
-| #5129 | pakiat | Fields: PDFs and prints show body PAGEREF pages, as Word fills them in | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today ⚠ stale: main changed fields.rs, lib.rs, para/paragraph.rs |
+| #5129 | pakiat | Fields: PDFs and prints show body PAGEREF pages, as Word fills them in | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today ⚠ stale: new commits; main changed fields.rs, lib.rs, para/paragraph.rs |
 | #5252 | scks1 | Layout: a continuous section after a page break and an empty closing mark starts the new page (#2109) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 3 d ago ⚠ stale: new commits; main changed flow.rs, page.rs, pass.rs |
 | #2662 | finwarman | Respect the font minimum height for display operators | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 3 d ago |
-| #3217 | MichaelMuClaude | A display operator without a cataloged size variant still enlarges (#3208) | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 2 d ago |
+| #3217 | MichaelMuClaude | A display operator without a cataloged size variant still enlarges (#3208) | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 3 d ago |
 | #5634 | kennyfs | Layout: turned cell text never makes a row taller, as in Word | -0.000 | +0.002 | +0 | 1 (0↑ 0↓) | – | – | `e0d8312fb`, today ⚠ stale: main changed table.rs |
-| #5735 | benandez | Watermark: picture watermarks and transparency (#3001) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `729cd0a5f`, 1 d ago ⚠ stale: main changed read/parts.rs, read/story/runs.rs, read/story/vml.rs … |
+| #5735 | benandez | Watermark: picture watermarks and transparency (#3001) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `729cd0a5f`, 2 d ago ⚠ stale: main changed read/parts.rs, read/story/runs.rs, read/story/vml.rs … |
 | #5935 | frandavid100 | layout: reserve table footnotes before fitting row fragments | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, today ⚠ stale: main changed table.rs |
 | #5313 | Harrison-Booth | Preserve table cell diagonal borders | -0.001 | -0.001 | +0 | 3 (0↑ 1↓) | – | italian_academic_cv_form -0.8 | `661a79054`, today ⚠ stale: main changed table.rs |
 | #1486 | dfgodvan | Tables: a page break inside a vertical merge takes the merged cell's text along (#1485) | -0.001 | -0.001 | +0 | 1 (0↑ 1↓) | – | go_math_grade4_guide -1.6 | `4b0d39959`, today |
 | #4558 | ro-legal-docx | Borders: preserve dashSmallGap and align border previews | -0.002 | -0.001 | +0 | 2 (0↑ 1↓) | – | paragraph-border-styles -2.2 | `661a79054`, today |
 | #542 | krinry | feat(shapes): full Office shapes gallery and canvas drag-to-draw tool | -0.002 | -0.003 | +0 | 3 (1↑ 2↓) | case34 +1.1 | case35 -1.8, japanese_land_development_sign_form -1.3 | `4b0d39959`, today |
-| #5181 | pakiat | Tables: a percentage-width table from Word 2013 ends its outer borders at its width | -0.002 | -0.000 | +0 | 5 (3↑ 1↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8 | `661a79054`, today ⚠ stale: main changed table.rs |
-| #6002 | pakiat | Tables: right-to-left start edges, mode 14 end edges and style parts' inner lines as Word | -0.002 | -0.000 | +0 | 5 (3↑ 1↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8 | `661a79054`, today ⚠ stale: main changed table.rs |
+| #5181 | pakiat | Tables: a percentage-width table from Word 2013 takes its share after its outer borders | -0.002 | -0.000 | +0 | 5 (3↑ 1↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8 | `661a79054`, today ⚠ stale: new commits; main changed table.rs |
+| #6002 | pakiat | Tables: right-to-left start edges, mode 14 end edges and style parts' inner lines as Word | -0.002 | -0.000 | +0 | 5 (3↑ 1↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8 | `661a79054`, today ⚠ stale: new commits; main changed table.rs |
 | #2709 | finwarman | Honor complete rounded percentage cell widths | -0.002 | -0.001 | +0 | 2 (0↑ 1↓) | – | primary_care_safeguarding_annual_review -2.5 | `661a79054`, today ⚠ stale: main changed table.rs |
 | #5630 | kennyfs | Layout: a table in a text frame floats where the frame says | -0.002 | -0.001 | +0 | 1 (0↑ 1↓) | – | massachusetts_community_sanitation -2.4 | `e919982fa`, 3 d ago ⚠ stale: new commits; main changed boxes.rs, ctx.rs, page.rs … |
 | #4564 | OPUZZLES | Tables: keep fitting hanging-indent labels at their grid width | -0.004 | -0.003 | +0 | 1 (0↑ 1↓) | – | australian_higher_education_guidelines -4.5 | `661a79054`, today ⚠ stale: main changed table.rs |
@@ -188,28 +188,28 @@ same fixtures (see *Combined branch*).
 | #4436 | dfgodvan | Layout: line height of an inline picture in multiple line spacing, as in Word | -0.044 | +0.070 | -2 | 21 (7↑ 5↓) | picture-mark-leading-compat15-line480 +42.8, czech_village_budget_commentary +22.1, brazilian_logistics_study +22.0 (+4 more) | picture-mark-leading-mark22-line360-text0 -41.2, picture-mark-leading-compat14-line480 -39.3, picture-mark-leading-mark28-line480-text0 -39.3 (+2 more) | `e919982fa`, 3 d ago ⚠ stale: main changed flow.rs, para/lines.rs |
 | #2578 | finwarman | Reserve page-colour clearance in initial header stories | -0.113 | -0.090 | -1 | 2 (0↑ 2↓) | – | traditional_skills_job_form -65.5, czech_village_council_minutes_2025 -55.8 | `e919982fa`, 3 d ago ⚠ stale: main changed page.rs, pass.rs |
 
-**Benched, no change on the suite (249):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1931, #2022, #2056, #2063, #2064, #2117, #2120, #2141, #2288, #2340, #2345, #2356, #2372, #2384, #2455, #2473, #2586, #2642, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5705, #5721, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5980, #5986, #5991, #5992. These may
+**Benched, no change on the suite (251):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #2022, #2056, #2063, #2064, #2117, #2120, #2141, #2288, #2340, #2345, #2356, #2372, #2384, #2455, #2473, #2586, #2642, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5705, #5721, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5980, #5986, #5991, #5992. These may
 still be right; the suite just has no document that exercises them.
 
 </details>
 
 ## Combined branch
 
-**Every PR with a positive score**: 21 PRs merged into `main` 4b0d39959: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #5887, #3823, #4065, #2834, #2465, #1757, #5850, #2674, #2792, #4614, #5339, #5074, #4846. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5096, #4142, #2608; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695.
+**Every PR with a positive score**: 21 PRs merged into `main` 7b8c0ba5e: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #5887, #3823, #4065, #2834, #2465, #1757, #5850, #2674, #2792, #4614, #5339, #5074, #4846. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5096, #4142, #2608; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
-| `main` 4b0d39959 | 73.70 | 56.17 | 1044/1073 | 93.2 |
+| `main` 7b8c0ba5e | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | combined | 76.46 (+2.765) | 58.88 (+2.704) | 1047/1073 (+3) | 93.4 (+0.24) |
 
 The merged PRs' individual SSIM changes add up to +3.797; the difference to the combined +2.765 is where
 they overlap or interact. 222 fixtures change (162↑ 39↓). Regressions over 0.5: nested-floats-spaced-text-long-one -62.9, nested-floats-spaced-text-bottom-cell -61.8, nested-floats-spaced-text-long-two -61.8, nested-floats-spaced-text-nonzero-x -61.8, nested-floats-spaced-text-inline-reference -60.6, nested-floats-spaced-text-short-spacers -58.8, section-mark-after-table-inline-compat15 -53.6, section-mark-after-table-float-compat15 -51.4 (+31 more).
 
-**The same without #2792**: 21 PRs merged into `main` 4b0d39959: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #5887, #3823, #4065, #2834, #2465, #1757, #5850, #2674, #4614, #5339, #5074, #4846, #2608. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5096, #4142; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695; left out on purpose: #2792.
+**The same without #2792**: 21 PRs merged into `main` 7b8c0ba5e: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #5887, #3823, #4065, #2834, #2465, #1757, #5850, #2674, #4614, #5339, #5074, #4846, #2608. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5096, #4142; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695; left out on purpose: #2792.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
-| `main` 4b0d39959 | 73.70 | 56.17 | 1044/1073 | 93.2 |
+| `main` 7b8c0ba5e | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | combined | 77.43 (+3.731) | 59.58 (+3.406) | 1047/1073 (+3) | 93.6 (+0.44) |
 
 The merged PRs' individual SSIM changes add up to +3.794; the difference to the combined +3.731 is where
@@ -217,10 +217,10 @@ they overlap or interact. 206 fixtures change (166↑ 19↓). Regressions over 0
 
 ## Not benched
 
-- **Code conflicts with `main`** (396 PRs): not rerun until rebased.
-- **Waiting for a look before they're built** (97): #4649, #4652, #1217, #1292, #1493, #1713, #1926, #1948, #2120, #2815, #3337, #3878, #4136, #5113, #5158, #5331, #5357, #5778, #5791, #6039 change
-  build scripts, cargo config or dependencies; 77 more are from authors without a merged PR yet.
-- **Change no rendering file** (96): not benched.
+- **Code conflicts with `main`** (391 PRs): not rerun until rebased.
+- **Waiting for a look before they're built** (100): #4649, #4652, #1217, #1292, #1493, #1713, #1926, #1927, #1948, #2815, #3337, #3878, #4136, #5113, #5158, #5307, #5331, #5357, #5778, #5791, #6039, #6066 change
+  build scripts, cargo config or dependencies; 78 more are from authors without a merged PR yet.
+- **Change no rendering file** (100): not benched.
 - **Doesn't build once merged with `main`:** #1292, #2783, #2876, #3160, #3520, #4265, #4408, #4640, #4645, #5570, #675.
 - **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974, #1518.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output

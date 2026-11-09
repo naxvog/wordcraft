@@ -22,7 +22,13 @@ def code(f):
 
 
 def gh(*a):
-    return subprocess.run(['gh', *a], capture_output=True, text=True, check=True).stdout
+    for last in (False, True):  # one retry: big PR listings sometimes fail on GitHub's side
+        r = subprocess.run(['gh', *a], capture_output=True, text=True)
+        if r.returncode == 0:
+            return r.stdout
+        print(f'gh {a[0]} {a[1]} failed: {r.stderr.strip()[-2000:]}', file=sys.stderr)
+        if last:
+            r.check_returncode()
 
 
 subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin', 'main'], check=True)

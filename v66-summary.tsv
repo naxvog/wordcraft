@@ -487,3 +487,4 @@
 #5991 ed17fb94d	SSIM 73.699 (+0.000)	J 56.172 (+0.000)	pages 1044/1073 (+0)	lines 93.21 (+0.00)	changed 0	up 0	down 0	
 #5992 9b3447258	SSIM 73.699 (+0.000)	J 56.172 (+0.000)	pages 1044/1073 (+0)	lines 93.21 (+0.00)	changed 0	up 0	down 0	
 #6002 cd9faaa3e	SSIM 73.698 (-0.002)	J 56.172 (-0.000)	pages 1044/1073 (+0)	lines 93.21 (+0.00)	changed 5	up 3	down 1	scraped/italian_project_proposal(-6.8)
+3160: bench failed: doesn't build once merged with main

@@ -3634,9 +3634,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed para.rs"
-]
+"stale": []
 },
 {
 "n": 2533,
@@ -7956,7 +7954,7 @@
 "author": "vu2jpr",
 "assoc": "NONE",
 "draft": false,
-"head": "f255dbf2c0eb9052e96d178817c23d2cced5be45",
+"head": "c2f063c16b571670d999e078cfd29aaca590c490",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13307,7 +13305,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d04fc60dc6d0729c1a279b79a357f81103276d00",
+"head": "5428f7fe7b7ff2b7b3b5535d0d42cb64a0262e2c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13338,13 +13336,15 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9b3447258f98d49fd50ea5251899c928474ef5fa",
+"head": "9602241cba859b74b9309bd156837e47df2a796b",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5995,
@@ -13651,7 +13651,7 @@
 "author": "veevie55",
 "assoc": "NONE",
 "draft": false,
-"head": "5bb729bc44abade035545e235e35a6dbb49a6ebd",
+"head": "e23d52e4f4e18e4962811d791d75bf09aa7feb2f",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13723,7 +13723,7 @@
 "author": "keithcsqueensu",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "6e9f214baa277268816395821bc95da29647d7a3",
+"head": "f80b7a780c27438b265180b4471876661344d603",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13737,7 +13737,7 @@
 "author": "keithcsqueensu",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a896c0e302c094b3035f582d8c9901c9b692edfd",
+"head": "f3fc411716b1a43b68fbfe7c49b292cdb9618b57",
 "mine": false,
 "conflicts": [],
 "render": false,

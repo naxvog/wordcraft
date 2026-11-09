@@ -348,5 +348,90 @@
 "n": 1518,
 "title": "Objects: text in a freely rotated text box turns with the box",
 "state": "CLOSED"
+},
+{
+"n": 1806,
+"title": "fix(docx): preserve page background textures through saves",
+"state": "CLOSED"
+},
+{
+"n": 1807,
+"title": "fix(docx): extended cx:chart drawings keep data through saves",
+"state": "CLOSED"
+},
+{
+"n": 1810,
+"title": "fix(docx): tracked deletions inside field results stay revisions",
+"state": "CLOSED"
+},
+{
+"n": 1814,
+"title": "fix(table): apply table Cell Size inputs across entire selection",
+"state": "CLOSED"
+},
+{
+"n": 1815,
+"title": "fix(engine): document.text returns final text with tracked revisions applied",
+"state": "CLOSED"
+},
+{
+"n": 2039,
+"title": "ODT header/footer render",
+"state": "CLOSED"
+},
+{
+"n": 2642,
+"title": "feat: add ICU4X and fix Thai/Lao word-boundary line breaking",
+"state": "CLOSED"
+},
+{
+"n": 2706,
+"title": "feat: Thai/Lao word movement and double-click selection via ICU4X",
+"state": "CLOSED"
+},
+{
+"n": 3090,
+"title": "Page text on Linux is hinted like FreeType's hintslight",
+"state": "CLOSED"
+},
+{
+"n": 3097,
+"title": "Word signature lines stay signable after saving a .docx",
+"state": "CLOSED"
+},
+{
+"n": 3101,
+"title": "Dark-theme interface text on Linux no longer looks semi-bold",
+"state": "CLOSED"
+},
+{
+"n": 3111,
+"title": "Pointer zoom stretches page rasters until it stops",
+"state": "CLOSED"
+},
+{
+"n": 3443,
+"title": "ODT drawing shapes, text frames and anchored frames (#863)",
+"state": "CLOSED"
+},
+{
+"n": 5705,
+"title": "ODT: frames keep the page they are anchored to (gap 19)",
+"state": "MERGED"
+},
+{
+"n": 5721,
+"title": "ODT: pictures keep the size their file gives (gap 19)",
+"state": "MERGED"
+},
+{
+"n": 6039,
+"title": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6005)",
+"state": "MERGED"
+},
+{
+"n": 6066,
+"title": "Add Support Thai Language#1",
+"state": "CLOSED"
 }
 ]

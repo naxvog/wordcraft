@@ -11,7 +11,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed lib.rs"
+]
 },
 {
 "n": 1757,
@@ -25,7 +27,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed display/lines.rs"
+]
 },
 {
 "n": 2552,
@@ -55,7 +59,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read.rs"
+]
 },
 {
 "n": 3823,
@@ -107,7 +113,10 @@
 "draft": false,
 "head": "ff46656d63371ac636ae872c685435432160bfa0",
 "mine": true,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"apps/wordcraft-cli/src/main.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [
@@ -295,11 +304,15 @@
 "draft": false,
 "head": "9675dab467408e07559b2955d0c0bee4334b1de4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/pdf/src/exporter.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs, exporter.rs, lib.rs"
+]
 },
 {
 "n": 672,
@@ -869,7 +882,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "38458d9e45703ded8effdaa9f9e5082933e6816e",
+"head": "7612fdcd1adb80f6e5c01f93d8f42e68a910183b",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -1087,7 +1100,10 @@
 "draft": false,
 "head": "42bd629f73beba2a6a08927d034eed280b845955",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"apps/wordcraft-cli/src/main.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [
@@ -1109,9 +1125,11 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "62dee6a2881863b9792a752570428a7d4f33f3f2",
+"head": "5a99324c857d59b12c0035c3701b3f92052ca1e9",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/file.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -1342,7 +1360,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read/meta.rs"
+]
 },
 {
 "n": 1803,
@@ -1379,42 +1399,6 @@
 "stale": []
 },
 {
-"n": 1806,
-"title": "fix(docx): preserve page background textures through saves",
-"author": "asmodeus-oos",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "49b35d110034c8a3b7ce7f370fb9dcd9cc4f54a0",
-"mine": false,
-"conflicts": [
-"crates/doc/src/lib.rs",
-"crates/docx/src/read/mod.rs",
-"crates/docx/src/write/mod.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 1807,
-"title": "fix(docx): extended cx:chart drawings keep data through saves",
-"author": "asmodeus-oos",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "1852a295acd525a1fc59c991c2c80ad072022d9b",
-"mine": false,
-"conflicts": [
-"crates/docx/src/read/story.rs",
-"crates/docx/src/write/story.rs",
-"crates/docx/src/xml.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 1808,
 "title": "fix(docx): view and zoom round-trip; per-file fit memory",
 "author": "asmodeus-oos",
@@ -1435,22 +1419,6 @@
 "stale": []
 },
 {
-"n": 1810,
-"title": "fix(docx): tracked deletions inside field results stay revisions",
-"author": "asmodeus-oos",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "2d22529b6e2ad667c5ac9ec70e9b9d55afd6f203",
-"mine": false,
-"conflicts": [
-"crates/docx/src/read/story.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 1811,
 "title": "feat(templates): add MLA and APA paper templates to gallery",
 "author": "asmodeus-oos",
@@ -1460,38 +1428,6 @@
 "mine": false,
 "conflicts": [
 "crates/engine/src/cmd/file.rs"
-],
-"render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 1814,
-"title": "fix(table): apply table Cell Size inputs across entire selection",
-"author": "asmodeus-oos",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "43ce049326bd7ede50d8d8198d2ffbcc201ea294",
-"mine": false,
-"conflicts": [
-"crates/engine/src/cmd/table.rs"
-],
-"render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 1815,
-"title": "fix(engine): document.text returns final text with tracked revisions applied",
-"author": "asmodeus-oos",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "174aaad36b3add52bf03ff852790fc831e4da0ec",
-"mine": false,
-"conflicts": [
-"crates/doc/src/lib.rs"
 ],
 "render": false,
 "allowed": false,
@@ -1608,7 +1544,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "583b0f7a8a53f08163041639970046dcd010888f",
+"head": "c69a74327a3782ac89551b5118bdf67a574516ff",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -1657,11 +1593,16 @@
 "draft": false,
 "head": "97cbb436b690f2d013c23b4620cc44c41e26ad8d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read.rs"
+]
 },
 {
 "n": 1931,
@@ -1678,7 +1619,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed flow.rs"
+"main changed read/meta.rs, flow.rs"
 ]
 },
 {
@@ -1783,7 +1724,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "fdd8b6a1ac54b1eef0690bafa396c6350a824907",
+"head": "5a0aa376971003ab362f961eccaa0392b2ee738a",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -1797,21 +1738,10 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "09c4192b58e8cfdb83e9026b0a06374321b71403",
+"head": "03abd2e2d526e1fffdef9d971669a38240d7a07e",
 "mine": false,
 "conflicts": [
-"Cargo.lock",
-"Cargo.toml",
-"crates/docx/src/write/story/drawing.rs",
-"crates/engine/src/cmd/objects/specs.rs",
-"crates/engine/src/cmd/paste.rs",
-"crates/formats/Cargo.toml",
-"crates/formats/src/odt/writer.rs",
-"crates/formats/src/rtf/export.rs",
-"crates/pdf/src/exporter.rs",
-"crates/pdf/src/exporter/draw.rs",
-"crates/render/src/lib.rs",
-"xtask/src/layers.rs"
+"crates/docx/src/read/story/drawing.rs"
 ],
 "render": true,
 "allowed": false,
@@ -1899,51 +1829,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "f60606ae1ef4ee987e05cbc269fc2a294b0c8ab1",
+"head": "df3583145acde351619642bade2e7802db58a3da",
 "mine": false,
-"conflicts": [
-"crates/docbin/src/drawing.rs",
-"crates/docx/src/read/story/drawing.rs",
-"crates/docx/src/read/story/vml.rs",
-"crates/docx/src/write/story/drawing.rs",
-"crates/engine/src/cmd/insert/objects.rs",
-"crates/engine/src/cmd/objects/picture.rs",
-"crates/engine/src/cmd/objects/specs.rs",
-"crates/formats/src/model/to_doc.rs",
-"crates/layout/src/display/objects.rs",
-"crates/layout/src/display/page.rs",
-"crates/layout/src/floats.rs",
-"crates/layout/src/placed.rs",
-"crates/pdf/src/exporter/draw.rs",
-"crates/render/src/lib.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 2039,
-"title": "ODT header/footer render",
-"author": "yogsagot",
-"assoc": "NONE",
-"draft": false,
-"head": "1d67b3c4843094260b869aed80bfcb351ad8738f",
-"mine": false,
-"conflicts": [
-"crates/formats/src/latex/export.rs",
-"crates/formats/src/markdown/export.rs",
-"crates/formats/src/model/to_doc.rs",
-"crates/formats/src/model/types.rs",
-"crates/formats/src/odt.rs",
-"crates/formats/src/odt/body.rs",
-"crates/formats/src/odt/import.rs",
-"crates/formats/src/odt/page_parts.rs",
-"crates/formats/src/odt/styles.rs",
-"crates/formats/src/odt/writer.rs",
-"crates/formats/src/rtf/export.rs",
-"crates/layout/src/flow.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -2105,6 +1993,7 @@
 "head": "18234bf5e04eebbe9f3e2ae3d55526b158d9ed1b",
 "mine": false,
 "conflicts": [
+"apps/wordcraft-cli/src/main.rs",
 "crates/engine/src/io.rs",
 "crates/formats/src/lib.rs",
 "crates/formats/src/odt.rs",
@@ -2139,7 +2028,7 @@
 "author": "matstrange",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "915021d21faacf16cb9150c214a7178f34ba6308",
+"head": "57c3599f27d4eb052b863e9823ac78d7821d8d42",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -2277,10 +2166,13 @@
 "author": "Morzilla",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "afff9befb2825921ae413d7ac78bc81c8a5b14de",
+"head": "c8a2db7a804ed0e912fd60183d9ec5878db68c05",
 "mine": false,
 "conflicts": [
-"Cargo.toml"
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io.rs",
+"crates/engine/src/io_ext.rs"
 ],
 "render": true,
 "allowed": false,
@@ -2290,7 +2182,8 @@
 "new packages in Cargo.lock: block-padding 0.4.2, cbc 0.2.1, ecb 0.2.1, lopdf 0.45.0, md-5 0.11.0, rangemap 1.8.0 \u2026"
 ],
 "stale": [
-"new commits"
+"new commits",
+"main changed export.rs, lib.rs, options.rs"
 ]
 },
 {
@@ -2542,8 +2435,8 @@
 "title": "Preserve header/footer content when adding page numbers (#2201)",
 "author": "MMexicann",
 "assoc": "CONTRIBUTOR",
-"draft": true,
-"head": "447dec8ee0a10675eaa74b5925aa4c7a2b3d1c77",
+"draft": false,
+"head": "5eb4c8cb8b205ebcfcb5b1a48d55c5e21b1683e6",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -3042,7 +2935,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed package.rs"
+"main changed package.rs, read/meta.rs"
 ]
 },
 {
@@ -3676,7 +3569,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "dd5b93c2cd6740e9314679f694304f987f2b543e",
+"head": "593e293ab8988121864fa5f2a63f13a1c8e3012f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -3744,7 +3637,8 @@
 "head": "efc81f188e28e75428271a56b4a628c861b791c5",
 "mine": false,
 "conflicts": [
-"Cargo.lock"
+"Cargo.lock",
+"crates/engine/src/cmd/file.rs"
 ],
 "render": true,
 "allowed": false,
@@ -3763,7 +3657,7 @@
 "new packages in Cargo.lock: aead 0.5.2, aes 0.8.4, aes-gcm 0.10.3, arc-swap 1.9.3, bit-set 0.8.0, bit-vec 0.8.0 \u2026"
 ],
 "stale": [
-"main changed read/embed.rs"
+"main changed read.rs, read/embed.rs"
 ]
 },
 {
@@ -3813,9 +3707,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed para.rs"
-]
+"stale": []
 },
 {
 "n": 2606,
@@ -3861,9 +3753,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 2612,
@@ -3874,6 +3764,8 @@
 "head": "8f574dc1f85ba1314eb6ffab3d2b847d918c91b0",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
 "crates/engine/src/session/views.rs",
 "crates/layout/src/hit.rs",
@@ -3892,7 +3784,7 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7d3d658f79854c916735b039bec1d932f05ad3df",
+"head": "949c63131871c5a40dc1416be4d5fe5bff6cc342",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -3973,29 +3865,6 @@
 "stale": []
 },
 {
-"n": 2642,
-"title": "feat: add ICU4X and fix Thai/Lao word-boundary line breaking",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "31770407200777136fa982a6cf7d8adf12bbc08f",
-"mine": false,
-"conflicts": [
-"crates/layout/src/para/paragraph.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [
-"changes Cargo.toml",
-"changes crates/doc/Cargo.toml",
-"changes crates/layout/Cargo.toml",
-"new packages in Cargo.lock: core_maths 0.1.1, icu_segmenter 2.3.0, icu_segmenter_data 2.3.0"
-],
-"stale": [
-"main changed kinsoku.rs, para/paragraph.rs"
-]
-},
-{
 "n": 2643,
 "title": "Fields: Japanese era and numeral picture items in DATE fields (\u548c\u66a6)",
 "author": "midasdf",
@@ -4047,7 +3916,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs"
+]
 },
 {
 "n": 2662,
@@ -4126,28 +3997,8 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits"
+"main changed read.rs"
 ]
-},
-{
-"n": 2706,
-"title": "feat: Thai/Lao word movement and double-click selection via ICU4X",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "f754bb3b4bfa57c880ad1d0908f8f1b481f3f376",
-"mine": false,
-"conflicts": [
-"crates/layout/src/para/paragraph.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [
-"changes Cargo.toml",
-"changes crates/doc/Cargo.toml",
-"changes crates/layout/Cargo.toml"
-],
-"stale": []
 },
 {
 "n": 2707,
@@ -4195,9 +4046,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 2711,
@@ -4262,7 +4111,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits"
+"main changed display/objects.rs"
 ]
 },
 {
@@ -4396,9 +4245,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 2793,
@@ -4424,7 +4271,7 @@
 "author": "maxm11",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1f86d71b387630fbf0497077ea9bd27dccbafe30",
+"head": "e8c5d421d60d3d02e8a0d229c53e22ea2687bced",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -4440,13 +4287,14 @@
 "author": "maxm11",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "06d4c91ceaf3399b5eef45fed5549c1c556ddc4b",
+"head": "25de77e95fea0a7e9b316e9fa2fe205762587679",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed lib.rs"
 ]
 },
@@ -4462,9 +4310,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 2838,
@@ -4863,7 +4709,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed lib.rs, para.rs, para/paragraph.rs"
+"main changed lib.rs"
 ]
 },
 {
@@ -4926,64 +4772,15 @@
 "draft": false,
 "head": "531a0d1f1d9b7a109af15c7f1660c463edb9bee7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/io_ext.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed metadata.rs"
+"main changed lib.rs, metadata.rs"
 ]
-},
-{
-"n": 3090,
-"title": "Page text on Linux is hinted like FreeType's hintslight",
-"author": "mikael2",
-"assoc": "NONE",
-"draft": false,
-"head": "7b1e32ac2fa1beaaa47e8e6ff50758c23c3ef161",
-"mine": false,
-"conflicts": [
-"crates/fonts/src/fontdb.rs",
-"crates/render/src/lib.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 3097,
-"title": "Word signature lines stay signable after saving a .docx",
-"author": "Axxxxpirine",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "111376917d9af0c42463e82ae177276a4864b30d",
-"mine": false,
-"conflicts": [
-"crates/doc/src/para.rs",
-"crates/docx/src/read/story.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 3101,
-"title": "Dark-theme interface text on Linux no longer looks semi-bold",
-"author": "mikael2",
-"assoc": "NONE",
-"draft": false,
-"head": "ac1d3b4fdc75b6deb0318bbc4fa8a93900f2ab9d",
-"mine": false,
-"conflicts": [
-"crates/fonts/src/fontdb.rs",
-"crates/render/src/lib.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
 },
 {
 "n": 3110,
@@ -5018,29 +4815,12 @@
 "stale": []
 },
 {
-"n": 3111,
-"title": "Pointer zoom stretches page rasters until it stops",
-"author": "mikael2",
-"assoc": "NONE",
-"draft": false,
-"head": "4069ea8a8fb47a449f6412a74b3eb4ea90d1cba9",
-"mine": false,
-"conflicts": [
-"crates/fonts/src/fontdb.rs",
-"crates/render/src/lib.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 3119,
 "title": "M1: EPUB import (#3117)",
 "author": "MichaelMuClaude",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "17e166b39bb6a87cda1eceaad06d00bdfd48815a",
+"head": "a64b84dc4be0b59ca42334ff35c3b8c506241d53",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -5248,7 +5028,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed math/glyphs.rs"
+]
 },
 {
 "n": 3222,
@@ -5474,7 +5256,10 @@
 "draft": false,
 "head": "bfbc5ea7fe47e3a782b4819fc06b09ef900a89b3",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"apps/wordcraft-cli/src/main.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [
@@ -5767,45 +5552,18 @@
 "stale": []
 },
 {
-"n": 3443,
-"title": "ODT drawing shapes, text frames and anchored frames (#863)",
-"author": "yogsagot",
-"assoc": "NONE",
-"draft": false,
-"head": "aad7ed0dc1ea63f494a410add51074ff0fd8667c",
-"mine": false,
-"conflicts": [
-"crates/formats/src/latex/export.rs",
-"crates/formats/src/markdown/export.rs",
-"crates/formats/src/model.rs",
-"crates/formats/src/model/from_doc.rs",
-"crates/formats/src/model/media.rs",
-"crates/formats/src/model/to_doc.rs",
-"crates/formats/src/model/types.rs",
-"crates/formats/src/odt.rs",
-"crates/formats/src/odt/body.rs",
-"crates/formats/src/odt/import.rs",
-"crates/formats/src/odt/page_parts.rs",
-"crates/formats/src/odt/styles.rs",
-"crates/formats/src/odt/writer.rs",
-"crates/formats/src/rtf/export.rs",
-"crates/layout/src/flow.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 3458,
 "title": "PDF export can turn blanks drawn with underscores into fillable fields",
 "author": "Morzilla",
 "assoc": "CONTRIBUTOR",
 "draft": true,
-"head": "94d9fcbfdcf5328046eab4b041bdbc76f8b6504a",
+"head": "f7136f0086aabcd8d995981214fc66bece122d28",
 "mine": false,
 "conflicts": [
-"Cargo.toml"
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io.rs",
+"crates/engine/src/io_ext.rs"
 ],
 "render": true,
 "allowed": false,
@@ -5828,9 +5586,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed kinsoku.rs, para.rs, para/paragraph.rs"
-]
+"stale": []
 },
 {
 "n": 3465,
@@ -6117,9 +5873,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 3566,
@@ -6182,7 +5936,9 @@
 "mine": false,
 "conflicts": [
 "crates/layout/src/display/lines.rs",
-"crates/layout/src/display/page.rs"
+"crates/layout/src/display/page.rs",
+"crates/pdf/src/exporter.rs",
+"crates/pdf/src/lib.rs"
 ],
 "render": true,
 "allowed": false,
@@ -6216,6 +5972,7 @@
 "head": "875e266dd1124b2811f110ae312e1a5c29b5e368",
 "mine": false,
 "conflicts": [
+"apps/wordcraft-cli/src/main.rs",
 "crates/engine/src/io.rs",
 "crates/formats/src/lib.rs",
 "crates/formats/src/odt.rs",
@@ -6425,6 +6182,8 @@
 "mine": false,
 "conflicts": [
 "apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
 "crates/engine/src/session/views.rs",
 "crates/layout/src/hit.rs",
@@ -6462,11 +6221,16 @@
 "draft": false,
 "head": "46e56d977c1b33d6d764f9d3c27442a37190d330",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read.rs"
+]
 },
 {
 "n": 3828,
@@ -6587,14 +6351,17 @@
 "draft": false,
 "head": "534d3fe55f094da777668e5c7a35a71565c3753f",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"apps/wordcraft-cli/src/main.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [
 "changes crates/pdf/Cargo.toml"
 ],
 "stale": [
-"new commits"
+"new commits",
+"main changed lib.rs"
 ]
 },
 {
@@ -6954,10 +6721,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed para/paragraph.rs"
-]
+"stale": []
 },
 {
 "n": 4134,
@@ -7007,9 +6771,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed para/paragraph.rs"
-]
+"stale": []
 },
 {
 "n": 4169,
@@ -7374,7 +7136,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed lib.rs"
+"main changed read/meta.rs, lib.rs"
 ]
 },
 {
@@ -7922,7 +7684,7 @@
 "author": "d-0-t",
 "assoc": "NONE",
 "draft": false,
-"head": "87d512edd4d5dd4887a09e3e22059c6023a2552b",
+"head": "59615a37f9798c3c62e3cc2ebe26518a008e7aeb",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7954,7 +7716,7 @@
 "author": "vu2jpr",
 "assoc": "NONE",
 "draft": false,
-"head": "c2f063c16b571670d999e078cfd29aaca590c490",
+"head": "e23ee246ac6114edc9d51b1b81d273b6ef9b152e",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -8065,9 +7827,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 4565,
@@ -8225,6 +7985,7 @@
 "head": "0aaef7a5bddd9e22760f772ba131d5345d5d3d4a",
 "mine": false,
 "conflicts": [
+"apps/wordcraft-cli/src/main.rs",
 "crates/fonts/src/word.rs"
 ],
 "render": true,
@@ -8476,7 +8237,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed package.rs, read/story/drawing.rs"
+"main changed package.rs, read.rs, read/chunk.rs \u2026"
 ]
 },
 {
@@ -9223,7 +8984,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed para/paragraph.rs"
+"main changed read/meta.rs"
 ]
 },
 {
@@ -9239,7 +9000,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed read/parts.rs"
+"main changed read.rs, read/parts.rs"
 ]
 },
 {
@@ -9267,6 +9028,7 @@
 "conflicts": [
 "crates/doc/src/kept.rs",
 "crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/drawing.rs",
 "crates/docx/src/write/story/drawing.rs"
 ],
 "render": true,
@@ -9340,7 +9102,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed display/lines.rs, para.rs"
+"main changed read/meta.rs, display/lines.rs"
 ]
 },
 {
@@ -9416,6 +9178,7 @@
 "mine": false,
 "conflicts": [
 "crates/engine/Cargo.toml",
+"crates/engine/src/lib.rs",
 "xtask/src/layers.rs"
 ],
 "render": false,
@@ -9450,13 +9213,14 @@
 "author": "fluorine",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3d2f23c4c8e59e631342f22022a28d344c448c3e",
+"head": "d3c7e676b0bb27f3b0501aa3182c8f23d3042355",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed display/objects.rs"
 ]
 },
@@ -9629,12 +9393,10 @@
 "title": "fonts: SubstituteProvider hook for app-supplied named substitutes",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "4eba2f2c8e0780821fb908be56af5082b1a59ea0",
+"draft": false,
+"head": "80077ec9bfc2ba64dc6f70648084aaeb48f2db88",
 "mine": false,
-"conflicts": [
-"crates/fonts/src/word.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -9645,8 +9407,8 @@
 "title": "layout: character-grid cells for large text, *Chars indents in grid cells",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "902f8efe0452a43f15e95ec07d640529133b280b",
+"draft": false,
+"head": "528951ac8eabed5dd64c5bf35f55c548611c2eef",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -9659,13 +9421,10 @@
 "title": "layout: kinsoku sets gain curly quotes, per-mille and Celsius",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "db13aa60a1ae35b754cb7926da4609079a7c5dcd",
+"draft": false,
+"head": "fc08ae78df2865ccf78883ddd9df6d7a7f10eec1",
 "mine": false,
-"conflicts": [
-"crates/layout/src/kinsoku.rs",
-"crates/layout/src/para/paragraph.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -9676,12 +9435,10 @@
 "title": "doc, docx, layout: w:hint=\"eastAsia\" and named East Asian substitutes",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "3dc7cb744a0069bd25fdbfa6c95c46d92e0a5a02",
+"draft": false,
+"head": "b9081fa8012d57250b20b14fe8c7f90147e35bb1",
 "mine": false,
-"conflicts": [
-"crates/layout/src/para/builder.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -9692,15 +9449,10 @@
 "title": "doc, docx, layout: East Asian punctuation compression (w:characterSpacingControl)",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "0ac59db8c25a07d82080955880ecad617e518740",
+"draft": false,
+"head": "da0ab31dc5b9d729e2aef32346b4762a6d331293",
 "mine": false,
-"conflicts": [
-"crates/doc/src/lib.rs",
-"crates/doc/src/settings.rs",
-"crates/layout/src/kinsoku.rs",
-"crates/layout/src/para/paragraph.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -9867,7 +9619,7 @@
 "author": "dotCooCoo",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "6734753b4abd696c2381da2f4e324215a8e42a81",
+"head": "6c59804b2d8a840153cbdd4baa02d7ae1cfb05fe",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9904,7 +9656,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs"
+]
 },
 {
 "n": 5071,
@@ -9950,9 +9704,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 5076,
@@ -10098,9 +9850,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed para/paragraph.rs"
-]
+"stale": []
 },
 {
 "n": 5098,
@@ -10138,15 +9888,15 @@
 "author": "dotCooCoo",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "01fe954a71f4d2e20ce61cfbb9f681e3cb160b2c",
+"head": "c1afd8e4400ba8405676f7375f4a5ce62dac3cc9",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/fmt_revisions.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5113,
@@ -10156,14 +9906,18 @@
 "draft": false,
 "head": "7b8f65c380689c932f72e9e39c2b0fda26bc878b",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"apps/wordcraft-cli/Cargo.toml",
+"crates/pdf/src/lib.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [
 "changes apps/wordcraft-cli/Cargo.toml"
 ],
 "stale": [
-"main changed metadata.rs"
+"main changed lib.rs, metadata.rs"
 ]
 },
 {
@@ -10175,6 +9929,8 @@
 "head": "dd8a0fad0fcad00a05d5e682d377f1a3d926b948",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
+"apps/wordcraft-cli/Cargo.toml",
 "apps/wordcraft-cli/src/main.rs",
 "crates/engine/Cargo.toml",
 "crates/engine/src/io_ext.rs",
@@ -10215,13 +9971,15 @@
 "draft": false,
 "head": "4d74d2c02e1c60518e648cf3b8aea6ef3d9f8c77",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/io_ext.rs",
+"crates/pdf/src/export.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits",
-"main changed fields.rs, lib.rs, para/paragraph.rs"
+"main changed lib.rs, export.rs, options.rs"
 ]
 },
 {
@@ -10311,7 +10069,7 @@
 "author": "maxm11",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8a5e7d42b4d9f1a3643f024178734a5ea321aead",
+"head": "97203eb2cf0012efa0bc23a2a62da70498985a00",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10375,7 +10133,7 @@
 "author": "multipointmaster-glitch",
 "assoc": "NONE",
 "draft": false,
-"head": "ed5130f13bff824752d73c0ea94311f507857fbf",
+"head": "8a63f04be9b7f24b4e05d228a43280f3774ccec1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10490,10 +10248,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 5177,
@@ -10523,10 +10278,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 5182,
@@ -10571,7 +10323,9 @@
 "crates/layout/src/display/lines.rs",
 "crates/layout/src/floats.rs",
 "crates/layout/src/para/lines.rs",
-"crates/layout/src/para/paragraph.rs"
+"crates/layout/src/para/paragraph.rs",
+"crates/pdf/src/exporter/text.rs",
+"crates/render/src/media.rs"
 ],
 "render": true,
 "allowed": false,
@@ -10848,13 +10602,15 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "78e94a87822871e96c1fd1100268343ff99f9a32",
+"head": "7afa2297a365c0e86490e5ef04d81d9df7534c7e",
 "mine": false,
 "conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5269,
@@ -10865,9 +10621,14 @@
 "head": "95b84cdec47be408af2342ee0b94f26038d02167",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io.rs",
 "crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
 "crates/engine/src/session/layout.rs",
+"crates/pdf/src/export.rs",
+"crates/pdf/src/exporter.rs",
+"crates/pdf/src/lib.rs",
 "crates/pdf/src/options.rs"
 ],
 "render": true,
@@ -10884,9 +10645,16 @@
 "head": "f9b59d10032565b45b5327a9717c55dd97dd727b",
 "mine": false,
 "conflicts": [
+"apps/wordcraft-cli/Cargo.toml",
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io.rs",
 "crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
 "crates/engine/src/session/layout.rs",
+"crates/pdf/src/export.rs",
+"crates/pdf/src/exporter.rs",
+"crates/pdf/src/lib.rs",
 "crates/pdf/src/options.rs"
 ],
 "render": true,
@@ -10921,13 +10689,14 @@
 "author": "ashokram-si",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "f9bc627671eff48d33a3dc410455c19b697ae7ee",
+"head": "4000aaf3df54f192a53b679a7f1774b68c919696",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed fontdb.rs, fontdb/face.rs"
 ]
 },
@@ -11007,9 +10776,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 5314,
@@ -11031,15 +10798,15 @@
 "author": "hshamilt",
 "assoc": "NONE",
 "draft": false,
-"head": "2936f45ee516dd4dafee5f6d9f7334044ba3552a",
+"head": "9795a98b7ba947a09fd6482f9eddab0accb832a4",
 "mine": false,
-"conflicts": [
-"crates/doc/src/numbering.rs",
-"crates/layout/src/styleref.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
-"risky": [],
+"risky": [
+"changes Cargo.toml",
+"new packages in Cargo.lock: wordcraft 0.16.0, wordcraft-cli 0.16.0, wordcraft-control-key 0.16.0, wordcraft-doc 0.16.0, wordcraft-docbin 0.16.0, wordcraft-docx 0.16.0 \u2026"
+],
 "stale": []
 },
 {
@@ -11048,7 +10815,7 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a760e58ae4885ced4a46bbb92bc1e933b6e9fe79",
+"head": "5e28cfb849a88a506266415c22f151fd3ed6a49c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11212,13 +10979,14 @@
 "author": "pitamcclav",
 "assoc": "NONE",
 "draft": false,
-"head": "05ee27f180947d6a845b4517c0542533c8c4e87a",
+"head": "ae2216c2f6d14ed8937477349e7d1b879c50bfef",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed boxes.rs"
 ]
 },
@@ -11321,7 +11089,7 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "4cf92e065862eb4fe6b2f89d271728d267f5b960",
+"head": "a189025f316856ea7bf5b340d64bbc16646380c1",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11405,7 +11173,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed exporter.rs"
+"main changed export.rs, exporter.rs, picture.rs"
 ]
 },
 {
@@ -11445,8 +11213,8 @@
 "title": "layout: a field result in more than one font keeps a cluster per font",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "434c4a6dc40636cb120c8334ddc4d830dc161fd7",
+"draft": false,
+"head": "5f1d5cc230905a2e965346c0689a39b137339992",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11459,8 +11227,8 @@
 "title": "docx: VML WordArt letters take the shape fill's opacity",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "94848e15fd0f66fcb4476220d6d253f4f81280b9",
+"draft": false,
+"head": "5676b06708947bcb92260ba2e7e832b188d7292d",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11473,13 +11241,10 @@
 "title": "fonts: a document's embedded fonts belong to that document",
 "author": "xiaojunyang0805",
 "assoc": "NONE",
-"draft": true,
-"head": "defa90c0649898014491d3bdd03ebfbabb6caa8f",
+"draft": false,
+"head": "76acec08574ad37cce848260f18f015595e2aba2",
 "mine": false,
-"conflicts": [
-"crates/doc/src/document.rs",
-"crates/doc/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -11497,9 +11262,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5488,
@@ -11507,9 +11270,12 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0da0d06d81cebb7df53e432553c9dc702cdf22be",
+"head": "dfcd37f80384a01ac56e86805124aa5711c5f508",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -11527,7 +11293,9 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"main changed media.rs"
+]
 },
 {
 "n": 5500,
@@ -11581,13 +11349,18 @@
 "author": "neilcawse",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "86268c4d8af60d299cd1dcce7825bc4a0a64141d",
+"head": "f1febbb87a56f261f01df79e3c59ac00a6b41fc5",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits",
+"main changed read/story/drawing.rs"
+]
 },
 {
 "n": 5521,
@@ -11640,13 +11413,15 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "6bb99188be06b25c6cb509e1fc24c8e342be4a41",
+"head": "32783f1e2963d465fb83b456356bac81887d0784",
 "mine": false,
 "conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5545,
@@ -11654,13 +11429,14 @@
 "author": "mmazzieri",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a11e4daae62ed5151fdea365282b3be2b79e3dba",
+"head": "72f0577d0c31762455ade32496880be2282aa6c5",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed boxes.rs, ctx.rs, floats.rs \u2026"
 ]
 },
@@ -11670,11 +11446,9 @@
 "author": "mmazzieri",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "dc515b61285cf649ddbe76226fdb7990d93033cd",
+"head": "d3096ed0fbc89443d8c7950f2d0e55982fa1ea6a",
 "mine": false,
-"conflicts": [
-"crates/layout/src/table_flow.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -11686,7 +11460,7 @@
 "author": "jimprince",
 "assoc": "NONE",
 "draft": false,
-"head": "5f71e2f74c209acb8cb8209af8d5f78bbdfd02b7",
+"head": "6b156a6ea0a48ed81e89b97696469ad3390e28f9",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11714,14 +11488,17 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "508d64021fa586a16e726637aa4d50eb1ffdffae",
+"head": "ee10deb566d289f06213d1509b2f839db0389d4a",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
-"risky": [],
+"risky": [
+"changes crates/layout/Cargo.toml"
+],
 "stale": [
-"main changed fields.rs"
+"new commits",
+"main changed fields.rs, para/paragraph.rs"
 ]
 },
 {
@@ -11771,7 +11548,7 @@
 "risky": [],
 "stale": [
 "new commits",
-"main changed table.rs"
+"main changed read/story/drawing.rs, read/story/vml.rs, display/objects.rs \u2026"
 ]
 },
 {
@@ -11888,7 +11665,7 @@
 "author": "marcwgls",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "e1b7553b9d2fecad81347c5da14f47fd6225288b",
+"head": "7f47f53e307d5bc9d3a23d270f265944eae1bf10",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11920,11 +11697,9 @@
 "author": "benandez",
 "assoc": "MEMBER",
 "draft": false,
-"head": "cc125c47329ca47cc5959bfed09c896f7c283693",
+"head": "ae22f35312a643ab66a44be3d787e80d180668fd",
 "mine": false,
-"conflicts": [
-"crates/engine/src/session/documents.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -11954,11 +11729,9 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "6ae268ba1b4949d8085bea082a6a00be112c6ad1",
+"head": "7bd55dde98ddd58df201687162c98a3c928f3223",
 "mine": false,
-"conflicts": [
-"crates/layout/src/boxes.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -11973,13 +11746,15 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a93758168eef4d65a30de8b4cb1627104cc5f64b",
+"head": "9e2f9c4571d6e96b5a7e2b027f64614c2c930cef",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5634,
@@ -11987,14 +11762,14 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a90d977758b50c4e588686435ae5f7d0aac95814",
+"head": "4cfdf33da06b44a4233263934c7b35970d58db35",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed table.rs"
+"new commits"
 ]
 },
 {
@@ -12006,13 +11781,14 @@
 "head": "5e6ead2a3ffa6c9d3b5e8f7f01be58c41abaa27a",
 "mine": false,
 "conflicts": [
-"crates/render/src/lib.rs"
+"crates/render/src/lib.rs",
+"crates/render/src/media.rs"
 ],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed lib.rs"
+"main changed lib.rs, media.rs"
 ]
 },
 {
@@ -12051,13 +11827,16 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "39ca0139f9109214ad2aea9bbf4ccb6d8256f2aa",
+"head": "8ed5311cf82820d397bbe3307acbe91de8f919a5",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits",
+"main changed read/meta.rs"
+]
 },
 {
 "n": 5665,
@@ -12072,7 +11851,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits"
+"main changed read.rs, read/chunk.rs"
 ]
 },
 {
@@ -12129,7 +11908,10 @@
 "draft": true,
 "head": "8eae4d943e2e28c90cf900e0c5b0c7507d4fa7ea",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -12172,7 +11954,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "89f67939ca99ff0fcd919eef9f857fc67185478e",
+"head": "23f4219555cb80e835be325bce0a069bae357332",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12188,23 +11970,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d32466c783331e91f9ac32eef1ea96cfe7483c84",
-"mine": false,
-"conflicts": [],
-"render": false,
-"allowed": false,
-"risky": [],
-"stale": [
-"new commits"
-]
-},
-{
-"n": 5705,
-"title": "ODT: frames keep the page they are anchored to (gap 19)",
-"author": "alehel",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "26d6a0f67149fe36b4d16eb539d212860d6de43b",
+"head": "1b5d76a3ede7f78e8a5f93b56c5b5a492808c364",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12231,28 +11997,12 @@
 "stale": []
 },
 {
-"n": 5721,
-"title": "ODT: pictures keep the size their file gives (gap 19)",
-"author": "alehel",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "6b5d3a294a07b189eee19c119f4d64206041453d",
-"mine": false,
-"conflicts": [],
-"render": false,
-"allowed": false,
-"risky": [],
-"stale": [
-"new commits"
-]
-},
-{
 "n": 5723,
 "title": "ODT: a list item's further paragraphs stay paragraphs (gap 19)",
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8ffef24d663cf6bf20d55adff2d8dc981a4d2b76",
+"head": "9675328ad71a2267a182d88f1b91817e2b4b00b1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12289,7 +12039,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed read/embed.rs, read/story/drawing.rs, xml.rs \u2026"
+"main changed read.rs, read/embed.rs, read/story/drawing.rs \u2026"
 ]
 },
 {
@@ -12313,7 +12063,7 @@
 "changes crates/pdf/Cargo.toml"
 ],
 "stale": [
-"main changed read/parts.rs, read/story/runs.rs, read/story/vml.rs \u2026"
+"main changed read.rs, read/parts.rs, read/story/runs.rs \u2026"
 ]
 },
 {
@@ -12368,13 +12118,14 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "83ab5033df3bbf3d95c52161accae6ce974025d3",
+"head": "be0b1ab67364766d615c92e9ec3a1b6fbf92df47",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed read/props.rs, read/styles.rs, table.rs"
 ]
 },
@@ -12384,15 +12135,14 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "47e848685862709e765c6a27c6bb054872ce6be6",
+"head": "314b24728b59373599f76f23f90100874ff36df9",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits",
-"main changed read/styles.rs, table.rs"
+"new commits"
 ]
 },
 {
@@ -12401,24 +12151,23 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "6134276f57ecef96b36de55eaa9ae6db9fc1c251",
+"head": "9718f0895b498290019ea0dced3f4de7c90485f9",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits",
-"main changed read/props.rs, write/props.rs"
+"new commits"
 ]
 },
 {
 "n": 5778,
-"title": "chore(deps): bump the hayro group with 3 updates",
+"title": "chore(deps): bump the hayro group across 1 directory with 3 updates",
 "author": "app/dependabot",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a6e7343a6a44a4d78234b9fe0e073cc41027f2e9",
+"head": "48a1c43811ac7979933262e161521effb6737828",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12427,7 +12176,9 @@
 "changes crates/pdf/Cargo.toml",
 "new packages in Cargo.lock: hayro-ccitt 0.5.0, hayro-cmap 0.1.1, hayro-interpret 0.8.0, hayro-jbig2 0.4.0, hayro-jpeg2000 0.4.1, hayro-jpeg2000 0.5.0 \u2026"
 ],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5779,
@@ -12439,7 +12190,8 @@
 "mine": false,
 "conflicts": [
 "crates/engine/src/cmd/lists.rs",
-"crates/formats/src/markdown/export.rs"
+"crates/formats/src/markdown/export.rs",
+"crates/formats/src/model/from_doc.rs"
 ],
 "render": false,
 "allowed": false,
@@ -12468,13 +12220,15 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0ccf7d61869f489410272d01ec4c8897dc89e160",
+"head": "8807a1100fb81d547715b2a16c0a6e43942d6032",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5791,
@@ -12482,7 +12236,7 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "833e2fd379dde9920bb73e6a948f1620f20a3bc6",
+"head": "95c7b3aaada1c653599b2a726123e6400569862f",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12501,13 +12255,15 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "2751828dc2fc22f8a18cf433281ce2726f280602",
+"head": "1466e287d5c5f4b94675f1eb81779dcb64855faf",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5810,
@@ -12575,7 +12331,10 @@
 "draft": false,
 "head": "a252c1467fd3c095af79b741490ac1343c3fc6a6",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"apps/wordcraft-cli/src/main.rs",
+"crates/engine/src/cmd/file.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -12617,7 +12376,7 @@
 "author": "copoka",
 "assoc": "NONE",
 "draft": true,
-"head": "da4f531e2411662c8d71fd95fdc71056ce0bd4f4",
+"head": "c211e63a13f8245b87a5d6eecfc7b81a4347cc2a",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12644,14 +12403,14 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d5ed13284ed0c6b2d7d025c8f83c93abd97c796c",
+"head": "9bef724c0162508ac878b3f2b3e9d31423e4dc59",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed para.rs, para/paragraph.rs"
+"new commits"
 ]
 },
 {
@@ -12667,7 +12426,7 @@
 "allowed": false,
 "risky": [],
 "stale": [
-"main changed fontdb.rs, fontdb/face.rs"
+"main changed fontdb.rs, fontdb/face.rs, display/objects.rs"
 ]
 },
 {
@@ -12722,7 +12481,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "031f12e2a826601424831aa3ad6bb6b7fb2303ad",
+"head": "346662658e6bb47028d7cf0ca9a04d80f7cad0de",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12760,9 +12519,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5880,
@@ -12786,15 +12543,15 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "398b06b369676e8a2eb7a3870db831eb1abd5d8c",
+"head": "d810864733798a82bc83736a02e522a6de714914",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/references/fields.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5882,
@@ -12836,15 +12593,14 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "2fee0a182afedc9a633cf955f6e3f8b09c877db1",
+"head": "e4a580284e7de26f9d326348b3c0dbd6436b36d9",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits",
-"main changed para.rs, para/lines.rs"
+"new commits"
 ]
 },
 {
@@ -12853,13 +12609,16 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "f6771707c22d6805a616c3579d26a2515e2de8e0",
+"head": "05c11278fbaaf37e9b8ab411458e85307671e063",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits",
+"main changed exporter/text.rs"
+]
 },
 {
 "n": 5889,
@@ -12869,7 +12628,9 @@
 "draft": false,
 "head": "cc1b886c11f96c58928598c72dc806f139c86773",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/lib.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -12915,7 +12676,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9171f258234df2e1f9831afa6ee3e78838320881",
+"head": "ce375356e18ef60b4c4fac208478e23e83d5fd08",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12929,13 +12690,15 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "e6d84d61543935311f6c064d1c06a9013ee4c1ee",
+"head": "d251ec7856996a66c8195366c490d0e43adac470",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5902,
@@ -12943,7 +12706,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8693137fb672a2ad316a3ae5ad3eb8bdf570035c",
+"head": "435491361056481ad0496c5e6b06d15df82bb9f8",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12957,7 +12720,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1c7fef71731469471e716d83db7b3ebc0bea1d90",
+"head": "b7b9dad1c2cbbee2e6eb70039f1753557a883947",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12973,7 +12736,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "35028586d945f741cdca03f10645fdb7cdaf6c19",
+"head": "0a188ca1444e1318c45fd2bb34dbe8c568d822f7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12989,7 +12752,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a366da42a3ed452789f1fe1b9bced9d49d5ba85b",
+"head": "2d26feb7bf762961a4498ba51dbcd8aaaa9c5edb",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13042,9 +12805,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 5940,
@@ -13052,13 +12813,16 @@
 "author": "SenuraMalaka",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "f9ae310b934b726605786aa65010d45c3cc8d62a",
+"head": "e9a4eb4de900b0f629fd15d07f1200d585ed70fe",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits",
+"main changed read/meta.rs"
+]
 },
 {
 "n": 5948,
@@ -13094,7 +12858,7 @@
 "author": "neilcawse",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ca0163515dda9b6fcdf60ad1dfb6535488924cf4",
+"head": "68b8fcd6d6e7da6326f5161d9c2b419daa4b1b5a",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13110,7 +12874,7 @@
 "author": "neilcawse",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8bde7f873616ddd4dd45e9981f579892e0852759",
+"head": "1e14bbceeba4bbe014352fd4dbdf5f3eaec80bf1",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13126,14 +12890,15 @@
 "author": "neilcawse",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0ba6f60c48649b18c1d36612d6cc5777f735f4d9",
+"head": "23d99302112458e020b139db8f604a2d9f2ea410",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
-"new commits"
+"new commits",
+"main changed read/story/drawing.rs"
 ]
 },
 {
@@ -13142,7 +12907,7 @@
 "author": "neilcawse",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "525a6a8f89eb3f05a784d73ad17e368b06d9443f",
+"head": "d593088a31f76f82505004a582b97091913822ed",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13164,9 +12929,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5969,
@@ -13188,13 +12951,15 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "46fb6a333048f91559e2a41f8e255cadaf5a4517",
+"head": "0800306ef2abdcd4cd785b2bade8288c212f1f2b",
 "mine": false,
 "conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5972,
@@ -13202,12 +12967,9 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "e7e822440b9f51c1a6a217a49f754c708300099c",
+"head": "f13d81e78b600410498db59cf333346a30446b48",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/chart/model.rs",
-"crates/docx/src/read/chart/parse.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -13233,7 +12995,7 @@
 "author": "kk376",
 "assoc": "NONE",
 "draft": false,
-"head": "df3029f792c19cc411f972847dac39a51f4d860f",
+"head": "c0a0fa8b76f833d3b34d3af96ba25542b97c36cb",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13319,15 +13081,18 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a6aa65fbbcf2e9458ffca9723c3d410f004e76ca",
+"head": "75a43a95e88df1182c80ba477c0570aad0e20042",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/pdf/src/exporter.rs",
+"crates/render/src/media.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
 "new commits",
-"main changed lib.rs"
+"main changed read.rs, exporter.rs, lib.rs \u2026"
 ]
 },
 {
@@ -13336,7 +13101,7 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9602241cba859b74b9309bd156837e47df2a796b",
+"head": "e534fb033a3badd90ef7ba055636d6628edfcf31",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13372,10 +13137,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed table.rs"
-]
+"stale": []
 },
 {
 "n": 6004,
@@ -13425,7 +13187,7 @@
 "author": "scks1",
 "assoc": "NONE",
 "draft": false,
-"head": "5cb4188462b8588a3e01ef6ee9e3239a78960cda",
+"head": "cce771c002bdf72067b765217f476f16fbe6cf60",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13560,22 +13322,6 @@
 "stale": []
 },
 {
-"n": 6039,
-"title": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6005)",
-"author": "benandez",
-"assoc": "MEMBER",
-"draft": false,
-"head": "2c99020d1bf372c3ec944c78022c71e616de7144",
-"mine": false,
-"conflicts": [],
-"render": true,
-"allowed": false,
-"risky": [
-"changes apps/wordcraft-cli/Cargo.toml"
-],
-"stale": []
-},
-{
 "n": 6040,
 "title": "Use Diagram and Decorative Text display names",
 "author": "FredApps",
@@ -13623,7 +13369,7 @@
 "author": "cloutier",
 "assoc": "NONE",
 "draft": false,
-"head": "1016db741ec12e2bcb43f9fd5b3ed11a483abac1",
+"head": "fabd1eca5685e2ca074e7910c6cfcfe52b63681d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13637,28 +13383,12 @@
 "author": "LimaLuma-gme",
 "assoc": "NONE",
 "draft": false,
-"head": "191d6feed8e5e23fdb46aaccfc7914c8e9bc9ed2",
+"head": "1b539d78e12c1808e8593389b86bb7526577cb19",
 "mine": false,
 "conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
-},
-{
-"n": 6066,
-"title": "Add Support Thai Language#1",
-"author": "veevie55",
-"assoc": "NONE",
-"draft": false,
-"head": "e23d52e4f4e18e4962811d791d75bf09aa7feb2f",
-"mine": false,
-"conflicts": [],
-"render": true,
-"allowed": false,
-"risky": [
-"crates/fonts/build.rs"
-],
 "stale": []
 },
 {
@@ -13755,6 +13485,291 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6091,
+"title": "Lowered pictures: the comment and the gap note say what layout does now",
+"author": "Morzilla",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "f9e43775dfa4a40f0d47ce089288ea6d6cbf72c1",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6092,
+"title": "Tables: a table style's shading is what Word paints",
+"author": "pakiat",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "16a9d435d812b43b444195f45ffb3f1be7797273",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6093,
+"title": "Compare: write deleted text-box text as delText; track whole-paragraph mark deletions",
+"author": "chamber074",
+"assoc": "NONE",
+"draft": false,
+"head": "29606f9eee369969db1f1ff5d90c9fe4e75259ed",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6100,
+"title": "Layout: an inline picture and the word right after it stay on one line, as in Word",
+"author": "tpawley2001",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "4781e71692c3e9bc96a3f45af40c98d596daf07d",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6103,
+"title": "Vertical text: a narrow ideographic comma or full stop stays in its own square (#6060)",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "7e6fcb478fe2e0e33258d630a5d6de45f567a9b0",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6107,
+"title": "i18n: Hebrew (he) interface on the Arabic right-to-left layout",
+"author": "yonatan-langer83",
+"assoc": "NONE",
+"draft": false,
+"head": "eb5dd785f87297e3a762471e37cf28d91e3eef01",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6112,
+"title": "Tables: a table style's bands fall as in Word",
+"author": "pakiat",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "80a802a64babac18e40e8d30bccde3d0aa1de343",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6114,
+"title": "Fix/footnote continued bottom",
+"author": "kevinj24fr",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "6997afcc346e44c0990b1b5f7ef94b7e093e0e03",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6118,
+"title": "feat(thai): Thai language support, line breaking and word navigation via libthai",
+"author": "nanusorn",
+"assoc": "NONE",
+"draft": false,
+"head": "3d98646722518fc48a8de4ebb9a991688e13036a",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [
+"changes Cargo.toml",
+"changes crates/doc/Cargo.toml",
+"changes crates/layout/Cargo.toml",
+"new packages in Cargo.lock: libthai 0.1.4"
+],
+"stale": []
+},
+{
+"n": 6120,
+"title": "Compare: surface character-level diff fallback on long paragraphs (#6111)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "d07e46aaf8a13063ff967881ae06eca7e88c2dca",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6122,
+"title": "Compare: diff header and footer content across sections (#5837)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "089dc4ac7bd73291626e27266f243a108f780dec",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6123,
+"title": "Compare: detect replaced image bytes when size and extents are unchanged (#6086)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "e574e76c94919f55aca6987c7714193f63a25ba6",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6124,
+"title": "tools: chunk LCS alignment past MAX_LCS window to prevent false revisions (#6110)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "ccf6a5392daefe876fad3eec0fa2f636f28e0ae0",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6127,
+"title": "#6125: replace the whole compatibilityMode element when merging settings",
+"author": "GodelloVbP",
+"assoc": "NONE",
+"draft": false,
+"head": "284434ca26d02986054aad8585f1b835c613e866",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6128,
+"title": "#6110: Compare aligns sequences longer than the comparison table",
+"author": "GodelloVbP",
+"assoc": "NONE",
+"draft": false,
+"head": "6387ec1923c02603e5fb48316e16e3e7649cfa9a",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6130,
+"title": "#3627: Remove personal information leaves out the people part and the\u2026",
+"author": "GodelloVbP",
+"assoc": "NONE",
+"draft": false,
+"head": "f24fe0797a82be94e5f124074bcc7e2038cae631",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6136,
+"title": "Compare: settings merge replaces the whole compatibilityMode element",
+"author": "chamber074",
+"assoc": "NONE",
+"draft": false,
+"head": "b8e3f71fb962de940198b653b8e7fbb5c53d4740",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6141,
+"title": "tools/compare: row-level diff inside surviving tables (#5921)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "5884c91acb5d6f45f4485ae7ddf2591d51e6fa12",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6142,
+"title": "Compare: emit w:numberingChange for numbering-only differences (#5836)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "674845060c5f1942aeb28cf73497aa518d29f315",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6144,
+"title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "48cf2e52fd50821b65319a6af8785c3d2571ccf7",
+"mine": false,
+"conflicts": [],
+"render": true,
 "allowed": false,
 "risky": [],
 "stale": []

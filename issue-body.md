@@ -1,10 +1,10 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-10 00:14 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-10 00:46 UTC.
 
 ## Summary for reviewers
 
-`main` d40d1b271 scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
+`main` 43f94a5dc scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
 (13.6 points ahead). Merging the 25 PRs below, in this order, gives **77.57 (+3.87)**,
 measured on one branch with all of them merged (see *Combined branch*).
 
@@ -23,7 +23,7 @@ next round.
 | #5439 | naxvog | Layout: a raised or lowered run moves its line's box instead of growing it | **+0.220** | 8↑ 1↓ | czech_municipal_grant_form -7.8 | ✅ | – | +135 −10 | `e0d8312fb`, 2 d ago |
 | #5808 | kevinj24fr | Layout: an exactly spaced line puts its baseline 0.8 of its height down | **+0.153** | 6↑ 1↓ | continued-gap-cell-after0-before4 -2.8 | ✅ | changes requested | +105 −10 | `d40d1b271`, today |
 | #4840 | ro-legal-docx | Layout: continue oversized cantSplit rows across pages | **+0.141** | 3↑ 0↓ | – | ✅ | – | +470 −7 | `661a79054`, 1 d ago |
-| #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | **+0.098** | 3↑ 0↓ | – | ✅ | – | +198 −2 | `661a79054`, 1 d ago |
+| #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | **+0.098** | 3↑ 0↓ | – | ✅ | – | +198 −2 | `661a79054`, 2 d ago |
 | #6030 | pakiat | Tables: Word gives a table nothing from Normal Table, and Table Grid is based on it | **+0.097** | 4↑ 1↓ | wide-nested-float-edge-wide-m14-left-o108-i0 -23.8 | ✅ | – | +262 −4 | `7b8c0ba5e`, today |
 | #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | **+0.055** | 6↑ 0↓ | – | ✅ | – | +336 −21 | `d40d1b271`, today |
 | #3823 | naxvog | Layout: in older documents, tabs behind a float keep their text on the row | **+0.040** | 1↑ 0↓ | – | ✅ | – | +200 −8 | `661a79054`, 2 d ago |
@@ -74,7 +74,7 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 4 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 4 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 334 PRs benched (78 change the score), 171 of them stale; 20 queued for the
+**Coverage:** 335 PRs benched (78 change the score), 163 of them stale; 11 queued for the
 next round; 112 waiting for a person to look before they're built; 383 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
@@ -104,7 +104,7 @@ next round; 112 waiting for a person to look before they're built; 383 conflict 
   not installed, so WordCraft draws those documents in metric-compatible substitutes (Carlito, Caladea, …) while
   Word's references use the originals. docxide-pdf runs in the same container without its private font set.
 
-| `main` d40d1b271 | SSIM | Jaccard | Pages matching | Line match |
+| `main` 43f94a5dc | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
 | WordCraft | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | docxide-pdf (for reference) | 87.34 | 70.90 | 1055/1073 | 93.9 |
@@ -126,7 +126,7 @@ same fixtures (see *Combined branch*).
 | #5808 | kevinj24fr | Layout: an exactly spaced line puts its baseline 0.8 of its height down | +0.153 | +0.101 | +0 | 15 (6↑ 1↓) | nested-table-keep-next +53.8, heading-keep-next-exact +52.1, keep-next-inline-image +44.5 (+3 more) | continued-gap-cell-after0-before4 -2.8 | `d40d1b271`, today |
 | #4840 | ro-legal-docx | Layout: continue oversized cantSplit rows across pages | +0.141 | +0.128 | +3 | 3 (3↑ 0↓) | modern-oversized-lines55-cant1-prefix0 +60.7, modern-oversized-lines55-cant1-prefix330 +45.5, modern-oversized-lines55-cant1-prefix160 +45.5 | – | `661a79054`, 1 d ago |
 | #3787 | cyril265 | Layout: a page break at the end of the document or of a section starts no blank page | +0.105 | +0.089 | +2 | 2 (2↑ 0↓) | geneva_waste_facility_permit_request +63.4, stem_partnerships_guide +49.3 | – | `e919982fa`, 4 d ago ⚠ stale: main changed ctx.rs, flow.rs |
-| #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | +0.098 | +0.114 | +0 | 3 (3↑ 0↓) | continuous-context-frame1-same1-ctx1 +48.3, continuous-context-frame0-same1-ctx1 +28.5, continuous-context-after-same1-ctx1 +28.5 | – | `661a79054`, 1 d ago |
+| #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | +0.098 | +0.114 | +0 | 3 (3↑ 0↓) | continuous-context-frame1-same1-ctx1 +48.3, continuous-context-frame0-same1-ctx1 +28.5, continuous-context-after-same1-ctx1 +28.5 | – | `661a79054`, 2 d ago |
 | #6030 | pakiat | Tables: Word gives a table nothing from Normal Table, and Table Grid is based on it | +0.097 | +0.085 | +0 | 5 (4↑ 1↓) | section-mark-after-table-inline-compat14 +51.1, case196 +30.4, short-float-clear-inline-table +25.5 (+1 more) | wide-nested-float-edge-wide-m14-left-o108-i0 -23.8 | `7b8c0ba5e`, today |
 | #5095 | dfgodvan | Layout: keep with next lets the last line's leading run into the bottom margin, as when the line is placed | +0.079 | +0.065 | +0 | 3 (3↑ 0↓) | case49 +43.4, case4 +39.6, uk_commercial_lease_template +1.6 | – | `e919982fa`, 4 d ago ⚠ stale: main changed flow.rs |
 | #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | +0.055 | +0.050 | +0 | 6 (6↑ 0↓) | czech_council_resolutions_2023 +31.3, ukrainian_municipal_heating_resolution +19.2, uk_commercial_lease_template +4.4 (+3 more) | – | `d40d1b271`, today |
@@ -197,28 +197,28 @@ same fixtures (see *Combined branch*).
 | #4436 | dfgodvan | Layout: line height of an inline picture in multiple line spacing, as in Word | -0.044 | +0.070 | -2 | 21 (7↑ 5↓) | picture-mark-leading-compat15-line480 +42.8, czech_village_budget_commentary +22.1, brazilian_logistics_study +22.0 (+4 more) | picture-mark-leading-mark22-line360-text0 -41.2, picture-mark-leading-compat14-line480 -39.3, picture-mark-leading-mark28-line480-text0 -39.3 (+2 more) | `e919982fa`, 4 d ago ⚠ stale: main changed flow.rs, para/lines.rs |
 | #2578 | finwarman | Reserve page-colour clearance in initial header stories | -0.113 | -0.090 | -1 | 2 (0↑ 2↓) | – | traditional_skills_job_form -65.5, czech_village_council_minutes_2025 -55.8 | `e919982fa`, 4 d ago ⚠ stale: main changed page.rs, pass.rs |
 
-**Benched, no change on the suite (256):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #2022, #2056, #2063, #2064, #2117, #2120, #2141, #2288, #2340, #2345, #2356, #2372, #2384, #2455, #2473, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5977, #5980, #5986, #5991, #5992, #6033, #6049, #6051, #6077, #6080, #6081, #6082. These may
+**Benched, no change on the suite (257):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #2022, #2056, #2063, #2064, #2117, #2120, #2141, #2288, #2340, #2345, #2356, #2372, #2384, #2455, #2473, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6033, #6049, #6051, #6077, #6080, #6081, #6082. These may
 still be right; the suite just has no document that exercises them.
 
 </details>
 
 ## Combined branch
 
-**Every PR with a positive score**: 25 PRs merged into `main` d40d1b271: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #6030, #5887, #3823, #4065, #5546, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #2792, #4614, #5339, #5074, #4846. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5630, #5096, #4142, #2608; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695.
+**Every PR with a positive score**: 25 PRs merged into `main` 43f94a5dc: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #6030, #5887, #3823, #4065, #5546, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #2792, #4614, #5339, #5074, #4846. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5630, #5096, #4142, #2608; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
-| `main` d40d1b271 | 73.70 | 56.17 | 1044/1073 | 93.2 |
+| `main` 43f94a5dc | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | combined | 76.51 (+2.808) | 58.92 (+2.746) | 1047/1073 (+3) | 93.5 (+0.27) |
 
 The merged PRs' individual SSIM changes add up to +3.938; the difference to the combined +2.808 is where
 they overlap or interact. 229 fixtures change (165↑ 39↓). Regressions over 0.5: nested-floats-spaced-text-long-one -62.9, nested-floats-spaced-text-bottom-cell -61.8, nested-floats-spaced-text-long-two -61.8, nested-floats-spaced-text-nonzero-x -61.8, nested-floats-spaced-text-inline-reference -60.6, nested-floats-spaced-text-short-spacers -58.8, section-mark-after-table-inline-compat15 -53.6, section-mark-after-table-float-compat15 -51.4 (+31 more).
 
-**The same without #2792**: 25 PRs merged into `main` d40d1b271: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #6030, #5887, #3823, #4065, #5546, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #4614, #5339, #5074, #4846, #2608. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5630, #5096, #4142; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695; left out on purpose: #2792.
+**The same without #2792**: 25 PRs merged into `main` 43f94a5dc: #3821, #2523, #5443, #5458, #5439, #5808, #4840, #5455, #6030, #5887, #3823, #4065, #5546, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #4614, #5339, #5074, #4846, #2608. Left out: code conflict with `main`: #2047, #3604, #3787, #3790, #3832, #3833, #3834, #4460, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #1172, #5457, #5176, #3072, #5630, #5096, #4142; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #5564, #5590, #5695; left out on purpose: #2792.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
-| `main` d40d1b271 | 73.70 | 56.17 | 1044/1073 | 93.2 |
+| `main` 43f94a5dc | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | combined | 77.57 (+3.872) | 59.71 (+3.534) | 1047/1073 (+3) | 93.7 (+0.46) |
 
 The merged PRs' individual SSIM changes add up to +3.934; the difference to the combined +3.872 is where

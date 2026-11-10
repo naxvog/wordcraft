@@ -7535,6 +7535,7 @@
 "head": "78eb5a0d10604cc4b020bfd07b378f260ad1e3cc",
 "mine": false,
 "conflicts": [
+"crates/formats/src/model/color.rs",
 "crates/layout/src/pass.rs"
 ],
 "render": true,
@@ -11730,9 +11731,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5638,
@@ -11795,10 +11794,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read/meta.rs"
-]
+"stale": []
 },
 {
 "n": 5665,
@@ -12084,10 +12080,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read/props.rs, read/styles.rs, table.rs"
-]
+"stale": []
 },
 {
 "n": 5767,
@@ -12101,9 +12094,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5772,
@@ -12117,9 +12108,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5778,
@@ -12186,9 +12175,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5791,
@@ -12221,9 +12208,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5810,
@@ -12369,9 +12354,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5852,
@@ -12559,9 +12542,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5888,

@@ -8,7 +8,7 @@ Refreshes the PR list from GitHub and decides what the next bench round reruns. 
   <VER>-todo.txt     PRs to bench now: benchable and gated through, and never benched, or with new commits, or stale
                      against main while their run changed fixtures; not a PR whose head failed to build (<VER>-failed.txt)
 --all also benches PRs that change no rendering file (a safety net for the RENDER filter, once per suite version)."""
-import json, os, subprocess, sys
+import json, os, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # run with -I, which leaves the script's dir out
 from benchlib import B, GH, VER, REPO, NONCLI, TRUSTED, git, render_files, risky, allowed, stale, load, delta, run_base
 
@@ -22,20 +22,44 @@ def code(f):
 
 
 def gh(*a):
-    for last in (False, True):  # one retry: big PR listings sometimes fail on GitHub's side
+    for i in range(3):  # GitHub's API sometimes answers 502 on heavy queries
         r = subprocess.run(['gh', *a], capture_output=True, text=True)
         if r.returncode == 0:
             return r.stdout
         print(f'gh {a[0]} {a[1]} failed: {r.stderr.strip()[-2000:]}', file=sys.stderr)
-        if last:
-            r.check_returncode()
+        time.sleep(10 * (i + 1))
+    r.check_returncode()
+
+
+# own pages of 25 PRs: `gh pr list --json files` asks for 100 PRs with their files per page, which GitHub answers with
+# 502 once the repo has ~1,300 open PRs
+PRS_QUERY = """query($owner: String!, $name: String!, $after: String) {
+  repository(owner: $owner, name: $name) {
+    pullRequests(states: OPEN, first: 25, after: $after) {
+      pageInfo { hasNextPage endCursor }
+      nodes { number title isDraft headRefOid author { login } files(first: 100) { nodes { path } } }
+    }
+  }
+}"""
+
+
+def open_prs():
+    owner, name = GH.split('/')
+    prs, after = [], []
+    while True:
+        page = json.loads(gh('api', 'graphql', '-f', f'query={PRS_QUERY}', '-f', f'owner={owner}', '-f', f'name={name}',
+                             *after))['data']['repository']['pullRequests']
+        for p in page['nodes']:
+            prs.append(dict(p, author=p['author'] or {'login': 'ghost'}, files=p['files']['nodes']))
+        if not page['pageInfo']['hasNextPage']:
+            return prs
+        after = ['-f', f"after={page['pageInfo']['endCursor']}"]
 
 
 subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin', 'main'], check=True)
 # shortcut: GitHub lists at most 100 files per PR here; a bigger PR whose rendering changes all sit past the first 100
 # is missed. Upgrade to `gh api repos/.../pulls/N/files --paginate` for PRs with 100 files if that ever matters.
-P = json.loads(gh('pr', 'list', '-R', GH, '--state', 'open', '--limit', '3000',
-                  '--json', 'number,title,author,isDraft,headRefOid,files'))
+P = open_prs()
 assoc = dict(l.split() for l in gh('api', '--paginate', f'repos/{GH}/pulls?state=open&per_page=100',
                                    '--jq', '.[] | "\\(.number) \\(.author_association)"').splitlines())
 cand = [p for p in P if any(f['path'].startswith(CORE) and code(f['path']) for f in p['files'])]

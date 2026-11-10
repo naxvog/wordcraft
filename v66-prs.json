@@ -1119,11 +1119,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "5a99324c857d59b12c0035c3701b3f92052ca1e9",
+"head": "9bfd3a3fccb32667005578c99e7f9d5fa08f37ad",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -1585,16 +1583,14 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "97cbb436b690f2d013c23b4620cc44c41e26ad8d",
+"head": "8746f8f0bd5edc7f9bd2e35b61e8b6c606c537a2",
 "mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs",
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed read.rs"
 ]
 },
@@ -1732,11 +1728,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "03abd2e2d526e1fffdef9d971669a38240d7a07e",
+"head": "745e32fc38189af30cf8ac81f0534e8f79bcd6a7",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/story/drawing.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -12556,10 +12550,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed exporter/text.rs"
-]
+"stale": []
 },
 {
 "n": 5889,
@@ -12637,9 +12628,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5902,
@@ -12699,10 +12688,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 5918,
@@ -12760,10 +12746,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read/meta.rs"
-]
+"stale": []
 },
 {
 "n": 5948,
@@ -12805,9 +12788,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5951,
@@ -12821,9 +12802,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5953,
@@ -12837,10 +12816,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read/story/drawing.rs"
-]
+"stale": []
 },
 {
 "n": 5954,
@@ -12854,9 +12830,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5968,

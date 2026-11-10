@@ -12,6 +12,7 @@ art = sys.argv[1]
 FIXTURE = re.compile(r'^[a-z]+/[A-Za-z0-9._-]{1,200}$')
 NAME = re.compile(rf'^{VER}-(main-[0-9a-f]{{9}}|pr[0-9]{{1,6}}|combined(-excl)?)$')
 SHA = re.compile(r'^[0-9a-f]{40}$')
+FAILED = f'{B}/{VER}-failed.txt'  # <pr> <head> of PRs whose last bench failed to build
 PRS = re.compile(r'^[0-9]{1,6}( [0-9]{1,6})*$|^$')
 
 
@@ -56,8 +57,12 @@ for a in sorted(os.listdir(art), key=lambda a: '-main-' not in a):  # baselines 
         assert all(PRS.match(m[k]) for k in ('pr', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'gated', 'excluded') if k in m)
         if m['status'] != 'ok':
             if m.get('pr'):  # issue.py lists these; the reason is our own text (pr.sh), cut to one line
-                with open(f'{B}/{VER}-summary.tsv', 'a') as f:
-                    f.write(f"{m['pr']}: {m['status'][:200].splitlines()[0]}\n")
+                line = f"{m['pr']}: {m['status'][:200].splitlines()[0]}\n"
+                if not os.path.exists(f'{B}/{VER}-summary.tsv') or line not in open(f'{B}/{VER}-summary.tsv').readlines():
+                    open(f'{B}/{VER}-summary.tsv', 'a').write(line)
+                if m['status'].startswith('bench failed') and 'pr_head' in m:  # scan.py requeues it only on new commits
+                    fails = [l for l in open(FAILED).readlines() if l.split()[0] != m['pr']] if os.path.exists(FAILED) else []
+                    open(FAILED, 'w').write(''.join(fails) + f"{m['pr']} {m['pr_head']}\n")
             print(f"{a}: {m['status'][:200]}")
             continue
         main = '-main-' in m['name']

@@ -6,7 +6,7 @@ Refreshes the PR list from GitHub and decides what the next bench round reruns. 
                      stale (reasons its run no longer reflects the PR on today's main)
   <VER>-removed.json PRs that left the list (merged or closed)
   <VER>-todo.txt     PRs to bench now: benchable and gated through, and never benched, or with new commits, or stale
-                     against main while their run changed fixtures
+                     against main while their run changed fixtures; not a PR whose head failed to build (<VER>-failed.txt)
 --all also benches PRs that change no rendering file (a safety net for the RENDER filter, once per suite version)."""
 import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # run with -I, which leaves the script's dir out
@@ -54,6 +54,7 @@ for i in range(0, len(refetch), 100):
     subprocess.run(['git', '-C', REPO, 'fetch', '-q', '-f', 'origin',
                     *[f'+pull/{n}/head:refs/heads/pr/{n}' for n in refetch[i:i + 100]]], check=True)
 
+failed = dict(l.split() for l in open(f'{B}/{VER}-failed.txt')) if os.path.exists(f'{B}/{VER}-failed.txt') else {}
 Q, todo = [], []
 for p in cand:
     n, head = p['number'], p['headRefOid']
@@ -69,7 +70,9 @@ for p in cand:
     q['stale'] = stale(n, head) if run else []
     gated = (q['assoc'] in TRUSTED and not q['risky']) or q['allowed']
     if not q['draft'] and not q['conflicts'] and (q['render'] or ALL) and gated:
-        if not run or 'new commits' in q['stale']:
+        if failed.get(str(n)) == head:  # didn't build at this head: wait for new commits
+            pass
+        elif not run or 'new commits' in q['stale']:
             todo.append(q)
         elif q['stale'] and delta(load(run_base(f'{VER}-pr{n}')), run)['changed']:
             todo.append(q)

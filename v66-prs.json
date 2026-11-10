@@ -33,13 +33,15 @@
 "author": "naxvog",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3f270f30a6f8fe017be40a12dab8b7ab8b7c2e66",
+"head": "09bea6e3a3fc2afb4fd268ddb904b300d92f1a0e",
 "mine": true,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 3821,
@@ -1293,12 +1295,9 @@
 "author": "dfgodvan",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "61134893ab67386a68f8f01c364a60b808426ce6",
+"head": "6ffa4321f6e1b981e31e36f953433e5e0c55aa6a",
 "mine": false,
-"conflicts": [
-"crates/layout/Cargo.toml",
-"crates/layout/src/page.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -3065,14 +3064,9 @@
 "author": "finwarman",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0007f1ae8796aa5687a31f0664bf867a04465bc3",
+"head": "3411f542dbf01b29cfe6488039aed9af32759a0b",
 "mine": false,
-"conflicts": [
-"crates/layout/src/para.rs",
-"crates/layout/src/para/builder.rs",
-"crates/layout/src/para/lines.rs",
-"crates/layout/src/para/paragraph.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -3310,12 +3304,9 @@
 "author": "finwarman",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d91949694fb647eaf064d8bc2adefb2925f1093d",
+"head": "a4f4b668b059cfb2e37c8b594b7718bde82ee5b1",
 "mine": false,
-"conflicts": [
-"crates/layout/src/table.rs",
-"crates/layout/src/table_flow.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -3500,13 +3491,9 @@
 "author": "finwarman",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "16521fff7c356b8094b8b291fe9178b85b37e0ee",
+"head": "ccd2686342e5a19a2066a0f0bef6239e3d40e6fe",
 "mine": false,
-"conflicts": [
-"crates/layout/src/boxes.rs",
-"crates/layout/src/ctx.rs",
-"crates/layout/src/floats.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -4013,13 +4000,9 @@
 "author": "Nghiathan13",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "5fee6153e17c0fdd1e9af4cbb19aed382cc7511d",
+"head": "c741c4e0fc9506a262a1db7d071f2193cb18ccb6",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/parts.rs",
-"crates/fonts/src/word.rs",
-"crates/layout/src/para/chars.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -6171,10 +6154,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read.rs"
-]
+"stale": []
 },
 {
 "n": 3828,
@@ -10256,11 +10236,9 @@
 "author": "MarekSpodBiedry",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3b8f6574ccdaa5340327be5abce62c92bccdb0c9",
+"head": "e070b8a0c30f3abc1c4c7522b01b9ef4e6e6d734",
 "mine": false,
-"conflicts": [
-"crates/docx/src/write/story/drawing.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -10552,13 +10530,15 @@
 "author": "ashokram-si",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "4000aaf3df54f192a53b679a7f1774b68c919696",
+"head": "5eafd5db2e80ed3f577e737f2eb48b26d21ab0f3",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5293,
@@ -11587,9 +11567,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5631,
@@ -11603,9 +11581,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5634,
@@ -11619,9 +11595,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5638,
@@ -12211,7 +12185,7 @@
 "author": "copoka",
 "assoc": "NONE",
 "draft": false,
-"head": "15c9625b94403429909044c853cb43c14531c28b",
+"head": "077b40561b426d8bd63aa43b72c82a29bce4d901",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12244,9 +12218,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5852,
@@ -12524,9 +12496,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5902,
@@ -13298,9 +13268,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6093,
@@ -13680,7 +13648,7 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "eb2907e2d291975c285c03383e8c058c9c953c97",
+"head": "9b918a9230b0f22e99cf2c9b5e84f7e57c764678",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13722,7 +13690,7 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ba1f9e3a1ce83d09a7d2fe9f25831192dafe7a7f",
+"head": "c2d6607835a5a88393875d842b5452d1bee7febe",
 "mine": false,
 "conflicts": [],
 "render": false,

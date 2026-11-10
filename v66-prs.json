@@ -33,11 +33,9 @@
 "author": "naxvog",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ce4cb5c84fec1053e99cd3a431e3897ee3ec3170",
+"head": "3f270f30a6f8fe017be40a12dab8b7ab8b7c2e66",
 "mine": true,
-"conflicts": [
-"crates/layout/src/para/lines.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -1092,12 +1090,9 @@
 "author": "pattalkslaw-del",
 "assoc": "NONE",
 "draft": false,
-"head": "42bd629f73beba2a6a08927d034eed280b845955",
+"head": "21094437ca6b622ad14a36d0360ecc403c018075",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"apps/wordcraft-cli/src/main.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -1677,12 +1672,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "79c424e496f7b41a7977ef131c0b616935505028",
+"head": "357db4794540d043caf2d46b90a9957283314530",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/paste.rs",
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -3688,11 +3680,9 @@
 "author": "Nghiathan13",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0c720149f6b3c387f5ec9c8fb741fa27a6ee0abd",
+"head": "90ee14010474971305e5df0fb2624f5dcf5d0ba8",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/equation.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -5878,11 +5868,9 @@
 "author": "dpkruse",
 "assoc": "NONE",
 "draft": false,
-"head": "5dbb6d56d93e8e7f5863022b12c0d11229f3c37d",
+"head": "c310bc72b084c96124cdec02b9a1bd813325eb5c",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -5894,14 +5882,9 @@
 "author": "dpkruse",
 "assoc": "NONE",
 "draft": false,
-"head": "60159209695a469590079895b99fe3d59805bd29",
+"head": "cb6a1bde096942053970d7c4a1b139d4cc943434",
 "mine": false,
-"conflicts": [
-"crates/layout/src/display/lines.rs",
-"crates/layout/src/display/page.rs",
-"crates/pdf/src/exporter.rs",
-"crates/pdf/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -5913,15 +5896,14 @@
 "author": "dpkruse",
 "assoc": "NONE",
 "draft": false,
-"head": "63326d0e922df6b739cdf031547f24ae7acaeef8",
+"head": "02b9edd57c211da81a6b48211ef9110d4e57783a",
 "mine": false,
-"conflicts": [
-"crates/layout/src/flow.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed flow.rs, para.rs"
 ]
 },
@@ -5975,13 +5957,15 @@
 "author": "dpkruse",
 "assoc": "NONE",
 "draft": false,
-"head": "73b280c69491cc3c8f78cd0414a0e6120da4012f",
+"head": "ed26caaad8de9fb3eaef6484f32c7a0bb0c18a35",
 "mine": false,
 "conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 3787,
@@ -6181,16 +6165,14 @@
 "author": "fluorine",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "46e56d977c1b33d6d764f9d3c27442a37190d330",
+"head": "798e4bd47a831f2596e770b7b4b43e5b47d404bf",
 "mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs",
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed read.rs"
 ]
 },
@@ -6311,11 +6293,9 @@
 "author": "pattalkslaw-del",
 "assoc": "NONE",
 "draft": false,
-"head": "534d3fe55f094da777668e5c7a35a71565c3753f",
+"head": "0c2d53753c4aca599d39f5ae09c073bb8f700fb3",
 "mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -6428,13 +6408,14 @@
 "author": "dpkruse",
 "assoc": "NONE",
 "draft": false,
-"head": "ead5d522ab8fcf5e44c5e7446ab4eede6246f67f",
+"head": "295881c1d369f2d317ba58b6b98740647ce1f646",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed flow.rs"
 ]
 },
@@ -7479,18 +7460,16 @@
 "author": "fluorine",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "78eb5a0d10604cc4b020bfd07b378f260ad1e3cc",
+"head": "728a33c50a5c6175aecfe3f24b01ba935588006a",
 "mine": false,
-"conflicts": [
-"crates/formats/src/model/color.rs",
-"crates/layout/src/pass.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
 "changes apps/wordcraft/Cargo.toml"
 ],
 "stale": [
+"new commits",
 "main changed read/props.rs, write/props.rs, write/story/drawing.rs \u2026"
 ]
 },
@@ -9251,15 +9230,15 @@
 "author": "Bra1nZ",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0811a091af5ecaf056fd78d11d4158ef16ecb01c",
+"head": "b708ce0e5073040e0873c9adbb12c5c9ddc098f3",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/caret.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 4996,
@@ -10603,11 +10582,9 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "fa17af4dec9435758c7b01d9aefb0457139dae47",
+"head": "1f17b880fa834d33d5d0f40f35c4f6bc45c1f072",
 "mine": false,
-"conflicts": [
-"crates/layout/src/display/page.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -11335,7 +11312,7 @@
 "author": "jimprince",
 "assoc": "NONE",
 "draft": false,
-"head": "6b156a6ea0a48ed81e89b97696469ad3390e28f9",
+"head": "023a2816815251e28a57347a682ce781601d5b95",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11604,13 +11581,15 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7bd55dde98ddd58df201687162c98a3c928f3223",
+"head": "e434154317f6ecab77b04b14790e84685ab81320",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5631,
@@ -11618,13 +11597,15 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9e2f9c4571d6e96b5a7e2b027f64614c2c930cef",
+"head": "eb08f12360b9b32445256bec15ecfd2ae8d9a98c",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5634,
@@ -11632,13 +11613,15 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "4cfdf33da06b44a4233263934c7b35970d58db35",
+"head": "a224da94dccfce68228eb2490f60884075da4eee",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5638,
@@ -11757,7 +11740,7 @@
 "author": "Bra1nZ",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9ff31a3f697d43814767e77ed314f459fb0dcd37",
+"head": "bc8a76cbe21957fb475e96a0c7bcd75ee335280e",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11788,7 +11771,7 @@
 "author": "Gonzagamer088",
 "assoc": "NONE",
 "draft": false,
-"head": "315353a8726bbea2663efe5aad22b06857cebaf5",
+"head": "e3c2e962da9c1098d0a8c105899e4e8f6e400a5f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11819,7 +11802,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "23f4219555cb80e835be325bce0a069bae357332",
+"head": "849ea8ba37f46fd449eebe4a0cb48ce33e2f79b6",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11835,7 +11818,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1b5d76a3ede7f78e8a5f93b56c5b5a492808c364",
+"head": "5a1f935809a3eceaf50cff236a83ee05d200a0a0",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11851,7 +11834,7 @@
 "author": "GabrielMatozo",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "3f96b551466aa77a908ca2464c3cab04b336bbcd",
+"head": "be6ec972c2721e5c22932e61ffc574e146031119",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11865,7 +11848,7 @@
 "author": "alehel",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9675328ad71a2267a182d88f1b91817e2b4b00b1",
+"head": "ac95159a9dcccbcb26818559d13c1a0c0b741544",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12020,10 +12003,10 @@
 {
 "n": 5778,
 "title": "chore(deps): bump the hayro group across 1 directory with 3 updates",
-"author": "app/dependabot",
+"author": "dependabot",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "48a1c43811ac7979933262e161521effb6737828",
+"head": "eeb3a2d31f0f888c42230332bfd3ea5760055c92",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12227,8 +12210,8 @@
 "title": "Real-time collaboration: authoritative sync server, document adapter, client core (draft)",
 "author": "copoka",
 "assoc": "NONE",
-"draft": true,
-"head": "467948fa105e17ff55194e52a2f31e8d1918c15f",
+"draft": false,
+"head": "15c9625b94403429909044c853cb43c14531c28b",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12255,13 +12238,15 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9bef724c0162508ac878b3f2b3e9d31423e4dc59",
+"head": "8f14b54461fece90b3e06a8aaa1cbf1c16ab3e9f",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5852,
@@ -12505,11 +12490,9 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "dc56e06624b3f50f1783a1b06180b2d75585b836",
+"head": "fb5ef3fe553017ab8fb821c29a2272c68b93873c",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/text.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -12521,7 +12504,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ce375356e18ef60b4c4fac208478e23e83d5fd08",
+"head": "c7c61ca9b3a44845c717a7c9d1e21ea82b5135fc",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12535,13 +12518,15 @@
 "author": "kennyfs",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d251ec7856996a66c8195366c490d0e43adac470",
+"head": "862320b8fc904b3307aa1f869cc00567fb353af8",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5902,
@@ -12671,20 +12656,6 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 5949,
-"title": "Preserve character formatting outside a paragraph style selection",
-"author": "Shabirahmad427",
-"assoc": "NONE",
-"draft": false,
-"head": "bb1e9762f8f5a2d64ddfacf89291ae66577af85d",
-"mine": false,
-"conflicts": [],
-"render": false,
 "allowed": false,
 "risky": [],
 "stale": []
@@ -12971,7 +12942,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9f13dcc0cf78f3b151e14635c90f2d5246e79d88",
+"head": "5205fc8ad0af167cd85ecdfb43fcce3a9fa7ebb4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13013,7 +12984,7 @@
 "author": "scks1",
 "assoc": "NONE",
 "draft": false,
-"head": "cce771c002bdf72067b765217f476f16fbe6cf60",
+"head": "573c2202c500e764f120915324b30605624f3a22",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13064,20 +13035,6 @@
 "stale": []
 },
 {
-"n": 6024,
-"title": "HTML paste: a space or tab written as a character reference stays one (#6020)",
-"author": "avariiiiiiiiii",
-"assoc": "NONE",
-"draft": false,
-"head": "96a152c2b6713657f14c4ede0bb6a18543ad32e3",
-"mine": false,
-"conflicts": [],
-"render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 6030,
 "title": "Tables: Word gives a table nothing from Normal Table, and Table Grid is based on it",
 "author": "pakiat",
@@ -13111,7 +13068,7 @@
 "author": "10230equals3000",
 "assoc": "NONE",
 "draft": false,
-"head": "cc2b121da4af24cca8dfc5afff7e00cdd8917b0e",
+"head": "6e89152e13d3f30dc2a9eb5e355e4db0c2d7af80",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13125,7 +13082,7 @@
 "author": "10230equals3000",
 "assoc": "NONE",
 "draft": false,
-"head": "0c221cae40a56baadcdd4fafe4eaba7ef05af8cc",
+"head": "0bee819ff6f2c5a3e48b0bfb388d16276239da89",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13139,7 +13096,7 @@
 "author": "10230equals3000",
 "assoc": "NONE",
 "draft": false,
-"head": "b680a3aa25c581a2bdb89062e134f9885bee928f",
+"head": "01cb6bed38dc233a1e7b3cd3e6f2aeb5cd6c6348",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13195,7 +13152,7 @@
 "author": "cloutier",
 "assoc": "NONE",
 "draft": false,
-"head": "fabd1eca5685e2ca074e7910c6cfcfe52b63681d",
+"head": "35550daec8b7a3954f058398509eb446552662fe",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13335,13 +13292,15 @@
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "16a9d435d812b43b444195f45ffb3f1be7797273",
+"head": "4e48f4296e0098b6bafedc3a9080504a95e33c08",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6093,
@@ -13363,13 +13322,15 @@
 "author": "tpawley2001",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "4781e71692c3e9bc96a3f45af40c98d596daf07d",
+"head": "35250cd661c1aba917f70399ec58cb13fcdfbe8d",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6103,
@@ -13391,12 +13352,14 @@
 "author": "yonatan-langer83",
 "assoc": "NONE",
 "draft": false,
-"head": "eb5dd785f87297e3a762471e37cf28d91e3eef01",
+"head": "3a90dc56a4072f44a86a8b7caa9184eab9e100af",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
-"risky": [],
+"risky": [
+"crates/fonts/build.rs"
+],
 "stale": []
 },
 {
@@ -13559,13 +13522,15 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "674845060c5f1942aeb28cf73497aa518d29f315",
+"head": "8d8abbad5dff67fe8761dcf4c1789e0aca0e77c8",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6144,
@@ -13616,8 +13581,8 @@
 "title": "Refuse ui.screenshot on secondary document windows and support root window selection",
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
-"draft": true,
-"head": "b85518060b6d479d3bf91c5b91913cd5b17bb257",
+"draft": false,
+"head": "b2fa4dfd5d1070993accffe78476478829f374f2",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13677,6 +13642,118 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6178,
+"title": "Ribbon: three-band card parity at 1024x768",
+"author": "alosslessdev",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "e8909a7a7e88440c89b45813eced0c218a354b8a",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6183,
+"title": "References: Insert Index \u203a AutoMark marks index entries from a concordance file",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "628b6c94e6b1ee80ecf6b042e264803a6fffbf6a",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6185,
+"title": "View \u203a Split: two panes in one window, each with its own caret and view (gap 27, #3254)",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "eb2907e2d291975c285c03383e8c058c9c953c97",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6186,
+"title": "Paragraph dialog: indents in points win over indents in characters",
+"author": "pakiat",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "0eb6f85a9b0ba1a455f54cd4c0ba0d665e24d7ba",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6189,
+"title": "Accessibility: contrast in a table is against the shading the cell shows",
+"author": "pakiat",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "575d6a69f2f735bb45e23b130ec42b22e3145569",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6194,
+"title": "#6101: automation can't attach a template on another machine",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "ba1f9e3a1ce83d09a7d2fe9f25831192dafe7a7f",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6197,
+"title": "Tables: a nested table wider than its cell is cut off at the cell's edges",
+"author": "pakiat",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "b183835e064601219cb5c4cf81d0fb94023ff79e",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6203,
+"title": "Layout: justified lines in RTF documents fit the overrunning word by squeezing spaces up to half, as Word does",
+"author": "tpawley2001",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "b4f40996e64fabd283a4adb37c7f4d08e06aa142",
+"mine": false,
+"conflicts": [],
+"render": true,
 "allowed": false,
 "risky": [],
 "stale": []

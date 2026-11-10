@@ -458,5 +458,10 @@
 "n": 6118,
 "title": "feat(thai): Thai language support, line breaking and word navigation via libthai",
 "state": "CLOSED"
+},
+{
+"n": 5949,
+"title": "Preserve character formatting outside a paragraph style selection",
+"state": "CLOSED"
 }
 ]

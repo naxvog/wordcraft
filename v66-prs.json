@@ -2833,10 +2833,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed para.rs"
-]
+"stale": []
 },
 {
 "n": 2368,
@@ -2925,11 +2922,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "70b887605b022baa04be63b1cfc9035faba2810d",
+"head": "a3d7705822cb28d94b178c3f4331bf52b37592cc",
 "mine": false,
-"conflicts": [
-"crates/doc/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -2990,12 +2985,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "23f5ca357bb8cc772f53759b3507b3b37cc604a0",
+"head": "370d5048cc6471f48c01c55ca483461817d06f45",
 "mine": false,
-"conflicts": [
-"crates/doc/src/lib.rs",
-"crates/docx/src/read/story/blocks.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -6874,22 +6866,6 @@
 "stale": []
 },
 {
-"n": 4251,
-"title": "feat(doc): BAHTTEXT field \u2014 Thai number-to-words (ported from GridCraft)",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "ba58223ac992d67f4024a03805a43841d4eac695",
-"mine": false,
-"conflicts": [
-"crates/doc/src/section.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 4257,
 "title": "feat(pdf): bulleted and numbered lists are lists in tagged PDF",
 "author": "MyAIPlugins",
@@ -7283,22 +7259,6 @@
 "mine": false,
 "conflicts": [],
 "render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 4399,
-"title": "feat(thai): input sequence checking, WTT 2.0 render substitutions",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "9541b42543d7b88d51fa74312b09ab38c80dd830",
-"mine": false,
-"conflicts": [
-"crates/fonts/src/word.rs"
-],
-"render": true,
 "allowed": false,
 "risky": [],
 "stale": []
@@ -7819,22 +7779,6 @@
 "stale": []
 },
 {
-"n": 4566,
-"title": "feat(doc): implement ThaiNumbers and ThaiCounting list-label formats",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "edb5cda560bf7e68228fefc0fbb43039d7c7fede",
-"mine": false,
-"conflicts": [
-"crates/doc/src/section.rs"
-],
-"render": true,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 4571,
 "title": "Fields: format switches follow Word",
 "author": "Harrison-Booth",
@@ -8237,22 +8181,6 @@
 "crates/engine/src/cmd/file.rs"
 ],
 "render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
-"n": 4665,
-"title": "feat(thai): Thai-aware drop cap using Thai Character Block (TCB)",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "660e1ea1e408cdfc9d5683e6469936aa5ac8c2be",
-"mine": false,
-"conflicts": [
-"crates/layout/src/para/paragraph.rs"
-],
-"render": true,
 "allowed": false,
 "risky": [],
 "stale": []
@@ -10276,21 +10204,13 @@
 },
 {
 "n": 5187,
-"title": "WMF preview text for MathType equations, inline object position, and CJK UI file names",
+"title": "WMF preview text for MathType equations and CJK UI file names",
 "author": "woei66",
 "assoc": "NONE",
 "draft": false,
-"head": "808e7dbca48099f9f79540c18c85a6ed411c6a58",
+"head": "98d8a4c6e3938da389853ea127ab585b299aed3a",
 "mine": false,
-"conflicts": [
-"crates/fonts/src/word.rs",
-"crates/layout/src/display/lines.rs",
-"crates/layout/src/floats.rs",
-"crates/layout/src/para/lines.rs",
-"crates/layout/src/para/paragraph.rs",
-"crates/pdf/src/exporter/text.rs",
-"crates/render/src/media.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -12989,7 +12909,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "dfbd109cf14a2a7f6ffe937eaf767511d40c7e93",
+"head": "e8e6de0d1ca735bd096bac3cfe6d96b29fe630d2",
 "mine": false,
 "conflicts": [
 "crates/pdf/src/exporter.rs",
@@ -13023,7 +12943,7 @@
 "author": "woei66",
 "assoc": "NONE",
 "draft": false,
-"head": "5ed401d73763391b98e3405951525802a328dc02",
+"head": "6dcd824f4e892ef785735317882b30327129f46b",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13508,25 +13428,6 @@
 "stale": []
 },
 {
-"n": 6118,
-"title": "feat(thai): Thai language support, line breaking and word navigation via libthai",
-"author": "nanusorn",
-"assoc": "NONE",
-"draft": false,
-"head": "3d98646722518fc48a8de4ebb9a991688e13036a",
-"mine": false,
-"conflicts": [],
-"render": true,
-"allowed": false,
-"risky": [
-"changes Cargo.toml",
-"changes crates/doc/Cargo.toml",
-"changes crates/layout/Cargo.toml",
-"new packages in Cargo.lock: libthai 0.1.4"
-],
-"stale": []
-},
-{
 "n": 6120,
 "title": "Compare: surface character-level diff fallback on long paragraphs (#6111)",
 "author": "batistalucasv",
@@ -13546,7 +13447,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d104bc13cc512630c3df387f5880c99c9e8a9a4c",
+"head": "4a237299c8953e48538b11393518b095e8dd00b5",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13706,6 +13607,62 @@
 "mine": false,
 "conflicts": [],
 "render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6169,
+"title": "Refuse ui.screenshot on secondary document windows and support root window selection",
+"author": "batistalucasv",
+"assoc": "CONTRIBUTOR",
+"draft": true,
+"head": "b85518060b6d479d3bf91c5b91913cd5b17bb257",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6170,
+"title": "DOCX: a HYPERLINK field with no result stays a field when the file is read",
+"author": "helenkwok",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "6b2bbc018917317cb7b265cadce3458de0c6eb17",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6171,
+"title": "fix(fonts): keep LastResort placeholder boxes out of automatic font fallback",
+"author": "neupaneprashant",
+"assoc": "NONE",
+"draft": false,
+"head": "8dad8eed190771e8b6669d8dcad1df23b4d8ee7e",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6173,
+"title": "Add document readability statistics",
+"author": "Bardanghimire",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "b456b04a8896684fd999f6543268bf43019b0742",
+"mine": false,
+"conflicts": [],
+"render": false,
 "allowed": false,
 "risky": [],
 "stale": []

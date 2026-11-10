@@ -433,5 +433,30 @@
 "n": 6066,
 "title": "Add Support Thai Language#1",
 "state": "CLOSED"
+},
+{
+"n": 4251,
+"title": "feat(doc): BAHTTEXT field \u2014 Thai number-to-words (ported from GridCraft)",
+"state": "CLOSED"
+},
+{
+"n": 4399,
+"title": "feat(thai): input sequence checking, WTT 2.0 render substitutions",
+"state": "CLOSED"
+},
+{
+"n": 4566,
+"title": "feat(doc): implement ThaiNumbers and ThaiCounting list-label formats",
+"state": "CLOSED"
+},
+{
+"n": 4665,
+"title": "feat(thai): Thai-aware drop cap using Thai Character Block (TCB)",
+"state": "CLOSED"
+},
+{
+"n": 6118,
+"title": "feat(thai): Thai language support, line breaking and word navigation via libthai",
+"state": "CLOSED"
 }
 ]

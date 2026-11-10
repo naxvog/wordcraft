@@ -1,6 +1,6 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-10 01:19 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-10 01:48 UTC.
 
 ## Summary for reviewers
 
@@ -74,8 +74,8 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 4 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 4 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 341 PRs benched (80 change the score), 160 of them stale; 3 queued for the
-next round; 113 waiting for a person to look before they're built; 380 conflict with `main`.
+**Coverage:** 346 PRs benched (80 change the score), 159 of them stale; 0 queued for the
+next round; 113 waiting for a person to look before they're built; 378 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -199,7 +199,7 @@ same fixtures (see *Combined branch*).
 | #4436 | dfgodvan | Layout: line height of an inline picture in multiple line spacing, as in Word | -0.044 | +0.070 | -2 | 21 (7↑ 5↓) | picture-mark-leading-compat15-line480 +42.8, czech_village_budget_commentary +22.1, brazilian_logistics_study +22.0 (+4 more) | picture-mark-leading-mark22-line360-text0 -41.2, picture-mark-leading-compat14-line480 -39.3, picture-mark-leading-mark28-line480-text0 -39.3 (+2 more) | `e919982fa`, 4 d ago ⚠ stale: main changed flow.rs, para/lines.rs |
 | #2578 | finwarman | Reserve page-colour clearance in initial header stories | -0.113 | -0.090 | -1 | 2 (0↑ 2↓) | – | traditional_skills_job_form -65.5, czech_village_council_minutes_2025 -55.8 | `e919982fa`, 4 d ago ⚠ stale: main changed page.rs, pass.rs |
 
-**Benched, no change on the suite (261):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #2022, #2056, #2063, #2064, #2117, #2120, #2141, #2288, #2340, #2345, #2356, #2372, #2384, #2455, #2473, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6033, #6049, #6051, #6077, #6080, #6081, #6082, #6091, #6100, #6103, #6112. These may
+**Benched, no change on the suite (266):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #2022, #2056, #2063, #2064, #2100, #2117, #2120, #2141, #2260, #2288, #2340, #2345, #2356, #2372, #2384, #2455, #2473, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6033, #6049, #6051, #6077, #6080, #6081, #6082, #6091, #6100, #6103, #6112, #6141, #6142, #6144. These may
 still be right; the suite just has no document that exercises them.
 
 </details>
@@ -228,7 +228,7 @@ they overlap or interact. 218 fixtures change (173↑ 20↓). Regressions over 0
 
 ## Not benched
 
-- **Code conflicts with `main`** (380 PRs): not rerun until rebased.
+- **Code conflicts with `main`** (378 PRs): not rerun until rebased.
 - **Waiting for a look before they're built** (113): #4652, #1217, #1292, #1713, #1926, #1927, #1948, #2010, #2815, #4136, #5158, #5307, #5317, #5331, #5357, #5557, #5778, #5791, #6118, #6161 change
   build scripts, cargo config or dependencies; 93 more are from authors without a merged PR yet.
 - **Change no rendering file** (109): not benched.

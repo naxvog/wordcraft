@@ -1589,10 +1589,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read.rs"
-]
+"stale": []
 },
 {
 "n": 1931,
@@ -2084,11 +2081,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "5191805f34e7723acdb9588a4b480734e04c2f5e",
+"head": "96e8c11d63d3960a7998eaa8899a7cd81555a85e",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/design.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -2457,12 +2452,9 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "33a48070fa4b9e8b3b9d91f629e991826bc70f52",
+"head": "ffa6a1a51512fbc2aac75dd08443e81c0a28504a",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/para.rs",
-"crates/layout/src/pass.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -2835,13 +2827,14 @@
 "author": "dkhlapov",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "2c1c792cac65ea98eb861d7865cb2bfdd97af2d8",
+"head": "54b8495b76f1760f95804d7ef5f94646d1d7a677",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed para.rs"
 ]
 },
@@ -11938,7 +11931,7 @@
 "author": "GabrielMatozo",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0f8e313c851f32e509b2ba564d2059734c620fb0",
+"head": "3f96b551466aa77a908ca2464c3cab04b336bbcd",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12996,7 +12989,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "81e9bf40bd19ecb87bcb1fafc7077fb2da6f7c75",
+"head": "dfbd109cf14a2a7f6ffe937eaf767511d40c7e93",
 "mine": false,
 "conflicts": [
 "crates/pdf/src/exporter.rs",
@@ -13022,9 +13015,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5995,
@@ -13276,9 +13267,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6053,
@@ -13543,7 +13532,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d07e46aaf8a13063ff967881ae06eca7e88c2dca",
+"head": "3de32c0a6d255bea9841610299b7ec01f371eb47",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13557,7 +13546,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "089dc4ac7bd73291626e27266f243a108f780dec",
+"head": "d104bc13cc512630c3df387f5880c99c9e8a9a4c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13585,7 +13574,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ccf6a5392daefe876fad3eec0fa2f636f28e0ae0",
+"head": "869dcdd844bbb09fb447e937be54409fba90b070",
 "mine": false,
 "conflicts": [],
 "render": false,

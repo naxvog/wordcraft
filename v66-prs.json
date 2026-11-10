@@ -8966,9 +8966,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed read/meta.rs"
-]
+"stale": []
 },
 {
 "n": 4849,
@@ -9084,9 +9082,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed read/meta.rs, display/lines.rs"
-]
+"stale": []
 },
 {
 "n": 4867,
@@ -9202,10 +9198,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed display/objects.rs"
-]
+"stale": []
 },
 {
 "n": 4905,
@@ -10678,10 +10671,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed fontdb.rs, fontdb/face.rs"
-]
+"stale": []
 },
 {
 "n": 5293,
@@ -11078,10 +11068,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed display/lines.rs"
-]
+"stale": []
 },
 {
 "n": 5427,
@@ -11418,10 +11405,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed boxes.rs, ctx.rs, floats.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5546,
@@ -11648,7 +11632,7 @@
 "author": "marcwgls",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7f47f53e307d5bc9d3a23d270f265944eae1bf10",
+"head": "019f67fcf75034d415b4b640da0dfb6ed9ed6433",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11718,10 +11702,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed boxes.rs, ctx.rs, page.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5631,
@@ -11735,9 +11716,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5634,
@@ -11969,11 +11948,9 @@
 "author": "GabrielMatozo",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "4465cf99b1dfd68b6bab711004e1d1ba3bd09c93",
+"head": "0f8e313c851f32e509b2ba564d2059734c620fb0",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -12359,7 +12336,7 @@
 "author": "copoka",
 "assoc": "NONE",
 "draft": true,
-"head": "c211e63a13f8245b87a5d6eecfc7b81a4347cc2a",
+"head": "467948fa105e17ff55194e52a2f31e8d1918c15f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13064,7 +13041,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "75a43a95e88df1182c80ba477c0570aad0e20042",
+"head": "81e9bf40bd19ecb87bcb1fafc7077fb2da6f7c75",
 "mine": false,
 "conflicts": [
 "crates/pdf/src/exporter.rs",
@@ -13764,15 +13741,29 @@
 "title": "Engine: fall back to fsync on Apple targets when full flush is unsupported (#6155)",
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
-"draft": true,
-"head": "aa10db96c453a29996f33fda7e73a3c80c64593d",
+"draft": false,
+"head": "a37d987842f41e741b2582e444c75998a8f58349",
 "mine": false,
 "conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [
-"head moved during the scan"
+"changes crates/engine/Cargo.toml"
 ],
+"stale": []
+},
+{
+"n": 6162,
+"title": "fix(docx): frame shapes have a hole; header drawings aren't dimmed",
+"author": "tsw2k",
+"assoc": "NONE",
+"draft": false,
+"head": "c82406a510d5ea3d90c0d4c4a8dae19dfd0ca3e3",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
 "stale": []
 }
 ]

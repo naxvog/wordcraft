@@ -39,9 +39,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3821,
@@ -3491,13 +3489,15 @@
 "author": "finwarman",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ccd2686342e5a19a2066a0f0bef6239e3d40e6fe",
+"head": "8073a90093103af16c6907d961018bed91c419cd",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2535,
@@ -4000,13 +4000,15 @@
 "author": "Nghiathan13",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "c741c4e0fc9506a262a1db7d071f2193cb18ccb6",
+"head": "498f6a23c2b3922485b31f8f793f226eaa1b5716",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2713,
@@ -8248,12 +8250,9 @@
 "author": "benandez",
 "assoc": "MEMBER",
 "draft": false,
-"head": "fc177518602aed74b14fbc276f5fbc306ae787cc",
+"head": "02bf88f8f2a7fd8ce9d289f9d38832f7831bf97a",
 "mine": false,
-"conflicts": [
-"crates/formats/src/odt/styles.rs",
-"crates/layout/src/pass.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -10536,9 +10535,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5293,
@@ -10796,7 +10793,7 @@
 "author": "sungkhum",
 "assoc": "NONE",
 "draft": false,
-"head": "3614efb419b078bdadb9ed289d132df8c726c008",
+"head": "5744a042135556bfae604f8882bda63964fa47eb",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13296,9 +13293,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6103,
@@ -13496,9 +13491,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6144,
@@ -13542,6 +13535,26 @@
 "render": true,
 "allowed": false,
 "risky": [],
+"stale": []
+},
+{
+"n": 6166,
+"title": "\u2601\ufe0f Google Drive: open, save back and export to Drive, off by default with an Accounts setting (#518)",
+"author": "randomtask2000",
+"assoc": "NONE",
+"draft": false,
+"head": "2abfd145c69e895d07dfbec228972b5b884e50c2",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [
+"xtask/src/layers.rs",
+"changes Cargo.toml",
+"changes crates/gdrive/Cargo.toml",
+"changes crates/ui-egui/Cargo.toml",
+"new packages in Cargo.lock: aes 0.8.4, async-fs 2.2.0, block-padding 0.3.3, byteorder 1.5.0, cbc 0.1.2, cipher 0.4.4 \u2026"
+],
 "stale": []
 },
 {

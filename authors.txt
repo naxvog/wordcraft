@@ -1,2 +1,0 @@
-# <login>  # why: authors whose work landed although GitHub still lists their PRs as NONE; the user decides
-neupaneprashant  # #1016 merged 2026-10-14; cleared by the user 2026-11-11

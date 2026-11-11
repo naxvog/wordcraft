@@ -297,6 +297,7 @@
 "head": "9675dab467408e07559b2955d0c0bee4334b1de4",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd/insert.rs",
 "crates/pdf/src/exporter.rs"
 ],
 "render": true,
@@ -409,9 +410,11 @@
 "head": "57e5250a9e0684d84cb4aa81e67ff0475b36a5d8",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
 "apps/wordcraft-cli/src/main.rs",
 "crates/engine/Cargo.toml",
 "crates/engine/src/cmd/file.rs",
+"crates/engine/src/io/safe_save.rs",
 "crates/engine/src/recovery.rs",
 "crates/engine/src/recovery/desktop.rs",
 "crates/engine/src/session.rs"
@@ -2049,6 +2052,7 @@
 "head": "ac0b3cb0986a477638e73c81e8cfb71a9746c108",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd/view.rs",
 "crates/engine/src/lib.rs",
 "crates/engine/src/session.rs"
 ],
@@ -3818,7 +3822,9 @@
 "draft": false,
 "head": "921015dd8b7847eddcc2882aec269226ad223ee2",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/insert/items.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -4798,11 +4804,12 @@
 "n": 3143,
 "title": "Feat/date time dialog current",
 "author": "felipegavilanes-source",
-"assoc": "NONE",
+"assoc": "CONTRIBUTOR",
 "draft": false,
 "head": "49660c06d4258165e9d37e59587651aabab0a6ba",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd.rs",
 "crates/engine/src/cmd/insert.rs",
 "crates/engine/src/cmd/insert/items.rs",
 "crates/engine/src/cmd/references/fields.rs"
@@ -4979,7 +4986,9 @@
 "draft": false,
 "head": "96f6d63424311e0c7da1d602e0a3fcda6f1fe56c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/insert.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -5422,7 +5431,9 @@
 "draft": false,
 "head": "2dcb7c698de756a64964506db22ba5cab998ae39",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/insert.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -5689,7 +5700,7 @@
 "n": 3520,
 "title": "Feat/contextual paste options",
 "author": "felipegavilanes-source",
-"assoc": "NONE",
+"assoc": "CONTRIBUTOR",
 "draft": false,
 "head": "5e3f3ada66a39d0436104b8b73db14de07acba0a",
 "mine": false,
@@ -6344,7 +6355,9 @@
 "draft": false,
 "head": "cfbe89a8e8bcfffc8251f66e673f11292ab5f176",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/references/fields.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -6845,7 +6858,7 @@
 "n": 4260,
 "title": "Sync/wordcraft main paragraph mark color base",
 "author": "felipegavilanes-source",
-"assoc": "NONE",
+"assoc": "CONTRIBUTOR",
 "draft": false,
 "head": "19bff03334b39932181f710510e1d2f4fce99209",
 "mine": false,
@@ -6861,7 +6874,7 @@
 "n": 4265,
 "title": "Feat/paragraph mark color",
 "author": "felipegavilanes-source",
-"assoc": "NONE",
+"assoc": "CONTRIBUTOR",
 "draft": false,
 "head": "06affa8cc5cc964bfbc23552977792f2f9b1bee3",
 "mine": false,
@@ -6893,7 +6906,7 @@
 "n": 4268,
 "title": "Feat/ptbr word keyboard shortcuts",
 "author": "felipegavilanes-source",
-"assoc": "NONE",
+"assoc": "CONTRIBUTOR",
 "draft": false,
 "head": "c27d6f2aa5585121fd1d8b9436c8d26c6d9bfc48",
 "mine": false,
@@ -6969,10 +6982,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed hit.rs"
-]
+"stale": []
 },
 {
 "n": 4294,
@@ -8942,9 +8952,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed ctx.rs, flow.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 4867,
@@ -8989,10 +8997,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed ctx.rs, flow.rs"
-]
+"stale": []
 },
 {
 "n": 4875,
@@ -9059,9 +9064,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 4905,
@@ -9071,7 +9074,9 @@
 "draft": false,
 "head": "30b858c70b5ac8fc0e715d0e919ed86ac8bea0da",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/insert.rs"
+],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -9172,6 +9177,20 @@
 "crates/layout/src/kinsoku.rs"
 ],
 "render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 4964,
+"title": "fix(formats): narrow table columns keep their width on import",
+"author": "tsw2k",
+"assoc": "NONE",
+"draft": false,
+"head": "72c71573123c4759d361ee2619f870d2b57e30ff",
+"mine": false,
+"conflicts": [],
+"render": false,
 "allowed": false,
 "risky": [],
 "stale": []
@@ -9446,7 +9465,9 @@
 "draft": false,
 "head": "17949dd6661ea348a31e1c09be5998cf14cc180e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -10043,9 +10064,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 5170,
@@ -11005,10 +11024,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed export.rs, exporter.rs, picture.rs"
-]
+"stale": []
 },
 {
 "n": 5454,
@@ -11218,7 +11234,9 @@
 "draft": false,
 "head": "34fef3d5ddf6a7476276c0d40a92d61f1c0de7ac",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -11569,9 +11587,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed ctx.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 5631,
@@ -11599,9 +11615,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed ctx.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 5638,
@@ -11615,10 +11629,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed lib.rs, media.rs"
-]
+"stale": []
 },
 {
 "n": 5639,
@@ -11720,7 +11731,9 @@
 "draft": false,
 "head": "bc8a76cbe21957fb475e96a0c7bcd75ee335280e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/insert.rs"
+],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -11945,9 +11958,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5767,
@@ -11955,13 +11966,15 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "314b24728b59373599f76f23f90100874ff36df9",
+"head": "76ea3e155786dab5f1d47c804e496de107037692",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5772,
@@ -12020,7 +12033,7 @@
 "author": "x0tero",
 "assoc": "NONE",
 "draft": false,
-"head": "94ab828fc802d4b9588ad11f0194166923c24673",
+"head": "1dceac21be7d91a26ec41e72612c7460eebd1299",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12186,7 +12199,7 @@
 "author": "copoka",
 "assoc": "NONE",
 "draft": false,
-"head": "a32524b53a87536e19853816f14d12b1f30f1d8f",
+"head": "b4b5f50b4e3eb08e74be50d85e790509cb9fdcba",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12403,7 +12416,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "c2310b7ddd57d027948a0a9749e135bfcf811085",
+"head": "cad9a4e6acb88e1d1705cbe10931111b7545beca",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12451,13 +12464,14 @@
 "author": "frandavid100",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "26401a789d0571eff8f18af4d12057bfaaa019ab",
+"head": "e46c28a85d228c3754f25c2a1fa9e8c1f0cc698a",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed flow.rs, para.rs"
 ]
 },
@@ -12599,13 +12613,15 @@
 "author": "frandavid100",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "ce3a36372dd1fcaae1f8e19971a0554addec2626",
+"head": "0130efd7340846c79224cca55233b07320d5a06c",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5940,
@@ -13000,20 +13016,6 @@
 "stale": []
 },
 {
-"n": 6022,
-"title": "Insert > Date & Time: Word-style dialog with regional formats and field support (#5093)",
-"author": "batistalucasv",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "e9de23a88b18ef9f0f2e5353d6381c9a4807cb81",
-"mine": false,
-"conflicts": [],
-"render": false,
-"allowed": false,
-"risky": [],
-"stale": []
-},
-{
 "n": 6023,
 "title": "Lists: Numbering removes the typed label it repeats (#6017)",
 "author": "avariiiiiiiiii",
@@ -13313,7 +13315,7 @@
 "author": "yonatan-langer83",
 "assoc": "NONE",
 "draft": false,
-"head": "3a90dc56a4072f44a86a8b7caa9184eab9e100af",
+"head": "dcd0b8192541f61517380a560300cfb7f7889d70",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13506,28 +13508,12 @@
 "stale": []
 },
 {
-"n": 6161,
-"title": "Engine: fall back to fsync on Apple targets when full flush is unsupported (#6155)",
-"author": "batistalucasv",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "a37d987842f41e741b2582e444c75998a8f58349",
-"mine": false,
-"conflicts": [],
-"render": false,
-"allowed": false,
-"risky": [
-"changes crates/engine/Cargo.toml"
-],
-"stale": []
-},
-{
 "n": 6162,
 "title": "fix(docx): frame shapes have a hole; header drawings aren't dimmed",
 "author": "tsw2k",
 "assoc": "NONE",
 "draft": false,
-"head": "646f3f9c2d4c3b39f739f36a7af33c5e0ba66b7e",
+"head": "4a7a9f3db9510b3e9116366cafff6baa14e1fbf5",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13553,20 +13539,6 @@
 "changes crates/ui-egui/Cargo.toml",
 "new packages in Cargo.lock: aes 0.8.4, async-fs 2.2.0, block-padding 0.3.3, byteorder 1.5.0, cbc 0.1.2, cipher 0.4.4 \u2026"
 ],
-"stale": []
-},
-{
-"n": 6169,
-"title": "Refuse ui.screenshot on secondary document windows and support root window selection",
-"author": "batistalucasv",
-"assoc": "CONTRIBUTOR",
-"draft": false,
-"head": "b2fa4dfd5d1070993accffe78476478829f374f2",
-"mine": false,
-"conflicts": [],
-"render": false,
-"allowed": false,
-"risky": [],
 "stale": []
 },
 {

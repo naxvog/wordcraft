@@ -483,5 +483,20 @@
 "n": 6049,
 "title": "Line numbers appear beside every column and keep their Word formatting",
 "state": "MERGED"
+},
+{
+"n": 6022,
+"title": "Insert > Date & Time: Word-style dialog with regional formats and field support (#5093)",
+"state": "MERGED"
+},
+{
+"n": 6161,
+"title": "Engine: fall back to fsync on Apple targets when full flush is unsupported (#6155)",
+"state": "MERGED"
+},
+{
+"n": 6169,
+"title": "Refuse ui.screenshot on secondary document windows and support root window selection",
+"state": "MERGED"
 }
 ]

@@ -463,5 +463,25 @@
 "n": 5949,
 "title": "Preserve character formatting outside a paragraph style selection",
 "state": "CLOSED"
+},
+{
+"n": 2251,
+"title": "Preserve header/footer content when adding page numbers (#2201)",
+"state": "MERGED"
+},
+{
+"n": 4683,
+"title": "#4501 follow-up: restore pre-refactor behaviour",
+"state": "MERGED"
+},
+{
+"n": 6033,
+"title": "DOCX: save and load tracked revision marks around equations (#6011)",
+"state": "MERGED"
+},
+{
+"n": 6049,
+"title": "Line numbers appear beside every column and keep their Word formatting",
+"state": "MERGED"
 }
 ]

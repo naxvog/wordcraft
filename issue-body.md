@@ -1,11 +1,11 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 14:41 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 15:13 UTC.
 
 ## Summary for reviewers
 
 `main` ad5e1a65f scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
-(13.6 points ahead). Merging the 26 PRs below, in this order, gives **77.55 (+3.85)**,
+(13.6 points ahead). Merging the 27 PRs below, in this order, gives **77.70 (+4.00)**,
 measured on one branch with all of them merged (see *Combined branch*).
 
 ### Merge next
@@ -21,6 +21,7 @@ next round.
 | #5443 | naxvog | Tables: a nested table in an older-mode document keeps its edge at its cell's text | **+0.425** | 16↑ 2↓ | case91 -8.6 | ✅ | – | +231 −13 | `4b0d39959`, 3 d ago |
 | #5458 | naxvog | Layout: a cell's end mark below its floating table adds no line, as in Word | **+0.307** | 8↑ 2↓ | nested-adjacent-negative-large-offset -10.5 | ✅ | – | +161 −7 | `060768f1e`, today |
 | #5439 | naxvog | Layout: a raised or lowered run moves its line's box instead of growing it | **+0.220** | 8↑ 1↓ | czech_municipal_grant_form -7.8 | ✅ | – | +135 −10 | `e0d8312fb`, 3 d ago |
+| #5808 | kevinj24fr | Layout: an exactly spaced line puts its baseline 0.8 of its height down | **+0.153** | 6↑ 1↓ | continued-gap-cell-after0-before4 -2.8 | ✅ | changes requested | +105 −10 | `ad5e1a65f`, today |
 | #2552 | naxvog | Layout: a left tab whose text doesn't fit moves to the next line with it (#2531) | **+0.152** | 5↑ 0↓ | – | ✅ | – | +280 −15 | `a42c9eaab`, today |
 | #4840 | ro-legal-docx | Layout: continue oversized cantSplit rows across pages | **+0.141** | 3↑ 0↓ | – | ✅ | – | +470 −7 | `661a79054`, 3 d ago |
 | #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | **+0.098** | 3↑ 0↓ | – | ✅ | – | +198 −2 | `060768f1e`, today |
@@ -73,7 +74,7 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 6 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 5 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 362 PRs benched (88 change the score), 167 of them stale; 3 queued for the
+**Coverage:** 365 PRs benched (88 change the score), 167 of them stale; 0 queued for the
 next round; 124 waiting for a person to look before they're built; 362 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
@@ -122,7 +123,7 @@ same fixtures (see *Combined branch*).
 | #5443 | naxvog | Tables: a nested table in an older-mode document keeps its edge at its cell's text | +0.425 | +0.277 | +0 | 25 (16↑ 2↓) | nested-autofit-padding-d3-p108-w4200 +48.4, nested-autofit-padding-d1-p108-w4200 +48.3, nested-autofit-padding-d1-p108-w6000 +45.8 (+13 more) | case91 -8.6, case89 -8.5 | `4b0d39959`, 3 d ago |
 | #5458 | naxvog | Layout: a cell's end mark below its floating table adds no line, as in Word | +0.307 | +0.205 | +0 | 10 (8↑ 2↓) | negative-x-nested-x-142-y1-w4820-n4 +52.7, negative-x-nested-x142-y-33-w4820-n0 +48.2, nested-final-mark-w5100-y1-h400-n1 +47.8 (+5 more) | nested-adjacent-negative-large-offset -10.5, nested-adjacent-negative-positive -7.8 | `060768f1e`, today |
 | #5439 | naxvog | Layout: a raised or lowered run moves its line's box instead of growing it | +0.220 | +0.409 | +0 | 9 (8↑ 1↓) | shifted-text-position-7-mixed0-mark1 +50.7, shifted-text-position-7-mixed0-mark0 +50.7, raised-empty-size12-position7-count2 +35.3 (+5 more) | czech_municipal_grant_form -7.8 | `e0d8312fb`, 3 d ago |
-| #5808 | kevinj24fr | Layout: an exactly spaced line puts its baseline 0.8 of its height down | +0.153 | +0.101 | +0 | 15 (6↑ 1↓) | nested-table-keep-next +53.8, heading-keep-next-exact +52.1, keep-next-inline-image +44.5 (+3 more) | continued-gap-cell-after0-before4 -2.8 | `d40d1b271`, 2 d ago |
+| #5808 | kevinj24fr | Layout: an exactly spaced line puts its baseline 0.8 of its height down | +0.153 | +0.101 | +0 | 15 (6↑ 1↓) | nested-table-keep-next +53.8, heading-keep-next-exact +52.1, keep-next-inline-image +44.5 (+3 more) | continued-gap-cell-after0-before4 -2.8 | `ad5e1a65f`, today |
 | #2552 | naxvog | Layout: a left tab whose text doesn't fit moves to the next line with it (#2531) | +0.152 | +0.124 | +0 | 5 (5↑ 0↓) | leading-tab-four-tabs +47.1, leading-tab-two-tabs +46.5, leading-tab-visible-prefix +38.1 (+2 more) | – | `a42c9eaab`, today |
 | #4840 | ro-legal-docx | Layout: continue oversized cantSplit rows across pages | +0.141 | +0.128 | +3 | 3 (3↑ 0↓) | modern-oversized-lines55-cant1-prefix0 +60.7, modern-oversized-lines55-cant1-prefix330 +45.5, modern-oversized-lines55-cant1-prefix160 +45.5 | – | `661a79054`, 3 d ago |
 | #3787 | cyril265 | Layout: a page break at the end of the document or of a section starts no blank page | +0.105 | +0.089 | +2 | 2 (2↑ 0↓) | geneva_waste_facility_permit_request +63.4, stem_partnerships_guide +49.3 | – | `e919982fa`, 5 d ago ⚠ stale: main changed ctx.rs, flow.rs |
@@ -206,32 +207,32 @@ same fixtures (see *Combined branch*).
 | #4436 | dfgodvan | Layout: line height of an inline picture in multiple line spacing, as in Word | -0.044 | +0.070 | -2 | 21 (7↑ 5↓) | picture-mark-leading-compat15-line480 +42.8, czech_village_budget_commentary +22.1, brazilian_logistics_study +22.0 (+4 more) | picture-mark-leading-mark22-line360-text0 -41.2, picture-mark-leading-compat14-line480 -39.3, picture-mark-leading-mark28-line480-text0 -39.3 (+2 more) | `e919982fa`, 6 d ago ⚠ stale: main changed flow.rs, para/lines.rs |
 | #2578 | finwarman | Reserve page-colour clearance in initial header stories | -0.113 | -0.090 | -1 | 2 (0↑ 2↓) | – | traditional_skills_job_form -65.5, czech_village_council_minutes_2025 -55.8 | `e919982fa`, 5 d ago ⚠ stale: main changed page.rs, pass.rs |
 
-**Benched, no change on the suite (274):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #1999, #2022, #2056, #2063, #2064, #2100, #2117, #2120, #2141, #2260, #2288, #2340, #2345, #2356, #2372, #2384, #2414, #2455, #2473, #2533, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5302, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6051, #6077, #6080, #6081, #6082, #6091, #6100, #6103, #6112, #6141, #6142, #6144, #6170, #6203, #6207, #6231, #6233, #6243. These may
+**Benched, no change on the suite (277):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1713, #1715, #1791, #1838, #1928, #1931, #1952, #1999, #2022, #2056, #2063, #2064, #2100, #2117, #2120, #2141, #2260, #2288, #2340, #2345, #2356, #2372, #2384, #2414, #2455, #2473, #2533, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5302, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6051, #6077, #6080, #6081, #6082, #6091, #6100, #6103, #6112, #6141, #6142, #6144, #6170, #6203, #6207, #6231, #6233, #6243, #6244, #6245, #6246. These may
 still be right; the suite just has no document that exercises them.
 
 </details>
 
 ## Combined branch
 
-**Every PR with a positive score**: 26 PRs merged into `main` ad5e1a65f: #3821, #2523, #5443, #5458, #5439, #2552, #4840, #5455, #6030, #2711, #3823, #6114, #5546, #6219, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #2792, #3072, #5339, #5074, #4846. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #1172, #5457, #4065, #5176, #2493, #5206, #6092, #2393, #4614, #5630, #5096, #4142, #2608; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #3604, #4460, #5564, #5590, #5695, #5808.
+**Every PR with a positive score**: 27 PRs merged into `main` ad5e1a65f: #3821, #2523, #5443, #5458, #5439, #5808, #2552, #4840, #5455, #6030, #2711, #3823, #6114, #5546, #6219, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #2792, #3072, #5339, #5074, #4846. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #1172, #5457, #4065, #5176, #2493, #5206, #6092, #2393, #4614, #5630, #5096, #4142, #2608; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #3604, #4460, #5564, #5590, #5695.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
 | `main` ad5e1a65f | 73.70 | 56.17 | 1044/1073 | 93.2 |
-| combined | 76.48 (+2.785) | 58.90 (+2.730) | 1047/1073 (+3) | 93.6 (+0.36) |
+| combined | 76.64 (+2.936) | 59.03 (+2.854) | 1047/1073 (+3) | 93.6 (+0.36) |
 
-The merged PRs' individual SSIM changes add up to +3.949; the difference to the combined +2.785 is where
-they overlap or interact. 232 fixtures change (166↑ 41↓). Regressions over 0.5: nested-floats-spaced-text-long-one -62.9, nested-floats-spaced-text-bottom-cell -61.8, nested-floats-spaced-text-long-two -61.8, nested-floats-spaced-text-nonzero-x -61.8, nested-floats-spaced-text-inline-reference -60.6, nested-floats-spaced-text-short-spacers -58.8, section-mark-after-table-inline-compat15 -53.6, section-mark-after-table-float-compat15 -51.4 (+33 more).
+The merged PRs' individual SSIM changes add up to +4.102; the difference to the combined +2.936 is where
+they overlap or interact. 241 fixtures change (172↑ 41↓). Regressions over 0.5: nested-floats-spaced-text-long-one -62.9, nested-floats-spaced-text-bottom-cell -61.8, nested-floats-spaced-text-long-two -61.8, nested-floats-spaced-text-nonzero-x -61.8, nested-floats-spaced-text-inline-reference -60.6, nested-floats-spaced-text-short-spacers -58.8, section-mark-after-table-inline-compat15 -53.6, section-mark-after-table-float-compat15 -51.4 (+33 more).
 
-**The same without #2792**: 26 PRs merged into `main` ad5e1a65f: #3821, #2523, #5443, #5458, #5439, #2552, #4840, #5455, #6030, #2711, #3823, #6114, #5546, #6219, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #3072, #5339, #5074, #4846, #2608. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #1172, #5457, #4065, #5176, #2493, #5206, #6092, #2393, #4614, #5630, #5096, #4142; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #3604, #4460, #5564, #5590, #5695, #5808; left out on purpose: #2792.
+**The same without #2792**: 27 PRs merged into `main` ad5e1a65f: #3821, #2523, #5443, #5458, #5439, #5808, #2552, #4840, #5455, #6030, #2711, #3823, #6114, #5546, #6219, #2834, #2027, #2465, #1757, #5948, #5850, #2674, #3072, #5339, #5074, #4846, #2608. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #1172, #5457, #4065, #5176, #2493, #5206, #6092, #2393, #4614, #5630, #5096, #4142; doesn't compile with the PRs merged before it: #5166; waiting for a look before it is built: #3604, #4460, #5564, #5590, #5695; left out on purpose: #2792.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
 | `main` ad5e1a65f | 73.70 | 56.17 | 1044/1073 | 93.2 |
-| combined | 77.55 (+3.849) | 59.69 (+3.518) | 1047/1073 (+3) | 93.8 (+0.56) |
+| combined | 77.70 (+3.999) | 59.81 (+3.642) | 1047/1073 (+3) | 93.8 (+0.56) |
 
-The merged PRs' individual SSIM changes add up to +3.946; the difference to the combined +3.849 is where
-they overlap or interact. 221 fixtures change (174↑ 22↓). Regressions over 0.5: continuous-context-frame1-same0-ctx1 -47.1, case128 -26.0, wide-nested-float-edge-wide-m14-left-o108-i0 -23.8, empty-margin-frame-15-one-empty -11.1, nested-adjacent-negative-large-offset -10.5, empty-margin-frame-15-two-empty -10.5, empty-margin-frame-15-two-space-only -10.5, empty-margin-frame-visible-body-before-frame -8.0 (+14 more).
+The merged PRs' individual SSIM changes add up to +4.099; the difference to the combined +3.999 is where
+they overlap or interact. 230 fixtures change (180↑ 22↓). Regressions over 0.5: continuous-context-frame1-same0-ctx1 -47.1, case128 -26.0, wide-nested-float-edge-wide-m14-left-o108-i0 -23.8, empty-margin-frame-15-one-empty -11.1, nested-adjacent-negative-large-offset -10.5, empty-margin-frame-15-two-empty -10.5, empty-margin-frame-15-two-space-only -10.5, empty-margin-frame-visible-body-before-frame -8.0 (+14 more).
 
 ## Not benched
 

@@ -11980,13 +11980,15 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9718f0895b498290019ea0dced3f4de7c90485f9",
+"head": "d07cf7a09cc22142db49e62a843da75f56f929aa",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5778,
@@ -12045,13 +12047,15 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "8807a1100fb81d547715b2a16c0a6e43942d6032",
+"head": "1150e076497815ec4bb9155cd8437bdaee3239ee",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5791,
@@ -12059,7 +12063,7 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "95c7b3aaada1c653599b2a726123e6400569862f",
+"head": "2eeeb3ec84f83df64648b8d6aa05e1cbd4d59127",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12078,13 +12082,15 @@
 "author": "kevinj24fr",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1466e287d5c5f4b94675f1eb81779dcb64855faf",
+"head": "5757973999d51e58e85aac137fd7c3d54f505234",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5810,
@@ -12466,9 +12472,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5893,
@@ -12798,9 +12802,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5986,
@@ -12872,10 +12874,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed read.rs, exporter.rs, lib.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5992,
@@ -12889,9 +12888,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5995,
@@ -12921,9 +12918,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6004,

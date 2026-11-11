@@ -9017,7 +9017,7 @@
 "title": "Compare: emit property-change revisions for matched tables and sections",
 "author": "reubgr",
 "draft": false,
-"head": "e653635f39879011fc0e8f3a3a8199a49f173cf2",
+"head": "3406105da7079dd8c33a18043d5781b9dfe3a8a7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9621,7 +9621,7 @@
 "title": "Real-time collaboration: authoritative sync server, document adapter, client core",
 "author": "copoka",
 "draft": false,
-"head": "b4b5f50b4e3eb08e74be50d85e790509cb9fdcba",
+"head": "d55d7c94e3133cae42f9fd8b4243b996428cdc6d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9681,7 +9681,7 @@
 "title": "Fix: pair edited paragraphs by text similarity during document comparison (#5861)",
 "author": "batistalucasv",
 "draft": false,
-"head": "4f3d766722d569612be50e80039654ac1a4106c9",
+"head": "0e51fe4e10ae3fd42dab146fd0d8a0e49259bb0c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9694,7 +9694,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "7aa8473c962d774b65e4f719ff3be2d80f4a1c8a",
+"head": "d1a7067db1256d0a4e99c2220cf6ca20503959a8",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9952,11 +9952,13 @@
 "title": "Layout: Word 2003's indent rules start a line right after a float before the indent (#5939)",
 "author": "SenuraMalaka",
 "draft": false,
-"head": "e9a4eb4de900b0f629fd15d07f1200d585ed70fe",
+"head": "823d8ec07c5b98f080b855ee060f5c541906054e",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5948,
@@ -10634,11 +10636,9 @@
 "title": "\u2601\ufe0f Google Drive: open, save back and export to Drive, off by default with an Accounts setting (#518)",
 "author": "randomtask2000",
 "draft": false,
-"head": "d538cb4a260b89e47078d4543851083aa211de71",
+"head": "63568b3f33aeaa0018251da8075c25e3b2968432",
 "mine": false,
-"conflicts": [
-"Cargo.lock"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -10691,7 +10691,7 @@
 "title": "Ribbon: three-band card parity at 1024x768",
 "author": "alosslessdev",
 "draft": false,
-"head": "8b04be3fd05372b09993e3c7c29572fd2cc27dd1",
+"head": "2da9fec6f4d5b0cff7c130315bd754259a4fcc46",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11032,7 +11032,7 @@
 "title": "A first start takes the system account's name as the user name (#2209)",
 "author": "johanneswilm",
 "draft": false,
-"head": "2e78bc53c81a58ecd2ca39fc16b5d824e467ba9d",
+"head": "da8953db960540d9a14276fb7334865b9762597e",
 "mine": false,
 "conflicts": [],
 "render": false,

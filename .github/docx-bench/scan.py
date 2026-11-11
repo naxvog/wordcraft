@@ -62,6 +62,8 @@ subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin', 'main'], check=True)
 P = open_prs()
 assoc = dict(l.split() for l in gh('api', '--paginate', f'repos/{GH}/pulls?state=open&per_page=100',
                                    '--jq', '.[] | "\\(.number) \\(.author_association)"').splitlines())
+# authors.txt: <login>  # why; authors whose work landed although GitHub still calls them NONE (the user's call)
+landed = {l.split('#')[0].strip() for l in open(f'{B}/authors.txt')} - {''} if os.path.exists(f'{B}/authors.txt') else set()
 cand = [p for p in P if any(f['path'].startswith(CORE) and code(f['path']) for f in p['files'])]
 
 old_path = f'{B}/{VER}-prs.json'
@@ -84,7 +86,7 @@ for p in cand:
     n, head = p['number'], p['headRefOid']
     out = git('merge-tree', '--write-tree', '--name-only', '--no-messages', 'origin/main', f'pr/{n}').splitlines()[1:]
     conf = [f for f in out if f and not f.endswith('.md')]
-    q = dict(n=n, title=p['title'], author=p['author']['login'], assoc=assoc.get(str(n), 'NONE'), draft=p['isDraft'],
+    q = dict(n=n, title=p['title'], author=p['author']['login'], assoc='CONTRIBUTOR' if p['author']['login'] in landed else assoc.get(str(n), 'NONE'), draft=p['isDraft'],
              head=head, mine=p['author']['login'] == 'naxvog',
              conflicts=[f for f in conf if not NONCLI.search(f)],
              render=bool(render_files([f['path'] for f in p['files']])), allowed=allowed(n, head),

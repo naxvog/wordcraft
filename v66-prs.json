@@ -3245,7 +3245,7 @@
 "title": "#2710: Home Borders applies to the caret cell or selected table cells",
 "author": "vangel76",
 "draft": true,
-"head": "1356fdd3ea0f918d3fb8d8df9f21495de859c4e8",
+"head": "08ac1f5e4e5d0c29537727219d4989bfcd1baca1",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -3866,11 +3866,12 @@
 "title": "Layout: a paragraph of only a page break moves when it doesn't fit",
 "author": "vangel76",
 "draft": false,
-"head": "0a221eef3a62c2a79b8de1b03c04e1a7b1168982",
+"head": "d4f00582d3f9fe2bada40c62824301544b9051ce",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed flow.rs"
 ]
 },
@@ -8480,7 +8481,7 @@
 "title": "Mail merge: cap the cells a recipient list keeps, not just its records and fields",
 "author": "dylanmtaylor",
 "draft": false,
-"head": "8087582ee234f20f34da632c6d9d2dce198e98fa",
+"head": "03153bf24192b9ca9ca7a84964c7a7e771f32412",
 "mine": false,
 "conflicts": [
 "crates/engine/src/cmd/mailings/recipients.rs"
@@ -9056,9 +9057,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs, write/props.rs, xml.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5599,
@@ -9123,10 +9122,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed pass.rs"
-]
+"stale": []
 },
 {
 "n": 5630,
@@ -9292,10 +9288,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/props.rs, write/props.rs, kinsoku.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5702,
@@ -9516,10 +9509,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed word.rs"
-]
+"stale": []
 },
 {
 "n": 5808,
@@ -9647,10 +9637,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed fontdb.rs, fontdb/face.rs, display/objects.rs"
-]
+"stale": []
 },
 {
 "n": 5858,
@@ -9668,7 +9655,7 @@
 "title": "Fix: enable copy and paste for custom text boxes and frames",
 "author": "batistalucasv",
 "draft": false,
-"head": "167f8f3c6bf2b9689945b863cab70e1bb585e1b5",
+"head": "4ea959f7bb00579e4a4fd2e0e1f0472e5fefc057",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9681,7 +9668,7 @@
 "title": "Fix: pair edited paragraphs by text similarity during document comparison (#5861)",
 "author": "batistalucasv",
 "draft": false,
-"head": "0e51fe4e10ae3fd42dab146fd0d8a0e49259bb0c",
+"head": "53c72896a8d950fa99139c78144706c005432d19",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9694,7 +9681,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "d1a7067db1256d0a4e99c2220cf6ca20503959a8",
+"head": "d0517b725344c48eacf2e803baac9fe7cf50e467",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9847,7 +9834,7 @@
 "title": "Proofing: support freestanding custom.dic dictionary files (#5840)",
 "author": "batistalucasv",
 "draft": false,
-"head": "c7c61ca9b3a44845c717a7c9d1e21ea82b5135fc",
+"head": "b4a9ddf450779974bb4bd30dbb6ddfd64c9eaa1e",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9930,7 +9917,7 @@
 "title": "Format Shape: add Line and Layout settings for shapes and text boxes (#5896)",
 "author": "batistalucasv",
 "draft": false,
-"head": "881cf5e1db2c120925ad59e661731e0e0d59e6af",
+"head": "70b5d2c520d43421d22824795b54dca4780af7c7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9956,9 +9943,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5948,
@@ -9980,9 +9965,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5951,
@@ -9993,9 +9976,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5953,
@@ -10006,9 +9987,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5954,
@@ -10019,9 +9998,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5968,
@@ -10636,7 +10613,7 @@
 "title": "\u2601\ufe0f Google Drive: open, save back and export to Drive, off by default with an Accounts setting (#518)",
 "author": "randomtask2000",
 "draft": false,
-"head": "63568b3f33aeaa0018251da8075c25e3b2968432",
+"head": "7841a2f06852b8127b10be10966e7fa6e18ef1e3",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10691,7 +10668,7 @@
 "title": "Ribbon: three-band card parity at 1024x768",
 "author": "alosslessdev",
 "draft": false,
-"head": "2da9fec6f4d5b0cff7c130315bd754259a4fcc46",
+"head": "f78e915b7f32a9b93285a6456bc6aa5d5fc424a7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11100,7 +11077,7 @@
 "title": "#6303: Insert Table takes the width of the caret's section and column",
 "author": "ljkx",
 "draft": false,
-"head": "ad96921f0f4c45f13f109c2621c063e8e9c3ad5e",
+"head": "5e936dc153528d1ce07622c7b08c7471a6c1ce7e",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11156,6 +11133,28 @@
 "author": "Nghiathan13",
 "draft": false,
 "head": "e2bb4aa72f40eb9890ddd0ab662bab65b8042a9e",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6361,
+"title": "Layout: text goes beside a floating picture in an 18pt gap, as in Word (#6316)",
+"author": "keithcsqueensu",
+"draft": false,
+"head": "0c7f425e912a90a25d050994a3bb3045fd1f3c33",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6362,
+"title": "#6137: equations with tracked changes from Word keep their content",
+"author": "Nghiathan13",
+"draft": false,
+"head": "da18a1fb74f3207dcff5392926d45912264b9fa8",
 "mine": false,
 "conflicts": [],
 "render": true,

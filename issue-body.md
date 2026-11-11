@@ -1,10 +1,10 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 22:35 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 23:12 UTC.
 
 ## Summary for reviewers
 
-`main` 06c2ae6f9 scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
+`main` 07f977372 scores **73.70** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores 87.34
 (13.6 points ahead). Merging the 31 PRs below, in this order, gives **77.77 (+4.07)**,
 measured on one branch with all of them merged (see *Combined branch*).
 
@@ -46,7 +46,7 @@ next round.
 | #5074 | pakiat | Tables: percentage cell widths size their columns whichever rows give them | **+0.001** | 0↑ 0↓ | – | ✅ | – | +341 −7 | `7b8c0ba5e`, 3 d ago |
 | #4846 | jpc7k1 | Layout: with useFELayout + balanceSingleByteDoubleByteWidth, runs of spaces take the East Asian space width | **+0.001** | 1↑ 0↓ | – | ✅ | – | +110 −2 | `d40d1b271`, 2 d ago |
 | #2608 | finwarman | Honor row table cell margin exceptions | **+0.001** | 1↑ 0↓ | – | ✅ | – | +261 −12 | `7b8c0ba5e`, 3 d ago |
-| #6302 | ljkx | #6260: character shading and highlight are one fill per run of letters, with no seams between them | **+0.001** | 0↑ 0↓ | – | ✅ | – | +145 −10 | `411a4915a`, today ⚠ stale: new commits |
+| #6302 | ljkx | #6260: character shading and highlight are one fill per run of letters, with no seams between them | **+0.001** | 0↑ 0↓ | – | ✅ | – | +145 −10 | `07f977372`, today |
 
 ### Needs a look
 
@@ -78,7 +78,7 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 6 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 6 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 395 PRs benched (97 change the score), 149 of them stale; 6 queued for the
+**Coverage:** 400 PRs benched (99 change the score), 149 of them stale; 0 queued for the
 next round; 371 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
@@ -107,14 +107,14 @@ next round; 371 conflict with `main`.
   not installed, so WordCraft draws those documents in metric-compatible substitutes (Carlito, Caladea, …) while
   Word's references use the originals. docxide-pdf runs in the same container without its private font set.
 
-| `main` 06c2ae6f9 | SSIM | Jaccard | Pages matching | Line match |
+| `main` 07f977372 | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
 | WordCraft | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | docxide-pdf (for reference) | 87.34 | 70.90 | 1055/1073 | 93.9 |
 
 </details>
 
-<details><summary><b>Every PR that changes the score (97)</b></summary>
+<details><summary><b>Every PR that changes the score (99)</b></summary>
 
 Sorted by SSIM change. The sum of these rows is not what all of them together would give: several touch the
 same fixtures (see *Combined branch*).
@@ -162,6 +162,7 @@ same fixtures (see *Combined branch*).
 | #6092 | pakiat | Tables: a table style's shading is what Word paints | +0.006 | +0.014 | +0 | 2 (1↑ 1↓) | table-style-valign-merged +7.6 | physical_therapy_comparison_table -0.8 | `8548b33be`, 1 d ago |
 | #5850 | batistalucasv | layout: wrap field results across multiple lines within margins (#5838) | +0.006 | +0.005 | +0 | 4 (4↑ 0↓) | clean_energy_regulator_act +2.4, carbon_farming_initiative_rule +2.3, wa_child_services_regulations +0.7 (+1 more) | – | `8548b33be`, 1 d ago |
 | #2674 | finwarman | Reserve font math leading in equation line metrics | +0.006 | -0.002 | +0 | 2 (1↑ 1↓) | case221 +8.0 | pendulum_mechanics_oscillation_lab -1.8 | `d40d1b271`, 2 d ago |
+| #6215 | sebastian-schmitt | ODT: double borders keep their exact stroke widths (gap 19) | +0.006 | -0.001 | +0 | 1 (1↑ 0↓) | paragraph-border-styles +6.1 | – | `07f977372`, today |
 | #2393 | dkhlapov | #1534: more preset shapes and picture fills | +0.006 | +0.009 | +0 | 3 (2↑ 0↓) | case34 +4.8, case35 +0.8 | – | `2922fe566`, 2 d ago |
 | #5462 | xiaojunyang0805 | layout: a field result in more than one font keeps a cluster per font | +0.005 | +0.003 | +0 | 4 (2↑ 0↓) | clean_energy_regulator_act +2.4, carbon_farming_initiative_rule +2.3 | – | `d86d2b69f`, today |
 | #2792 | finwarman | Inherit omitted table-wide cell margins | +0.004 | +0.003 | +0 | 2 (2↑ 0↓) | english_town_council_report +3.3, maine_criminal_history_record +0.5 | – | `7b8c0ba5e`, 3 d ago |
@@ -184,7 +185,7 @@ same fixtures (see *Combined branch*).
 | #5074 | pakiat | Tables: percentage cell widths size their columns whichever rows give them | +0.001 | +0.000 | +0 | 2 (0↑ 0↓) | – | – | `7b8c0ba5e`, 3 d ago |
 | #4846 | jpc7k1 | Layout: with useFELayout + balanceSingleByteDoubleByteWidth, runs of spaces take the East Asian space width | +0.001 | +0.001 | +0 | 4 (1↑ 0↓) | japanese_interlibrary_loan +0.7 | – | `d40d1b271`, 2 d ago |
 | #2608 | finwarman | Honor row table cell margin exceptions | +0.001 | +0.001 | +0 | 1 (1↑ 0↓) | maine_criminal_history_record +0.5 | – | `7b8c0ba5e`, 3 d ago |
-| #6302 | ljkx | #6260: character shading and highlight are one fill per run of letters, with no seams between them | +0.001 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `411a4915a`, today ⚠ stale: new commits |
+| #6302 | ljkx | #6260: character shading and highlight are one fill per run of letters, with no seams between them | +0.001 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `07f977372`, today |
 | #3462 | midasdf | Layout: hanging punctuation (overflowPunct) and line-start punctuation compression (topLinePunct) | +0.000 | +0.001 | +0 | 2 (0↑ 0↓) | – | – | `7b8c0ba5e`, 3 d ago |
 | #2454 | finwarman | Fix automatic leading on picture-only lines | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `a42c9eaab`, 1 d ago |
 | #4186 | Silvertree2010 | Draw in-front-of-text pictures above tables laid out after them | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `060768f1e`, today |
@@ -202,6 +203,7 @@ same fixtures (see *Combined branch*).
 | #5005 | xiaojunyang0805 | doc, docx, layout: w:hint="eastAsia" and named East Asian substitutes | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `a8db235e0`, today |
 | #5003 | xiaojunyang0805 | layout: character-grid cells for large text, \*Chars indents in grid cells | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `a8db235e0`, today |
 | #5935 | frandavid100 | layout: reserve table footnotes before fitting row fragments | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `ad5e1a65f`, today |
+| #6258 | appyx123 | Fonts: resolve Yu Mincho and Yu Gothic aliases and macOS AssetData (#6237) | -0.001 | -0.001 | +0 | 1 (0↑ 1↓) | – | japanese_medical_consultation_form -1.3 | `07f977372`, today |
 | #5313 | Harrison-Booth | Preserve table cell diagonal borders | -0.001 | -0.001 | +0 | 3 (0↑ 1↓) | – | italian_academic_cv_form -0.8 | `7b8c0ba5e`, 3 d ago |
 | #1486 | dfgodvan | Tables: a page break inside a vertical merge takes the merged cell's text along (#1485) | -0.001 | -0.001 | +0 | 1 (0↑ 1↓) | – | go_math_grade4_guide -1.6 | `4b0d39959`, 3 d ago |
 | #4558 | ro-legal-docx | Borders: preserve dashSmallGap and align border previews | -0.002 | -0.001 | +0 | 2 (0↑ 1↓) | – | paragraph-border-styles -2.2 | `661a79054`, 3 d ago |
@@ -219,28 +221,28 @@ same fixtures (see *Combined branch*).
 | #4436 | dfgodvan | Layout: line height of an inline picture in multiple line spacing, as in Word | -0.044 | +0.070 | -2 | 21 (7↑ 5↓) | picture-mark-leading-compat15-line480 +42.8, czech_village_budget_commentary +22.1, brazilian_logistics_study +22.0 (+4 more) | picture-mark-leading-mark22-line360-text0 -41.2, picture-mark-leading-compat14-line480 -39.3, picture-mark-leading-mark28-line480-text0 -39.3 (+2 more) | `e919982fa`, 6 d ago ⚠ stale: main changed flow.rs, para/lines.rs |
 | #2578 | finwarman | Reserve page-colour clearance in initial header stories | -0.113 | -0.090 | -1 | 2 (0↑ 2↓) | – | traditional_skills_job_form -65.5, czech_village_council_minutes_2025 -55.8 | `e919982fa`, 6 d ago ⚠ stale: main changed page.rs, pass.rs |
 
-**Benched, no change on the suite (298):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1493, #1713, #1715, #1753, #1791, #1838, #1927, #1928, #1931, #1952, #1999, #2022, #2056, #2063, #2064, #2100, #2117, #2120, #2141, #2260, #2288, #2340, #2345, #2356, #2372, #2384, #2414, #2455, #2473, #2533, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3587, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5002, #5004, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5064, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5187, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5302, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5463, #5470, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6035, #6036, #6037, #6051, #6077, #6080, #6081, #6082, #6091, #6093, #6100, #6103, #6107, #6112, #6127, #6130, #6136, #6141, #6142, #6144, #6170, #6171, #6203, #6207, #6231, #6233, #6243, #6244, #6245, #6246, #6300, #6313. These may
+**Benched, no change on the suite (301):** #4635, #4652, #5349, #6003, #1123, #1217, #1278, #1303, #1493, #1713, #1715, #1753, #1791, #1838, #1927, #1928, #1931, #1952, #1999, #2022, #2056, #2063, #2064, #2100, #2117, #2120, #2141, #2260, #2288, #2340, #2345, #2356, #2372, #2384, #2414, #2455, #2473, #2533, #2586, #2643, #2655, #2664, #2703, #2719, #2732, #2733, #2817, #2901, #2995, #3022, #3077, #3089, #3148, #3198, #3200, #3309, #3332, #3388, #3404, #3465, #3472, #3506, #3587, #3778, #3788, #3825, #3829, #3878, #3884, #3933, #3935, #3960, #3961, #3965, #3972, #3980, #3993, #4089, #4134, #4183, #4214, #4260, #4266, #4278, #4316, #4320, #4321, #4322, #4338, #4353, #4393, #4407, #4413, #4437, #4443, #4445, #4473, #4474, #4483, #4504, #4521, #4532, #4571, #4580, #4582, #4615, #4625, #4631, #4642, #4647, #4655, #4656, #4688, #4703, #4709, #4714, #4716, #4717, #4719, #4723, #4737, #4747, #4766, #4773, #4781, #4783, #4786, #4791, #4795, #4797, #4826, #4836, #4839, #4849, #4852, #4856, #4860, #4874, #4901, #4905, #4932, #4934, #4972, #4993, #5002, #5004, #5007, #5013, #5015, #5020, #5024, #5041, #5061, #5064, #5067, #5073, #5076, #5098, #5112, #5113, #5153, #5158, #5159, #5170, #5172, #5177, #5187, #5200, #5209, #5228, #5251, #5254, #5259, #5283, #5293, #5302, #5312, #5314, #5331, #5351, #5357, #5362, #5378, #5386, #5387, #5390, #5407, #5422, #5427, #5435, #5447, #5451, #5461, #5463, #5470, #5483, #5494, #5500, #5516, #5521, #5541, #5545, #5557, #5560, #5565, #5576, #5599, #5600, #5613, #5616, #5628, #5631, #5638, #5639, #5651, #5665, #5670, #5675, #5702, #5703, #5731, #5737, #5738, #5764, #5767, #5772, #5778, #5779, #5789, #5791, #5810, #5820, #5823, #5831, #5852, #5859, #5864, #5869, #5870, #5872, #5880, #5881, #5882, #5885, #5888, #5889, #5891, #5901, #5907, #5916, #5917, #5918, #5940, #5950, #5951, #5953, #5954, #5968, #5969, #5971, #5972, #5977, #5980, #5986, #5991, #5992, #6035, #6036, #6037, #6051, #6077, #6080, #6081, #6082, #6091, #6093, #6100, #6103, #6107, #6112, #6127, #6130, #6136, #6141, #6142, #6144, #6170, #6171, #6203, #6207, #6231, #6233, #6243, #6244, #6245, #6246, #6300, #6313, #6347, #6361, #6362. These may
 still be right; the suite just has no document that exercises them.
 
 </details>
 
 ## Combined branch
 
-**Every PR with a positive score**: 31 PRs merged into `main` 06c2ae6f9: #3821, #2523, #5443, #5458, #5439, #5808, #2552, #4840, #5455, #6030, #4507, #2711, #3823, #6114, #5546, #6219, #2834, #5206, #2465, #5006, #1757, #2674, #2792, #6162, #5564, #5695, #5096, #5339, #5074, #4846, #6302. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #2010, #1172, #5457, #4065, #5176, #2493, #5948, #3604, #6092, #5850, #2393, #5462, #4460, #4614, #3588, #5590, #3072, #5630, #4142, #2608; doesn't compile with the PRs merged before it: #2027, #5166.
+**Every PR with a positive score**: 31 PRs merged into `main` 07f977372: #3821, #2523, #5443, #5458, #5439, #5808, #2552, #4840, #5455, #6030, #4507, #2711, #3823, #6114, #5546, #6219, #2834, #5206, #2465, #5006, #1757, #2674, #2792, #6162, #5564, #5695, #5096, #5339, #5074, #4846, #6302. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #2010, #1172, #5457, #4065, #5176, #2493, #5948, #3604, #6092, #5850, #6215, #2393, #5462, #4460, #4614, #3588, #5590, #3072, #5630, #4142, #2608; doesn't compile with the PRs merged before it: #2027, #5166.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
-| `main` 06c2ae6f9 | 73.70 | 56.17 | 1044/1073 | 93.2 |
+| `main` 07f977372 | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | combined | 76.71 (+3.008) | 59.11 (+2.939) | 1047/1073 (+3) | 93.6 (+0.36) |
 
 The merged PRs' individual SSIM changes add up to +4.173; the difference to the combined +3.008 is where
 they overlap or interact. 258 fixtures change (179↑ 44↓). Regressions over 0.5: nested-floats-spaced-text-long-one -62.9, nested-floats-spaced-text-bottom-cell -61.8, nested-floats-spaced-text-long-two -61.8, nested-floats-spaced-text-nonzero-x -61.8, nested-floats-spaced-text-inline-reference -60.6, nested-floats-spaced-text-short-spacers -58.8, section-mark-after-table-inline-compat15 -53.6, section-mark-after-table-float-compat15 -51.4 (+36 more).
 
-**The same without #2792**: 31 PRs merged into `main` 06c2ae6f9: #3821, #2523, #5443, #5458, #5439, #5808, #2552, #4840, #5455, #6030, #4507, #2711, #3823, #6114, #5546, #6219, #2834, #5206, #2465, #5006, #1757, #2674, #6162, #5564, #5695, #5096, #5339, #5074, #4846, #2608, #6302. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #2010, #1172, #5457, #4065, #5176, #2493, #5948, #3604, #6092, #5850, #2393, #5462, #4460, #4614, #3588, #5590, #3072, #5630, #4142; doesn't compile with the PRs merged before it: #2027, #5166; left out on purpose: #2792.
+**The same without #2792**: 31 PRs merged into `main` 07f977372: #3821, #2523, #5443, #5458, #5439, #5808, #2552, #4840, #5455, #6030, #4507, #2711, #3823, #6114, #5546, #6219, #2834, #5206, #2465, #5006, #1757, #2674, #6162, #5564, #5695, #5096, #5339, #5074, #4846, #2608, #6302. Left out: code conflict with `main`: #2047, #3787, #3790, #3832, #3833, #3834, #4619, #4845, #5095, #5562; code conflict with PRs merged before it: #5887, #2010, #1172, #5457, #4065, #5176, #2493, #5948, #3604, #6092, #5850, #6215, #2393, #5462, #4460, #4614, #3588, #5590, #3072, #5630, #4142; doesn't compile with the PRs merged before it: #2027, #5166; left out on purpose: #2792.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
-| `main` 06c2ae6f9 | 73.70 | 56.17 | 1044/1073 | 93.2 |
+| `main` 07f977372 | 73.70 | 56.17 | 1044/1073 | 93.2 |
 | combined | 77.77 (+4.071) | 59.90 (+3.727) | 1047/1073 (+3) | 93.8 (+0.56) |
 
 The merged PRs' individual SSIM changes add up to +4.170; the difference to the combined +4.071 is where
@@ -249,7 +251,7 @@ they overlap or interact. 247 fixtures change (187↑ 25↓). Regressions over 0
 ## Not benched
 
 - **Code conflicts with `main`** (371 PRs): not rerun until rebased.
-- **Change no rendering file** (127): not benched.
+- **Change no rendering file** (129): not benched.
 - **Doesn't build once merged with `main`:** #1292, #2783, #2876, #3160, #3520, #4265, #4408, #4640, #4645, #5570, #675.
 - **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197, #5705, #5721, #6039, #2251, #4683, #6033, #6049, #6022, #6161, #6169, #6120, #6124; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974, #1518, #1806, #1807, #1810, #1814, #1815, #2039, #2642, #2706, #3090, #3097, #3101, #3111, #3443, #6066, #4251, #4399, #4566, #4665, #6118, #5949.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output

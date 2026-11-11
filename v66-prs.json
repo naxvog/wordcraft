@@ -3870,10 +3870,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 3200,
@@ -5695,11 +5692,13 @@
 "title": "Fields: screen field shading for citation results (#4290)",
 "author": "Yudhistira-Official",
 "draft": false,
-"head": "d4a500d58ed1bc82a7fb66a0f94221eeead34324",
+"head": "b34374d5e43678a75ecb7b5b18904a6ca57231bc",
 "mine": false,
 "conflicts": [],
 "render": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 4408,
@@ -9668,7 +9667,7 @@
 "title": "Fix: pair edited paragraphs by text similarity during document comparison (#5861)",
 "author": "batistalucasv",
 "draft": false,
-"head": "53c72896a8d950fa99139c78144706c005432d19",
+"head": "22df20b5b385fc8681e1ddbc722cbc801e3d3ad8",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9834,7 +9833,7 @@
 "title": "Proofing: support freestanding custom.dic dictionary files (#5840)",
 "author": "batistalucasv",
 "draft": false,
-"head": "b4a9ddf450779974bb4bd30dbb6ddfd64c9eaa1e",
+"head": "eda6e43391d2f9d06f003fb18561af66f5e9caed",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9917,7 +9916,7 @@
 "title": "Format Shape: add Line and Layout settings for shapes and text boxes (#5896)",
 "author": "batistalucasv",
 "draft": false,
-"head": "70b5d2c520d43421d22824795b54dca4780af7c7",
+"head": "721905f99ea832a276ae7eff2a10b6e23b945b42",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11143,7 +11142,7 @@
 "title": "Layout: text goes beside a floating picture in an 18pt gap, as in Word (#6316)",
 "author": "keithcsqueensu",
 "draft": false,
-"head": "0c7f425e912a90a25d050994a3bb3045fd1f3c33",
+"head": "366b89341d47250a26d1cb55dbb17c95ffe682df",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11158,6 +11157,28 @@
 "mine": false,
 "conflicts": [],
 "render": true,
+"stale": []
+},
+{
+"n": 6368,
+"title": "#6328: Word's international-character keys on Windows and Linux (Ctrl+' then e types \u00e9)",
+"author": "ljkx",
+"draft": false,
+"head": "0bb3a5f21c36229e9ef036bc9d85cab47883aa19",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6370,
+"title": "#6326: text typed into an inserted table row keeps the row's font",
+"author": "Nghiathan13",
+"draft": false,
+"head": "c893ffc634732cffe336c3117be77236aaf60053",
+"mine": false,
+"conflicts": [],
+"render": false,
 "stale": []
 }
 ]

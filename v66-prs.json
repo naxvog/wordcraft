@@ -11,9 +11,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 1757,
@@ -27,9 +25,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 2552,
@@ -195,9 +191,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 5457,
@@ -225,9 +219,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 6003,
@@ -3485,9 +3477,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed ctx.rs, flow.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 2533,
@@ -4245,9 +4235,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2834,
@@ -6165,9 +6153,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3828,
@@ -6610,9 +6596,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 4066,
@@ -6741,10 +6725,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits",
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 4186,
@@ -6758,9 +6739,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"main changed flow.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 4188,
@@ -9090,7 +9069,7 @@
 "author": "Bitslay",
 "assoc": "NONE",
 "draft": false,
-"head": "af69a48c728719160254fe9a6f29b4f9a6b86815",
+"head": "30b858c70b5ac8fc0e715d0e919ed86ac8bea0da",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12310,7 +12289,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "346662658e6bb47028d7cf0ca9a04d80f7cad0de",
+"head": "3334c29dae49980f1b0ae57038f126823af3f115",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12424,13 +12403,15 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "e4a580284e7de26f9d326348b3c0dbd6436b36d9",
+"head": "c2310b7ddd57d027948a0a9749e135bfcf811085",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5888,
@@ -12604,7 +12585,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "b5510d078ae64dd6c68a53fb65553a7c2dc2577d",
+"head": "150a6ad1769e6a9604e73348d647a72183ece6dd",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12938,13 +12919,15 @@
 "author": "pakiat",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "0c3faec910877e22f8f26a47c27ee82412e5fb6b",
+"head": "5aab683ff2dd849c7d20a71bd5b844072a0b65f8",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6004,
@@ -13872,7 +13855,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "22f01131d8cb4e0c9786eb481525f5a8cfee5b19",
+"head": "28af39b610bc68fbab5a122047b6a688104a6258",
 "mine": false,
 "conflicts": [],
 "render": false,

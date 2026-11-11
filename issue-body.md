@@ -1,6 +1,6 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 13:04 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 13:34 UTC.
 
 ## Summary for reviewers
 
@@ -73,7 +73,7 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 5 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 5 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 357 PRs benched (87 change the score), 186 of them stale; 27 queued for the
+**Coverage:** 357 PRs benched (87 change the score), 178 of them stale; 19 queued for the
 next round; 129 waiting for a person to look before they're built; 355 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
@@ -129,7 +129,7 @@ same fixtures (see *Combined branch*).
 | #5455 | naxvog | Layout: contextual spacing reaches across a continuous section break, as in Word | +0.098 | +0.114 | +0 | 3 (3↑ 0↓) | continuous-context-frame1-same1-ctx1 +48.3, continuous-context-frame0-same1-ctx1 +28.5, continuous-context-after-same1-ctx1 +28.5 | – | `060768f1e`, today |
 | #6030 | pakiat | Tables: Word gives a table nothing from Normal Table, and Table Grid is based on it | +0.097 | +0.085 | +0 | 5 (4↑ 1↓) | section-mark-after-table-inline-compat14 +51.1, case196 +30.4, short-float-clear-inline-table +25.5 (+1 more) | wide-nested-float-edge-wide-m14-left-o108-i0 -23.8 | `7b8c0ba5e`, 2 d ago |
 | #5095 | dfgodvan | Layout: keep with next lets the last line's leading run into the bottom margin, as when the line is placed | +0.079 | +0.065 | +0 | 3 (3↑ 0↓) | case49 +43.4, case4 +39.6, uk_commercial_lease_template +1.6 | – | `e919982fa`, 5 d ago ⚠ stale: main changed flow.rs |
-| #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | +0.055 | +0.050 | +0 | 6 (6↑ 0↓) | czech_council_resolutions_2023 +31.3, ukrainian_municipal_heating_resolution +19.2, uk_commercial_lease_template +4.4 (+3 more) | – | `d40d1b271`, 2 d ago |
+| #5887 | batistalucasv | Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) | +0.055 | +0.050 | +0 | 6 (6↑ 0↓) | czech_council_resolutions_2023 +31.3, ukrainian_municipal_heating_resolution +19.2, uk_commercial_lease_template +4.4 (+3 more) | – | `d40d1b271`, 2 d ago ⚠ stale: new commits |
 | #4845 | jpc7k1 | Layout: a justified line with a tab shrinks the spaces after its last tab, as Word does | +0.054 | +0.048 | +0 | 5 (5↑ 0↓) | czech_council_resolutions_2023 +31.5, ukrainian_municipal_heating_resolution +19.5, uk_commercial_lease_template +4.4 (+2 more) | – | `e919982fa`, 5 d ago ⚠ stale: main changed para/lines.rs |
 | #1172 | naxvog | Layout: picture-only lines keep no descent, line spacing may hang into the bottom margin, paragraph border groups take between borders and end at page breaks | +0.050 | +0.050 | +0 | 4 (3↑ 1↓) | case49 +43.4, case4 +39.6, uk_commercial_lease_template +1.6 | lithuanian_excise_tax_amendment -30.7 | `060768f1e`, today |
 | #3790 | cyril265 | Layout: text before a floating table or shape on its page wraps around it | +0.050 | +0.019 | +0 | 2 (2↑ 0↓) | full-width-float-empty-anchor +37.5, bosch_software_ai_announcement +15.6 | – | `e919982fa`, 6 d ago ⚠ stale: main changed ctx.rs, floats.rs, flow.rs … |
@@ -162,10 +162,10 @@ same fixtures (see *Combined branch*).
 | #5695 | prasertsakd | Add Thai Distributed alignment and capped Thai justification | +0.001 | +0.001 | +0 | 1 (1↑ 0↓) | case77 +1.2 | – | `729cd0a5f`, 5 d ago ⚠ stale: new commits; main changed read/props.rs, write/props.rs, kinsoku.rs … |
 | #3072 | inmean | Add Thai Distributed and Khmer Justify paragraph alignments | +0.001 | +0.002 | +0 | 1 (1↑ 0↓) | case77 +1.2 | – | `d40d1b271`, 2 d ago |
 | #5590 | xullul | Home › Paragraph: a Thai Distributed button after Justify | +0.001 | +0.002 | +0 | 1 (1↑ 0↓) | case77 +1.2 | – | `e919982fa`, 5 d ago ⚠ stale: main changed read/props.rs, write/props.rs, xml.rs … |
-| #5630 | kennyfs | Layout: a table in a text frame floats where the frame says | +0.001 | +0.001 | +0 | 1 (1↑ 0↓) | massachusetts_community_sanitation +1.1 | – | `8548b33be`, today ⚠ stale: main changed ctx.rs, pass.rs |
+| #5630 | kennyfs | Layout: a table in a text frame floats where the frame says | +0.001 | +0.001 | +0 | 1 (1↑ 0↓) | massachusetts_community_sanitation +1.1 | – | `060768f1e`, today |
 | #5096 | dfgodvan | Layout: no line break after the '?' of a query, nor after a slash before an underscore | +0.001 | +0.001 | +0 | 1 (1↑ 0↓) | erasmus_plus_staff_mobility_agreement +1.0 | – | `7b8c0ba5e`, 2 d ago |
 | #5339 | MichaelMuClaude | A DOCX drop cap's letter takes the text's size instead of being scaled twice (#5294) | +0.001 | +0.000 | +0 | 1 (1↑ 0↓) | torture_test +0.9 | – | `729cd0a5f`, 5 d ago |
-| #5166 | ro-legal-docx | Layout: keep headings with following inline tables | +0.001 | +0.000 | +0 | 1 (1↑ 0↓) | wa_child_services_regulations +0.9 | – | `661a79054`, 3 d ago ⚠ stale: main changed flow.rs |
+| #5166 | ro-legal-docx | Layout: keep headings with following inline tables | +0.001 | +0.000 | +0 | 1 (1↑ 0↓) | wa_child_services_regulations +0.9 | – | `060768f1e`, today |
 | #3832 | dfgodvan | Layout: a paragraph kept with a table needs its header rows and the start of its first row | +0.001 | +0.000 | +0 | 1 (1↑ 0↓) | wa_child_services_regulations +0.9 | – | `e919982fa`, 5 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | +0.001 | +0.000 | +0 | 1 (1↑ 0↓) | wa_child_services_regulations +0.9 | – | `e919982fa`, 5 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #4142 | SusieeTheLinuxUser | DOCX: a drop cap's letter takes the text's size back, not the file's enlarged one (#3000) | +0.001 | +0.000 | +0 | 1 (1↑ 0↓) | torture_test +0.7 | – | `7b8c0ba5e`, 2 d ago |
@@ -185,7 +185,7 @@ same fixtures (see *Combined branch*).
 | #5252 | scks1 | Layout: a continuous section after a page break and an empty closing mark starts the new page (#2109) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 5 d ago ⚠ stale: new commits; main changed flow.rs, page.rs, pass.rs |
 | #2662 | finwarman | Respect the font minimum height for display operators | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 5 d ago |
 | #3217 | MichaelMuClaude | A display operator without a cataloged size variant still enlarges (#3208) | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `d40d1b271`, 2 d ago |
-| #5634 | kennyfs | Layout: turned cell text never makes a row taller, as in Word | -0.000 | +0.002 | +0 | 1 (0↑ 0↓) | – | – | `8548b33be`, today ⚠ stale: main changed ctx.rs, pass.rs |
+| #5634 | kennyfs | Layout: turned cell text never makes a row taller, as in Word | -0.000 | +0.002 | +0 | 1 (0↑ 0↓) | – | – | `060768f1e`, today |
 | #5735 | benandez | Watermark: picture watermarks and transparency (#3001) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `729cd0a5f`, 4 d ago ⚠ stale: main changed read.rs, read/parts.rs, read/story/runs.rs … |
 | #5935 | frandavid100 | layout: reserve table footnotes before fitting row fragments | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `7b8c0ba5e`, 2 d ago |
 | #5313 | Harrison-Booth | Preserve table cell diagonal borders | -0.001 | -0.001 | +0 | 3 (0↑ 1↓) | – | italian_academic_cv_form -0.8 | `7b8c0ba5e`, 2 d ago |
@@ -194,11 +194,11 @@ same fixtures (see *Combined branch*).
 | #542 | krinry | feat(shapes): full Office shapes gallery and canvas drag-to-draw tool | -0.002 | -0.003 | +0 | 3 (1↑ 2↓) | case34 +1.1 | case35 -1.8, japanese_land_development_sign_form -1.3 | `4b0d39959`, 3 d ago ⚠ stale: main changed read/story/drawing.rs, exporter.rs, lib.rs |
 | #2709 | finwarman | Honor complete rounded percentage cell widths | -0.002 | -0.001 | +0 | 2 (0↑ 1↓) | – | primary_care_safeguarding_annual_review -2.5 | `7b8c0ba5e`, 2 d ago |
 | #5181 | pakiat | Tables: a percentage-width table from Word 2013 takes its share after its outer borders | -0.003 | -0.000 | +0 | 6 (3↑ 2↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8, japanese_land_development_sign_form -1.2 | `7b8c0ba5e`, 2 d ago |
-| #6002 | pakiat | Tables: right-to-left start edges, mode 14 end edges and style parts' inner lines as Word | -0.003 | -0.000 | +0 | 6 (3↑ 2↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8, japanese_land_development_sign_form -1.2 | `7b8c0ba5e`, 2 d ago |
+| #6002 | pakiat | Tables: right-to-left start edges, mode 14 end edges and style parts' inner lines as Word | -0.003 | -0.000 | +0 | 6 (3↑ 2↓) | traditional_skills_job_form +3.0, czech_wastewater_discharge_permit +1.1, polish_ministry_accessibility_report +0.7 | italian_project_proposal -6.8, japanese_land_development_sign_form -1.2 | `7b8c0ba5e`, 2 d ago ⚠ stale: new commits |
 | #4564 | OPUZZLES | Tables: keep fitting hanging-indent labels at their grid width | -0.004 | -0.003 | +0 | 1 (0↑ 1↓) | – | australian_higher_education_guidelines -4.5 | `7b8c0ba5e`, 2 d ago |
 | #3559 | MichaelMuClaude | Tables: an older-mode table moves out by its default cell margin, not the first cell's own (#3407) | -0.005 | -0.005 | +0 | 1 (0↑ 1↓) | – | candidate_reference_check_form -5.6 | `7b8c0ba5e`, 2 d ago |
 | #2714 | finwarman | Preserve equation size and superscript ink bounds | -0.013 | -0.003 | +0 | 1 (0↑ 1↓) | – | pendulum_mechanics_oscillation_lab -13.6 | `661a79054`, 3 d ago ⚠ stale: main changed read/story/runs.rs |
-| #4864 | cyfung1031 | Read w:textAlignment and w:adjustLineHeightInTable; honour the grid in table cells | -0.026 | +0.003 | +0 | 4 (1↑ 2↓) | physical_therapy_comparison_table +58.4 | center-body-list-height-center-space0 -43.3, center-body-list-height-center-space1 -42.8 | `d40d1b271`, 2 d ago ⚠ stale: main changed ctx.rs, flow.rs, pass.rs |
+| #4864 | cyfung1031 | Read w:textAlignment and w:adjustLineHeightInTable; honour the grid in table cells | -0.026 | +0.003 | +0 | 4 (1↑ 2↓) | physical_therapy_comparison_table +58.4 | center-body-list-height-center-space0 -43.3, center-body-list-height-center-space1 -42.8 | `060768f1e`, today |
 | #6197 | pakiat | Tables: a nested table wider than its cell is cut off at the cell's edges | -0.033 | -0.020 | +0 | 2 (0↑ 2↓) | – | case204 -17.8, case210 -17.8 | `a42c9eaab`, today |
 | #2604 | finwarman | Choose justified breaks by spacing cost | -0.037 | -0.036 | +0 | 3 (1↑ 1↓) | squeeze-threshold-after-space +3.9 | czech_village_budget_commentary -43.9 | `7b8c0ba5e`, 2 d ago |
 | #1630 | Morzilla | Tables without w:tblGrid take their grid from the cells, and widths wider than the page are squeezed like Word | -0.038 | -0.034 | +0 | 3 (0↑ 3↓) | – | parish_housing_data_profile -35.9, victorian_universal_design_policy -2.7, russian_construction_org_council_minutes -2.0 | `4b0d39959`, 3 d ago |

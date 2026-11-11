@@ -498,5 +498,15 @@
 "n": 6169,
 "title": "Refuse ui.screenshot on secondary document windows and support root window selection",
 "state": "MERGED"
+},
+{
+"n": 6120,
+"title": "Compare: surface character-level diff fallback on long paragraphs (#6111)",
+"state": "MERGED"
+},
+{
+"n": 6124,
+"title": "tools: chunk LCS alignment past MAX_LCS window to prevent false revisions (#6110)",
+"state": "MERGED"
 }
 ]

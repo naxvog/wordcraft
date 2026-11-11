@@ -1097,11 +1097,9 @@
 "author": "pattalkslaw-del",
 "assoc": "NONE",
 "draft": false,
-"head": "21094437ca6b622ad14a36d0360ecc403c018075",
+"head": "365cdfe320650031d14598d7119eedc4bac25815",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/insert/items.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [
@@ -5070,6 +5068,7 @@
 "head": "e1dee9f4b3abea882dfcf6f4c380d56419f1be85",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
 "crates/fonts/src/fontdb.rs",
 "crates/render/src/lib.rs"
 ],
@@ -6666,13 +6665,14 @@
 "author": "Menonro",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "1c2ee222b107bed1e477c9edfbbda5b65f6a0965",
+"head": "65933f6dfb2f9a316fafc594e828782d5a4a436e",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed boxes.rs, ctx.rs, flow.rs \u2026"
 ]
 },
@@ -9072,11 +9072,9 @@
 "author": "Bitslay",
 "assoc": "NONE",
 "draft": false,
-"head": "30b858c70b5ac8fc0e715d0e919ed86ac8bea0da",
+"head": "fe1ce7cfa0a15e9c0e800f90536fc2ffdb3f6491",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/insert.rs"
-],
+"conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
@@ -9463,7 +9461,7 @@
 "author": "dotCooCoo",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "35b2d9821c28de13490adc0a95ffcf5f80c7b934",
+"head": "df2a1efe49afda2c63af713719d7da9b7578c943",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10942,13 +10940,15 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "a189025f316856ea7bf5b340d64bbc16646380c1",
+"head": "7119772831d665b2e8b56a2af5a3728db097e571",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5427,
@@ -11120,12 +11120,9 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "dfcd37f80384a01ac56e86805124aa5711c5f508",
+"head": "ab5387c1196d7df4fcd46fc5b54d3548450f0f02",
 "mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs",
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": false,
 "allowed": false,
 "risky": [],
@@ -11281,13 +11278,14 @@
 "author": "mmazzieri",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "72f0577d0c31762455ade32496880be2282aa6c5",
+"head": "3b0469da5724e8ebab3fea56e81b6e2a8f47f673",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
 "stale": [
+"new commits",
 "main changed ctx.rs, flow.rs"
 ]
 },
@@ -11297,13 +11295,15 @@
 "author": "mmazzieri",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "d3096ed0fbc89443d8c7950f2d0e55982fa1ea6a",
+"head": "892235af064e7a8fbe09f1f927f975c0e946110f",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5554,
@@ -11516,7 +11516,7 @@
 "author": "marcwgls",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "955aba17ca0045d86e960748f50582bf4ac00017",
+"head": "12284c30a321607379e41fdaf53a5a0d17d7895a",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11986,9 +11986,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5778,
@@ -12033,7 +12031,7 @@
 "author": "x0tero",
 "assoc": "NONE",
 "draft": false,
-"head": "1dceac21be7d91a26ec41e72612c7460eebd1299",
+"head": "4a00e03356b6d68c430b7e3b629d1f159a016ad1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12053,9 +12051,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5791,
@@ -12088,9 +12084,7 @@
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5810,
@@ -12598,7 +12592,7 @@
 "author": "batistalucasv",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "150a6ad1769e6a9604e73348d647a72183ece6dd",
+"head": "ec3b862991e205a14e4fa729a7c9db04be7f6cd5",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13276,13 +13270,15 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "7e6fcb478fe2e0e33258d630a5d6de45f567a9b0",
+"head": "e7abc3703cb25f8e231a3f897ed2497e4db02e48",
 "mine": false,
 "conflicts": [],
 "render": true,
 "allowed": false,
 "risky": [],
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6107,
@@ -13504,7 +13500,9 @@
 "draft": false,
 "head": "d538cb4a260b89e47078d4543851083aa211de71",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock"
+],
 "render": false,
 "allowed": false,
 "risky": [
@@ -13534,7 +13532,7 @@
 "n": 6171,
 "title": "fix(fonts): keep LastResort placeholder boxes out of automatic font fallback",
 "author": "neupaneprashant",
-"assoc": "NONE",
+"assoc": "CONTRIBUTOR",
 "draft": false,
 "head": "8dad8eed190771e8b6669d8dcad1df23b4d8ee7e",
 "mine": false,
@@ -13578,7 +13576,7 @@
 "author": "alosslessdev",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "b5414314decea4b3280f9b681153ef97ad0c5aa8",
+"head": "8b04be3fd05372b09993e3c7c29572fd2cc27dd1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13620,7 +13618,7 @@
 "author": "ljkx",
 "assoc": "CONTRIBUTOR",
 "draft": false,
-"head": "9b918a9230b0f22e99cf2c9b5e84f7e57c764678",
+"head": "bc3895de0e28daaf8e3e779b0da74f0521ad6691",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13998,7 +13996,7 @@
 "author": "johanneswilm",
 "assoc": "NONE",
 "draft": false,
-"head": "d498c199931aeebf7c6308d33e0d7ea30dca36e0",
+"head": "8657daad9bf2a2ab2f5ba89a4b8a6bfe64de8deb",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -14015,6 +14013,90 @@
 "assoc": "NONE",
 "draft": false,
 "head": "702ed4208b62c0a45fd7565c5f40e03f6268dbda",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6300,
+"title": "DOCX: keep right-to-left and left-to-right embeddings and overrides (w:dir, w:bdo) on open and save",
+"author": "tpawley2001",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "1694ee052d2edca1ef4215d8a9fffcea6b52be2d",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6302,
+"title": "#6260: character shading and highlight are one fill per run of letters, with no seams between them",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "569e87626b365bcc8f18920d79ee4bfe4feea0e6",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6305,
+"title": "Decrease Font Size steps one point at a time below 8 pt and by 10 pt above 72 pt, as in Word",
+"author": "tpawley2001",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "5c3b1e7a95d71aa51d6558499fcc8692340eff1d",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6313,
+"title": "#6059: symbols such as \u25b2 \u203b \u2460 \u2163 \u2103 stand upright in vertical text, as Unicode's vertical orientation says",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "f8f5a233f20345d8d57e4879ebf99c624fee71e5",
+"mine": false,
+"conflicts": [],
+"render": true,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6315,
+"title": "#6303: Insert Table takes the width of the caret's section and column",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "ad96921f0f4c45f13f109c2621c063e8e9c3ad5e",
+"mine": false,
+"conflicts": [],
+"render": false,
+"allowed": false,
+"risky": [],
+"stale": []
+},
+{
+"n": 6324,
+"title": "#6318: DATE and TIME fields find their languages in one walk of the paragraph",
+"author": "ljkx",
+"assoc": "CONTRIBUTOR",
+"draft": false,
+"head": "e4889a6e2f76cfc9ef908dc6c39e085bc33e85d6",
 "mine": false,
 "conflicts": [],
 "render": false,

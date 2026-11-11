@@ -954,10 +954,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed kinsoku.rs, para.rs, para/builder.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 1715,
@@ -4622,10 +4619,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs, para.rs"
-]
+"stale": []
 },
 {
 "n": 3764,
@@ -4951,10 +4945,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 3884,
@@ -5045,10 +5036,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 3941,
@@ -8429,7 +8417,10 @@
 "draft": false,
 "head": "9795a98b7ba947a09fd6482f9eddab0accb832a4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"Cargo.toml"
+],
 "render": true,
 "stale": []
 },
@@ -8794,11 +8785,9 @@
 "title": "Files: save a Single File Web Page (.mht, .mhtml) (gap 26)",
 "author": "ljkx",
 "draft": false,
-"head": "ab5387c1196d7df4fcd46fc5b54d3548450f0f02",
+"head": "6e5a8cb5b71b0ca96ee043163e2a547c3ca82b6d",
 "mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9677,11 +9666,12 @@
 "title": "SmartArt: CJK text in diagrams maintains consistent fallback font family (#5672)",
 "author": "batistalucasv",
 "draft": false,
-"head": "85890d8b1d40891f046d4ce12d9cc04630e2a43d",
+"head": "24b8d9f9eb2cab3542da50f799518e6d4bf6ff76",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed fontdb.rs, fontdb/face.rs, display/objects.rs"
 ]
 },
@@ -9701,7 +9691,7 @@
 "title": "Fix: enable copy and paste for custom text boxes and frames",
 "author": "batistalucasv",
 "draft": false,
-"head": "213ee32f1456f8300418a078aa36db9ee6ed87ba",
+"head": "167f8f3c6bf2b9689945b863cab70e1bb585e1b5",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9714,11 +9704,9 @@
 "title": "Fix: pair edited paragraphs by text similarity during document comparison (#5861)",
 "author": "batistalucasv",
 "draft": false,
-"head": "8de68da8537e64eab9df439459a957249fe2e2b6",
+"head": "aa5f8f31c307f46aed4980c22a3c51a8eeadcee5",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": [
 "new commits"
@@ -9729,7 +9717,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "3334c29dae49980f1b0ae57038f126823af3f115",
+"head": "2ce9482307cb4f229e1ad24a87946b0904911949",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10009,44 +9997,52 @@
 "title": "docx, engine: preserve and resolve row/cell ins/del and tblPrExChange revisions",
 "author": "neilcawse",
 "draft": false,
-"head": "14a3364d36fb60488e5d71852e499ec240727043",
+"head": "e9cc31a7b5a9b026c60fa1fb3d1d6451170a10d3",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5951,
 "title": "docx, engine: update range fields and preserve revisions and ffData in field results",
 "author": "neilcawse",
 "draft": false,
-"head": "741e66bb8a92bb64b091f10bf29e5956c07dc9e7",
+"head": "18ffd6959720a90247e6099dbc92e351e7a8f31f",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5953,
 "title": "docx: round fractional file-unit measures and raise group nesting depth to 64",
 "author": "neilcawse",
 "draft": false,
-"head": "bf42afb1ecd7debfd0fba47d7d2eb365a4fe8161",
+"head": "bd68fccfbd65c21b982aa963ef5a3f2d85cd1f5a",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5954,
 "title": "fonts: check family cmap coverage before loading fallback fonts and clear caches on rescan",
 "author": "neilcawse",
 "draft": false,
-"head": "2d986748df10684ad4db90e930a0c6a08a89dcbc",
+"head": "02bcba5f71d3517b4650a70908f0e89a508c80ad",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5968,
@@ -10784,11 +10780,9 @@
 "title": "#6101: automation can't attach a template on another machine",
 "author": "ljkx",
 "draft": false,
-"head": "c2d6607835a5a88393875d842b5452d1bee7febe",
+"head": "d816dca7bb4711ddf0ee946fc0314b2262839fdb",
 "mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -11061,7 +11055,7 @@
 "title": "A first start takes the system account's name as the user name (#2209)",
 "author": "johanneswilm",
 "draft": false,
-"head": "8657daad9bf2a2ab2f5ba89a4b8a6bfe64de8deb",
+"head": "3a2dcd9a5d67de5dc6d69cc8999d24c3c105a4c4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11094,11 +11088,13 @@
 "title": "#6260: character shading and highlight are one fill per run of letters, with no seams between them",
 "author": "ljkx",
 "draft": false,
-"head": "569e87626b365bcc8f18920d79ee4bfe4feea0e6",
+"head": "5e32115b489a86bc793f06c850bc6875b9fefdda",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6305,
@@ -11161,6 +11157,17 @@
 "author": "ljkx",
 "draft": false,
 "head": "a525210f48de41f5a9b8127ec29fbd0124544695",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6340,
+"title": "fix: inserted table rows inherit source row's paragraph margin settings",
+"author": "Huyvux12",
+"draft": false,
+"head": "d55a5118cd4b58827e1f5ff8f1cca5cc38c4570c",
 "mine": false,
 "conflicts": [],
 "render": false,

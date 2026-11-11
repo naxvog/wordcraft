@@ -5341,11 +5341,9 @@
 "title": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198)",
 "author": "ovezthaking",
 "draft": false,
-"head": "e6185e6dcf5e6ce0e5262bdb32ae7b54451d7e9e",
+"head": "329ba1640ea33256f52f93975e0864859ae0f35a",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/para/styles.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -8538,10 +8536,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed kinsoku.rs, lib.rs, para.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5362,
@@ -8552,10 +8547,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed boxes.rs"
-]
+"stale": []
 },
 {
 "n": 5378,
@@ -8592,10 +8584,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed write/embed.rs"
-]
+"stale": []
 },
 {
 "n": 5390,
@@ -8957,10 +8946,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed fields.rs, para/paragraph.rs"
-]
+"stale": []
 },
 {
 "n": 5560,
@@ -8998,10 +8984,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/story/drawing.rs, read/story/vml.rs, display/objects.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5565,
@@ -11049,7 +11032,7 @@
 "title": "A first start takes the system account's name as the user name (#2209)",
 "author": "johanneswilm",
 "draft": false,
-"head": "315a4ccbaebf487caf3fd59a1f888cb18ea8d01a",
+"head": "2e78bc53c81a58ecd2ca39fc16b5d824e467ba9d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11165,6 +11148,17 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 6347,
+"title": "#6263: STYLEREF results leave out the deletions the markup hides",
+"author": "Nghiathan13",
+"draft": false,
+"head": "e2bb4aa72f40eb9890ddd0ab662bab65b8042a9e",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 }
 ]

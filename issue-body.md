@@ -1,6 +1,6 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 20:10 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-11 21:01 UTC.
 
 ## Summary for reviewers
 
@@ -77,8 +77,8 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #3834 | dfgodvan | Layout: a paragraph kept with a table counts its space after | **+0.001** | 1↑ 0↓ | – | ✅ | – | +192 −3 | `e919982fa`, 6 d ago ⚠ stale: main changed flow.rs, table_flow.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `e919982fa`, 6 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 386 PRs benched (96 change the score), 159 of them stale; 21 queued for the
-next round; 373 conflict with `main`.
+**Coverage:** 386 PRs benched (96 change the score), 159 of them stale; 22 queued for the
+next round; 372 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -193,7 +193,7 @@ same fixtures (see *Combined branch*).
 | #4638 | arcanii | Fonts: Japanese text falls back to a Japanese font, not a Chinese one | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `661a79054`, 3 d ago |
 | #5129 | pakiat | Fields: PDFs and prints show body PAGEREF pages, as Word fills them in | +0.000 | +0.000 | +0 | 1 (0↑ 0↓) | – | – | `7b8c0ba5e`, 3 d ago ⚠ stale: main changed lib.rs, pass.rs, export.rs … |
 | #5252 | scks1 | Layout: a continuous section after a page break and an empty closing mark starts the new page (#2109) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 6 d ago ⚠ stale: new commits; main changed flow.rs, page.rs, pass.rs |
-| #2662 | finwarman | Respect the font minimum height for display operators | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 5 d ago |
+| #2662 | finwarman | Respect the font minimum height for display operators | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `e919982fa`, 6 d ago |
 | #3217 | MichaelMuClaude | A display operator without a cataloged size variant still enlarges (#3208) | -0.000 | -0.001 | +0 | 1 (0↑ 0↓) | – | – | `d40d1b271`, 2 d ago |
 | #5634 | kennyfs | Layout: turned cell text never makes a row taller, as in Word | -0.000 | +0.002 | +0 | 1 (0↑ 0↓) | – | – | `060768f1e`, today |
 | #5735 | benandez | Watermark: picture watermarks and transparency (#3001) | -0.000 | -0.000 | +0 | 1 (0↑ 0↓) | – | – | `729cd0a5f`, 4 d ago ⚠ stale: main changed read.rs, read/parts.rs, read/story/runs.rs … |
@@ -246,8 +246,8 @@ they overlap or interact. 245 fixtures change (185↑ 25↓). Regressions over 0
 
 ## Not benched
 
-- **Code conflicts with `main`** (373 PRs): not rerun until rebased.
-- **Change no rendering file** (125): not benched.
+- **Code conflicts with `main`** (372 PRs): not rerun until rebased.
+- **Change no rendering file** (126): not benched.
 - **Doesn't build once merged with `main`:** #1292, #2783, #2876, #3160, #3520, #4265, #4408, #4640, #4645, #5570, #675.
 - **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197, #5705, #5721, #6039, #2251, #4683, #6033, #6049, #6022, #6161, #6169, #6120, #6124; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974, #1518, #1806, #1807, #1810, #1814, #1815, #2039, #2642, #2706, #3090, #3097, #3101, #3111, #3443, #6066, #4251, #4399, #4566, #4665, #6118, #5949.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output

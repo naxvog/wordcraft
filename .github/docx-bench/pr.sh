@@ -1,6 +1,6 @@
 #!/bin/bash
 # usage: pr.sh <pr> <head sha> <base run>   (in a bench job: wc/ is storytold/wordcraft at the baseline commit)
-# Merges the head scan.py planned (and gated) into the baseline and scores it into $W/run/<VER>-pr<n>. Conflicts in
+# Merges the head scan.py planned into the baseline and scores it into $W/run/<VER>-pr<n>. Conflicts in
 # files wordcraft-cli doesn't build take main's side; code conflicts skip the PR. PR outcomes end in meta.json
 # (status=ok or the reason); a failure of the bench itself fails the job, so the PR stays queued for the next round.
 set -uo pipefail; . "$(dirname "$0")/lib.sh"

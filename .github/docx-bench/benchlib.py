@@ -13,9 +13,6 @@ TESTS = re.compile(r'(^|/)tests?(\.rs$|/)')
 # conflicts in these take main's side in a bench merge: wordcraft-cli doesn't build them
 NONCLI = re.compile(r'\.(md|tsv)$|^(docs|contributors|crates/ui-egui|apps/wordcraft|apps/wordcraft-web|\.github|packaging)/'
                     r'|tests\.rs$|/tests/|^NOTICE$')
-# code that runs while building, or config that changes what cargo fetches or runs: a person looks first (allow.txt)
-RISKY = re.compile(r'(^|/)build\.rs$|^\.cargo/|(^|/)rust-toolchain(\.toml)?$|^xtask/')
-TRUSTED = {'OWNER', 'MEMBER', 'COLLABORATOR', 'CONTRIBUTOR'}  # GitHub: CONTRIBUTOR = has had a PR merged
 
 
 def git(*a):
@@ -35,36 +32,6 @@ def pr_files(n):
     """Files PR n changes against its merge base with main."""
     mb = git('merge-base', f'pr/{n}', 'origin/main').strip()
     return git('diff', '--name-only', mb, f'pr/{n}').split() if mb else []
-
-
-def risky(n):
-    """Why PR n needs a person's look before it is built, from its fetched head (empty if nothing)."""
-    mb = git('merge-base', f'pr/{n}', 'origin/main').strip()
-    if not mb:
-        return ['no merge base with main']
-    files = git('diff', '--name-only', mb, f'pr/{n}').split()
-    why = [f for f in files if RISKY.search(f)]
-    # any manifest change: dependencies, [patch], `build = ...`, proc macros all live there (10 of ~280 PRs touch one)
-    why += [f'changes {f}' for f in files if f.endswith('Cargo.toml')]
-    if 'Cargo.lock' in files:
-        def pkgs(rev):
-            return set(re.findall(r'^name = "(.+)"\nversion = "(.+)"(?:\nsource = "(.+)")?', git('show', f'{rev}:Cargo.lock'), re.M))
-        new = sorted(f'{a} {b}' for a, b, _ in pkgs(f'pr/{n}') - pkgs(mb))
-        if new:
-            why.append('new packages in Cargo.lock: ' + ', '.join(new[:6]) + (' …' if len(new) > 6 else ''))
-    return why
-
-
-def allowed(n, head):
-    """allow.txt: '<pr> <head sha prefix>  # who looked and why', one per line. Bound to the head that was read."""
-    p = f'{B}/allow.txt'
-    if not os.path.exists(p):
-        return False
-    for l in open(p):
-        w = l.split('#')[0].split()
-        if len(w) >= 2 and w[0] == str(n) and head.startswith(w[1]):
-            return True
-    return False
 
 
 def current_base():

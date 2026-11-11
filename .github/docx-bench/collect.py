@@ -54,7 +54,7 @@ for a in sorted(os.listdir(art), key=lambda a: '-main-' not in a):  # baselines 
         assert type(m) is dict and all(type(v) is str for v in m.values())
         assert NAME.match(m['name']) and a == 'run-' + m['name'] and m['date'].isdigit()
         assert all(SHA.match(m[k]) for k in ('commit', 'pr_head') if k in m) and NAME.match(m.get('base', m['name']))
-        assert all(PRS.match(m[k]) for k in ('pr', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'gated', 'excluded') if k in m)
+        assert all(PRS.match(m[k]) for k in ('pr', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'moved', 'excluded') if k in m)
         if m['status'] != 'ok':
             if m.get('pr'):  # issue.py lists these; the reason is our own text (pr.sh), cut to one line
                 line = f"{m['pr']}: {m['status'][:200].splitlines()[0]}\n"
@@ -78,7 +78,7 @@ for a in sorted(os.listdir(art), key=lambda a: '-main-' not in a):  # baselines 
     os.makedirs(out)
     json.dump(R, open(f'{out}/wordcraft_comparison.json', 'w'), separators=(',', ':'))
     json.dump(T, open(f'{out}/textcmp.json', 'w'), separators=(',', ':'))
-    for k in ('commit', 'pr_head', 'base', 'date', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'gated', 'excluded'):
+    for k in ('commit', 'pr_head', 'base', 'date', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'moved', 'excluded'):
         if k in m:
             open(f'{out}/{k}', 'w').write(m[k] + '\n')
     done.append(m['name'])

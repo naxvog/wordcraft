@@ -4,7 +4,7 @@ runs (runs/<VER>-pr<n>, each against the baseline in its `base` file), <VER>-prs
 runs and <VER>-notes.md. Asks GitHub for CI, review state and size of the PRs in the summary."""
 import datetime, json, os, re, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # run with -I, which leaves the script's dir out
-from benchlib import B, GH, VER, TRUSTED, load, means, delta, run_base, run_date, pr_head, current_base
+from benchlib import B, GH, VER, load, means, delta, run_base, run_date, pr_head, current_base
 
 FORK = 'https://github.com/naxvog/docxide-pdf/tree/wordcraft-comparison'
 GIST = 'https://gist.github.com/naxvog/54e2039e999cdeacfc0ed59b8da3c6e6'
@@ -54,7 +54,6 @@ for q in prs:
 measured.sort(key=lambda x: -x[1]['ssim'])
 by_n = {str(q['n']): (q, d) for q, d in measured}
 ok = [q for q in prs if not q['draft'] and not q['conflicts']]
-gated = [q for q in ok if not q['allowed'] and (q['assoc'] not in TRUSTED or q['risky'])]
 norender = [q for q in ok if not q['render'] and not load(f"{VER}-pr{q['n']}")]
 conflicting = [q for q in prs if q['conflicts'] and not q['draft']]
 done = {str(q['n']) for q, _ in measured + nochange}
@@ -82,7 +81,7 @@ if not order:
     order = [str(q['n']) for q, d in measured if d['ssim'] > 0.0005 and not q['conflicts']]
 # positive and mergeable, but not in the combined branch (rebased or new since it was built)
 # (PRs that clash with the ones above are explained under *Combined branch* instead)
-clash = lst(excl_run, 'conflicts_prs') + lst(excl_run, 'broken') + lst(excl_run, 'gated')
+clash = lst(excl_run, 'conflicts_prs') + lst(excl_run, 'broken') + lst(excl_run, 'moved')
 later = [str(q['n']) for q, d in measured if d['ssim'] > 0.0005 and not q['conflicts'] and str(q['n']) not in order + excl + clash]
 rebase = [(q, d) for q, d in measured if d['ssim'] > 0.0005 and q['conflicts']]
 look = [(q, d) for q, d in measured if str(q['n']) in order and d['down'] and d['down'][0][0] < -DROP]
@@ -172,7 +171,7 @@ These raised the score when they were benched, but now conflict with `main` in c
 n_stale = sum(bool(q['stale']) for q, _ in measured + nochange)
 out.append(f"""
 **Coverage:** {len(done)} PRs benched ({len(measured)} change the score), {n_stale} of them stale; {len(todo)} queued for the
-next round; {len(gated)} waiting for a person to look before they're built; {len(conflicting)} conflict with `main`.
+next round; {len(conflicting)} conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -194,8 +193,7 @@ next round; {len(gated)} waiting for a person to look before they're built; {len
   changed fixtures and `main` has since changed a rendering file it changes too. PRs that change no file in
   `crates/{{docx,layout,render,pdf,fonts}}/src` aren't benched (in 321 runs, none of them changed a fixture).
 - **Safety:** PR code is built and run in containers without network or capabilities, with their own cargo caches,
-  seeing the suite read-only. PRs from authors without a merged PR, and PRs that add build scripts, proc macros,
-  cargo config or dependencies, wait until someone has read the diff.
+  seeing the suite read-only; dependencies are downloaded without running any of the PR's code.
 - **Environment:** Linux container, debug build of `wordcraft-cli` (the layout code is the same as release), fonts
   from Debian packages plus Microsoft's core web fonts. Calibri, Cambria, Aptos and the other Office fonts are
   not installed, so WordCraft draws those documents in metric-compatible substitutes (Carlito, Caladea, …) while
@@ -236,7 +234,7 @@ def comb_block(name, label):
     summed = sum(by_n[n][1]['ssim'] for n in mlist if n in by_n)
     left = [f"{why}: {', '.join('#' + n for n in lst(name, f))}" for f, why in (
         ('conflicts_main', 'code conflict with `main`'), ('conflicts_prs', 'code conflict with PRs merged before it'),
-        ('broken', "doesn't compile with the PRs merged before it"), ('gated', 'waiting for a look before it is built'),
+        ('broken', "doesn't compile with the PRs merged before it"), ('moved', 'got new commits during the round'),
         ('excluded', 'left out on purpose')) if lst(name, f)]
     return f"""**{label}**: {len(mlist)} PRs merged into `main` {bn.split('-')[-1]}: {', '.join('#' + n for n in mlist)}.{(' Left out: ' + '; '.join(left) + '.') if left else ''}
 
@@ -259,8 +257,6 @@ out.append(f"""
 ## Not benched
 
 - **Code conflicts with `main`** ({len(conflicting)} PRs): not rerun until rebased.
-- **Waiting for a look before they're built** ({len(gated)}): {', '.join(f"#{q['n']}" for q in gated if q['risky']) or 'none'} change
-  build scripts, cargo config or dependencies; {sum(not q['risky'] for q in gated)} more are from authors without a merged PR yet.
 - **Change no rendering file** ({len(norender)}): not benched.
 - **Doesn't build once merged with `main`:** {', '.join('#' + n for n in failed) or '–'}.
 - **Removed from this list** since they're no longer open: {removed_txt}.

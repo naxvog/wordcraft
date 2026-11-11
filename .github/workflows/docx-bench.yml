@@ -6,7 +6,7 @@ name: docx bench
 #   bench     one job per PR, 16 at a time: merged into the baseline, built and scored without network (pr.sh)
 #   combine   every PR that raised the score merged together, with and without v66-exclude.txt (combine.sh)
 #   publish   checks the results (collect.py), commits them to the bench-results branch, renders issue-body.md
-# State (runs, PR list, allow.txt, v66-exclude.txt, v66-notes.md) lives in the bench-results branch.
+# State (runs, PR list, v66-exclude.txt, v66-notes.md) lives in the bench-results branch.
 # Start a round: gh workflow run docx-bench.yml -R naxvog/wordcraft [-f max=N] [-f all=true]
 # Then post the issue from your machine: .github/docx-bench/post-issue.sh
 

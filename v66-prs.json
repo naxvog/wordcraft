@@ -5871,10 +5871,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/props.rs, write/props.rs, write/story/drawing.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 4463,
@@ -7160,10 +7157,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed page.rs, pass.rs"
-]
+"stale": []
 },
 {
 "n": 4912,
@@ -9666,7 +9660,7 @@
 "title": "SmartArt: CJK text in diagrams maintains consistent fallback font family (#5672)",
 "author": "batistalucasv",
 "draft": false,
-"head": "24b8d9f9eb2cab3542da50f799518e6d4bf6ff76",
+"head": "3da1ea2cd913913095a10edf426896d312436da8",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -9704,7 +9698,7 @@
 "title": "Fix: pair edited paragraphs by text similarity during document comparison (#5861)",
 "author": "batistalucasv",
 "draft": false,
-"head": "aa5f8f31c307f46aed4980c22a3c51a8eeadcee5",
+"head": "4f3d766722d569612be50e80039654ac1a4106c9",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9717,7 +9711,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "2ce9482307cb4f229e1ad24a87946b0904911949",
+"head": "7aa8473c962d774b65e4f719ff3be2d80f4a1c8a",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11055,7 +11049,7 @@
 "title": "A first start takes the system account's name as the user name (#2209)",
 "author": "johanneswilm",
 "draft": false,
-"head": "3a2dcd9a5d67de5dc6d69cc8999d24c3c105a4c4",
+"head": "315a4ccbaebf487caf3fd59a1f888cb18ea8d01a",
 "mine": false,
 "conflicts": [],
 "render": false,

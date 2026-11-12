@@ -11,7 +11,7 @@ prev, runs = sys.argv[1], sys.argv[2:]
 base = current_base()
 bm = means(load(base))
 print(f"Baseline {base.split('-')[-1]}: SSIM {bm['ssim']:.2f}" + (' (unchanged)' if base == prev else f" (new; was {prev.split('-')[-1]})"))
-for c in (f'{VER}-combined-excl', f'{VER}-combined'):
+for c in (f'{VER}-combined-excl', f'{VER}-combined', f'{VER}-combined-only'):
     if (r := load(c)) and run_base(c) == base:
         merged = open(f'{B}/runs/{c}/merged').read().split()
         print(f"{c}: {means(r)['ssim']:.2f} ({delta(load(base), r)['ssim']:+.2f}), {len(merged)} PRs merged")

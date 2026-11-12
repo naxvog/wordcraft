@@ -20,6 +20,9 @@ on:
         description: Also bench PRs that change no rendering file
         type: boolean
         default: false
+      only:
+        description: 'Probe: instead of the two combined branches, merge only these PRs (space-separated) into v66-combined-only'
+        default: ''
 
 permissions:
   contents: read
@@ -125,13 +128,13 @@ jobs:
 
   combine:
     needs: [plan, baseline, bench]
-    if: ${{ !cancelled() && needs.plan.result == 'success' && (needs.plan.outputs.need_base == 'true' || needs.plan.outputs.todo != '[]') }}
+    if: ${{ !cancelled() && needs.plan.result == 'success' && (needs.plan.outputs.need_base == 'true' || needs.plan.outputs.todo != '[]' || inputs.only != '') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     strategy:
       fail-fast: false
       matrix:
-        variant: [combined, combined-excl]
+        variant: ${{ fromJSON(inputs.only != '' && '["combined-only"]' || '["combined", "combined-excl"]') }}
     steps:
       - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
@@ -143,7 +146,7 @@ jobs:
         with: {pattern: 'run-*', path: art}
       - uses: actions/download-artifact@v8
         with: {name: plan, path: state}
-      - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}'}
+      - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}', ONLY: '${{ inputs.only }}'}
         run: |
           mkdir -p art
           python3 -I .github/docx-bench/collect.py art
@@ -151,6 +154,9 @@ jobs:
           echo "$BASE" > state/current-main
           ex=; [ "$VARIANT" = combined-excl ] && ex=$(cat state/v66-exclude.txt 2>/dev/null)
           [ "$VARIANT" = combined-excl ] && [ -z "$ex" ] && { echo "v66-exclude.txt is empty: same as combined"; exit 0; }
+          [ "$VARIANT" = combined-only ] || ONLY=
+          [[ "$ONLY" =~ ^[0-9\ ]*$ ]] || { echo "only: PR numbers and spaces"; exit 1; }
+          export ONLY
           .github/docx-bench/combine.sh "v66-$VARIANT" $ex
       - if: always()
         uses: actions/upload-artifact@v7

@@ -1,19 +1,20 @@
 #!/bin/bash
 # usage: combine.sh <name> [<excluded pr>...]   (in a combine job, after collect.py put this round's runs in $BENCH_STATE)
+# With ONLY="<pr>..." (a probe for an interaction), only those of the PRs below are merged.
 # Merges every open PR whose run raised the suite's SSIM (against that run's baseline) into the current baseline, in
 # descending order of gain, at the head scan.py planned; after each merge `cargo check -p wordcraft-cli`
 # must pass (no network) or the merge is undone. Records why PRs were left out, then scores the result into $W/run/<name>.
 set -uo pipefail; . "$(dirname "$0")/lib.sh"
 name=$1; shift; EX="$*"; D=$W/run/$name; base=$(cat "$BENCH_STATE/current-main")
 # two lines: the merge order as pr=head pairs, PRs that conflict with main
-mapfile -t plan < <(EX="$EX" python3 -I - <<'PY'
+mapfile -t plan < <(EX="$EX" ONLY="${ONLY:-}" python3 -I - <<'PY'
 import json, os, sys
 sys.path.insert(0, os.environ['GITHUB_WORKSPACE'] + '/.github/docx-bench')
 from benchlib import B, VER, load, delta, run_base
-ex = set(os.environ['EX'].split()); rows, cmain = [], []
+ex, only = set(os.environ['EX'].split()), set(os.environ['ONLY'].split()); rows, cmain = [], []
 for q in json.load(open(f'{B}/{VER}-prs.json')):
     n = str(q['n'])
-    if q['draft'] or n in ex or not (r := load(f'{VER}-pr{n}')) or not (b := load(run_base(f'{VER}-pr{n}'))):
+    if q['draft'] or n in ex or (only and n not in only) or not (r := load(f'{VER}-pr{n}')) or not (b := load(run_base(f'{VER}-pr{n}'))):
         continue
     g = delta(b, r)['ssim']
     if g <= 0.0005:

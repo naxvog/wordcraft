@@ -10,7 +10,7 @@ from benchlib import B, VER
 
 art = sys.argv[1]
 FIXTURE = re.compile(r'^[a-z]+/[A-Za-z0-9._-]{1,200}$')
-NAME = re.compile(rf'^{VER}-(main-[0-9a-f]{{9}}|pr[0-9]{{1,6}}|combined(-excl)?)$')
+NAME = re.compile(rf'^{VER}-(main-[0-9a-f]{{9}}|pr[0-9]{{1,6}}|combined(-excl|-only)?)$')
 SHA = re.compile(r'^[0-9a-f]{40}$')
 FAILED = f'{B}/{VER}-failed.txt'  # <pr> <head> of PRs whose last bench failed to build
 PRS = re.compile(r'^[0-9]{1,6}( [0-9]{1,6})*$|^$')

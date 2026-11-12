@@ -173,7 +173,7 @@ nothing about whether the code is right; fix those first.
         out.append(LATER)
 looks = [f"- **#{q['n']}** ({md(q['author'])}): {fx(d['down'], 4)}" for q, d in look]
 if os.path.exists(f'{B}/{VER}-notes.md'):
-    looks.append('- ' + open(f'{B}/{VER}-notes.md').read().strip().replace('\n', ' '))
+    looks += ['- ' + n.strip().replace('\n', ' ') for n in open(f'{B}/{VER}-notes.md').read().split('\n\n') if n.strip()]
 if excl:
     looks.append(f"- Left out of *Merge next* on purpose: {', '.join('#' + n for n in excl)} (see *Combined branch*).")
 out.append(f"""

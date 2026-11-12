@@ -1,6 +1,6 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-12 17:58 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-12 18:04 UTC.
 
 ## Summary for reviewers
 
@@ -30,7 +30,7 @@ next round.
 | #2463 | Nghiathan13 | Layout: a paragraph-anchored floating table that doesn't fit runs on across pages (#2359) | **+0.056** | 2↑ 1↓ | pendulum_mechanics_oscillation_lab -25.4 | ✅ | – | +160 −20 | `a7ca977ee` on `10e5bb8bc`, today |
 | #3823 | naxvog | Layout: in older documents, tabs behind a float keep their text on the row | **+0.040** | 1↑ 0↓ | – | ✅ | – | +200 −8 | `7e86e2ea5` on `661a79054`, 4 d ago |
 | #6114 | kevinj24fr | Fix/footnote continued bottom | **+0.034** | 2↑ 0↓ | – | ✅ | – | +138 −9 | `6997afcc3` on `2922fe566`, 3 d ago |
-| #5546 | mmazzieri | Different first page: no first-page header on a continuous section's second page | **+0.023** | 1↑ 0↓ | – | ✅ | – | +108 −13 | `892235af0` on `411a4915a`, today |
+| #5546 | mmazzieri | Different first page: no first-page header on a continuous section's second page | **+0.023** | 1↑ 0↓ | – | ✅ | – | +108 −13 | `892235af0` on `411a4915a`, 1 d ago |
 | #2834 | finwarman | Keep empty row continuations with their labels | **+0.014** | 1↑ 0↓ | – | ✅ | – | +506 −5 | `c14375951` on `7b8c0ba5e`, 3 d ago |
 | #5206 | MarekSpodBiedry | DOCX: keep negative picture crop values and pad the picture instead of squeezing it (#5194) | **+0.013** | 1↑ 0↓ | – | ✅ | – | +59 −13 | `e070b8a0c` on `a42c9eaab`, 2 d ago |
 | #5006 | xiaojunyang0805 | doc, docx, layout: East Asian punctuation compression (w:characterSpacingControl) | **+0.008** | 2↑ 0↓ | – | ✅ | – | +723 −18 | `da0ab31dc` on `a8db235e0`, today |
@@ -70,6 +70,7 @@ PRs above that also make a fixture worse by more than 5 SSIM points, and interac
 - **#6030** (pakiat): wide-nested-float-edge-wide-m14-left-o108-i0 -23.8
 - **#2463** (Nghiathan13): pendulum_mechanics_oscillation_lab -25.4
 - **Interaction found:** #3821 and #2792 together drop the six `nested-floats-spaced-text-*` fixtures from 92.5 to 31.2 SSIM; neither changes them alone (found by merging prefixes of the list above). #2792 reads a `w:tblCellMar` that sets only some sides into `partial_cell_margins` and leaves `cell_margins` empty; #3821 then sees no `cell_margins` in a file without a default table style and sets all four to 0, which overrides the sides the table does set. Whichever lands second should check `partial_cell_margins` too and fill only the missing sides with 0.
+- **Interaction found:** #2523 and #5455 together drop `continuous-context-frame1-same0-ctx1` from 98.5 to 51.3 SSIM; neither changes it alone (a probe round merged only these two). There the continuous section break sits on an empty framed paragraph of another style. #5455 makes a section's closing mark the paragraph above for the next paragraph's contextual spacing, in `place_para` after the mark is laid out; #2523 places framed paragraphs in `place_framed_para`, which returns at the top of `place_para`, before that. So the paragraph after the break is compared with the one before the mark, matches its style and drops its 12 pt space before, which Word keeps. Whichever lands second should leave a section's empty closing mark to the normal path, or set `pb.prev` for it in the framed path as #5455 does.
 - Left out of *Merge next* on purpose: #2792 (see *Combined branch*).
 
 ### Would help, needs a rebase
@@ -90,7 +91,7 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `638fd79f0` on `e919982fa`, 7 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
 **Coverage:** 402 PRs benched (101 change the score), 175 of them stale; 40 queued for the
-next round; 372 conflict with `main`.
+next round; 371 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -159,7 +160,7 @@ same fixtures (see *Combined branch*).
 | #4065 | jpc7k1 | Layout: a long note referenced on a paragraph's last lines continues below them, as in Word (#3820) | +0.030 | +0.027 | +0 | 2 (1↑ 0↓) | zimbabwe_gold_mining_judgment +32.4 | – | `7fce65fcc` on `060768f1e`, 1 d ago |
 | #3833 | dfgodvan | Layout: tables at the foot of a page before Word 2013 layout (compatibility mode 12 and 14) | +0.029 | +0.039 | +0 | 3 (3↑ 0↓) | short-cell-widows-m14-l3-room2-w1-none +29.7, wa_child_services_regulations +0.9, romanian_quality_evaluation_strategy +0.8 | – | `c29995c9d` on `e919982fa`, 7 d ago ⚠ stale: main changed flow.rs, para/paragraph.rs, table_flow.rs |
 | #4619 | Harrison-Booth | Fonts: report a missing Word core font with no metric twin | +0.024 | +0.012 | +1 | 1 (1↑ 0↓) | arabic_rice_benefits_article +25.4 | – | `0aaef7a5b` on `e919982fa`, 6 d ago ⚠ stale: main changed word.rs |
-| #5546 | mmazzieri | Different first page: no first-page header on a continuous section's second page | +0.023 | +0.018 | +0 | 3 (1↑ 0↓) | cont-first-first-fits +24.5 | – | `892235af0` on `411a4915a`, today |
+| #5546 | mmazzieri | Different first page: no first-page header on a continuous section's second page | +0.023 | +0.018 | +0 | 3 (1↑ 0↓) | cont-first-first-fits +24.5 | – | `892235af0` on `411a4915a`, 1 d ago |
 | #6219 | pakiat | DOCX: a default part the file leaves out is Word's own (12 pt run, 8 pt after) | +0.016 | +0.017 | +0 | 7 (4↑ 0↓) | seq-heading-reset +9.9, alfies_arc_adult_safeguarding_policy +4.1, polish_building_procurement_spec +2.3 (+1 more) | – | `e31d4c0e5` on `ad5e1a65f`, 1 d ago |
 | #5176 | pakiat | Tables: a percentage-width table before Word 2013 adds its outer cell margins | +0.015 | +0.011 | +0 | 5 (4↑ 0↓) | chinese_costume_design_course +9.2, zimbabwe_broadcasting_corporation_judgment +3.5, zimbabwe_gold_mining_judgment +2.5 (+1 more) | – | `ff4e71a17` on `7b8c0ba5e`, 3 d ago |
 | #2493 | finwarman | Close split table fragments at fitted content | +0.015 | +0.011 | +0 | 13 (4↑ 0↓) | master_thesis_learning_agreement +10.7, cote_dazur_phd_grants_call +1.4, education_consultant_posting +1.1 (+1 more) | – | `a4f4b668b` on `a42c9eaab`, 2 d ago |
@@ -263,8 +264,8 @@ they overlap or interact. 249 fixtures change (189↑ 25↓). Regressions over 0
 
 ## Not benched
 
-- **Code conflicts with `main`** (372 PRs): not rerun until rebased.
-- **Change no rendering file** (128): not benched.
+- **Code conflicts with `main`** (371 PRs): not rerun until rebased.
+- **Change no rendering file** (130): not benched.
 - **Doesn't build once merged with `main`:** #1292, #2783, #2876, #3160, #3520, #4265, #4408, #4640, #4645, #5570, #675.
 - **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197, #5705, #5721, #6039, #2251, #4683, #6033, #6049, #6022, #6161, #6169, #6120, #6124, #6004; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974, #1518, #1806, #1807, #1810, #1814, #1815, #2039, #2642, #2706, #3090, #3097, #3101, #3111, #3443, #6066, #4251, #4399, #4566, #4665, #6118, #5949.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output

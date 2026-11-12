@@ -7908,9 +7908,7 @@
 "draft": false,
 "head": "8a63f04be9b7f24b4e05d228a43280f3774ccec1",
 "mine": false,
-"conflicts": [
-"crates/engine/src/session/snapshot.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9733,7 +9731,7 @@
 "title": "Compare: diff style definitions as property-change revisions (#5841)",
 "author": "batistalucasv",
 "draft": false,
-"head": "2092aff7a5aa3dea291a80da48d44c4fb1a3bf0f",
+"head": "711c0fc7a9b8f8e50de16d53f604cf0d623910ca",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11405,10 +11403,21 @@
 "title": "Layout: add Fit One Page (#6433)",
 "author": "batistalucasv",
 "draft": false,
-"head": "98619947d716c95e222814394fe4b9898bed0a0b",
+"head": "ed09a2158f9d81d432a0d622f360707f81c4719b",
 "mine": false,
 "conflicts": [],
 "render": true,
+"stale": []
+},
+{
+"n": 6442,
+"title": "fix: save existing files on KIO/OneDrive in safe_save",
+"author": "kaivon-kaelen",
+"draft": false,
+"head": "9761e0500cab4e8221ae3cef0d2c640fd143d9bc",
+"mine": false,
+"conflicts": [],
+"render": false,
 "stale": []
 }
 ]

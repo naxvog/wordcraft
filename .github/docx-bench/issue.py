@@ -109,8 +109,17 @@ def gh_info(ns):
 info = gh_info(order + later + [str(q['n']) for q, _ in rebase])
 
 
+def ready(n):  # green CI and no changes requested (without GitHub's answer, every PR counts as ready)
+    i = info.get(n)
+    return not i or (i['ci'] == '✅' and i['review'] != 'changes requested')
+
+
+blocked = [n for n in order + later if not ready(n)]
+
+
 def when(q, d):
-    s = f"`{d['base']}`, {d['age']}"
+    h = pr_head(q['n'])
+    s = (f"`{h[:9]}` on " if h else '') + f"`{d['base']}`, {d['age']}"
     return s + (f" ⚠ stale: {'; '.join(q['stale'])}" if q['stale'] else '')
 
 
@@ -122,7 +131,7 @@ def srow(n, mark=''):
             f"{worst} | {i.get('ci', '–')} | {i.get('review', '–')} | {i.get('size', '')} | {when(q, d)} |")
 
 
-SHEAD = ('| PR | Author | What it changes | SSIM Δ | Fixtures | Worst fixture | CI | Review | Size | Measured on `main` |\n'
+SHEAD = ('| PR | Author | What it changes | SSIM Δ | Fixtures | Worst fixture | CI | Review | Size | Head, measured on `main` |\n'
          '|---|---|---|---|---|---|---|---|---|---|')
 now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
 cd = delta(base, load(excl_run)) if excl_run else None
@@ -135,20 +144,33 @@ rendering, fonts, DOCX reading or PDF export does to that score. It's regenerate
 
 `main` {MAIN} scores **{bm['ssim']:.2f}** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores {dm['ssim']:.2f}
 ({gap:.1f} points ahead)."""
-       + (f""" Merging the {len(order)} PRs below, in this order, gives **{bm['ssim'] + cd['ssim']:.2f} ({cd['ssim']:+.2f})**,
+       + (f""" Merging the {len(order)} PRs {'under *Merge next* and *Not ready yet*' if blocked else 'below'}, in this order, gives **{bm['ssim'] + cd['ssim']:.2f} ({cd['ssim']:+.2f})**,
 measured on one branch with all of them merged (see *Combined branch*)."""
           if cd else '') + f"""
 
 ### Merge next
 
-Ranked by what each adds on its own; they merge cleanly with `main` and with each other in this order. A row marked
+Ranked by what each adds on its own, with green CI and no changes requested. They merge cleanly with `main` and with
+each other in this order, together with the PRs under *Not ready yet*. A row marked
 stale was measured before the PR got new commits, or before `main` changed files it changes too; it's rerun in the
 next round.
 
 {SHEAD}"""]
-out += [srow(n) for n in order] + [srow(n, ' †') for n in later] or ['| – | | nothing yet | | | | | | | |']
-if later:
-    out.append('\n† Not in the combined branch yet (rebased or benched since it was built), so not in its total either.')
+LATER = '\n† Not in the combined branch yet (rebased or benched since it was built), so not in its total either.'
+out += [srow(n) for n in order if ready(n)] + [srow(n, ' †') for n in later if ready(n)] or ['| – | | nothing yet | | | | | | | |']
+if any(ready(n) for n in later):
+    out.append(LATER)
+if blocked:
+    out.append(f"""
+### Not ready yet
+
+These raise the score too, but their CI fails or is still running, or a reviewer requested changes. The score says
+nothing about whether the code is right; fix those first.
+
+{SHEAD}""")
+    out += [srow(n, ' †' if n in later else '') for n in blocked]
+    if any(n in later for n in blocked):
+        out.append(LATER)
 looks = [f"- **#{q['n']}** ({md(q['author'])}): {fx(d['down'], 4)}" for q, d in look]
 if os.path.exists(f'{B}/{VER}-notes.md'):
     looks.append('- ' + open(f'{B}/{VER}-notes.md').read().strip().replace('\n', ' '))
@@ -211,7 +233,7 @@ next round; {len(conflicting)} conflict with `main`.
 Sorted by SSIM change. The sum of these rows is not what all of them together would give: several touch the
 same fixtures (see *Combined branch*).
 
-| PR | Author | What it changes | SSIM Δ | Jaccard Δ | Pages Δ | Fixtures changed | Biggest gains | Regressions | Measured on `main` |
+| PR | Author | What it changes | SSIM Δ | Jaccard Δ | Pages Δ | Fixtures changed | Biggest gains | Regressions | Head, measured on `main` |
 |---|---|---|---|---|---|---|---|---|---|""")
 out += [f"| #{q['n']} | {md(q['author'])} | {md(q['title'])} | {d['ssim']:+.3f} | {d['j']:+.3f} | {d['pages']:+d} | "
         f"{d['changed']} ({len(d['up'])}↑ {len(d['down'])}↓) | {fx(d['up']) or '–'} | {fx(d['down']) or '–'} | {when(q, d)} |"
@@ -231,12 +253,16 @@ def comb_block(name, label):
     cb = bases.setdefault(bn, load(bn))
     d, cm, b0 = delta(cb, c), means(c), means(cb)
     mlist = lst(name, 'merged')
+    H = dict(x.split('=') for x in lst(name, 'heads'))
+    commit = lst(name, 'commit')
     summed = sum(by_n[n][1]['ssim'] for n in mlist if n in by_n)
     left = [f"{why}: {', '.join('#' + n for n in lst(name, f))}" for f, why in (
         ('conflicts_main', 'code conflict with `main`'), ('conflicts_prs', 'code conflict with PRs merged before it'),
         ('broken', "doesn't compile with the PRs merged before it"), ('moved', 'got new commits during the round'),
         ('excluded', 'left out on purpose')) if lst(name, f)]
-    return f"""**{label}**: {len(mlist)} PRs merged into `main` {bn.split('-')[-1]}: {', '.join('#' + n for n in mlist)}.{(' Left out: ' + '; '.join(left) + '.') if left else ''}
+    heads = f" (merge commit `{commit[0][:9]}`, made in the bench job and not pushed)" if commit else ''
+    mtxt = ', '.join(f"#{n}" + (f" `{H[n][:9]}`" if n in H else '') for n in mlist)
+    return f"""**{label}**: {len(mlist)} PRs merged into `main` {bn.split('-')[-1]} in this order{', at these heads' if H else ''}{heads}: {mtxt}.{(' Left out: ' + '; '.join(left) + '.') if left else ''}
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
@@ -247,8 +273,19 @@ The merged PRs' individual SSIM changes add up to {summed:+.3f}; the difference 
 they overlap or interact. {d['changed']} fixtures change ({len(d['up'])}↑ {len(d['down'])}↓). Regressions over 0.5: {fx(d['down'], 8) or 'none'}."""
 
 
+def excl_label():
+    a, b = lst(f'{VER}-combined', 'merged'), lst(f'{VER}-combined-excl', 'merged')
+    extra, gone = [n for n in b if n not in a], [n for n in a if n not in b and n not in excl]
+    j = lambda ns: ', '.join('#' + n for n in ns)
+    s = 'The same without ' + j(excl)
+    if extra or gone:  # e.g. a PR that clashed with an excluded one merges here: the gap isn't the excluded PRs' alone
+        s += ' (' + ' and '.join(filter(None, [extra and f'{j(extra)} merges here instead', gone and f'{j(gone)} drops out'])) \
+             + f', so the difference between the two isn\'t {j(excl)} alone)'
+    return s
+
+
 blocks = [b for b in (comb_block(f'{VER}-combined', 'Every PR with a positive score'),
-                      comb_block(f'{VER}-combined-excl', 'The same without ' + ', '.join('#' + n for n in excl)) if excl else None) if b]
+                      comb_block(f'{VER}-combined-excl', excl_label()) if excl else None) if b]
 out.append(f"""
 ## Combined branch
 

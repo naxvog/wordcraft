@@ -26,7 +26,7 @@ print(' '.join(p for _, p in sorted(rows, reverse=True))); print(' '.join(cmain)
 PY
 )
 [ ${#plan[@]} = 2 ] || { echo "could not work out the merge order"; exit 1; }
-cmain=(${plan[1]}); moved=(); merged=(); cprs=(); broken=()
+cmain=(${plan[1]}); moved=(); merged=(); heads=(); cprs=(); broken=()
 check() {
   fetch "$W/wc" rw >/dev/null 2>&1 &&
   docker run --rm "${USR[@]}" "${OFF[@]}" -v "$W/wc:/src:ro" -w /src -v "$HOME/c/wc-target:/target" -v "$W/fonts:/fonts:ro" \
@@ -44,11 +44,11 @@ for ph in ${plan[0]}; do
   fi
   if ! check; then g reset -q --hard "$pre"; broken+=("$p"); continue; fi
   g diff --quiet || g commit -qam "bench: refresh Cargo.lock after #$p"
-  merged+=("$p")
+  merged+=("$p"); heads+=("$p=$h")
 done
 echo "merged: ${merged[*]}"; echo "conflict with main: ${cmain[*]}"; echo "conflict with earlier PRs: ${cprs[*]}"
 echo "doesn't compile with them: ${broken[*]}"; echo "moved since the plan: ${moved[*]}"
 "$S/score.sh" "$W/wc" "$D"; rc=$?
 [ $rc = 0 ] || [ $rc = 2 ] || exit 1
 meta "$D" name="$name" base="$base" commit="$(g rev-parse HEAD)" status="$([ $rc = 0 ] && echo ok || echo 'bench failed: does not build')" \
-  merged="${merged[*]}" conflicts_main="${cmain[*]}" conflicts_prs="${cprs[*]}" broken="${broken[*]}" moved="${moved[*]}" excluded="$EX"
+  merged="${merged[*]}" heads="${heads[*]}" conflicts_main="${cmain[*]}" conflicts_prs="${cprs[*]}" broken="${broken[*]}" moved="${moved[*]}" excluded="$EX"

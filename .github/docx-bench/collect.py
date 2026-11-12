@@ -14,6 +14,7 @@ NAME = re.compile(rf'^{VER}-(main-[0-9a-f]{{9}}|pr[0-9]{{1,6}}|combined(-excl)?)
 SHA = re.compile(r'^[0-9a-f]{40}$')
 FAILED = f'{B}/{VER}-failed.txt'  # <pr> <head> of PRs whose last bench failed to build
 PRS = re.compile(r'^[0-9]{1,6}( [0-9]{1,6})*$|^$')
+HEADS = re.compile(r'^[0-9]{1,6}=[0-9a-f]{40}( [0-9]{1,6}=[0-9a-f]{40})*$|^$')
 
 
 def score(x):
@@ -55,6 +56,7 @@ for a in sorted(os.listdir(art), key=lambda a: '-main-' not in a):  # baselines 
         assert NAME.match(m['name']) and a == 'run-' + m['name'] and m['date'].isdigit()
         assert all(SHA.match(m[k]) for k in ('commit', 'pr_head') if k in m) and NAME.match(m.get('base', m['name']))
         assert all(PRS.match(m[k]) for k in ('pr', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'moved', 'excluded') if k in m)
+        assert HEADS.match(m.get('heads', ''))
         if m['status'] != 'ok':
             if m.get('pr'):  # issue.py lists these; the reason is our own text (pr.sh), cut to one line
                 line = f"{m['pr']}: {m['status'][:200].splitlines()[0]}\n"
@@ -78,7 +80,7 @@ for a in sorted(os.listdir(art), key=lambda a: '-main-' not in a):  # baselines 
     os.makedirs(out)
     json.dump(R, open(f'{out}/wordcraft_comparison.json', 'w'), separators=(',', ':'))
     json.dump(T, open(f'{out}/textcmp.json', 'w'), separators=(',', ':'))
-    for k in ('commit', 'pr_head', 'base', 'date', 'merged', 'conflicts_main', 'conflicts_prs', 'broken', 'moved', 'excluded'):
+    for k in ('commit', 'pr_head', 'base', 'date', 'merged', 'heads', 'conflicts_main', 'conflicts_prs', 'broken', 'moved', 'excluded'):
         if k in m:
             open(f'{out}/{k}', 'w').write(m[k] + '\n')
     done.append(m['name'])

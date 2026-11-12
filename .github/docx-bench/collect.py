@@ -48,6 +48,16 @@ def fixtures(run):
 
 
 done = []
+if os.path.isfile(f'{art}/meta.json'):  # download-artifact unpacks a lone artifact without its run-<name> folder
+    try:
+        lone = json.load(open(f'{art}/meta.json'))['name']
+        assert type(lone) is str and NAME.match(lone)
+        os.makedirs(f'{art}/run-{lone}')
+        for f in ('meta.json', 'wordcraft_comparison.json', 'textcmp.json'):
+            if os.path.isfile(f'{art}/{f}'):
+                os.replace(f'{art}/{f}', f'{art}/run-{lone}/{f}')
+    except (AssertionError, KeyError, ValueError, TypeError, OSError) as e:
+        print(f'lone run: rejected ({type(e).__name__} {e})')
 for a in sorted(os.listdir(art), key=lambda a: '-main-' not in a):  # baselines first: the other runs refer to them
     d = f'{art}/{a}'
     try:

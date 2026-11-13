@@ -553,5 +553,10 @@
 "n": 5858,
 "title": "Fix: arrange.bounds on header picture writes page-anchored ODT frame",
 "state": "MERGED"
+},
+{
+"n": 5269,
+"title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
+"state": "CLOSED"
 }
 ]

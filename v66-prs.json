@@ -445,7 +445,9 @@
 "head": "fc794bf0d2634909f873ebfdecede15cca2025ea",
 "mine": false,
 "conflicts": [
-"crates/docbin/src/lib.rs"
+"crates/docbin/src/fmt.rs",
+"crates/docbin/src/lib.rs",
+"crates/docbin/src/table.rs"
 ],
 "render": false,
 "stale": []
@@ -1252,6 +1254,7 @@
 "head": "dd748e5d809b4171978dcbba4a3a5c252f13fc36",
 "mine": false,
 "conflicts": [
+"crates/docbin/src/lib.rs",
 "crates/docx/src/read/story/runs.rs",
 "crates/engine/src/cmd/insert/items.rs"
 ],
@@ -1400,7 +1403,10 @@
 "draft": false,
 "head": "df3583145acde351619642bade2e7802db58a3da",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/drawing.rs",
+"crates/docbin/src/lib.rs"
+],
 "render": true,
 "stale": []
 },
@@ -2277,7 +2283,9 @@
 "draft": false,
 "head": "a3d7705822cb28d94b178c3f4331bf52b37592cc",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/drawing.rs"
+],
 "render": true,
 "stale": []
 },
@@ -2582,10 +2590,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed floats.rs, notes.rs"
-]
+"stale": []
 },
 {
 "n": 2493,
@@ -2987,6 +2992,7 @@
 "conflicts": [
 "crates/doc/src/para.rs",
 "crates/docbin/src/drawing.rs",
+"crates/docbin/src/lib.rs",
 "crates/docx/src/read/story.rs",
 "crates/docx/src/write/story.rs",
 "crates/engine/src/cmd/insert.rs",
@@ -4707,6 +4713,7 @@
 "head": "741aa8167566e0fb4dcd7236071f357d0264c53f",
 "mine": false,
 "conflicts": [
+"crates/docbin/src/drawing.rs",
 "crates/docx/src/write/story/drawing.rs",
 "crates/docx/src/write/story/object.rs"
 ],
@@ -5041,9 +5048,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3960,
@@ -5417,6 +5422,7 @@
 "head": "ed1d87745f72317992e17ae49216d5f9247bd89c",
 "mine": false,
 "conflicts": [
+"crates/docbin/src/fmt.rs",
 "crates/formats/src/rtf/parse.rs"
 ],
 "render": false,
@@ -5726,6 +5732,7 @@
 "head": "b91df4bf3619bb4589c86198e935aa72718e5a05",
 "mine": false,
 "conflicts": [
+"crates/docbin/src/sections.rs",
 "crates/docx/src/write/story.rs",
 "crates/engine/src/cmd/page.rs",
 "crates/formats/src/odt.rs"
@@ -6056,7 +6063,9 @@
 "draft": false,
 "head": "2fef96870e9b8d9524108f0ac1c5154a1a409f00",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/fmt.rs"
+],
 "render": true,
 "stale": []
 },
@@ -7334,9 +7343,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs"
-]
+"stale": []
 },
 {
 "n": 5006,
@@ -7657,10 +7664,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs"
-]
+"stale": []
 },
 {
 "n": 5096,
@@ -7671,9 +7675,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5098,
@@ -7916,7 +7918,11 @@
 "draft": false,
 "head": "182e6090e90eff56e3ca8423c281ae8603dd43f3",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"crates/docbin/Cargo.toml",
+"crates/docbin/src/crypt.rs"
+],
 "render": true,
 "stale": []
 },
@@ -8064,6 +8070,7 @@
 "crates/doc/src/lib.rs",
 "crates/doc/src/props/para_props.rs",
 "crates/doc/src/settings.rs",
+"crates/docbin/src/fmt.rs",
 "crates/docbin/src/table.rs",
 "crates/docx/src/read/props.rs",
 "crates/formats/src/rtf/export.rs",
@@ -8287,27 +8294,6 @@
 ]
 },
 {
-"n": 5269,
-"title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
-"author": "cdhdt",
-"draft": false,
-"head": "95b84cdec47be408af2342ee0b94f26038d02167",
-"mine": false,
-"conflicts": [
-"crates/engine/src/cmd/file.rs",
-"crates/engine/src/io.rs",
-"crates/engine/src/io_ext.rs",
-"crates/engine/src/print.rs",
-"crates/engine/src/session/layout.rs",
-"crates/pdf/src/export.rs",
-"crates/pdf/src/exporter.rs",
-"crates/pdf/src/lib.rs",
-"crates/pdf/src/options.rs"
-],
-"render": true,
-"stale": []
-},
-{
 "n": 5270,
 "title": "wordcraft-cli convert: --insert-color / --delete-color for the markup PDF (#5233)",
 "author": "cdhdt",
@@ -8354,9 +8340,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5293,
@@ -8402,7 +8386,9 @@
 "draft": false,
 "head": "52b7b0e196bf230910b8a3e31cfd93de89376f07",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/fmt.rs"
+],
 "render": true,
 "stale": [
 "main changed read/props.rs, display/lines.rs, outline.rs"
@@ -8416,6 +8402,7 @@
 "head": "857e371a0f75abba0c0731becc853b691f29a5e4",
 "mine": false,
 "conflicts": [
+"crates/docbin/src/table.rs",
 "crates/docx/src/write/styles.rs"
 ],
 "render": true,
@@ -8457,7 +8444,16 @@
 "draft": false,
 "head": "98518fc3b4950f754d5dc205ff89dc55acbacfd4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/fmt.rs",
+"crates/docbin/src/lib.rs",
+"crates/docbin/src/list.rs",
+"crates/docbin/src/metadata.rs",
+"crates/docbin/src/notes.rs",
+"crates/docbin/src/piece.rs",
+"crates/docbin/src/sections.rs",
+"crates/docbin/src/sprm.rs"
+],
 "render": false,
 "stale": []
 },
@@ -8569,6 +8565,7 @@
 "head": "3f8090b2b04f395e2b4de81798791966e5b5051f",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
 "crates/engine/src/packs.rs",
 "crates/engine/src/session.rs",
 "crates/engine/src/session/documents.rs",
@@ -8680,9 +8677,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5427,
@@ -8889,10 +8884,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/story/drawing.rs, write/story/object.rs"
-]
+"stale": []
 },
 {
 "n": 5521,
@@ -8998,9 +8990,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5560,
@@ -9036,7 +9026,10 @@
 "draft": false,
 "head": "9c4f7cfa953a763332846f67774fb67a68307d7d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/drawing.rs",
+"crates/docbin/src/lib.rs"
+],
 "render": true,
 "stale": [
 "new commits",
@@ -9697,11 +9690,12 @@
 "title": "layout: wrap field results across multiple lines within margins (#5838)",
 "author": "batistalucasv",
 "draft": false,
-"head": "8f14b54461fece90b3e06a8aaa1cbf1c16ab3e9f",
+"head": "acf454cf5cb09e95ac88fab8a73f8ce61798460d",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed hit.rs"
 ]
 },
@@ -9734,7 +9728,7 @@
 "title": "Fix: pair edited paragraphs by text similarity during document comparison (#5861)",
 "author": "batistalucasv",
 "draft": false,
-"head": "31f138e3a7620964adb89edecd2c18d035d9d53c",
+"head": "76cfef5f4d5b74b281e071894a735797a3b05db8",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10015,7 +10009,10 @@
 "draft": false,
 "head": "823d8ec07c5b98f080b855ee060f5c541906054e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/fib.rs",
+"crates/docbin/src/lib.rs"
+],
 "render": true,
 "stale": []
 },
@@ -10255,6 +10252,7 @@
 "head": "6dcd824f4e892ef785735317882b30327129f46b",
 "mine": false,
 "conflicts": [
+"crates/docbin/src/lib.rs",
 "crates/engine/src/cmd/insert/items.rs"
 ],
 "render": true,
@@ -11519,7 +11517,9 @@
 "draft": false,
 "head": "d8d618ff677806506d3ca2191763c055331c0081",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/drawing.rs"
+],
 "render": true,
 "stale": []
 },
@@ -11937,7 +11937,9 @@
 "draft": false,
 "head": "71abd49f2fe99ac5f71cb91423e606b2fc5bfdf4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docbin/src/drawing.rs"
+],
 "render": true,
 "stale": []
 },
@@ -11947,6 +11949,28 @@
 "author": "Menonro",
 "draft": false,
 "head": "16f954eb91972a83f975c01eeae87c725b4b667f",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6571,
+"title": "Layout: a non-breaking hyphen the font lacks is drawn as Word draws it, on a line no taller (#6570)",
+"author": "Menonro",
+"draft": false,
+"head": "a05ebca275879c953d6a7de6e8a3d6801e4696d2",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6573,
+"title": "Layout: a table cell set not to wrap its text is sized as one unbreakable piece (#6572)",
+"author": "Menonro",
+"draft": false,
+"head": "f47099cd7e2f31250dd57267f9a8d18b6415d545",
 "mine": false,
 "conflicts": [],
 "render": true,

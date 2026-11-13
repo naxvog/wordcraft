@@ -2578,11 +2578,9 @@
 "title": "Layout: In Front of Text objects draw over the whole page's text (#1993)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "4602861446efc0f4c7f6ff27c10b7d839d84730c",
+"head": "732bb67be6f04df0844e77c25cd3efe018186523",
 "mine": false,
-"conflicts": [
-"crates/layout/src/floats.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits",
@@ -5039,7 +5037,7 @@
 "title": "DOCX: a Word file's latent quick styles fill the Styles gallery (#3909)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "e82477086284a5077a4852b34934e18c74eeceab",
+"head": "33ca8a23ddda763f6c105b0912e5ead052eb9b39",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -5268,9 +5266,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed write/story/para.rs"
-]
+"stale": []
 },
 {
 "n": 4169,
@@ -5489,10 +5485,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed hit.rs"
-]
+"stale": []
 },
 {
 "n": 4294,
@@ -5548,10 +5541,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/meta.rs, lib.rs"
-]
+"stale": []
 },
 {
 "n": 4320,
@@ -5726,9 +5716,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 4432,
@@ -5877,10 +5865,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/props.rs, write/parts.rs, write/story/para.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 4463,
@@ -6013,9 +5998,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs, read/styles.rs, write/story/para.rs"
-]
+"stale": []
 },
 {
 "n": 4511,
@@ -6075,9 +6058,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed display/page.rs"
-]
+"stale": []
 },
 {
 "n": 4559,
@@ -6190,9 +6171,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 4615,
@@ -7543,7 +7522,7 @@
 "title": "#5065: a DOCX border without w:sz is an eighth of a point",
 "author": "Nghiathan13",
 "draft": false,
-"head": "5407b4e15fc0de8f20703ec7dc9c34de9da13651",
+"head": "7bc3f3bc6c2f7c5cfd0a9f2341c065dd8d5525c0",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10211,7 +10190,7 @@
 "title": "Keyboard: shortcut keys for styles (Customize Keyboard \u203a Styles, Modify Style \u203a Format \u203a Shortcut key) (#3910)",
 "author": "tpawley2001",
 "draft": false,
-"head": "c711de895325b16e2741b51d1b3c373f18494b20",
+"head": "a2b534cb8b3ad737ceb167dcaf4824faa5e13360",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10259,11 +10238,12 @@
 "title": "Drop Cap In margin: first-line and hanging indents move to the cap's frame paragraph (#4173)",
 "author": "tpawley2001",
 "draft": false,
-"head": "4a920bb0ef5cfc5842b09dcdabc749431e41f2eb",
+"head": "5825ef6dcbe00e9599b9526eaa7d9ef662c54ebf",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed write/story/para.rs"
 ]
 },
@@ -11625,7 +11605,7 @@
 "title": "#6330: Insert Cells and Delete Cells with Word's four options each",
 "author": "ljkx",
 "draft": false,
-"head": "a5dc32be154f899733e2a1b1cff3d9d1a0728c55",
+"head": "04a6999e360abb7868d04ec26700eae27449e8fe",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11956,6 +11936,17 @@
 "author": "Menonro",
 "draft": false,
 "head": "71abd49f2fe99ac5f71cb91423e606b2fc5bfdf4",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6569,
+"title": "DOCX: a styled outline takes its width from the document's theme (#6568)",
+"author": "Menonro",
+"draft": false,
+"head": "16f954eb91972a83f975c01eeae87c725b4b667f",
 "mine": false,
 "conflicts": [],
 "render": true,

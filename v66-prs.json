@@ -3883,9 +3883,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3200,
@@ -4626,9 +4624,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed display/page.rs"
-]
+"stale": []
 },
 {
 "n": 3604,
@@ -4903,10 +4899,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs, table_flow.rs"
-]
+"stale": []
 },
 {
 "n": 3833,
@@ -4917,10 +4910,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs, para/paragraph.rs, table_flow.rs"
-]
+"stale": []
 },
 {
 "n": 3834,
@@ -4931,10 +4921,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed flow.rs, table_flow.rs"
-]
+"stale": []
 },
 {
 "n": 3858,
@@ -4959,9 +4946,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3884,
@@ -5054,11 +5039,13 @@
 "title": "DOCX: a Word file's latent quick styles fill the Styles gallery (#3909)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "9ba0f9149f27093361743fde57639964c8464dd4",
+"head": "e82477086284a5077a4852b34934e18c74eeceab",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 3960,
@@ -5208,9 +5195,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed notes.rs"
-]
+"stale": []
 },
 {
 "n": 4066,
@@ -5261,10 +5246,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed hit.rs"
-]
+"stale": []
 },
 {
 "n": 4136,
@@ -7561,7 +7543,7 @@
 "title": "#5065: a DOCX border without w:sz is an eighth of a point",
 "author": "Nghiathan13",
 "draft": false,
-"head": "133ecb380d6c84d143f6d3c87ff30aa778a4764b",
+"head": "5407b4e15fc0de8f20703ec7dc9c34de9da13651",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -9839,7 +9821,7 @@
 "title": "Fields: LISTNUM numbers paragraphs as in Word on F9 and in output; Ctrl+Alt+L inserts one",
 "author": "tpawley2001",
 "draft": false,
-"head": "d810864733798a82bc83736a02e522a6de714914",
+"head": "24f7314c5d20bc0d8c3d2f8cf93dc6c39fb5b8f1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9932,7 +9914,7 @@
 "title": "AutoFormat Now (Ctrl+Alt+K) applies smart quotes, dashes and list labels to existing text in one undo step",
 "author": "tpawley2001",
 "draft": false,
-"head": "fb5ef3fe553017ab8fb821c29a2272c68b93873c",
+"head": "9939d6a5f2d7e4effa0e3f58dc80b0abb3f0ef39",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10155,7 +10137,7 @@
 "title": "References: TOC, index, table of figures and page cross-references use the section's page number format (#3856)",
 "author": "tpawley2001",
 "draft": false,
-"head": "0800306ef2abdcd4cd785b2bade8288c212f1f2b",
+"head": "58729f8b65a1710b82449b69e96a0951a7f61a0b",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11642,8 +11624,8 @@
 "n": 6479,
 "title": "#6330: Insert Cells and Delete Cells with Word's four options each",
 "author": "ljkx",
-"draft": true,
-"head": "e59bcc5d6d682231e8b27f97cf77ccd506ab6c75",
+"draft": false,
+"head": "a5dc32be154f899733e2a1b1cff3d9d1a0728c55",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11966,6 +11948,17 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 6566,
+"title": "Layout: text in a shape keeps clear of half its outline's width (#6564)",
+"author": "Menonro",
+"draft": false,
+"head": "71abd49f2fe99ac5f71cb91423e606b2fc5bfdf4",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 }
 ]

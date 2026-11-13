@@ -41,10 +41,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read.rs, read/styles.rs"
-]
+"stale": []
 },
 {
 "n": 3823,
@@ -2663,9 +2660,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2512,
@@ -2676,10 +2671,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 2514,
@@ -2690,9 +2682,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2518,
@@ -2735,9 +2725,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed floats.rs"
-]
+"stale": []
 },
 {
 "n": 2533,
@@ -2827,10 +2815,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs, read.rs, read/embed.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 2590,
@@ -2905,9 +2890,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs"
-]
+"stale": []
 },
 {
 "n": 2612,
@@ -3169,10 +3152,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed write/embed.rs, display/objects.rs"
-]
+"stale": []
 },
 {
 "n": 2721,
@@ -3276,9 +3256,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs"
-]
+"stale": []
 },
 {
 "n": 2793,
@@ -3659,9 +3637,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs"
-]
+"stale": []
 },
 {
 "n": 3077,
@@ -5586,11 +5562,9 @@
 "title": "Proofing: hide spelling or grammar errors in this document only",
 "author": "dotCooCoo",
 "draft": false,
-"head": "45743f6da02e76b8a7d6e490c61d47e0b1211896",
+"head": "850cfe8fbdbf8f6a7ec55f0c290625f0265a034a",
 "mine": false,
-"conflicts": [
-"crates/engine/src/session/layout.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits",
@@ -5766,16 +5740,9 @@
 "title": "Fields: FILESIZE, TEMPLATE and INFO update with the other fields",
 "author": "dotCooCoo",
 "draft": false,
-"head": "9b6ec67b95f5642106c9285be3b5de509ee081e5",
+"head": "e72ba8f758f0e7efa3f31aacf1ad1a1f6e435123",
 "mine": false,
-"conflicts": [
-"crates/engine/src/io.rs",
-"crates/engine/src/session.rs",
-"crates/engine/src/session/documents.rs",
-"crates/engine/src/session/lifecycle.rs",
-"crates/engine/src/session/run.rs",
-"crates/engine/src/session/snapshot.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -5924,7 +5891,7 @@
 "title": "Critical batch: some approved, CI-green PRs merged together",
 "author": "fluorine",
 "draft": false,
-"head": "851e470037a18d6fb330f9414838d35de03ad956",
+"head": "4bf7ff37934a6b6265e5885bfd9cbaaeef6f07d1",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -7544,18 +7511,9 @@
 "title": "AutoFormat: a new list item's lead-in takes the formatting of the one before it",
 "author": "dotCooCoo",
 "draft": false,
-"head": "66f9399638f0e0c84e0eece60ecd126f7c8979fd",
+"head": "1ab36d31b57db7defe903867139c7c5269eede83",
 "mine": false,
-"conflicts": [
-"crates/engine/src/doc_state.rs",
-"crates/engine/src/session.rs",
-"crates/engine/src/session/documents.rs",
-"crates/engine/src/session/history.rs",
-"crates/engine/src/session/lifecycle.rs",
-"crates/engine/src/session/run.rs",
-"crates/engine/src/session/snapshot.rs",
-"crates/engine/src/session/views.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": [
 "new commits"
@@ -7788,7 +7746,7 @@
 "title": "AutoFormat: Define styles based on your formatting gives text formatted like a heading its style",
 "author": "dotCooCoo",
 "draft": false,
-"head": "e7f1c99ed0ab8da140ddb5b5a1f553d54fb68899",
+"head": "8f1a62538c446b5b6e9f42fa0a3fd2b8e2252e02",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9016,7 +8974,7 @@
 "title": "Custom Document Properties: Text, Date, Number and Yes or no types, as in Word",
 "author": "tpawley2001",
 "draft": false,
-"head": "32783f1e2963d465fb83b456356bac81887d0784",
+"head": "a22c7ca6354d8b9c67ef1be82650507646767801",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9075,11 +9033,13 @@
 "title": "Layout: a SYMBOL field with no stored result shows its character",
 "author": "tpawley2001",
 "draft": false,
-"head": "ee10deb566d289f06213d1509b2f839db0389d4a",
+"head": "cd826cd96289030e8d9fc561ec118b43ea677311",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5560,
@@ -9216,7 +9176,7 @@
 "title": "fix(clipboard): copied paragraphs keep their spacing and indents in other programs (#5537)",
 "author": "marcwgls",
 "draft": false,
-"head": "e55c31dd1b19e8f55f151679673ad3e30030916a",
+"head": "6c236ce37fcd38bf6f0dfad5f01ea60e78961bf7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11782,7 +11742,7 @@
 "title": "Layout: a cell spanning columns that fits their preferred widths leaves them alone (#6504)",
 "author": "Menonro",
 "draft": false,
-"head": "9609bd974e4f3a8ec9aa9502364ffcb3b20fda76",
+"head": "b1ad8c8dbcc9f0d3f17fbf3d802fb06d2740a447",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11969,7 +11929,7 @@
 "title": "Fonts: a space character the font lacks comes from its installed metric twin (#6513)",
 "author": "Menonro",
 "draft": false,
-"head": "05e01b55547981323bf79c63569eeb7d907681f1",
+"head": "c91efbdc30f06c5e6ed0e6921638a416ab2450e9",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11977,10 +11937,10 @@
 },
 {
 "n": 6542,
-"title": "Layout: double and triple borders take the room of their lines and gaps in a table row (#6540)",
+"title": "Layout: the room borders take in a table row: double and triple borders, shared edges, every cell of the row (#6540)",
 "author": "Menonro",
 "draft": false,
-"head": "960d394c7c5dd7e67b3e5f67caca7e0196f7953b",
+"head": "eaa8f284cf12c812f43e3cf32b4568043227bf20",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11995,6 +11955,17 @@
 "mine": false,
 "conflicts": [],
 "render": true,
+"stale": []
+},
+{
+"n": 6547,
+"title": "Shapes: a rounded rectangle without a corner size of its own takes the preset's default (#6546)",
+"author": "Menonro",
+"draft": false,
+"head": "61593fb7b31f074c0d2c1c36f15f31eb166355a4",
+"mine": false,
+"conflicts": [],
+"render": false,
 "stale": []
 }
 ]

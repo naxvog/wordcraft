@@ -8,7 +8,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed notes.rs"
+]
 },
 {
 "n": 1757,
@@ -19,7 +21,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed display/page.rs"
+]
 },
 {
 "n": 2552,
@@ -39,9 +43,13 @@
 "draft": false,
 "head": "1c5a2ec364a6ea6dd97824f12e1e1a8cb4a0ee8b",
 "mine": true,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, read/styles.rs"
+]
 },
 {
 "n": 3823,
@@ -145,11 +153,13 @@
 "title": "Layout: contextual spacing reaches across a continuous section break, as in Word",
 "author": "naxvog",
 "draft": false,
-"head": "de5f71f7eb27f07da0eb5a81b660e60a83d42f79",
+"head": "dce01cdd7ca2e711f4573157e4550ccc54b5221d",
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5457,
@@ -518,7 +528,9 @@
 "draft": false,
 "head": "b0efda33890847fcc7f03eb5459c07137a770338",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/embed.rs"
+],
 "render": true,
 "stale": [
 "main changed write/embed.rs"
@@ -647,6 +659,7 @@
 "head": "b395a33b783a63392219c423887610343443e5f4",
 "mine": false,
 "conflicts": [
+"crates/docx/src/write/embed.rs",
 "crates/engine/src/cmd/citations/sources.rs"
 ],
 "render": true,
@@ -736,6 +749,7 @@
 "head": "ffcfa15d049d07b1407c3b70b100bd3d798b5b66",
 "mine": false,
 "conflicts": [
+"crates/docx/src/write/embed.rs",
 "crates/engine/Cargo.toml",
 "crates/engine/src/cmd/citations/sources.rs",
 "crates/engine/src/cmd/file.rs"
@@ -810,11 +824,13 @@
 "title": "Tables: a page break inside a vertical merge takes the merged cell's text along (#1485)",
 "author": "dfgodvan",
 "draft": false,
-"head": "947cf1b5102cd288d1deee4bd6b035cadbc3f97d",
+"head": "94f87a1460aedbda163ae5d0b81f8acbeda94931",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 1489,
@@ -838,13 +854,14 @@
 "title": "wordcraft-law: LawCraft, an opt-in legal add-in",
 "author": "pattalkslaw-del",
 "draft": false,
-"head": "365cdfe320650031d14598d7119eedc4bac25815",
+"head": "91008b93a98b655344ab20ce3ab20fded5b14889",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed lib.rs, read.rs, read/props.rs"
+]
 },
 {
 "n": 1511,
@@ -1142,11 +1159,12 @@
 "head": "5c9f14c0226acf92ea76f0f94ec9c121c8f3db08",
 "mine": false,
 "conflicts": [
-"crates/layout/src/floats.rs"
+"crates/layout/src/floats.rs",
+"crates/layout/src/placed.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, write/story/drawing.rs, floats.rs"
+"main changed read/story/drawing.rs, write/story/drawing.rs, floats.rs \u2026"
 ]
 },
 {
@@ -1172,6 +1190,7 @@
 "head": "c69a74327a3782ac89551b5118bdf67a574516ff",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd/review/changes.rs",
 "crates/engine/src/cmd/tools/compare.rs"
 ],
 "render": false,
@@ -1210,7 +1229,9 @@
 "crates/engine/src/cmd/file.rs"
 ],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs, read.rs, read/embed.rs \u2026"
+]
 },
 {
 "n": 1931,
@@ -1251,7 +1272,7 @@
 ],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs, write/story/object.rs, ctx.rs"
+"main changed read/story/runs.rs, write/story/object.rs, write/story/para.rs \u2026"
 ]
 },
 {
@@ -1288,10 +1309,13 @@
 "head": "357db4794540d043caf2d46b90a9957283314530",
 "mine": false,
 "conflicts": [
+"crates/engine/src/cmd/review/changes.rs",
 "crates/engine/src/cmd/tools/compare.rs"
 ],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/para.rs"
+]
 },
 {
 "n": 2000,
@@ -1327,7 +1351,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, write/parts.rs"
+]
 },
 {
 "n": 2011,
@@ -1376,7 +1402,9 @@
 "draft": false,
 "head": "7659c561821b3652ad4cfcb713a51b67c8bdc62d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/paste.rs"
+],
 "render": false,
 "stale": [
 "new commits"
@@ -1391,7 +1419,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, display/page.rs, floats.rs \u2026"
+]
 },
 {
 "n": 2046,
@@ -1446,11 +1476,13 @@
 "title": "Paste Options: change the last paste in place (Keep Source, Keep Text Only, Merge, Picture) (#1747)",
 "author": "TheGaBr0",
 "draft": false,
-"head": "3c2f75993370dd6e5e3629dacb2fc9fb46acbcd3",
+"head": "1a16d354d4e3146e0e2d9b406c0f0619d4826e71",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2057,
@@ -1598,7 +1630,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs"
+]
 },
 {
 "n": 2102,
@@ -1886,7 +1920,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed ctx.rs, flow.rs, pass.rs"
+"main changed read/props.rs, ctx.rs, flow.rs \u2026"
 ]
 },
 {
@@ -2254,7 +2288,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed package.rs, read/meta.rs"
+"main changed lib.rs, package.rs, read/meta.rs \u2026"
 ]
 },
 {
@@ -2276,7 +2310,8 @@
 "head": "c168455fe645c683d6af515f0dff99547e331a96",
 "mine": false,
 "conflicts": [
-"crates/doc/src/para.rs"
+"crates/doc/src/para.rs",
+"crates/docx/src/read/props.rs"
 ],
 "render": true,
 "stale": []
@@ -2315,10 +2350,12 @@
 "draft": false,
 "head": "370d5048cc6471f48c01c55ca483461817d06f45",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs"
+],
 "render": true,
 "stale": [
-"main changed pass.rs"
+"main changed read/props.rs, display/page.rs, pass.rs"
 ]
 },
 {
@@ -2368,7 +2405,8 @@
 "mine": false,
 "conflicts": [
 "Cargo.lock",
-"crates/docx/src/read/meta.rs"
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/embed.rs"
 ],
 "render": true,
 "stale": []
@@ -2561,11 +2599,16 @@
 "title": "Layout: In Front of Text objects draw over the whole page's text (#1993)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "c19b28c96c1bc5cec012a35c116feefe794a3a83",
+"head": "4602861446efc0f4c7f6ff27c10b7d839d84730c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/floats.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed floats.rs, notes.rs"
+]
 },
 {
 "n": 2493,
@@ -2587,7 +2630,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed floats.rs"
+]
 },
 {
 "n": 2498,
@@ -2623,11 +2668,9 @@
 "title": "Layout: a square-wrapped logo in the default header is drawn and pushes the body down",
 "author": "midasmatterhorn",
 "draft": false,
-"head": "01e40c0b53a11ddf5e4574c8a7dd4566b767509c",
+"head": "9091dc5a57b54b34cddfb747ede867bb84d3a32d",
 "mine": false,
-"conflicts": [
-"crates/layout/src/page.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -2636,33 +2679,40 @@
 "title": "Layout: field results mixing scripts draw each glyph in its own face (#2491)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "57258690199f36ca9fbe464e958fbb7183e93b36",
+"head": "8ff2fe54a5c2910786da5b6b2febfabd128482c2",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2512,
 "title": "#2467: a click on a SmartArt shape picks its item for typing",
 "author": "Nghiathan13",
 "draft": false,
-"head": "c50e4373297ff227193a58a780e306f2471c3d59",
+"head": "5e6f76d45c0cd2b1bf651211ae30b6959a60dc6d",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed lib.rs"
+]
 },
 {
 "n": 2514,
 "title": "Linux: scan fontconfig's font folders; Load System Installed Fonts rescans on the desktop (#2499)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "2e897924ed3ddc5abaff0e5e73943dc13a538655",
+"head": "10141d1cb150d2de852dc1d11dfa0945a3c56388",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2518,
@@ -2688,6 +2738,7 @@
 "conflicts": [
 "crates/engine/src/cmd/objects/select.rs",
 "crates/layout/src/boxes.rs",
+"crates/layout/src/floats.rs",
 "crates/layout/src/flow.rs",
 "crates/layout/src/table.rs",
 "crates/layout/src/table_flow.rs"
@@ -2704,7 +2755,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed floats.rs"
+]
 },
 {
 "n": 2533,
@@ -2716,7 +2769,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed ctx.rs, pass.rs"
+"main changed ctx.rs, floats.rs, pass.rs"
 ]
 },
 {
@@ -2790,17 +2843,13 @@
 "title": "Gaps #22: add-ins, Office add-ins, VBA through an add-in, live co-editing and document chat",
 "author": "sirmmo",
 "draft": false,
-"head": "69eb01cd7a5b3c80c9e5704610aec2a87b7d1ec5",
+"head": "74eaa3184f2408b1fe76f210075370b913916551",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd.rs",
-"crates/engine/src/cmd/file.rs",
-"crates/engine/src/session/run.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits",
-"main changed read.rs, read/embed.rs"
+"main changed lib.rs, read.rs, read/embed.rs \u2026"
 ]
 },
 {
@@ -2876,7 +2925,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 2612,
@@ -2998,7 +3049,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, flow.rs, pass.rs"
+"main changed read/story/drawing.rs, write/parts.rs, floats.rs \u2026"
 ]
 },
 {
@@ -3050,19 +3101,6 @@
 "conflicts": [],
 "render": true,
 "stale": []
-},
-{
-"n": 2703,
-"title": "Track style property changes (#2697)",
-"author": "vangel76",
-"draft": false,
-"head": "52d16685071b3bd755a4648e2368d718ef7d6bac",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"main changed read.rs"
-]
 },
 {
 "n": 2707,
@@ -3152,7 +3190,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed display/objects.rs"
+"main changed write/embed.rs, display/objects.rs"
 ]
 },
 {
@@ -3241,7 +3279,7 @@
 "title": "#2710: Home Borders applies to the caret cell or selected table cells",
 "author": "vangel76",
 "draft": true,
-"head": "08ac1f5e4e5d0c29537727219d4989bfcd1baca1",
+"head": "840355042be1f1aff303becbe2db5223e66012ca",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -3256,7 +3294,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 2793,
@@ -3267,7 +3307,9 @@
 "mine": false,
 "conflicts": [
 "crates/layout/src/display/page.rs",
+"crates/layout/src/floats.rs",
 "crates/layout/src/hit.rs",
+"crates/layout/src/notes.rs",
 "crates/pdf/src/exporter.rs"
 ],
 "render": true,
@@ -3341,7 +3383,7 @@
 "title": "#2786: Home \u203a Bullets: Define New Bullet\u2026 dialog and Change List Level \u203a",
 "author": "Nghiathan13",
 "draft": false,
-"head": "5791313e02bb1ca382aa7dc1a87d26057ee3232f",
+"head": "0f234e744e8520e501af180d8550f004853f6f2f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -3352,12 +3394,9 @@
 "title": "#2787: Home \u203a Numbering \u203a Define New Number Format\u2026 dialog",
 "author": "Nghiathan13",
 "draft": false,
-"head": "68b70a8ba75ada285913d86157bbf3f8d434d052",
+"head": "b4c4ff89457081a8d6dbac028e0663cf3f9b9f30",
 "mine": false,
-"conflicts": [
-"crates/doc/src/numbering.rs",
-"crates/engine/src/cmd/tools/specs.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -3366,7 +3405,7 @@
 "title": "#2858: Change List Level shows each level as a drawn tile (builds on #2860)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "3e950bd8e0ee66e3a987b888933fef1632d4aa5a",
+"head": "6993e98aff8a2712e73f445bfa23270bae12bbef",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -3380,7 +3419,8 @@
 "head": "80d8e99d260b147f368978c23344ddbccc5d586f",
 "mine": false,
 "conflicts": [
-"crates/engine/src/cmd/edit.rs"
+"crates/engine/src/cmd/edit.rs",
+"crates/engine/src/cmd/paste.rs"
 ],
 "render": false,
 "stale": []
@@ -3403,7 +3443,9 @@
 "draft": false,
 "head": "df6a61ea39130f0b8b32640117369cb0447e78a5",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/paste.rs"
+],
 "render": false,
 "stale": []
 },
@@ -3585,6 +3627,7 @@
 "crates/engine/src/cmd/objects.rs",
 "crates/engine/src/cmd/tools.rs",
 "crates/layout/src/display.rs",
+"crates/layout/src/hit.rs",
 "crates/layout/src/lib.rs",
 "crates/pdf/src/lib.rs",
 "crates/render/src/lib.rs"
@@ -3610,9 +3653,16 @@
 "title": "Render: small text in a minified picture stays crisp",
 "author": "kevin2y",
 "draft": false,
-"head": "e8c6f09aca85937e9effa3372b6cd8617506cde2",
+"head": "2574f47b04b8078066e9cec4f1be13476380257d",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
+"Cargo.toml",
+"crates/engine/src/cmd/file.rs",
+"crates/engine/src/io.rs",
+"crates/engine/src/lib.rs",
+"crates/engine/src/session.rs",
+"crates/mcp/src/tools.rs",
 "crates/render/src/lib.rs"
 ],
 "render": true,
@@ -3628,7 +3678,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"main changed read/props.rs"
 ]
 },
 {
@@ -3649,13 +3699,9 @@
 "title": "Page borders on the first page only, or every page but it (w:display) (#3076)",
 "author": "Nghiathan13",
 "draft": true,
-"head": "f969670165ac2ee7201bb457b8f2c372b09b21b0",
+"head": "840585310f169999457435fc3d7376f8ff2302b1",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs",
-"crates/docx/src/write/story.rs",
-"crates/layout/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -4003,6 +4049,7 @@
 "head": "7baec55a0013781de14f0ffeddab701c6d6b512d",
 "mine": false,
 "conflicts": [
+"crates/layout/src/floats.rs",
 "crates/layout/src/hit.rs"
 ],
 "render": true,
@@ -4606,7 +4653,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 3588,
@@ -4617,7 +4666,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed display/page.rs"
+]
 },
 {
 "n": 3604,
@@ -4707,7 +4758,7 @@
 ],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, read/story/vml.rs, write/story/drawing.rs \u2026"
+"main changed lib.rs, read/story/drawing.rs, read/story/vml.rs \u2026"
 ]
 },
 {
@@ -4849,7 +4900,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"main changed read.rs"
 ]
 },
 {
@@ -4888,14 +4939,12 @@
 "title": "Layout: a paragraph kept with a table needs its header rows and the start of its first row",
 "author": "dfgodvan",
 "draft": false,
-"head": "3b415d7f5c51ca13bc44a67546e6570030110079",
+"head": "69578bbc6f3037e4947f6da8689f3b1414bec4da",
 "mine": false,
-"conflicts": [
-"crates/layout/src/flow.rs",
-"crates/layout/src/table_flow.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed flow.rs, table_flow.rs"
 ]
 },
@@ -4904,14 +4953,12 @@
 "title": "Layout: tables at the foot of a page before Word 2013 layout (compatibility mode 12 and 14)",
 "author": "dfgodvan",
 "draft": false,
-"head": "c29995c9d697df75d84ead2e5f072e63fe34a798",
+"head": "979077101fe2379f9630f24f56c5070928fe4528",
 "mine": false,
-"conflicts": [
-"crates/layout/src/flow.rs",
-"crates/layout/src/table_flow.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed flow.rs, para/paragraph.rs, table_flow.rs"
 ]
 },
@@ -4920,14 +4967,12 @@
 "title": "Layout: a paragraph kept with a table counts its space after",
 "author": "dfgodvan",
 "draft": false,
-"head": "e391c2c8667b95ab5993cacad48896ba86a71343",
+"head": "3d04c471a469bec24f9c15ff5843575c4358bf3f",
 "mine": false,
-"conflicts": [
-"crates/layout/src/flow.rs",
-"crates/layout/src/table_flow.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed flow.rs, table_flow.rs"
 ]
 },
@@ -4950,13 +4995,13 @@
 "title": "PDF open: import PDFs as editable documents (#1532), revived from #1561",
 "author": "pattalkslaw-del",
 "draft": false,
-"head": "0c2d53753c4aca599d39f5ae09c073bb8f700fb3",
+"head": "c0e0d2f72bec74f0cf6d8b386335dff192374474",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 3884,
@@ -4987,16 +5032,9 @@
 "title": "Define New List Style\u2026: list styles that stay linked to their lists (#3805)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "d9c606a38ccbc253c76854008b57a07daca237de",
+"head": "dd46dc39eaffcf1a26e0cbc5e3f7c8ed269dd969",
 "mine": false,
-"conflicts": [
-"crates/doc/src/numbering.rs",
-"crates/docx/src/read/mod.rs",
-"crates/docx/src/write/mod.rs",
-"crates/engine/src/cmd/lists.rs",
-"crates/engine/src/cmd/templates.rs",
-"crates/engine/src/cmd/tools.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -5032,11 +5070,13 @@
 "title": "#3917: Text Outline and Shape Outline \u203a Weight show a line sample for each weight",
 "author": "Nghiathan13",
 "draft": false,
-"head": "a2ed7b8a20af32fc5b13fd895c40fc7dbec9f044",
+"head": "3b37bbdf361a4bc5b24a851f8e4f2cc5df509919",
 "mine": false,
 "conflicts": [],
 "render": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 3935,
@@ -5054,11 +5094,9 @@
 "title": "DOCX: a Word file's latent quick styles fill the Styles gallery (#3909)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "7d8eb0a00a7a3e40c1dd88ec783ff4a4bcdf238e",
+"head": "9ba0f9149f27093361743fde57639964c8464dd4",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/mod.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -5071,7 +5109,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/parts.rs"
+]
 },
 {
 "n": 3961,
@@ -5208,7 +5248,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed notes.rs"
+]
 },
 {
 "n": 4066,
@@ -5247,7 +5289,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed ctx.rs, flow.rs"
+"main changed read/props.rs, ctx.rs, flow.rs"
 ]
 },
 {
@@ -5255,11 +5297,14 @@
 "title": "Layout: a paragraph with a hidden mark is shown on one line with the next one (#3986)",
 "author": "Menonro",
 "draft": false,
-"head": "65933f6dfb2f9a316fafc594e828782d5a4a436e",
+"head": "89f3e128f54b843fd8bf275d0293d882cbcf6790",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed hit.rs"
+]
 },
 {
 "n": 4136,
@@ -5281,7 +5326,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/para.rs"
+]
 },
 {
 "n": 4169,
@@ -5500,7 +5547,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed hit.rs"
+]
 },
 {
 "n": 4294,
@@ -5613,11 +5662,9 @@
 "title": "feat(fonts,layout,ui): add Hebrew font catalog, serif/sans substitution, and mixed RTL/LTR BiDi support",
 "author": "hrb9",
 "draft": false,
-"head": "7f1954f8420d0c62257f5425686af7b82855fd9d",
+"head": "b122237e6ba6b4c59451c4db300caf7f2c3efdcf",
 "mine": false,
-"conflicts": [
-"crates/fonts/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -5639,7 +5686,7 @@
 "title": "#4253: a fraction keeps its boundary in Linear format",
 "author": "Nghiathan13",
 "draft": false,
-"head": "0d78444337674aef6ad83d043636f0538a18f6a3",
+"head": "0fb4643c6f31e7d339025d93d9b81cfc3ab152ef",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -5735,10 +5782,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed fields.rs"
-]
+"stale": []
 },
 {
 "n": 4432,
@@ -5777,7 +5821,9 @@
 "draft": false,
 "head": "690b7acef1f211764cb9f7b9a1dd0723e41f1fdc",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/paste.rs"
+],
 "render": false,
 "stale": []
 },
@@ -5881,11 +5927,14 @@
 "title": "Critical batch: some approved, CI-green PRs merged together",
 "author": "fluorine",
 "draft": false,
-"head": "728a33c50a5c6175aecfe3f24b01ba935588006a",
+"head": "851e470037a18d6fb330f9414838d35de03ad956",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed read/props.rs, write/parts.rs, write/story/para.rs \u2026"
+]
 },
 {
 "n": 4463,
@@ -6018,7 +6067,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs, write/story/para.rs"
+]
 },
 {
 "n": 4511,
@@ -6078,7 +6129,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed display/page.rs"
+]
 },
 {
 "n": 4559,
@@ -6187,11 +6240,13 @@
 "title": "Layout: a right tab past the right indent takes its text up to the stop, as in Word",
 "author": "dfgodvan",
 "draft": false,
-"head": "210a596d4762ce6047365e5bf00490c90b8d014a",
+"head": "c120c09423187c1c690bff7c822420512c399fb9",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 4615,
@@ -6281,13 +6336,13 @@
 "title": "Equations: a \\name finishes where it can't continue (fixes #4255)",
 "author": "ayozetr",
 "draft": false,
-"head": "a46b4b8029740966915f530c000903a961b5c5ac",
+"head": "448e063a5e22375dc9c4a58f21797c038e2bf69b",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/equation.rs"
-],
+"conflicts": [],
 "render": false,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 4634,
@@ -6376,10 +6431,12 @@
 "draft": false,
 "head": "22ccd3f7359f488fe6b5b264e9984077316ab8b3",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/review/changes.rs"
+],
 "render": true,
 "stale": [
-"main changed write/props.rs"
+"main changed write/props.rs, write/story/para.rs"
 ]
 },
 {
@@ -6548,6 +6605,7 @@
 "head": "6c729f9a1db114bb4527d06dd8a9057b4a7d2a7d",
 "mine": false,
 "conflicts": [
+"crates/doc/src/edit.rs",
 "crates/engine/src/cmd/controls.rs"
 ],
 "render": false,
@@ -6562,7 +6620,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/parts.rs"
+]
 },
 {
 "n": 4704,
@@ -6728,7 +6788,7 @@
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/story/runs.rs, write/props.rs"
+"main changed read/props.rs, read/story/runs.rs, write/props.rs \u2026"
 ]
 },
 {
@@ -6867,7 +6927,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs"
+"main changed read/story/runs.rs, write/story/para.rs"
 ]
 },
 {
@@ -6910,7 +6970,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/para.rs"
+]
 },
 {
 "n": 4829,
@@ -6945,10 +7007,12 @@
 "draft": false,
 "head": "dc8851594deffe131e12a51f5c74ad0da1876a3c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/review/changes.rs"
+],
 "render": true,
 "stale": [
-"main changed write/props.rs"
+"main changed write/props.rs, write/story/para.rs"
 ]
 },
 {
@@ -7255,7 +7319,7 @@
 "title": "fix(formats): narrow table columns keep their width on import",
 "author": "tsw2k",
 "draft": false,
-"head": "72c71573123c4759d361ee2619f870d2b57e30ff",
+"head": "d68f304d7d53d0a434fed573dc6e67874c8bc9a3",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7345,7 +7409,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 5006,
@@ -7367,7 +7433,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 5013,
@@ -7433,7 +7501,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 5033,
@@ -7506,7 +7576,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"main changed read.rs, read/styles.rs"
 ]
 },
 {
@@ -7519,7 +7589,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs"
+"main changed read/story/drawing.rs, display/page.rs, floats.rs"
 ]
 },
 {
@@ -7527,11 +7597,9 @@
 "title": "#5065: a DOCX border without w:sz is an eighth of a point",
 "author": "Nghiathan13",
 "draft": false,
-"head": "da67ea98271ab1c3e461b98d0ed544fba3ad9c1f",
+"head": "133ecb380d6c84d143f6d3c87ff30aa778a4764b",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -7660,13 +7728,12 @@
 "title": "Layout: keep with next lets the last line's leading run into the bottom margin, as when the line is placed",
 "author": "dfgodvan",
 "draft": false,
-"head": "8cd2a0ad38171d89b284925c455bc4b5fb9726c6",
+"head": "5f6976addc5a1f868cc487bd64b26880ad88a981",
 "mine": false,
-"conflicts": [
-"crates/layout/src/flow.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "main changed flow.rs"
 ]
 },
@@ -7675,22 +7742,27 @@
 "title": "Layout: no line break after the '?' of a query, nor after a slash before an underscore",
 "author": "dfgodvan",
 "draft": false,
-"head": "f63e31c0777a2dcf4ac35d1a4010f66e7c9c059b",
+"head": "de4c68c0cc0ceeee214ff40620ce61b10512a58f",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5098,
 "title": "DOCX: an English default style flagged beside a localized one keeps its w:default",
 "author": "dfgodvan",
 "draft": false,
-"head": "4eba907cf06c77e173c82bb680ead66f29a89d2c",
+"head": "4ccf8f11cc87b2f337ca125a62d25dfe7aad107e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
 "stale": [
+"new commits",
 "main changed read/styles.rs"
 ]
 },
@@ -7710,7 +7782,7 @@
 "title": "AutoFormat: Define styles based on your formatting gives text formatted like a heading its style",
 "author": "dotCooCoo",
 "draft": false,
-"head": "a43fcf1ace9bccc36becca33da854c45797142da",
+"head": "afd1efb141d5d5476a9aabb6314f08a60b87d8eb",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7906,7 +7978,7 @@
 "title": "Add a manual Viewing mode with an orange active indicator",
 "author": "multipointmaster-glitch",
 "draft": false,
-"head": "6eb444d99b4c121c3197bb1809a8e99b06a0b3bb",
+"head": "3cbb5ce3a174df2f46ec9c4448856490e380ec1c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7969,7 +8041,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed notes.rs"
+]
 },
 {
 "n": 5172,
@@ -7981,7 +8055,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed write/story/drawing.rs"
+"main changed write/parts.rs, write/story/drawing.rs, write/story/para.rs"
 ]
 },
 {
@@ -8062,6 +8136,7 @@
 "head": "d24cfddc44529693bd865add2936935e44ae034e",
 "mine": false,
 "conflicts": [
+"crates/doc/src/lib.rs",
 "crates/doc/src/props/para_props.rs",
 "crates/doc/src/settings.rs",
 "crates/docbin/src/table.rs",
@@ -8069,6 +8144,7 @@
 "crates/formats/src/rtf/export.rs",
 "crates/formats/src/rtf/word.rs",
 "crates/layout/src/display/page.rs",
+"crates/layout/src/notes.rs",
 "crates/pdf/src/exporter/draw.rs"
 ],
 "render": true,
@@ -8169,7 +8245,9 @@
 "draft": false,
 "head": "6018748669d40a78c356aa5301a44674fc566dba",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/review/changes.rs"
+],
 "render": false,
 "stale": []
 },
@@ -8267,7 +8345,7 @@
 ],
 "render": true,
 "stale": [
-"main changed write/story/object.rs"
+"main changed write/parts.rs, write/story/object.rs"
 ]
 },
 {
@@ -8275,7 +8353,7 @@
 "title": "#3628: automation can't insert fields Word acts on when it opens the file",
 "author": "ljkx",
 "draft": false,
-"head": "7afa2297a365c0e86490e5ef04d81d9df7534c7e",
+"head": "ae8441af2bb2ed946e1f4064021453ead4052b3f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8347,11 +8425,13 @@
 "title": "Fonts: a document's embedded fonts leave when the last document that embeds them closes (#3687)",
 "author": "ashokram-si",
 "draft": false,
-"head": "5eafd5db2e80ed3f577e737f2eb48b26d21ab0f3",
+"head": "9757dccf32fc397e45298cbaee18360e9593a53a",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5293,
@@ -8375,7 +8455,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed display/page.rs"
+]
 },
 {
 "n": 5307,
@@ -8398,7 +8480,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed display/lines.rs, outline.rs"
+"main changed read/props.rs, display/lines.rs, outline.rs"
 ]
 },
 {
@@ -8408,9 +8490,13 @@
 "draft": false,
 "head": "857e371a0f75abba0c0731becc853b691f29a5e4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 5314,
@@ -8422,7 +8508,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs"
+"main changed read/story/runs.rs, write/story/para.rs"
 ]
 },
 {
@@ -8444,7 +8530,7 @@
 "title": "Gap 14: Save As Word 97-2003 Document (.doc writer)",
 "author": "ljkx",
 "draft": false,
-"head": "5b24fdbb911092532930a1842864740ba1590085",
+"head": "98518fc3b4950f754d5dc205ff89dc55acbacfd4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8555,11 +8641,14 @@
 "title": "Khmer: native wrapping, proofing and word counts",
 "author": "sungkhum",
 "draft": false,
-"head": "5744a042135556bfae604f8882bda63964fa47eb",
+"head": "b233ae8dd7826595cefffa4a821db84a102527e5",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed hit.rs"
+]
 },
 {
 "n": 5362,
@@ -8595,7 +8684,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed read/styles.rs"
+"main changed read/styles.rs, write/styles.rs"
 ]
 },
 {
@@ -8607,7 +8696,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/embed.rs, write/parts.rs"
+]
 },
 {
 "n": 5390,
@@ -8618,7 +8709,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/parts.rs, write/story/para.rs"
+]
 },
 {
 "n": 5407,
@@ -8649,11 +8742,13 @@
 "title": "Options: Show bookmarks draws grey brackets round bookmarks, as in Word (#3572)",
 "author": "ljkx",
 "draft": false,
-"head": "7119772831d665b2e8b56a2af5a3728db097e571",
+"head": "a07ae48aebbbc9859a37a9cede7d851f9016586f",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5427,
@@ -8688,7 +8783,9 @@
 "draft": false,
 "head": "cb459812017574ab36520fd41d9c4a2f75566548",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/doc/src/edit.rs"
+],
 "render": false,
 "stale": []
 },
@@ -8784,14 +8881,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs"
+]
 },
 {
 "n": 5488,
 "title": "Files: save a Single File Web Page (.mht, .mhtml) (gap 26)",
 "author": "ljkx",
 "draft": false,
-"head": "6e5a8cb5b71b0ca96ee043163e2a547c3ca82b6d",
+"head": "1dfdf41b025edd3eb8c283c687a0dc125c1e59ae",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8841,11 +8940,9 @@
 "title": "Compare: mark a whole inserted/deleted paragraph's mark (paragraphs half of #3750)",
 "author": "reubgr",
 "draft": false,
-"head": "8db89a6a6cef0226347f451158b91c1fec9272eb",
+"head": "959bc5450587c1e91db3094841b1ca4bc82308dd",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -8881,7 +8978,7 @@
 "title": "Typing into a legacy FORMTEXT field fills it instead of deleting it (#5525)",
 "author": "chamber074",
 "draft": false,
-"head": "6f7cc188440c5fcb368f531bc269d296ced19b8e",
+"head": "af7d0b83651d7a909474d020e01da7d6a30e8ea4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8923,7 +9020,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed floats.rs"
+]
 },
 {
 "n": 5546,
@@ -8941,7 +9040,7 @@
 "title": "Context menu: Accept Change and Reject Change on a tracked change",
 "author": "jimprince",
 "draft": false,
-"head": "cbbb2a8b63f8f90f6f1f88b94f9b9418b8cf7f40",
+"head": "6faa6da68980e93279a7d56fa213139cab849002",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9001,12 +9100,13 @@
 "title": "Draw a picture's outline (Picture Border) on screen and in PDF",
 "author": "chamber074",
 "draft": false,
-"head": "9360719ea7e72a672fbbf828ed6181f252b9cd2b",
+"head": "9c4f7cfa953a763332846f67774fb67a68307d7d",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed display/page.rs, floats.rs, placed.rs"
 ]
 },
 {
@@ -9027,11 +9127,9 @@
 "title": "Compare: preserve per-segment formatting in word_diff (#3749, stage 0)",
 "author": "reubgr",
 "draft": false,
-"head": "b40099856f478136efae62a1e1fa46b59facad22",
+"head": "7979aae0613075ee0ea7fe755af374aa922589d4",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9040,7 +9138,7 @@
 "title": "Compare: emit property-change revisions for matched tables and sections",
 "author": "reubgr",
 "draft": false,
-"head": "3406105da7079dd8c33a18043d5781b9dfe3a8a7",
+"head": "0127bf868fb06b5a16250aec29a5ba0d5d6aea95",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9068,7 +9166,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed hit.rs"
+]
 },
 {
 "n": 5590,
@@ -9079,7 +9179,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 5599,
@@ -9101,7 +9203,7 @@
 "title": "fix(clipboard): copied paragraphs keep their spacing and indents in other programs (#5537)",
 "author": "marcwgls",
 "draft": false,
-"head": "fcb4f44ec45a67f052040da354c8df84012d87a0",
+"head": "ed1c2b3e7473d61ef64e7bf176eda63b290e5289",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9114,7 +9216,7 @@
 "title": "Compare: relink cross-document references through adopt_in",
 "author": "chamber074",
 "draft": false,
-"head": "f6d03902251062ee3d585740844465ed85258f74",
+"head": "efd87a5428c83e780e1d192e78414d0501251f12",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9140,11 +9242,13 @@
 "title": "Layout: footnotes carried onto an odd/even filler page keep the ending section's margins",
 "author": "chamber074",
 "draft": false,
-"head": "a974de1cc3f3444e5475116ce1b0d3b3e2e84993",
+"head": "05fe00f0d40dfd616efc2221492f47d26b2266f6",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5630,
@@ -9223,7 +9327,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs"
+]
 },
 {
 "n": 5665,
@@ -9235,7 +9341,7 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"main changed read.rs, read/chunk.rs"
+"main changed lib.rs, read.rs, read/chunk.rs"
 ]
 },
 {
@@ -9310,14 +9416,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs"
+]
 },
 {
 "n": 5702,
 "title": "ODT: a style or list change keeps the file's other definitions (gap 19)",
 "author": "alehel",
 "draft": false,
-"head": "5f969bb92be86f81f7ac70f47fbe54daed214003",
+"head": "9e3ab5b0d39ee968df0a49fb034c36077f6ea377",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9330,7 +9438,7 @@
 "title": "ODT: a page setup change keeps the file's other page definitions (gap 19)",
 "author": "alehel",
 "draft": false,
-"head": "4a565b65b4808aeb8929466d46f4423f5503a2b2",
+"head": "29373e1ac1a66e505b7b902294d371c19f293f1f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9354,7 +9462,7 @@
 "title": "ODT: a list item's further paragraphs stay paragraphs (gap 19)",
 "author": "alehel",
 "draft": false,
-"head": "9e9a02934841d5bd6032b32eb6b2e9ab4bd90632",
+"head": "b9b44f809695e778f2784c02394ac4937e075f5b",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9380,7 +9488,9 @@
 "draft": false,
 "head": "cfa599ccb250de32226e63202bc66e58264f0496",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/embed.rs"
+],
 "render": true,
 "stale": [
 "main changed read.rs, read/embed.rs, read/story/drawing.rs \u2026"
@@ -9448,7 +9558,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs"
+]
 },
 {
 "n": 5767,
@@ -9457,9 +9569,13 @@
 "draft": false,
 "head": "76ea3e155786dab5f1d47c804e496de107037692",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 5772,
@@ -9470,14 +9586,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, write/parts.rs"
+]
 },
 {
 "n": 5778,
 "title": "chore(deps): bump the hayro group across 1 directory with 3 updates",
 "author": "dependabot",
 "draft": false,
-"head": "794b6c8ed4e0b44ca76c5fb1fd4c3e28169803f1",
+"head": "260a0651aab8110dd606fdb5f95ede1ef41996fd",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9622,18 +9740,21 @@
 "title": "#4246: Click and Type places the caret in empty page space",
 "author": "socrabs151",
 "draft": false,
-"head": "2efe413c188ab48bfc5538fe758fc29c800abd29",
+"head": "758ea6b3a80c344393e4825f9889ebdec767286e",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed hit.rs"
+]
 },
 {
 "n": 5834,
 "title": "Real-time collaboration: authoritative sync server, document adapter, client core",
 "author": "copoka",
 "draft": false,
-"head": "b85e193af8706c29dd5e79f0869f6c0edc59d6f2",
+"head": "9c6e343ae17ea09c69ac12d72f8bea748c51982b",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9648,7 +9769,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed hit.rs"
+]
 },
 {
 "n": 5852,
@@ -9677,7 +9800,7 @@
 "title": "Fix: enable copy and paste for custom text boxes and frames",
 "author": "batistalucasv",
 "draft": false,
-"head": "4ea959f7bb00579e4a4fd2e0e1f0472e5fefc057",
+"head": "2535c7ef19af05e4053090f1ba484b792778964c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9703,7 +9826,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "d0517b725344c48eacf2e803baac9fe7cf50e467",
+"head": "5c79b47f930664be9cc0759ce9336f1962070722",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9716,11 +9839,9 @@
 "title": "Compare: diff footnote and endnote content (#5842)",
 "author": "batistalucasv",
 "draft": false,
-"head": "1ce0ef9cce6ddebbb2141df7c7ff95d6eae21cda",
+"head": "1ba8520895e8147a36a22a2e5558dfc513514aa1",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": [
 "new commits"
@@ -9731,12 +9852,13 @@
 "title": "Compare: diff style definitions as property-change revisions (#5841)",
 "author": "batistalucasv",
 "draft": false,
-"head": "711c0fc7a9b8f8e50de16d53f604cf0d623910ca",
+"head": "f2c87ffbbc93d9556d51d41aac0dc8a143a2d3a6",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed read/props.rs, read/styles.rs, write/story/para.rs \u2026"
 ]
 },
 {
@@ -9798,11 +9920,13 @@
 "title": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847)",
 "author": "batistalucasv",
 "draft": false,
-"head": "cad9a4e6acb88e1d1705cbe10931111b7545beca",
+"head": "ee5ba339fa546303c92d0ee82cb6e6b0f9a6408e",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5888,
@@ -9859,7 +9983,7 @@
 "title": "Proofing: support freestanding custom.dic dictionary files (#5840)",
 "author": "batistalucasv",
 "draft": false,
-"head": "f9ac6b9bea17d7003b14d5ac2485b6f5a0fb61ab",
+"head": "cfb7d5c5d08927e2e2d47607210dbd0e2250bc41",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9907,7 +10031,9 @@
 "draft": false,
 "head": "0a188ca1444e1318c45fd2bb34dbe8c568d822f7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/doc/src/edit.rs"
+],
 "render": false,
 "stale": [
 "new commits"
@@ -9957,7 +10083,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed notes.rs"
+]
 },
 {
 "n": 5940,
@@ -10003,7 +10131,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/para.rs"
+]
 },
 {
 "n": 5953,
@@ -10095,7 +10225,7 @@
 "title": "Font: keep pending formatting when clicking on caret and return focus from ribbon (#5580)",
 "author": "kk376",
 "draft": false,
-"head": "52345d799cdb11a4d754e9028e210578c7bc546b",
+"head": "67b4426a104c74ced34a016a66250d8a95948fd2",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10167,9 +10297,13 @@
 "draft": false,
 "head": "345f765d5ee9efa8823f840b84a641151eab23d4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, write/parts.rs"
+]
 },
 {
 "n": 5992,
@@ -10180,7 +10314,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/para.rs"
+]
 },
 {
 "n": 5995,
@@ -10222,7 +10358,7 @@
 "title": "Compare: keep a diffed paragraph's words and equations in the saved file (#5924)",
 "author": "chamber074",
 "draft": false,
-"head": "766f89e30f42d6dd719cb960b9d67db0e87a03b1",
+"head": "6bb53ae371b91b5b97bb01d7823b503bb3553e78",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10234,17 +10370,6 @@
 "author": "scks1",
 "draft": false,
 "head": "573c2202c500e764f120915324b30605624f3a22",
-"mine": false,
-"conflicts": [],
-"render": false,
-"stale": []
-},
-{
-"n": 6019,
-"title": "#6017: Numbering strips typed labels it replaces",
-"author": "socrabs151",
-"draft": false,
-"head": "246da553990939ab41c697ba855f24801e1fd143",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10268,9 +10393,13 @@
 "draft": false,
 "head": "a1d416e331df57a3ded08dc7aa6cc887c5f35061",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs"
+]
 },
 {
 "n": 6035,
@@ -10279,10 +10408,13 @@
 "draft": false,
 "head": "15f9c70ca071374f16664e460cc192fe31e231a9",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/embed.rs"
+],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed lib.rs, read.rs, read/embed.rs \u2026"
 ]
 },
 {
@@ -10292,10 +10424,13 @@
 "draft": false,
 "head": "85b95c66582b5acbd2407186ad40d4b4cb7cde26",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/embed.rs"
+],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed lib.rs, read.rs, read/embed.rs \u2026"
 ]
 },
 {
@@ -10305,10 +10440,13 @@
 "draft": false,
 "head": "1610543590f7539810dd7f94e969f0a024e0c3ef",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/embed.rs"
+],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed lib.rs, read.rs, read/embed.rs \u2026"
 ]
 },
 {
@@ -10323,11 +10461,11 @@
 "stale": []
 },
 {
-"n": 6051,
-"title": "Text boxes inside a group can be edited",
+"n": 6048,
+"title": "Table borders no longer look blue and uneven",
 "author": "vangel76",
 "draft": false,
-"head": "7095a4eaf1cc893c901e427f637074488334c7c3",
+"head": "76e485e1e737b21c217e825e48a2101e36565372",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10349,7 +10487,7 @@
 "title": "Shape text: typing with a shape selected types into it (#5911)",
 "author": "LimaLuma-gme",
 "draft": false,
-"head": "1b539d78e12c1808e8593389b86bb7526577cb19",
+"head": "6c5ca3381c237eebdb523a43f49fc6f1dea7820d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10364,7 +10502,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed hit.rs"
+]
 },
 {
 "n": 6080,
@@ -10456,9 +10596,13 @@
 "draft": false,
 "head": "4e48f4296e0098b6bafedc3a9080504a95e33c08",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 6093,
@@ -10470,7 +10614,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed write/parts.rs, write/story/para.rs"
 ]
 },
 {
@@ -10489,11 +10634,13 @@
 "title": "Vertical text: a narrow ideographic comma or full stop stays in its own square (#6060)",
 "author": "ljkx",
 "draft": false,
-"head": "e7abc3703cb25f8e231a3f897ed2497e4db02e48",
+"head": "c3fbe05feb6e3c8a9e25596817dd7dd48d29d0ca",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6107,
@@ -10513,9 +10660,13 @@
 "draft": false,
 "head": "80a802a64babac18e40e8d30bccde3d0aa1de343",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 6114,
@@ -10526,7 +10677,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed notes.rs"
+]
 },
 {
 "n": 6122,
@@ -10585,7 +10738,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/embed.rs, write/parts.rs"
+]
 },
 {
 "n": 6136,
@@ -10603,34 +10758,50 @@
 "title": "tools/compare: row-level diff inside surviving tables (#5921)",
 "author": "batistalucasv",
 "draft": false,
-"head": "5884c91acb5d6f45f4485ae7ddf2591d51e6fa12",
+"head": "9faad7b15577f8ac2661a77aa991099a988becb7",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6142,
 "title": "Compare: emit w:numberingChange for numbering-only differences (#5836)",
 "author": "batistalucasv",
 "draft": false,
-"head": "8d8abbad5dff67fe8761dcf4c1789e0aca0e77c8",
+"head": "5d42f4a7f212bbc82511a63a9f47b90838b283a3",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed read.rs, write/story/para.rs, display/page.rs"
+]
 },
 {
 "n": 6144,
 "title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
 "author": "batistalucasv",
 "draft": false,
-"head": "48cf2e52fd50821b65319a6af8785c3d2571ccf7",
+"head": "f29d6e1257b3b3191c4bc883c9753c070948cba5",
 "mine": false,
 "conflicts": [],
 "render": true,
+"stale": [
+"new commits"
+]
+},
+{
+"n": 6160,
+"title": "HTML paste: container background does not leak into character shading (#6157)",
+"author": "batistalucasv",
+"draft": false,
+"head": "ab6ea5d9cc0c1e926d3cc604dd209af7fdf2cfe9",
+"mine": false,
+"conflicts": [],
+"render": false,
 "stale": []
 },
 {
@@ -10638,11 +10809,14 @@
 "title": "fix(docx): frame shapes have a hole; header drawings aren't dimmed",
 "author": "tsw2k",
 "draft": false,
-"head": "4a7a9f3db9510b3e9116366cafff6baa14e1fbf5",
+"head": "bfc52110df5ef6b011a26725c418d288fd86bb57",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"main changed display/page.rs"
+]
 },
 {
 "n": 6166,
@@ -10695,7 +10869,10 @@
 "draft": false,
 "head": "f02836f0ea62acd76a66be59fa98341aadd30c50",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/edit.rs",
+"crates/engine/src/cmd/paste.rs"
+],
 "render": false,
 "stale": []
 },
@@ -10737,7 +10914,7 @@
 "title": "View \u203a Split: two panes in one window, each with its own caret and view (gap 27, #3254)",
 "author": "ljkx",
 "draft": false,
-"head": "bc3895de0e28daaf8e3e779b0da74f0521ad6691",
+"head": "0552f79f6d286e9d563dd6d8ee3009cffca3948f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10842,7 +11019,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed display/page.rs, notes.rs, placed.rs"
+]
 },
 {
 "n": 6216,
@@ -10875,7 +11054,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 6220,
@@ -10889,24 +11070,15 @@
 "stale": []
 },
 {
-"n": 6225,
-"title": "Clipboard: transfer copied images to system clipboard and preserve media across internal paste (#6205)",
-"author": "batistalucasv",
-"draft": false,
-"head": "11318f9226f3f359cd32d794e08c02658911a092",
-"mine": false,
-"conflicts": [],
-"render": false,
-"stale": []
-},
-{
 "n": 6227,
 "title": "Clipboard: prevent Paste Special from inserting an older copy for external images",
 "author": "howdeploy",
 "draft": true,
 "head": "ad0a1fae9de05f9559824dec1a4d1b2568326486",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/paste.rs"
+],
 "render": false,
 "stale": []
 },
@@ -10919,17 +11091,6 @@
 "mine": false,
 "conflicts": [],
 "render": false,
-"stale": []
-},
-{
-"n": 6231,
-"title": "docx: ignore w:lnNumType without w:countBy (#6209)",
-"author": "batistalucasv",
-"draft": false,
-"head": "03de54b3bfb74b4e7b6c64f1131e9430baee05a7",
-"mine": false,
-"conflicts": [],
-"render": true,
 "stale": []
 },
 {
@@ -10974,9 +11135,14 @@
 "draft": false,
 "head": "cd236bd4d5675be8d521a92b447abf9708b9df24",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 6244,
@@ -11001,7 +11167,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed write/parts.rs, write/story/para.rs"
 ]
 },
 {
@@ -11079,18 +11246,22 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/para.rs"
+]
 },
 {
 "n": 6302,
 "title": "#6260: character shading and highlight are one fill per run of letters, with no seams between them",
 "author": "ljkx",
 "draft": false,
-"head": "5e32115b489a86bc793f06c850bc6875b9fefdda",
+"head": "16cbd10a8969fa1a8731f6cd6b1fdbe4f7101f2c",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6305,
@@ -11108,18 +11279,20 @@
 "title": "#6059: symbols such as \u25b2 \u203b \u2460 \u2163 \u2103 stand upright in vertical text, as Unicode's vertical orientation says",
 "author": "ljkx",
 "draft": false,
-"head": "f8f5a233f20345d8d57e4879ebf99c624fee71e5",
+"head": "afca82fa4ad453d2943939baf63a3c252937e7d6",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6315,
 "title": "#6303: Insert Table takes the width of the caret's section and column",
 "author": "ljkx",
 "draft": false,
-"head": "b86c07c72ebc264e719c9d495b6eed43def18ab0",
+"head": "644f5312e6e97a965082525b548033df917d7e69",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11130,7 +11303,7 @@
 "title": "#6318: DATE and TIME fields find their languages in one walk of the paragraph",
 "author": "ljkx",
 "draft": false,
-"head": "e4889a6e2f76cfc9ef908dc6c39e085bc33e85d6",
+"head": "afd027daad930811db219432cd550ea7bb392b55",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11141,7 +11314,7 @@
 "title": "#6332: the \\# picture reads its - and + signs, quoted text and the x placeholder",
 "author": "ljkx",
 "draft": false,
-"head": "b79ece5b50cea2859cdb837be2ae8eef68ac5592",
+"head": "83329fd5b7aa32612b990d7bbece25b6a99707b2",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11192,7 +11365,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed floats.rs"
 ]
 },
 {
@@ -11213,7 +11387,7 @@
 "title": "#6328: Word's international-character keys on Windows and Linux (Ctrl+' then e types \u00e9)",
 "author": "ljkx",
 "draft": false,
-"head": "c19af1841162c1a58cf2deca7a1682f4cb2bc713",
+"head": "a0bc6e77aec8df0f2967958b3746300eda6a7844",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11246,7 +11420,7 @@
 "title": "#6096: text pasted into another document keeps its comments and replies",
 "author": "Nghiathan13",
 "draft": false,
-"head": "6d70f83ffb6cecfed18fcbf1b3db5d41ea4502e7",
+"head": "1abdee0523e4996bef61e52248cc32b013e87a9e",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11359,7 +11533,7 @@
 "title": "#3363: Review \u203a Show Markup chooses which markup shows, and whose (Specific People)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "9fee262b5b32ed4ca76716f36bf167725c8ccff1",
+"head": "281aaf0dff9b662e47a86f9704d8695129b65075",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11388,36 +11562,203 @@
 "stale": []
 },
 {
-"n": 6429,
-"title": "Fonts: scan Android's system font folders",
-"author": "sanghnkim-max",
-"draft": false,
-"head": "8c6d26eceb76d4a75f7ee38564f0b499aea290a2",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": []
-},
-{
-"n": 6436,
-"title": "Layout: add Fit One Page (#6433)",
-"author": "batistalucasv",
-"draft": false,
-"head": "d87e6f793060f0c90c53eaeb8463090a5e351627",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": []
-},
-{
 "n": 6442,
 "title": "fix: save existing files on KIO/OneDrive in safe_save",
 "author": "kaivon-kaelen",
 "draft": false,
-"head": "6aeb540bce5db82c112411515389178c3ef16f9c",
+"head": "04cb6c844b146eda1c1719d645a9333d394a0d51",
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 6446,
+"title": "File > Export to DOCX, ODT or RTF writes a copy and keeps the document's file (#6131)",
+"author": "jayzed80",
+"draft": false,
+"head": "61ef4aab3caafffffa9a401e6de5ed7eb355b4f6",
+"mine": false,
+"conflicts": [
+"crates/engine/src/cmd/file.rs"
+],
+"render": false,
+"stale": []
+},
+{
+"n": 6453,
+"title": "#1534: more preset shapes and picture fills (#2393 on current main)",
+"author": "qwerpik",
+"draft": false,
+"head": "d8d618ff677806506d3ca2191763c055331c0081",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6457,
+"title": "Layout: a list number is never kerned, as in Word",
+"author": "dfgodvan",
+"draft": false,
+"head": "25c222b21a3acc60cd605dd711b3c1257f347a7e",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6458,
+"title": "Layout: a line may break before a slash standing alone between spaces, as in Word",
+"author": "dfgodvan",
+"draft": false,
+"head": "a798954b21db20511caa2ab8fa3fbc9cdb83396a",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6459,
+"title": "Layout: a line may break after any space, before closing punctuation or after an opening bracket, as in Word",
+"author": "dfgodvan",
+"draft": false,
+"head": "c05e5f19cc35746e75794b4a04f3b4ab039e3a97",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6470,
+"title": "Compare: a field whose result changed stays a live field (#6268)",
+"author": "jayzed80",
+"draft": false,
+"head": "98c631823218a20f66ad0766f8f6fac104be68e8",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6471,
+"title": "Format: Bold shows and turns off bold from a table style (#6430)",
+"author": "crispyaus",
+"draft": false,
+"head": "47d2429e783a4b750458645a395e7c51c6bf292c",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6474,
+"title": "picture: borders and frames keep a transparent background (#6444)",
+"author": "HEOJUNFO",
+"draft": false,
+"head": "1b89ca523b347a8aae5b11d8da6441052e9999a2",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6477,
+"title": "#6438: a right-to-left table's move handle sits at its top-right corner, and dragging it moves the whole table",
+"author": "Nghiathan13",
+"draft": false,
+"head": "dc72ab6445e1154656960ac57dcf63cf15137edf",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6479,
+"title": "#6330: Insert Cells and Delete Cells with Word's four options each",
+"author": "ljkx",
+"draft": true,
+"head": "0fb3f1e4a9dc7b966c6243ee0e299d7b89e0e0ba",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6485,
+"title": "Layout: contextual spacing compares paragraphs across table cell edges (#6483)",
+"author": "Menonro",
+"draft": false,
+"head": "c46a310e3e58fa0f6c8b09f3908ad47212a6207f",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6487,
+"title": "Layout: the underline and selection over hanging spaces stop at the margin (#6434)",
+"author": "Nghiathan13",
+"draft": false,
+"head": "e9c751b52cc708eb56ac24a8e2bb2988eba9e82a",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6489,
+"title": "Layout: a header's text wraps around a float placed on the page wherever its anchor is (#6488)",
+"author": "Menonro",
+"draft": false,
+"head": "ef065b66fb0c663240c5ec969b26a728972cf1d3",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6493,
+"title": "#6480: an OLE object without a preview picture survives open and save",
+"author": "Nghiathan13",
+"draft": false,
+"head": "6e405ce7d242b21283ef6a3e54906bff0f1af08c",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6494,
+"title": "DOCX: a footnote mark in ordinary text shows the number 1, as in Word (#6492)",
+"author": "Menonro",
+"draft": false,
+"head": "5836263e656fcbc3daf040f2f60d331f176e82f8",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6497,
+"title": "Layout: an empty paragraph after a nested table ends its cell without a line (#6496)",
+"author": "Menonro",
+"draft": false,
+"head": "8ddd667b3708a369ed7c6554b0682923bd46e7f8",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6501,
+"title": "Layout: text in a shape is set in the shape's text rectangle (#6500)",
+"author": "Menonro",
+"draft": false,
+"head": "d823f7b56b84c2ce2380783014ddccae36a0bc29",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 }
 ]

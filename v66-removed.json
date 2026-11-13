@@ -513,5 +513,40 @@
 "n": 6004,
 "title": "View: editable Markdown source view for .md files (#5826)",
 "state": "MERGED"
+},
+{
+"n": 2703,
+"title": "Track style property changes (#2697)",
+"state": "MERGED"
+},
+{
+"n": 6019,
+"title": "#6017: Numbering strips typed labels it replaces",
+"state": "CLOSED"
+},
+{
+"n": 6051,
+"title": "Text boxes inside a group can be edited",
+"state": "MERGED"
+},
+{
+"n": 6225,
+"title": "Clipboard: transfer copied images to system clipboard and preserve media across internal paste (#6205)",
+"state": "MERGED"
+},
+{
+"n": 6231,
+"title": "docx: ignore w:lnNumType without w:countBy (#6209)",
+"state": "MERGED"
+},
+{
+"n": 6429,
+"title": "Fonts: scan Android's system font folders",
+"state": "CLOSED"
+},
+{
+"n": 6436,
+"title": "Layout: add Fit One Page (#6433)",
+"state": "MERGED"
 }
 ]

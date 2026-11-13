@@ -1,6 +1,6 @@
 This issue tracks how close WordCraft's DOCX → PDF output is to Word's, measured with the
 [docxide-pdf](https://github.com/sverrejb/docxide-pdf) test suite, and what each open PR that touches layout,
-rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-13 23:11 UTC.
+rendering, fonts, DOCX reading or PDF export does to that score. It's regenerated as benches finish; last updated 2026-11-13 23:46 UTC.
 
 ## Summary for reviewers
 
@@ -91,8 +91,8 @@ These raised the score when they were benched, but now conflict with `main` in c
 | #5564 | chamber074 | Draw a picture's outline (Picture Border) on screen and in PDF | **+0.001** | 1↑ 0↓ | – | ✅ | changes requested | +1402 −35 | `9360719ea` on `10e5bb8bc`, 1 d ago ⚠ stale: new commits; main changed display/page.rs, floats.rs, placed.rs |
 | #5562 | Znerual | Layout: a footnote mark stays with the text before it (#5402) | **+0.001** | 1↑ 0↓ | – | ✅ | – | +272 −6 | `638fd79f0` on `e919982fa`, 8 d ago ⚠ stale: new commits; main changed para.rs, para/lines.rs, para/paragraph.rs |
 
-**Coverage:** 407 PRs benched (104 change the score), 209 of them stale; 68 queued for the
-next round; 383 conflict with `main`.
+**Coverage:** 407 PRs benched (104 change the score), 202 of them stale; 65 queued for the
+next round; 382 conflict with `main`.
 
 <details><summary><b>How it's measured</b></summary>
 
@@ -246,7 +246,7 @@ still be right; the suite just has no document that exercises them.
 
 ## Combined branch
 
-**Every PR with a positive score**: 33 PRs merged into `main` a4b898f82 in this order, at these heads (merge commit `f9fc0dcfa`, made in the bench job and not pushed): #3821 `42a377965`, #2523 `5ae458526`, #5443 `de04a1fc7`, #5458 `7207e8835`, #5439 `417337bb4`, #5808 `575797399`, #2552 `09bea6e3a`, #4840 `f7196220a`, #5455 `dce01cdd7`, #5095 `5f6976add`, #2463 `a7ca977ee`, #2010 `745e32fc3`, #2711 `498f6a23c`, #3823 `7e86e2ea5`, #6114 `6997afcc3`, #5546 `892235af0`, #6219 `e31d4c0e5`, #2834 `c14375951`, #5206 `e070b8a0c`, #2465 `06741cf45`, #5006 `da0ab31dc`, #1757 `8c689e973`, #5948 `38d8501d6`, #2674 `8812f4d7d`, #5462 `5f1d5cc23`, #2792 `09a0c68df`, #6162 `bfc52110d`, #5695 `b8094ceec`, #5096 `de4c68c0c`, #5339 `28dff24e4`, #5074 `cbbb8ee5d`, #4846 `8ba7b65bb`, #6302 `2acaf870a`. Left out: code conflict with `main`: #2027, #2047, #2393, #3787, #3790, #4619, #4845, #5562, #5564, #6030, #6092; code conflict with PRs merged before it: #4507, #5887, #1172, #3833, #5457, #4065, #5176, #2493, #3604, #5850, #6215, #2508, #4460, #4614, #3588, #5590, #3072, #5630, #5166, #3834, #3832, #4142, #2608.
+**Every PR with a positive score**: 33 PRs merged into `main` a4b898f82 in this order, at these heads (merge commit `78b665af9`, made in the bench job and not pushed): #3821 `42a377965`, #2523 `5ae458526`, #5443 `de04a1fc7`, #5458 `7207e8835`, #5439 `417337bb4`, #5808 `575797399`, #2552 `09bea6e3a`, #4840 `f7196220a`, #5455 `dce01cdd7`, #5095 `5f6976add`, #2463 `a7ca977ee`, #2010 `745e32fc3`, #2711 `498f6a23c`, #3823 `7e86e2ea5`, #6114 `6997afcc3`, #5546 `892235af0`, #6219 `e31d4c0e5`, #2834 `c14375951`, #5206 `e070b8a0c`, #2465 `06741cf45`, #5006 `da0ab31dc`, #1757 `8c689e973`, #5948 `38d8501d6`, #2674 `8812f4d7d`, #5462 `5f1d5cc23`, #2792 `09a0c68df`, #6162 `bfc52110d`, #5695 `b8094ceec`, #5096 `de4c68c0c`, #5339 `28dff24e4`, #5074 `cbbb8ee5d`, #4846 `8ba7b65bb`, #6302 `2acaf870a`. Left out: code conflict with `main`: #2027, #2047, #2393, #3787, #3790, #4619, #4845, #5562, #5564, #6030, #6092; code conflict with PRs merged before it: #4507, #5887, #1172, #3833, #5457, #4065, #5176, #2493, #3604, #5850, #6215, #2508, #4460, #4614, #3588, #5590, #3072, #5630, #5166, #3834, #3832, #4142, #2608.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
@@ -256,7 +256,7 @@ still be right; the suite just has no document that exercises them.
 The merged PRs' individual SSIM changes add up to +4.206; the difference to the combined +3.103 is where
 they overlap or interact. 252 fixtures change (180↑ 42↓). Regressions over 0.5: nested-floats-spaced-text-long-one -62.9, nested-floats-spaced-text-bottom-cell -61.8, nested-floats-spaced-text-long-two -61.8, nested-floats-spaced-text-nonzero-x -61.8, nested-floats-spaced-text-inline-reference -60.6, nested-floats-spaced-text-short-spacers -58.8, section-mark-after-table-inline-compat15 -53.6, section-mark-after-table-float-compat15 -51.4 (+34 more).
 
-**The same without #2792 (#2608 merges here instead, so the difference between the two isn't #2792 alone)**: 33 PRs merged into `main` a4b898f82 in this order, at these heads (merge commit `87cbacc07`, made in the bench job and not pushed): #3821 `42a377965`, #2523 `5ae458526`, #5443 `de04a1fc7`, #5458 `7207e8835`, #5439 `417337bb4`, #5808 `575797399`, #2552 `09bea6e3a`, #4840 `f7196220a`, #5455 `dce01cdd7`, #5095 `5f6976add`, #2463 `a7ca977ee`, #2010 `745e32fc3`, #2711 `498f6a23c`, #3823 `7e86e2ea5`, #6114 `6997afcc3`, #5546 `892235af0`, #6219 `e31d4c0e5`, #2834 `c14375951`, #5206 `e070b8a0c`, #2465 `06741cf45`, #5006 `da0ab31dc`, #1757 `8c689e973`, #5948 `38d8501d6`, #2674 `8812f4d7d`, #5462 `5f1d5cc23`, #6162 `bfc52110d`, #5695 `b8094ceec`, #5096 `de4c68c0c`, #5339 `28dff24e4`, #5074 `cbbb8ee5d`, #4846 `8ba7b65bb`, #2608 `c11c3fa85`, #6302 `2acaf870a`. Left out: code conflict with `main`: #2027, #2047, #2393, #3787, #3790, #4619, #4845, #5562, #5564, #6030, #6092; code conflict with PRs merged before it: #4507, #5887, #1172, #3833, #5457, #4065, #5176, #2493, #3604, #5850, #6215, #2508, #4460, #4614, #3588, #5590, #3072, #5630, #5166, #3834, #3832, #4142; left out on purpose: #2792.
+**The same without #2792 (#2608 merges here instead, so the difference between the two isn't #2792 alone)**: 33 PRs merged into `main` a4b898f82 in this order, at these heads (merge commit `bd7284091`, made in the bench job and not pushed): #3821 `42a377965`, #2523 `5ae458526`, #5443 `de04a1fc7`, #5458 `7207e8835`, #5439 `417337bb4`, #5808 `575797399`, #2552 `09bea6e3a`, #4840 `f7196220a`, #5455 `dce01cdd7`, #5095 `5f6976add`, #2463 `a7ca977ee`, #2010 `745e32fc3`, #2711 `498f6a23c`, #3823 `7e86e2ea5`, #6114 `6997afcc3`, #5546 `892235af0`, #6219 `e31d4c0e5`, #2834 `c14375951`, #5206 `e070b8a0c`, #2465 `06741cf45`, #5006 `da0ab31dc`, #1757 `8c689e973`, #5948 `38d8501d6`, #2674 `8812f4d7d`, #5462 `5f1d5cc23`, #6162 `bfc52110d`, #5695 `b8094ceec`, #5096 `de4c68c0c`, #5339 `28dff24e4`, #5074 `cbbb8ee5d`, #4846 `8ba7b65bb`, #2608 `c11c3fa85`, #6302 `2acaf870a`. Left out: code conflict with `main`: #2027, #2047, #2393, #3787, #3790, #4619, #4845, #5562, #5564, #6030, #6092; code conflict with PRs merged before it: #4507, #5887, #1172, #3833, #5457, #4065, #5176, #2493, #3604, #5850, #6215, #2508, #4460, #4614, #3588, #5590, #3072, #5630, #5166, #3834, #3832, #4142; left out on purpose: #2792.
 
 | | SSIM | Jaccard | Pages matching | Line match |
 |---|---|---|---|---|
@@ -268,7 +268,7 @@ they overlap or interact. 236 fixtures change (184↑ 22↓). Regressions over 0
 
 ## Not benched
 
-- **Code conflicts with `main`** (383 PRs): not rerun until rebased.
+- **Code conflicts with `main`** (382 PRs): not rerun until rebased.
 - **Change no rendering file** (142): not benched.
 - **Doesn't build once merged with `main`:** #1292, #2783, #2876, #3160, #3520, #4265, #4339, #4408, #4640, #4645, #5570, #675.
 - **Removed from this list** since they're no longer open: merged #5684, #5448, #5442, #5450, #5346, #5347, #5348, #5437, #5440, #5456, #4579, #5055, #5392, #5655, #5691, #5287, #5343, #5410, #5452, #5697, #4702, #5533, #5594, #5295, #5411, #5729, #5734, #5761, #5784, #5788, #5796, #5802, #5811, #5830, #5851, #5459, #5414, #5453, #5426, #2783, #3195, #3197, #5705, #5721, #6039, #2251, #4683, #6033, #6049, #6022, #6161, #6169, #6120, #6124, #6004, #2703, #6051, #6225, #6231, #6436, #5858; closed without merging #1579, #1809, #2415, #3082, #3984, #4267, #4297, #2437, #2495, #2670, #3241, #3915, #4307, #4837, #5632, #5633, #4249, #5666, #3187, #1448, #3141, #3883, #4189, #4938, #5678, #5119, #5974, #1518, #1806, #1807, #1810, #1814, #1815, #2039, #2642, #2706, #3090, #3097, #3101, #3111, #3443, #6066, #4251, #4399, #4566, #4665, #6118, #5949, #6019, #6429, #5269.

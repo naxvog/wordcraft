@@ -8880,11 +8880,13 @@
 "title": "docx: preserve picture outline, effects, out-of-unit crops, and linked images",
 "author": "neilcawse",
 "draft": false,
-"head": "18ba9fc020c4242135f9429a539b9c5ad6edee23",
+"head": "e692d95cd2200113b534de7d726ae892cefcf101",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5521,
@@ -9106,9 +9108,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs"
-]
+"stale": []
 },
 {
 "n": 5599,
@@ -9173,9 +9173,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5630,
@@ -9341,9 +9339,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs"
-]
+"stale": []
 },
 {
 "n": 5702,
@@ -9669,10 +9665,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed hit.rs"
-]
+"stale": []
 },
 {
 "n": 5834,
@@ -9694,10 +9687,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed hit.rs"
-]
+"stale": []
 },
 {
 "n": 5852,
@@ -9771,10 +9761,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/props.rs, read/styles.rs, write/story/para.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5880,
@@ -9839,9 +9826,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5888,
@@ -9998,9 +9983,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed notes.rs"
-]
+"stale": []
 },
 {
 "n": 5940,
@@ -10025,16 +10008,14 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5950,
 "title": "docx, engine: preserve and resolve row/cell ins/del and tblPrExChange revisions",
 "author": "neilcawse",
 "draft": false,
-"head": "b6551a2edcf929607fc0a90c2525a6225ac320fc",
+"head": "d42eb0012cd2ae37ccddb859605084b413fdc1e0",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10047,7 +10028,7 @@
 "title": "docx, engine: update range fields and preserve revisions and ffData in field results",
 "author": "neilcawse",
 "draft": false,
-"head": "04a683fe7267fb36d52739c908083ae242b55d92",
+"head": "cbe174d95910931516601dcd1bdf92c41733d531",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10061,7 +10042,7 @@
 "title": "docx: round fractional file-unit measures and raise group nesting depth to 64",
 "author": "neilcawse",
 "draft": false,
-"head": "92eb9ffc9054a48c5d312a1d4d9a63302f5174bf",
+"head": "e9b04917cfe2bc0b0ca74ff34bd4f3fb25699c29",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10074,7 +10055,7 @@
 "title": "fonts: check family cmap coverage before loading fallback fonts and clear caches on rescan",
 "author": "neilcawse",
 "draft": false,
-"head": "ace0cc6a10e65524c2207c5b6980381821d4aef4",
+"head": "12a29586d070097d57d7d5655fd5956b8e3d0eff",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11605,7 +11586,7 @@
 "title": "#6330: Insert Cells and Delete Cells with Word's four options each",
 "author": "ljkx",
 "draft": false,
-"head": "04a6999e360abb7868d04ec26700eae27449e8fe",
+"head": "59bac4505a86ce3cf66e39a621ebadcd24429311",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11935,11 +11916,9 @@
 "title": "Layout: text in a shape keeps clear of half its outline's width (#6564)",
 "author": "Menonro",
 "draft": false,
-"head": "71abd49f2fe99ac5f71cb91423e606b2fc5bfdf4",
+"head": "91af521d7535498bdc3c5888356211e19e9cd306",
 "mine": false,
-"conflicts": [
-"crates/docbin/src/drawing.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -11971,6 +11950,39 @@
 "author": "Menonro",
 "draft": false,
 "head": "f47099cd7e2f31250dd57267f9a8d18b6415d545",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6575,
+"title": "Layout: percentage cell widths that agree in every row replace a stale grid (#6574)",
+"author": "Menonro",
+"draft": false,
+"head": "6215673b374720ebd69fe6dca41cde856e7fbc8e",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6576,
+"title": "Layout: a right tab at the margin keeps its text there beside a float",
+"author": "Nghiathan13",
+"draft": false,
+"head": "af9b866cae1a84f25dc4d97c755e731c169cb3b7",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6578,
+"title": "PDF export: tag link annotations with a Link element and an OBJR (#6464)",
+"author": "jayzed80",
+"draft": false,
+"head": "8f8bec4ad7838aecea79f029138a77bc4d05b6b3",
 "mine": false,
 "conflicts": [],
 "render": true,

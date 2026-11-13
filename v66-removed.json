@@ -548,5 +548,10 @@
 "n": 6436,
 "title": "Layout: add Fit One Page (#6433)",
 "state": "MERGED"
+},
+{
+"n": 5858,
+"title": "Fix: arrange.bounds on header picture writes page-anchored ODT frame",
+"state": "MERGED"
 }
 ]

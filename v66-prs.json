@@ -10629,7 +10629,7 @@
 "title": "tools/compare: row-level diff inside surviving tables (#5921)",
 "author": "batistalucasv",
 "draft": false,
-"head": "9faad7b15577f8ac2661a77aa991099a988becb7",
+"head": "746ccc23111bb3106ce5fea9933fc946336be213",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11800,7 +11800,7 @@
 "title": "Fonts: a space character the font lacks comes from its installed metric twin (#6513)",
 "author": "Menonro",
 "draft": false,
-"head": "c91efbdc30f06c5e6ed0e6921638a416ab2450e9",
+"head": "ee2ac6096c5bf48ac62d7a86ca7b645823c75107",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11844,7 +11844,7 @@
 "title": "Layout: text in a shape keeps clear of half its outline's width (#6564)",
 "author": "Menonro",
 "draft": false,
-"head": "91af521d7535498bdc3c5888356211e19e9cd306",
+"head": "7c97b148de8052a7ec6793463c38a6ba195ede25",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11888,7 +11888,7 @@
 "title": "Layout: percentage cell widths that agree in every row replace a stale grid (#6574)",
 "author": "Menonro",
 "draft": false,
-"head": "6cbbceadddde394da3d4966c6919a134338e2e09",
+"head": "bd776c047527aa2063324955c2a2369828363181",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12002,6 +12002,17 @@
 "mine": false,
 "conflicts": [],
 "render": true,
+"stale": []
+},
+{
+"n": 6597,
+"title": "Added remove background feature request",
+"author": "JTJones73",
+"draft": false,
+"head": "6f3633adf5787f22a14bfaa6c12ae91ebab5f369",
+"mine": false,
+"conflicts": [],
+"render": false,
 "stale": []
 }
 ]

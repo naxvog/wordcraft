@@ -39,9 +39,15 @@
 "draft": false,
 "head": "42a377965b6588204096328c688317a943df3160",
 "mine": true,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, read/story/blocks.rs, read/styles.rs"
+]
 },
 {
 "n": 3823,
@@ -236,12 +242,15 @@
 "head": "9675dab467408e07559b2955d0c0bee4334b1de4",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs",
 "crates/engine/src/cmd/insert.rs",
 "crates/pdf/src/exporter.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, exporter.rs, lib.rs"
+"main changed read/shape_style.rs, read/story/drawing.rs, write/story/drawing.rs \u2026"
 ]
 },
 {
@@ -298,6 +307,8 @@
 "mine": false,
 "conflicts": [
 "Cargo.lock",
+"crates/docx/src/lib.rs",
+"crates/docx/src/write/math.rs",
 "crates/docx/src/write/mod.rs",
 "crates/engine/src/cmd/equation.rs",
 "crates/engine/src/cmd/objects.rs",
@@ -741,7 +752,15 @@
 "head": "ffcfa15d049d07b1407c3b70b100bd3d798b5b66",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/fields.rs",
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/read/toc.rs",
 "crates/docx/src/write/embed.rs",
+"crates/docx/src/write/story/field.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs",
 "crates/engine/Cargo.toml",
 "crates/engine/src/cmd/citations/sources.rs",
 "crates/engine/src/cmd/file.rs"
@@ -797,6 +816,7 @@
 "crates/doc/src/para.rs",
 "crates/docx/src/read/story.rs",
 "crates/docx/src/write/mod.rs",
+"crates/docx/src/write/settings_merge.rs",
 "crates/docx/src/write/story.rs",
 "crates/engine/src/cmd/file.rs",
 "crates/engine/src/cmd/insert.rs",
@@ -846,9 +866,18 @@
 "draft": false,
 "head": "91008b93a98b655344ab20ce3ab20fded5b14889",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs, read.rs, read/meta.rs \u2026"
+]
 },
 {
 "n": 1511,
@@ -858,7 +887,9 @@
 "head": "7cf4712f0c2bcf7eac95ab4d4090d755bf6c886b",
 "mine": false,
 "conflicts": [
-"crates/engine/src/cmd/file.rs"
+"crates/engine/src/cmd/file.rs",
+"crates/formats/src/rtf.rs",
+"crates/formats/src/rtf/export.rs"
 ],
 "render": false,
 "stale": []
@@ -886,6 +917,7 @@
 "head": "eb7d42d87a648dc28d0a778ae31c136a0b2a87f0",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
 "crates/engine/src/session/documents.rs"
 ],
 "render": false,
@@ -898,9 +930,13 @@
 "draft": false,
 "head": "34c0369d46fcc7124c427c628bcaf1a2a06eff94",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/blocks.rs"
+]
 },
 {
 "n": 1647,
@@ -1021,7 +1057,9 @@
 "draft": false,
 "head": "7e148cceb1ed76dfac972035ef3b5b3e9ab9fa27",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/meta.rs"
+],
 "render": true,
 "stale": [
 "main changed read/meta.rs"
@@ -1146,6 +1184,8 @@
 "head": "5c9f14c0226acf92ea76f0f94ec9c121c8f3db08",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs",
 "crates/layout/src/floats.rs",
 "crates/layout/src/placed.rs"
 ],
@@ -1213,11 +1253,19 @@
 "head": "8746f8f0bd5edc7f9bd2e35b61e8b6c606c537a2",
 "mine": false,
 "conflicts": [
+"crates/docx/src/flat.rs",
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/embed.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/embed.rs",
+"crates/docx/src/write/parts.rs",
 "crates/engine/src/cmd/file.rs"
 ],
 "render": true,
 "stale": [
-"main changed lib.rs, read.rs, read/embed.rs \u2026"
+"main changed flat.rs, lib.rs, package.rs \u2026"
 ]
 },
 {
@@ -1228,11 +1276,14 @@
 "head": "920d4a867411f05fdc723c91435d52e9d1eb5bf5",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs",
 "crates/layout/src/flow.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/meta.rs, flow.rs"
+"main changed read/meta.rs, write/settings.rs, write/settings_merge.rs \u2026"
 ]
 },
 {
@@ -1255,12 +1306,19 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/lib.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/fields.rs",
 "crates/docx/src/read/story/runs.rs",
+"crates/docx/src/read/toc.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/story/field.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs",
 "crates/engine/src/cmd/insert/items.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs, write/story/object.rs, write/story/para.rs \u2026"
+"main changed read/story.rs, read/story/fields.rs, read/story/runs.rs \u2026"
 ]
 },
 {
@@ -1297,12 +1355,16 @@
 "head": "357db4794540d043caf2d46b90a9957283314530",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/para.rs",
 "crates/engine/src/cmd/review/changes.rs",
 "crates/engine/src/cmd/tools/compare.rs"
 ],
 "render": true,
 "stale": [
-"main changed write/story/para.rs"
+"main changed read/story/blocks.rs, write/props.rs, write/story/blocks.rs \u2026"
 ]
 },
 {
@@ -1337,9 +1399,22 @@
 "draft": false,
 "head": "745e32fc38189af30cf8ac81f0534e8f79bcd6a7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"crates/docx/Cargo.toml",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/xml.rs",
+"crates/formats/src/rtf/export.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, read/parts.rs, read/story/drawing.rs \u2026"
+]
 },
 {
 "n": 2011,
@@ -1405,10 +1480,17 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/drawing.rs",
-"crates/docbin/src/lib.rs"
+"crates/docbin/src/lib.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/story/drawing.rs"
 ],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, read/shape_style.rs, read/story/drawing.rs \u2026"
+]
 },
 {
 "n": 2046,
@@ -1613,10 +1695,14 @@
 "draft": false,
 "head": "96e8c11d63d3960a7998eaa8899a7cd81555a85e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/write/settings.rs"
+],
 "render": true,
 "stale": [
-"main changed lib.rs"
+"main changed lib.rs, package.rs, write/settings.rs"
 ]
 },
 {
@@ -1697,10 +1783,13 @@
 "draft": false,
 "head": "087951b77afff0ff7b3391bf09198671fe36264d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story.rs",
+"crates/docx/src/units.rs"
+],
 "render": true,
 "stale": [
-"main changed units.rs"
+"main changed read/story.rs, units.rs"
 ]
 },
 {
@@ -1712,6 +1801,7 @@
 "mine": false,
 "conflicts": [
 "crates/docx/src/read/props.rs",
+"crates/docx/src/read/story.rs",
 "crates/docx/src/units.rs"
 ],
 "render": true,
@@ -1739,6 +1829,7 @@
 "mine": false,
 "conflicts": [
 "crates/docx/src/read/props.rs",
+"crates/docx/src/read/story.rs",
 "crates/docx/src/units.rs"
 ],
 "render": true,
@@ -1847,7 +1938,8 @@
 "head": "b1dcf1ac8b933b335390774ef91a28587f773e6f",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/drawing_color.rs"
+"crates/docx/src/read/drawing_color.rs",
+"crates/docx/src/read/wordart.rs"
 ],
 "render": true,
 "stale": []
@@ -1887,8 +1979,10 @@
 "head": "8a8740dc0e0e3b8937752faf6e49f2cfd993d2a8",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/math.rs",
 "crates/docx/src/read/mod.rs",
 "crates/docx/src/read/props.rs",
+"crates/docx/src/read/sdt.rs",
 "crates/docx/src/read/story.rs",
 "crates/docx/src/units.rs"
 ],
@@ -1902,10 +1996,13 @@
 "draft": false,
 "head": "ffa6a1a51512fbc2aac75dd08443e81c0a28504a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs, ctx.rs, flow.rs \u2026"
+"main changed read/props.rs, write/props.rs, ctx.rs \u2026"
 ]
 },
 {
@@ -1954,8 +2051,10 @@
 "head": "2669552cd4afc6a4ef40036204702f8822941469",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/math.rs",
 "crates/docx/src/read/mod.rs",
 "crates/docx/src/read/props.rs",
+"crates/docx/src/read/sdt.rs",
 "crates/docx/src/read/story.rs",
 "crates/docx/src/units.rs"
 ],
@@ -2041,9 +2140,14 @@
 "draft": false,
 "head": "d144cff2e66b6598851551503020e571b9f8716c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/wordml2003.rs",
+"crates/docx/src/wordml2003_write.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed wordml2003.rs, wordml2003_write.rs"
+]
 },
 {
 "n": 2291,
@@ -2231,7 +2335,8 @@
 "head": "30664628e3001c4a07bfaef4bdc78298ba590d7f",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/drawing_color.rs"
+"crates/docx/src/read/drawing_color.rs",
+"crates/docx/src/read/wordart.rs"
 ],
 "render": true,
 "stale": []
@@ -2243,10 +2348,14 @@
 "draft": false,
 "head": "b6a8f97e5cb676c998aa883e317ca14f94cefdd7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/units.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs, units.rs"
+"main changed read/props.rs, read/story.rs, units.rs"
 ]
 },
 {
@@ -2270,7 +2379,15 @@
 "draft": false,
 "head": "5514cea8a8c26016568ff74f1b638a72291fe9b4",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
 "stale": [
 "main changed lib.rs, package.rs, read/meta.rs \u2026"
@@ -2284,10 +2401,16 @@
 "head": "a3d7705822cb28d94b178c3f4331bf52b37592cc",
 "mine": false,
 "conflicts": [
-"crates/docbin/src/drawing.rs"
+"crates/docbin/src/drawing.rs",
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
 ],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/diagram.rs, read/shape_style.rs, read/story/drawing.rs \u2026"
+]
 },
 {
 "n": 2394,
@@ -2338,11 +2461,17 @@
 "head": "370d5048cc6471f48c01c55ca483461817d06f45",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/props.rs"
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs",
+"crates/docx/src/write/story/section.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, display/page.rs, pass.rs"
+"main changed read/meta.rs, read/props.rs, read/story.rs \u2026"
 ]
 },
 {
@@ -2392,8 +2521,16 @@
 "mine": false,
 "conflicts": [
 "Cargo.lock",
+"crates/docx/Cargo.toml",
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read/embed.rs",
 "crates/docx/src/read/meta.rs",
-"crates/docx/src/write/embed.rs"
+"crates/docx/src/write.rs",
+"crates/docx/src/write/embed.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs"
 ],
 "render": true,
 "stale": []
@@ -2610,9 +2747,14 @@
 "draft": false,
 "head": "d6cee8c2a9721fd3d7ff9e16b8b9c142f68cb806",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs, write/story/drawing.rs"
+]
 },
 {
 "n": 2498,
@@ -2672,9 +2814,14 @@
 "draft": false,
 "head": "5e6f76d45c0cd2b1bf651211ae30b6959a60dc6d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/smart_art.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs, smart_art.rs"
+]
 },
 {
 "n": 2514,
@@ -2804,7 +2951,12 @@
 "head": "2ed135ab65f8fc44cb69aa8312281c6e9afaa7f5",
 "mine": false,
 "conflicts": [
-"crates/doc/src/lib.rs"
+"crates/doc/src/lib.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/drawing_color.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
 ],
 "render": true,
 "stale": []
@@ -2816,9 +2968,17 @@
 "draft": false,
 "head": "74eaa3184f2408b1fe76f210075370b913916551",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"crates/docx/src/lib.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/embed.rs",
+"crates/docx/src/write/parts.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed lib.rs, read.rs, read/embed.rs \u2026"
+]
 },
 {
 "n": 2590,
@@ -2891,9 +3051,15 @@
 "draft": false,
 "head": "c11c3fa8551ad7c6441e1018bf94927622724b32",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/story/blocks.rs, write/props.rs"
+]
 },
 {
 "n": 2612,
@@ -3013,10 +3179,15 @@
 "draft": false,
 "head": "3d077806077c9eaf68e73b2276be33ab85bce09d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, write/parts.rs, floats.rs \u2026"
+"main changed read/story/drawing.rs, write.rs, write/parts.rs \u2026"
 ]
 },
 {
@@ -3091,9 +3262,14 @@
 "draft": false,
 "head": "be7b274705c2094f533977fe99b3cd359f375577",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/math.rs",
+"crates/docx/src/write/math.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/math.rs, write/math.rs"
+]
 },
 {
 "n": 2709,
@@ -3113,9 +3289,13 @@
 "draft": false,
 "head": "498f6a23c2b3922485b31f8f793f226eaa1b5716",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/parts.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/parts.rs"
+]
 },
 {
 "n": 2713,
@@ -3140,11 +3320,12 @@
 "head": "fc20c89317d2d4f9d8272b96f2bb2461ab92eac6",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/math.rs",
 "crates/docx/src/read/story/runs.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs"
+"main changed read/math.rs, read/story/runs.rs"
 ]
 },
 {
@@ -3154,9 +3335,21 @@
 "draft": false,
 "head": "0900265f4251622b31552abde6d5fe7871cd2c8a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/chart_spec.rs",
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/canvas.rs",
+"crates/docx/src/read/chart/model.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs",
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/write/embed.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed chart_spec.rs, read/chart.rs, read/chart/canvas.rs \u2026"
+]
 },
 {
 "n": 2721,
@@ -3258,9 +3451,15 @@
 "draft": false,
 "head": "09a0c68dfb6cccf1d5f5af4b42d53ff2bc1ff22a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/story/blocks.rs, write/props.rs"
+]
 },
 {
 "n": 2793,
@@ -3270,6 +3469,8 @@
 "head": "e7b8d68e81476792fb48c97446f084e0ab99a3c4",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs",
 "crates/layout/src/display/page.rs",
 "crates/layout/src/floats.rs",
 "crates/layout/src/hit.rs",
@@ -3557,10 +3758,12 @@
 "mine": false,
 "conflicts": [
 "crates/doc/src/lib.rs",
+"crates/docx/Cargo.toml",
 "crates/docx/src/read/mod.rs",
 "crates/docx/src/read/story.rs",
 "crates/docx/src/write/mod.rs",
 "crates/docx/src/write/story.rs",
+"crates/docx/src/write/watermark.rs",
 "crates/engine/src/cmd/design.rs",
 "crates/pdf/src/lib.rs",
 "crates/render/src/lib.rs"
@@ -3639,9 +3842,18 @@
 "draft": false,
 "head": "bd7eab8067a659aa5509b0347198d082e02ade10",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/xml.rs",
+"crates/formats/src/rtf/export.rs",
+"crates/formats/src/rtf/styles.rs",
+"crates/formats/src/rtf/word.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, write/props.rs, xml.rs"
+]
 },
 {
 "n": 3077,
@@ -3650,10 +3862,13 @@
 "draft": false,
 "head": "42c8f72571babdbdc36cdb077403bafb10d77398",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/story/section.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs"
+"main changed read/props.rs, write/story/section.rs"
 ]
 },
 {
@@ -3663,7 +3878,10 @@
 "draft": true,
 "head": "840585310f169999457435fc3d7376f8ff2302b1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/story/section.rs"
+],
 "render": true,
 "stale": []
 },
@@ -3707,6 +3925,8 @@
 "conflicts": [
 "Cargo.lock",
 "crates/doc/src/props.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
 "crates/engine/src/cmd/caret.rs",
 "crates/engine/src/cmd/para.rs",
 "crates/engine/src/session.rs",
@@ -3896,9 +4116,13 @@
 "draft": false,
 "head": "590f5e121e12546d24204f59cf6f7617450933c2",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/watermark.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/watermark.rs"
+]
 },
 {
 "n": 3217,
@@ -3907,9 +4131,14 @@
 "draft": false,
 "head": "fd3ec01859544033edf410d12073e78ee7ec7da1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/math.rs",
+"crates/docx/src/write/math.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/math.rs, write/math.rs"
+]
 },
 {
 "n": 3222,
@@ -3954,7 +4183,9 @@
 "head": "609c6181c89301d5699abf49645897c7c875da91",
 "mine": false,
 "conflicts": [
-"crates/docx/src/package.rs"
+"crates/docx/src/flat.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/wordml2003.rs"
 ],
 "render": true,
 "stale": []
@@ -4613,7 +4844,9 @@
 "draft": false,
 "head": "c310bc72b084c96124cdec02b9a1bd813325eb5c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs"
+],
 "render": true,
 "stale": [
 "main changed read/props.rs"
@@ -4714,6 +4947,9 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/drawing.rs",
+"crates/docx/src/lib.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/read/story/vml.rs",
 "crates/docx/src/write/story/drawing.rs",
 "crates/docx/src/write/story/object.rs"
 ],
@@ -4779,6 +5015,7 @@
 "crates/doc/src/props.rs",
 "crates/docx/src/read/mod.rs",
 "crates/docx/src/read/story.rs",
+"crates/docx/src/units.rs",
 "crates/layout/src/lib.rs",
 "crates/layout/src/para.rs"
 ],
@@ -4796,6 +5033,7 @@
 "crates/doc/src/props.rs",
 "crates/docx/src/read/mod.rs",
 "crates/docx/src/read/story.rs",
+"crates/docx/src/units.rs",
 "crates/docx/src/write/story.rs",
 "crates/engine/src/cmd/objects.rs",
 "crates/layout/src/display.rs",
@@ -4827,6 +5065,7 @@
 "mine": false,
 "conflicts": [
 "apps/wordcraft-cli/src/main.rs",
+"crates/docx/src/read/toc.rs",
 "crates/engine/src/cmd/file.rs",
 "crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
@@ -4858,10 +5097,13 @@
 "draft": false,
 "head": "574b0a974dcc2a8d332bb5376b9d42c8954afadf",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs"
+],
 "render": true,
 "stale": [
-"main changed read.rs"
+"main changed package.rs, read.rs"
 ]
 },
 {
@@ -4889,7 +5131,9 @@
 "draft": false,
 "head": "5854ebcb0758b3030655e013b6f81a56c8950bb1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/vml.rs"
+],
 "render": true,
 "stale": [
 "main changed read/story/vml.rs"
@@ -4984,9 +5228,14 @@
 "draft": false,
 "head": "dd46dc39eaffcf1a26e0cbc5e3f7c8ed269dd969",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 3923,
@@ -5046,9 +5295,14 @@
 "draft": false,
 "head": "33ca8a23ddda763f6c105b0912e5ead052eb9b39",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read.rs",
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, read/styles.rs"
+]
 },
 {
 "n": 3960,
@@ -5057,10 +5311,13 @@
 "draft": false,
 "head": "49e3a96dc93fbc58bbeb06fc16c18ef9d388764d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs"
+],
 "render": true,
 "stale": [
-"main changed write/parts.rs"
+"main changed write.rs, write/parts.rs"
 ]
 },
 {
@@ -5170,6 +5427,12 @@
 "head": "0b7f2f2868d968929556e32335c974e8c2463514",
 "mine": false,
 "conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/field.rs",
+"crates/docx/src/write/story/para.rs",
+"crates/docx/src/write/story/toc.rs",
 "crates/engine/src/cmd/citations/generated.rs"
 ],
 "render": true,
@@ -5234,10 +5497,14 @@
 "draft": false,
 "head": "4cf3d5563eb6d3202de1820a612510ea5d14a403",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/wordml2003_write.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs, ctx.rs, flow.rs"
+"main changed read/props.rs, wordml2003_write.rs, write/props.rs \u2026"
 ]
 },
 {
@@ -5269,9 +5536,14 @@
 "draft": false,
 "head": "c1c8d6d9b9b7d7dd87d35a0dc3a271f585e38236",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/blocks.rs, write/story/para.rs"
+]
 },
 {
 "n": 4169,
@@ -5357,7 +5629,8 @@
 "mine": false,
 "conflicts": [
 "crates/docx/src/lib.rs",
-"crates/docx/src/write/mod.rs"
+"crates/docx/src/write/mod.rs",
+"crates/docx/src/write/settings_merge.rs"
 ],
 "render": true,
 "stale": []
@@ -5423,7 +5696,11 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/fmt.rs",
-"crates/formats/src/rtf/parse.rs"
+"crates/formats/src/rtf/parse.rs",
+"crates/formats/src/rtf/reader.rs",
+"crates/formats/src/rtf/state.rs",
+"crates/formats/src/rtf/styles.rs",
+"crates/formats/src/rtf/word.rs"
 ],
 "render": false,
 "stale": []
@@ -5545,9 +5822,15 @@
 "draft": false,
 "head": "850cfe8fbdbf8f6a7ec55f0c290625f0265a034a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/meta.rs, write/settings.rs, write/settings_merge.rs"
+]
 },
 {
 "n": 4320,
@@ -5556,7 +5839,9 @@
 "draft": false,
 "head": "69f732207b55325a1a46126259b0addc7c9466a8",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/xml.rs"
+],
 "render": true,
 "stale": [
 "main changed xml.rs"
@@ -5661,6 +5946,8 @@
 "mine": false,
 "conflicts": [
 "crates/doc/src/props.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
 "crates/layout/src/lib.rs",
 "crates/layout/src/para.rs"
 ],
@@ -5733,6 +6020,8 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/sections.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/units.rs",
 "crates/docx/src/write/story.rs",
 "crates/engine/src/cmd/page.rs",
 "crates/formats/src/odt.rs"
@@ -5870,9 +6159,25 @@
 "draft": false,
 "head": "4bf7ff37934a6b6265e5885bfd9cbaaeef6f07d1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/wordml2003_write.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs",
+"crates/docx/src/xml.rs",
+"crates/formats/src/rtf/export.rs",
+"crates/formats/src/rtf/styles.rs",
+"crates/formats/src/rtf/word.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/story/blocks.rs, wordml2003_write.rs \u2026"
+]
 },
 {
 "n": 4463,
@@ -6003,9 +6308,31 @@
 "draft": false,
 "head": "e23ee246ac6114edc9d51b1b81d273b6ef9b152e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/canvas.rs",
+"crates/docx/src/read/chart/model.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs",
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs",
+"crates/formats/src/rtf/reader.rs",
+"crates/formats/src/rtf/text.rs",
+"crates/formats/src/rtf/word.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart.rs, read/chart/canvas.rs, read/chart/model.rs \u2026"
+]
 },
 {
 "n": 4511,
@@ -6064,7 +6391,9 @@
 "head": "2fef96870e9b8d9524108f0ac1c5154a1a409f00",
 "mine": false,
 "conflicts": [
-"crates/docbin/src/fmt.rs"
+"crates/docbin/src/fmt.rs",
+"crates/formats/src/rtf/export.rs",
+"crates/formats/src/rtf/word.rs"
 ],
 "render": true,
 "stale": []
@@ -6189,7 +6518,11 @@
 "draft": false,
 "head": "ca1e8765fb22fac65ac5f20e44539892591af504",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/embed.rs",
+"crates/docx/src/write/story/object.rs"
+],
 "render": true,
 "stale": [
 "main changed read/story/vml.rs, write/embed.rs, write/story/object.rs"
@@ -6323,14 +6656,17 @@
 "head": "b2ed4eb69b94c2bd9a6b90aca6d1b00b0e795192",
 "mine": false,
 "conflicts": [
+"Cargo.lock",
 "Cargo.toml",
+"crates/docx/Cargo.toml",
+"crates/docx/src/flat.rs",
 "crates/docx/src/write/embed.rs",
 "crates/docx/src/xml.rs",
 "crates/formats/src/sheet/xlsx.rs"
 ],
 "render": true,
 "stale": [
-"main changed write/embed.rs, xml.rs"
+"main changed flat.rs, write/embed.rs, xml.rs"
 ]
 },
 {
@@ -6366,11 +6702,15 @@
 "head": "22ccd3f7359f488fe6b5b264e9984077316ab8b3",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/para.rs",
 "crates/engine/src/cmd/review/changes.rs"
 ],
 "render": true,
 "stale": [
-"main changed write/props.rs, write/story/para.rs"
+"main changed read/story/blocks.rs, write/props.rs, write/story/blocks.rs \u2026"
 ]
 },
 {
@@ -6402,7 +6742,12 @@
 "draft": false,
 "head": "b31a6aef369a2fcd9c42e5b9ccbef8e7ff133038",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/chunk.rs",
+"crates/docx/src/read/story/drawing.rs"
+],
 "render": true,
 "stale": [
 "main changed package.rs, read.rs, read/chunk.rs \u2026"
@@ -6552,10 +6897,13 @@
 "draft": false,
 "head": "c51e94cae028a474800596d52f560029a9a5cddc",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/blocks.rs"
+],
 "render": true,
 "stale": [
-"main changed write/parts.rs"
+"main changed write/parts.rs, write/story/blocks.rs"
 ]
 },
 {
@@ -6612,9 +6960,12 @@
 "head": "7d03f8b331a6ab7220540b68f1dde23826431e29",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/read/story.rs",
 "crates/docx/src/read/story/drawing.rs",
 "crates/docx/src/read/story/runs.rs",
 "crates/docx/src/write/story/object.rs",
+"crates/docx/src/xml.rs",
 "crates/layout/src/display/objects.rs"
 ],
 "render": true,
@@ -6718,11 +7069,16 @@
 "head": "31b3cecc363e734387c2143656d3cf37091e578d",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/props.rs"
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/fields.rs",
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/para.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/story/runs.rs, write/props.rs \u2026"
+"main changed read/props.rs, read/story.rs, read/story/fields.rs \u2026"
 ]
 },
 {
@@ -6793,9 +7149,13 @@
 "draft": false,
 "head": "a2ee04f0436cbca9c16710275ae49015e1e1a68c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/settings_merge.rs"
+]
 },
 {
 "n": 4783,
@@ -6858,10 +7218,14 @@
 "draft": false,
 "head": "13100b51f58d28d748fec2b513d2d5226e2b1fa1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs, write/story/para.rs"
+"main changed read/story.rs, read/story/runs.rs, write/story/para.rs"
 ]
 },
 {
@@ -6874,6 +7238,7 @@
 "conflicts": [
 "crates/doc/src/props/char_props.rs",
 "crates/doc/src/resolve.rs",
+"crates/docx/src/write/props.rs",
 "crates/engine/src/cmd/format.rs",
 "crates/fonts/src/lib.rs",
 "crates/layout/src/display/objects.rs",
@@ -6902,10 +7267,13 @@
 "draft": false,
 "head": "7da086d47875d2f739fe75b02e9f6938ab99e576",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
 "stale": [
-"main changed write/story/para.rs"
+"main changed write.rs, write/story/para.rs"
 ]
 },
 {
@@ -6942,11 +7310,15 @@
 "head": "dc8851594deffe131e12a51f5c74ad0da1876a3c",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/para.rs",
 "crates/engine/src/cmd/review/changes.rs"
 ],
 "render": true,
 "stale": [
-"main changed write/props.rs, write/story/para.rs"
+"main changed read/story/blocks.rs, write/props.rs, write/story/blocks.rs \u2026"
 ]
 },
 {
@@ -6982,9 +7354,14 @@
 "draft": false,
 "head": "8ba7b65bb2c13307c365b38e28a4fadcd86b3c6e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/meta.rs, write/settings.rs"
+]
 },
 {
 "n": 4849,
@@ -6993,10 +7370,14 @@
 "draft": false,
 "head": "50f2fcda69addcfa60f034a6e4bd3b6733dbbaf8",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read.rs",
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/write.rs"
+],
 "render": true,
 "stale": [
-"main changed read.rs, read/parts.rs"
+"main changed read.rs, read/parts.rs, write.rs"
 ]
 },
 {
@@ -7020,8 +7401,15 @@
 "conflicts": [
 "crates/doc/src/kept.rs",
 "crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/blocks.rs",
 "crates/docx/src/read/story/drawing.rs",
-"crates/docx/src/write/story/drawing.rs"
+"crates/docx/src/write.rs",
+"crates/docx/src/write/embed.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": []
@@ -7074,9 +7462,15 @@
 "draft": false,
 "head": "8fa65bb78851462753deb8cb59985beeca4e56f1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/meta.rs, write/settings.rs, write/settings_merge.rs"
+]
 },
 {
 "n": 4867,
@@ -7158,9 +7552,18 @@
 "draft": false,
 "head": "c7d6a25632d03a341f9d756c24807d5ce9d343cc",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/canvas.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs",
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/smart_art.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart.rs, read/chart/canvas.rs, read/chart/plot.rs \u2026"
+]
 },
 {
 "n": 4905,
@@ -7206,7 +7609,8 @@
 "head": "94fa82a84dc710c607f37e9ab1c85d8c0707b7b5",
 "mine": false,
 "conflicts": [
-"Cargo.lock"
+"Cargo.lock",
+"crates/docx/src/package.rs"
 ],
 "render": true,
 "stale": []
@@ -7266,10 +7670,13 @@
 "draft": false,
 "head": "4686cf986ef13c8b049ac1dc84acfe5a0b6b0ff3",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/parse.rs"
+],
 "render": true,
 "stale": [
-"main changed read/chart/parse.rs"
+"main changed read/chart.rs, read/chart/parse.rs"
 ]
 },
 {
@@ -7341,9 +7748,14 @@
 "draft": false,
 "head": "b9081fa8012d57250b20b14fe8c7f90147e35bb1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, write/props.rs"
+]
 },
 {
 "n": 5006,
@@ -7352,9 +7764,14 @@
 "draft": false,
 "head": "da0ab31dc5b9d729e2aef32346b4762a6d331293",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/meta.rs, write/settings.rs"
+]
 },
 {
 "n": 5007,
@@ -7363,10 +7780,15 @@
 "draft": false,
 "head": "874d1945ddeadb2959219849ca3670b6dafd413c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/styles.rs, write/styles.rs"
+"main changed read/props.rs, read/styles.rs, write/props.rs \u2026"
 ]
 },
 {
@@ -7377,7 +7799,8 @@
 "head": "3e093617c41970209f9a353f5b1535f2fc0b08b8",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/props.rs"
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
 ],
 "render": true,
 "stale": [
@@ -7393,7 +7816,8 @@
 "mine": false,
 "conflicts": [
 "crates/doc/src/props.rs",
-"crates/docx/src/read/props.rs"
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
 ],
 "render": true,
 "stale": [
@@ -7407,7 +7831,10 @@
 "draft": false,
 "head": "52f6be6fbb2f283d37a9769146f6179bea7ba4b0",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
 "stale": [
 "main changed read/props.rs, write/props.rs"
@@ -7431,10 +7858,14 @@
 "draft": false,
 "head": "db949bbabad8d490c0c6a86224495fea98bb865f",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs"
+"main changed read/props.rs, read/story/blocks.rs, write/props.rs"
 ]
 },
 {
@@ -7505,10 +7936,14 @@
 "draft": false,
 "head": "41662936ac2d1bdb90760489b827f8e4f86c51a7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
 "stale": [
-"main changed read.rs, read/styles.rs"
+"main changed read.rs, read/story/blocks.rs, read/styles.rs"
 ]
 },
 {
@@ -7518,10 +7953,14 @@
 "draft": false,
 "head": "cc0d20788101c6ac3fa39bbc952d2d7ea741a208",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/xml.rs"
+],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, display/page.rs, floats.rs"
+"main changed read/story.rs, read/story/drawing.rs, xml.rs \u2026"
 ]
 },
 {
@@ -7531,9 +7970,14 @@
 "draft": false,
 "head": "7bc3f3bc6c2f7c5cfd0a9f2341c065dd8d5525c0",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/styles.rs"
+]
 },
 {
 "n": 5073,
@@ -7630,6 +8074,11 @@
 "crates/doc/src/lib.rs",
 "crates/doc/src/props.rs",
 "crates/doc/src/props/char_props.rs",
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs",
 "crates/layout/src/para/lines.rs"
 ],
 "render": true,
@@ -7646,6 +8095,11 @@
 "crates/doc/src/props.rs",
 "crates/doc/src/props/para_props.rs",
 "crates/doc/src/resolve.rs",
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs",
 "crates/engine/src/cmd/design.rs",
 "crates/fonts/src/word.rs",
 "crates/layout/src/para/builder.rs",
@@ -7843,6 +8297,7 @@
 "mine": false,
 "conflicts": [
 "crates/doc/src/connector.rs",
+"crates/docx/src/read/story/drawing.rs",
 "crates/layout/src/display/objects.rs"
 ],
 "render": true,
@@ -7868,6 +8323,7 @@
 "mine": false,
 "conflicts": [
 "crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/story/object.rs",
 "crates/engine/src/cmd/protect.rs"
 ],
 "render": true,
@@ -7921,10 +8377,13 @@
 "conflicts": [
 "Cargo.lock",
 "crates/docbin/Cargo.toml",
-"crates/docbin/src/crypt.rs"
+"crates/docbin/src/crypt.rs",
+"crates/docx/src/crypt.rs"
 ],
 "render": true,
-"stale": []
+"stale": [
+"main changed crypt.rs"
+]
 },
 {
 "n": 5159,
@@ -7983,10 +8442,17 @@
 "draft": false,
 "head": "744da4409fb62f225a7fc1c898fab6e2da8e30a7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/bidi.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
 "stale": [
-"main changed write/parts.rs, write/story/drawing.rs, write/story/para.rs"
+"main changed write.rs, write/bidi.rs, write/parts.rs \u2026"
 ]
 },
 {
@@ -8072,7 +8538,13 @@
 "crates/doc/src/settings.rs",
 "crates/docbin/src/fmt.rs",
 "crates/docbin/src/table.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/meta.rs",
 "crates/docx/src/read/props.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs",
+"crates/docx/src/write/story/section.rs",
 "crates/formats/src/rtf/export.rs",
 "crates/formats/src/rtf/word.rs",
 "crates/layout/src/display/page.rs",
@@ -8113,9 +8585,14 @@
 "draft": false,
 "head": "e070b8a0c30f3abc1c4c7522b01b9ef4e6e6d734",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs, write/story/drawing.rs"
+]
 },
 {
 "n": 5209,
@@ -8125,13 +8602,16 @@
 "head": "4184a5e926ee7308171b653193fd038bccec9381",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/read/story.rs",
 "crates/docx/src/read/story/drawing.rs",
 "crates/docx/src/read/story/runs.rs",
-"crates/docx/src/write/story/object.rs"
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/story/drawing.rs, read/story/runs.rs, write/story/object.rs \u2026"
+"main changed read/diagram.rs, read/story.rs, read/story/drawing.rs \u2026"
 ]
 },
 {
@@ -8153,6 +8633,9 @@
 "head": "92ffe2dcf99361467a60ec292d5cc5b0d0931d4f",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/story/drawing.rs",
 "crates/layout/src/boxes.rs",
 "crates/layout/src/floats.rs"
 ],
@@ -8215,6 +8698,8 @@
 "head": "3fd749223730ac842e501bdc05526ed2fa59862b",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/props.rs",
 "crates/fonts/src/word.rs",
 "crates/layout/src/para/builder.rs"
 ],
@@ -8273,11 +8758,16 @@
 "head": "e0787f67ad593a0eec44f8cdbeaea82c592415ba",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/blocks.rs",
 "crates/docx/src/write/story/object.rs"
 ],
 "render": true,
 "stale": [
-"main changed write/parts.rs, write/story/object.rs"
+"main changed read/story.rs, read/story/blocks.rs, write.rs \u2026"
 ]
 },
 {
@@ -8387,11 +8877,13 @@
 "head": "52b7b0e196bf230910b8a3e31cfd93de89376f07",
 "mine": false,
 "conflicts": [
-"crates/docbin/src/fmt.rs"
+"crates/docbin/src/fmt.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, display/lines.rs, outline.rs"
+"main changed read/props.rs, write/props.rs, display/lines.rs \u2026"
 ]
 },
 {
@@ -8403,11 +8895,14 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/table.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/props.rs",
 "crates/docx/src/write/styles.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/styles.rs, write/styles.rs"
+"main changed read/props.rs, read/styles.rs, write/props.rs \u2026"
 ]
 },
 {
@@ -8417,10 +8912,15 @@
 "draft": false,
 "head": "0df8aa9a283bbd8af966e9887cf427f36e6e9058",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/write/story.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
 "stale": [
-"main changed read/story/runs.rs, write/story/para.rs"
+"main changed read/story.rs, read/story/runs.rs, write/story.rs \u2026"
 ]
 },
 {
@@ -8432,7 +8932,10 @@
 "mine": false,
 "conflicts": [
 "Cargo.lock",
-"Cargo.toml"
+"Cargo.toml",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/styles.rs"
 ],
 "render": true,
 "stale": []
@@ -8476,7 +8979,10 @@
 "head": "3078a0b945d0a3cb3ea376ad4da619acbb15debf",
 "mine": false,
 "conflicts": [
-"crates/doc/src/edit.rs"
+"crates/doc/src/edit.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs"
 ],
 "render": true,
 "stale": []
@@ -8488,7 +8994,9 @@
 "draft": true,
 "head": "5c40bf62126dab2d95acf9ef2593a22855f778e6",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs"
+],
 "render": true,
 "stale": []
 },
@@ -8525,9 +9033,13 @@
 "draft": false,
 "head": "28dff24e47ff275e6099c5506b416888f310269e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/blocks.rs"
+]
 },
 {
 "n": 5345,
@@ -8612,7 +9124,10 @@
 "draft": false,
 "head": "87e6ee779b4e32accfe233c435bf242b8ad61818",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
 "stale": [
 "main changed read/styles.rs, write/styles.rs"
@@ -8625,7 +9140,10 @@
 "draft": false,
 "head": "1afc415645048849b86588cb20a0f54fcbd39127",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/embed.rs",
+"crates/docx/src/write/parts.rs"
+],
 "render": true,
 "stale": [
 "main changed write/embed.rs, write/parts.rs"
@@ -8638,10 +9156,14 @@
 "draft": false,
 "head": "be2d7f81fe7d4fac993e83cb017eb0271e514e54",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
 "stale": [
-"main changed write/parts.rs, write/story/para.rs"
+"main changed write.rs, write/parts.rs, write/story/para.rs"
 ]
 },
 {
@@ -8663,7 +9185,8 @@
 "head": "74034ec3cbf59e7633b1c179abe5de314a88bba1",
 "mine": false,
 "conflicts": [
-"crates/docx/src/write/math.rs"
+"crates/docx/src/write/math.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": []
@@ -8762,10 +9285,13 @@
 "draft": false,
 "head": "a6d748589c499f4e7c22ea12a5fbb562557348a3",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/smart_art.rs",
+"crates/docx/src/write/embed.rs"
+],
 "render": true,
 "stale": [
-"main changed write/embed.rs"
+"main changed smart_art.rs, write/embed.rs"
 ]
 },
 {
@@ -8786,9 +9312,13 @@
 "draft": false,
 "head": "5676b06708947bcb92260ba2e7e832b188d7292d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/vml.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/vml.rs"
+]
 },
 {
 "n": 5470,
@@ -8808,10 +9338,13 @@
 "draft": false,
 "head": "c2757178498ac57af90222f77b949467ab1b0fcb",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs"
+],
 "render": true,
 "stale": [
-"main changed lib.rs"
+"main changed lib.rs, package.rs"
 ]
 },
 {
@@ -8845,7 +9378,10 @@
 "draft": false,
 "head": "9b9e9e8d983567d9b16513d90bb881c20961a2fd",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
 "stale": [
 "main changed read/props.rs, write/props.rs"
@@ -8859,7 +9395,8 @@
 "head": "c80aade2149cf11462c7f0b60762a02531ffe7c6",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/props.rs"
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/story/section.rs"
 ],
 "render": true,
 "stale": []
@@ -8882,9 +9419,15 @@
 "draft": false,
 "head": "e692d95cd2200113b534de7d726ae892cefcf101",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/object.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs, write/story/drawing.rs, write/story/object.rs"
+]
 },
 {
 "n": 5521,
@@ -9028,12 +9571,16 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/drawing.rs",
-"crates/docbin/src/lib.rs"
+"crates/docbin/src/lib.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/story/drawing.rs"
 ],
 "render": true,
 "stale": [
 "new commits",
-"main changed display/page.rs, floats.rs, placed.rs"
+"main changed read/shape_style.rs, read/story/drawing.rs, read/story/vml.rs \u2026"
 ]
 },
 {
@@ -9043,7 +9590,10 @@
 "draft": false,
 "head": "475974f7f05f63d8e5ad5ceecb60af3e767b409a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
 "stale": [
 "main changed read/story/drawing.rs, write/story/drawing.rs, display/objects.rs"
@@ -9104,9 +9654,18 @@
 "draft": false,
 "head": "a5a3f3b1f19c5688f5c9ec47f2a0d9b4cf6df1d7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/xml.rs",
+"crates/formats/src/rtf/export.rs",
+"crates/formats/src/rtf/styles.rs",
+"crates/formats/src/rtf/word.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, write/props.rs, xml.rs"
+]
 },
 {
 "n": 5599,
@@ -9191,9 +9750,14 @@
 "draft": false,
 "head": "eb08f12360b9b32445256bec15ecfd2ae8d9a98c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/wordml2003.rs",
+"crates/docx/src/wordml2003_write.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed wordml2003.rs, wordml2003_write.rs"
+]
 },
 {
 "n": 5634,
@@ -9248,10 +9812,14 @@
 "draft": false,
 "head": "8ed5311cf82820d397bbe3307acbe91de8f919a5",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs"
+],
 "render": true,
 "stale": [
-"main changed lib.rs"
+"main changed lib.rs, read/meta.rs, write/settings.rs"
 ]
 },
 {
@@ -9261,10 +9829,16 @@
 "draft": false,
 "head": "902aa14ab33af6216c5aa8b7732c148021cfaf20",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/chunk.rs",
+"crates/docx/src/xml.rs"
+],
 "render": true,
 "stale": [
-"main changed lib.rs, read.rs, read/chunk.rs"
+"main changed lib.rs, package.rs, read.rs \u2026"
 ]
 },
 {
@@ -9274,7 +9848,9 @@
 "draft": false,
 "head": "4bc45db90d04b743695542349fdb46c623ab26e5",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs"
+],
 "render": true,
 "stale": [
 "main changed read/props.rs"
@@ -9312,7 +9888,10 @@
 "head": "00fad31bded20db31be8b00b55ccf14d2f1a7544",
 "mine": false,
 "conflicts": [
-"apps/wordcraft-cli/src/main.rs"
+"apps/wordcraft-cli/src/main.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/chunk.rs"
 ],
 "render": true,
 "stale": []
@@ -9335,9 +9914,15 @@
 "draft": false,
 "head": "b8094ceec61820d89c3fe364539ec06d2a99c484",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/props.rs",
+"crates/formats/src/rtf/export.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, write/props.rs"
+]
 },
 {
 "n": 5702,
@@ -9408,7 +9993,10 @@
 "head": "cfa599ccb250de32226e63202bc66e58264f0496",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/embed.rs"
+"crates/docx/src/read.rs",
+"crates/docx/src/read/embed.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": [
@@ -9424,11 +10012,20 @@
 "mine": false,
 "conflicts": [
 "crates/doc/src/kept.rs",
+"crates/docx/Cargo.toml",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/section.rs",
+"crates/docx/src/write/watermark.rs",
 "crates/formats/src/odt/tests_more/headers.rs"
 ],
 "render": true,
 "stale": [
-"main changed read.rs, read/parts.rs, read/story/runs.rs \u2026"
+"main changed read.rs, read/parts.rs, read/story.rs \u2026"
 ]
 },
 {
@@ -9475,7 +10072,11 @@
 "draft": false,
 "head": "9e964b7b6916fa2a4d2896dead5a23a55b372233",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/styles.rs",
+"crates/formats/src/rtf/export.rs"
+],
 "render": true,
 "stale": [
 "main changed read/props.rs, read/styles.rs"
@@ -9489,6 +10090,7 @@
 "head": "76ea3e155786dab5f1d47c804e496de107037692",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/styles.rs",
 "crates/docx/src/write/styles.rs"
 ],
 "render": true,
@@ -9503,10 +10105,14 @@
 "draft": false,
 "head": "d07cf7a09cc22142db49e62a843da75f56f929aa",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/props.rs"
+],
 "render": true,
 "stale": [
-"main changed read/props.rs, write/parts.rs"
+"main changed read/props.rs, write/parts.rs, write/props.rs"
 ]
 },
 {
@@ -9672,7 +10278,9 @@
 "draft": false,
 "head": "9c6e343ae17ea09c69ac12d72f8bea748c51982b",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock"
+],
 "render": false,
 "stale": []
 },
@@ -9757,9 +10365,18 @@
 "draft": false,
 "head": "f2c87ffbbc93d9556d51d41aac0dc8a143a2d3a6",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/para.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/props.rs, read/story/blocks.rs, read/styles.rs \u2026"
+]
 },
 {
 "n": 5880,
@@ -9894,9 +10511,13 @@
 "draft": false,
 "head": "862320b8fc904b3307aa1f869cc00567fb353af8",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/wordml2003.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed wordml2003.rs"
+]
 },
 {
 "n": 5902,
@@ -9992,10 +10613,14 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/fib.rs",
-"crates/docbin/src/lib.rs"
+"crates/docbin/src/lib.rs",
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs"
 ],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/meta.rs, write/settings.rs"
+]
 },
 {
 "n": 5948,
@@ -10004,9 +10629,16 @@
 "draft": false,
 "head": "38d8501d611c8126c1ede66b4f96c646816ff85e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/model.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart.rs, read/chart/model.rs, read/chart/parse.rs \u2026"
+]
 },
 {
 "n": 5950,
@@ -10015,9 +10647,15 @@
 "draft": false,
 "head": "d42eb0012cd2ae37ccddb859605084b413fdc1e0",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/blocks.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/blocks.rs, write/props.rs, write/story/blocks.rs"
+]
 },
 {
 "n": 5951,
@@ -10026,9 +10664,18 @@
 "draft": false,
 "head": "cbe174d95910931516601dcd1bdf92c41733d531",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/fields.rs",
+"crates/docx/src/read/toc.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/story/field.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/fields.rs, read/toc.rs, write.rs \u2026"
+]
 },
 {
 "n": 5953,
@@ -10037,9 +10684,14 @@
 "draft": false,
 "head": "e9b04917cfe2bc0b0ca74ff34bd4f3fb25699c29",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/units.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/drawing.rs, units.rs"
+]
 },
 {
 "n": 5954,
@@ -10059,9 +10711,16 @@
 "draft": false,
 "head": "a42b24a5b843a083e019efe53fa204e2936f9e8a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart/canvas.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart/canvas.rs, read/chart/parse.rs, read/chart/plot.rs \u2026"
+]
 },
 {
 "n": 5969,
@@ -10070,9 +10729,17 @@
 "draft": false,
 "head": "094ccd4df44a97f6728352419ff05ddbbcca5693",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart/canvas.rs",
+"crates/docx/src/read/chart/model.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart/canvas.rs, read/chart/model.rs, read/chart/parse.rs \u2026"
+]
 },
 {
 "n": 5971,
@@ -10094,9 +10761,17 @@
 "draft": false,
 "head": "f13d81e78b600410498db59cf333346a30446b48",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/model.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart.rs, read/chart/model.rs, read/chart/parse.rs \u2026"
+]
 },
 {
 "n": 5977,
@@ -10105,9 +10780,14 @@
 "draft": false,
 "head": "ca7c90d2d27d907d000daab03084fec76a1c5971",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/parse.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart.rs, read/chart/parse.rs"
+]
 },
 {
 "n": 5979,
@@ -10127,9 +10807,18 @@
 "draft": false,
 "head": "073e15e2f9d196948ce2fb69eda561700e44357a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chart.rs",
+"crates/docx/src/read/chart/canvas.rs",
+"crates/docx/src/read/chart/model.rs",
+"crates/docx/src/read/chart/parse.rs",
+"crates/docx/src/read/chart/plot.rs",
+"crates/docx/src/read/chart/polar.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chart.rs, read/chart/canvas.rs, read/chart/model.rs \u2026"
+]
 },
 {
 "n": 5986,
@@ -10185,11 +10874,13 @@
 "head": "345f765d5ee9efa8823f840b84a641151eab23d4",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read.rs"
+"crates/docx/src/read.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/settings.rs"
 ],
 "render": true,
 "stale": [
-"main changed read.rs, write/parts.rs"
+"main changed read.rs, write/parts.rs, write/settings.rs"
 ]
 },
 {
@@ -10199,9 +10890,14 @@
 "draft": false,
 "head": "5825ef6dcbe00e9599b9526eaa7d9ef662c54ebf",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/blocks.rs, write/story/para.rs"
+]
 },
 {
 "n": 5995,
@@ -10212,6 +10908,13 @@
 "mine": false,
 "conflicts": [
 "crates/docbin/src/lib.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/fields.rs",
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/read/toc.rs",
+"crates/docx/src/write/story/field.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs",
 "crates/engine/src/cmd/insert/items.rs"
 ],
 "render": true,
@@ -10257,7 +10960,12 @@
 "draft": false,
 "head": "573c2202c500e764f120915324b30605624f3a22",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/formats/src/rtf/reader.rs",
+"crates/formats/src/rtf/state.rs",
+"crates/formats/src/rtf/text.rs",
+"crates/formats/src/rtf/word.rs"
+],
 "render": false,
 "stale": []
 },
@@ -10280,11 +10988,14 @@
 "head": "a1d416e331df57a3ded08dc7aa6cc887c5f35061",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/blocks.rs",
 "crates/docx/src/read/styles.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/styles.rs"
+"main changed read/props.rs, read/story.rs, read/story/blocks.rs \u2026"
 ]
 },
 {
@@ -10295,12 +11006,26 @@
 "head": "15f9c70ca071374f16664e460cc192fe31e231a9",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/embed.rs"
+"crates/docx/src/flat.rs",
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/chunk.rs",
+"crates/docx/src/read/embed.rs",
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/sdt.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/wordml2003.rs",
+"crates/docx/src/wordml2003_write.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": [
 "new commits",
-"main changed lib.rs, read.rs, read/embed.rs \u2026"
+"main changed flat.rs, lib.rs, package.rs \u2026"
 ]
 },
 {
@@ -10311,12 +11036,26 @@
 "head": "85b95c66582b5acbd2407186ad40d4b4cb7cde26",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/embed.rs"
+"crates/docx/src/flat.rs",
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/chunk.rs",
+"crates/docx/src/read/embed.rs",
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/sdt.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/wordml2003.rs",
+"crates/docx/src/wordml2003_write.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": [
 "new commits",
-"main changed lib.rs, read.rs, read/embed.rs \u2026"
+"main changed flat.rs, lib.rs, package.rs \u2026"
 ]
 },
 {
@@ -10327,12 +11066,27 @@
 "head": "1610543590f7539810dd7f94e969f0a024e0c3ef",
 "mine": false,
 "conflicts": [
-"crates/docx/src/read/embed.rs"
+"crates/docx/src/flat.rs",
+"crates/docx/src/lib.rs",
+"crates/docx/src/package.rs",
+"crates/docx/src/read.rs",
+"crates/docx/src/read/chunk.rs",
+"crates/docx/src/read/embed.rs",
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/sdt.rs",
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/wordml2003.rs",
+"crates/docx/src/wordml2003_write.rs",
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/xml.rs"
 ],
 "render": true,
 "stale": [
 "new commits",
-"main changed lib.rs, read.rs, read/embed.rs \u2026"
+"main changed flat.rs, lib.rs, package.rs \u2026"
 ]
 },
 {
@@ -10399,9 +11153,13 @@
 "draft": false,
 "head": "dbe8925246ff33c6ea002c2edafad1cb7bfe896e",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/math.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/math.rs"
+]
 },
 {
 "n": 6081,
@@ -10410,9 +11168,16 @@
 "draft": false,
 "head": "375f88c32fd6186817eb74d3b8fd20dd4ff77d4c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock",
+"crates/docx/Cargo.toml",
+"crates/docx/src/flat.rs",
+"crates/docx/src/write/math.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed flat.rs, write/math.rs"
+]
 },
 {
 "n": 6082,
@@ -10421,9 +11186,13 @@
 "draft": false,
 "head": "757c64e5edc0a5af359f03b8f98638b43cabb3fc",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/math.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/math.rs"
+]
 },
 {
 "n": 6083,
@@ -10477,11 +11246,14 @@
 "head": "4e48f4296e0098b6bafedc3a9080504a95e33c08",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/props.rs",
 "crates/docx/src/write/styles.rs"
 ],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/styles.rs, write/styles.rs"
+"main changed read/props.rs, read/styles.rs, write/props.rs \u2026"
 ]
 },
 {
@@ -10491,9 +11263,17 @@
 "draft": false,
 "head": "74a792c184c6abbbc85ab0a53c234c70eff455e9",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/object.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write.rs, write/parts.rs, write/story/drawing.rs \u2026"
+]
 },
 {
 "n": 6100,
@@ -10536,6 +11316,7 @@
 "head": "80a802a64babac18e40e8d30bccde3d0aa1de343",
 "mine": false,
 "conflicts": [
+"crates/docx/src/read/styles.rs",
 "crates/docx/src/write/styles.rs"
 ],
 "render": true,
@@ -10583,9 +11364,13 @@
 "draft": false,
 "head": "284434ca26d02986054aad8585f1b835c613e866",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/settings_merge.rs"
+]
 },
 {
 "n": 6128,
@@ -10607,10 +11392,14 @@
 "draft": false,
 "head": "f24fe0797a82be94e5f124074bcc7e2038cae631",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/package.rs",
+"crates/docx/src/write/embed.rs",
+"crates/docx/src/write/parts.rs"
+],
 "render": true,
 "stale": [
-"main changed write/embed.rs, write/parts.rs"
+"main changed package.rs, write/embed.rs, write/parts.rs"
 ]
 },
 {
@@ -10620,21 +11409,30 @@
 "draft": false,
 "head": "b8e3f71fb962de940198b653b8e7fbb5c53d4740",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/settings_merge.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/settings_merge.rs"
+]
 },
 {
 "n": 6141,
 "title": "tools/compare: row-level diff inside surviving tables (#5921)",
 "author": "batistalucasv",
 "draft": false,
-"head": "a4657b8d93e40663483372aa6cc8dc1a834e5155",
+"head": "2e3c4e0f8ba5f7a1e3ee6ea78ace50a886e698a5",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/blocks.rs"
+],
 "render": true,
 "stale": [
-"new commits"
+"new commits",
+"main changed read/story/blocks.rs, write/props.rs, write/story/blocks.rs"
 ]
 },
 {
@@ -10644,9 +11442,16 @@
 "draft": false,
 "head": "6551359055147b116b57723290b05c7139245502",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read.rs",
+"crates/docx/src/read/story/blocks.rs",
+"crates/docx/src/write/props.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read.rs, read/story/blocks.rs, write/props.rs \u2026"
+]
 },
 {
 "n": 6144,
@@ -10677,9 +11482,15 @@
 "draft": false,
 "head": "bfc52110df5ef6b011a26725c418d288fd86bb57",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/shape_style.rs, read/story/drawing.rs, write/story/drawing.rs"
+]
 },
 {
 "n": 6166,
@@ -10688,7 +11499,9 @@
 "draft": false,
 "head": "9a5d2454a9559829d44b72c99ac95438a14bf8b7",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"Cargo.lock"
+],
 "render": false,
 "stale": []
 },
@@ -10699,9 +11512,13 @@
 "draft": false,
 "head": "6b2bbc018917317cb7b265cadce3458de0c6eb17",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/fields.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/fields.rs"
+]
 },
 {
 "n": 6171,
@@ -10834,9 +11651,19 @@
 "draft": false,
 "head": "a5c68907b2dea89ca66cb6ae30e276e3c41e8b35",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/meta.rs",
+"crates/docx/src/write/settings.rs",
+"crates/docx/src/write/settings_merge.rs",
+"crates/formats/src/rtf/export.rs",
+"crates/formats/src/rtf/parse.rs",
+"crates/formats/src/rtf/reader.rs",
+"crates/formats/src/rtf/word.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/meta.rs, write/settings.rs, write/settings_merge.rs"
+]
 },
 {
 "n": 6206,
@@ -10878,7 +11705,9 @@
 "draft": false,
 "head": "b90e06e28c5988060300835d7a4062e84cf60fbc",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/formats/src/rtf/export.rs"
+],
 "render": true,
 "stale": []
 },
@@ -10911,9 +11740,16 @@
 "draft": false,
 "head": "e31d4c0e533193cf83d95fc0bdea9469ef1d8128",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/parts.rs",
+"crates/docx/src/read/props.rs",
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/parts.rs, read/props.rs, read/styles.rs \u2026"
+]
 },
 {
 "n": 6220,
@@ -10957,9 +11793,13 @@
 "draft": false,
 "head": "24363d66cc1bdc2840bf7a626c397a8fbeb7b9bd",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/chunk.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/chunk.rs"
+]
 },
 {
 "n": 6236,
@@ -10990,9 +11830,14 @@
 "draft": false,
 "head": "07c41d3be55885c88b81b85bed904cc9f9ec8dbd",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/styles.rs",
+"crates/docx/src/write/styles.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/styles.rs, write/styles.rs"
+]
 },
 {
 "n": 6244,
@@ -11001,9 +11846,14 @@
 "draft": false,
 "head": "698b526de6b0445005f4d9b096fadb25a10ea55c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story.rs",
+"crates/docx/src/read/story/blocks.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story.rs, read/story/blocks.rs"
+]
 },
 {
 "n": 6245,
@@ -11012,9 +11862,18 @@
 "draft": false,
 "head": "3add69fb17b693432298cebc598042f5965dc969",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write.rs",
+"crates/docx/src/write/bidi.rs",
+"crates/docx/src/write/parts.rs",
+"crates/docx/src/write/story/blocks.rs",
+"crates/docx/src/write/story/drawing.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write.rs, write/bidi.rs, write/parts.rs \u2026"
+]
 },
 {
 "n": 6246,
@@ -11023,9 +11882,14 @@
 "draft": false,
 "head": "8f1453f1b2a63863712f4b2c5b6e143723873b34",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/story.rs",
+"crates/docx/src/write/story/blocks.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story.rs, write/story/blocks.rs"
+]
 },
 {
 "n": 6248,
@@ -11089,10 +11953,15 @@
 "draft": false,
 "head": "1694ee052d2edca1ef4215d8a9fffcea6b52be2d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/runs.rs",
+"crates/docx/src/write/bidi.rs",
+"crates/docx/src/write/story.rs",
+"crates/docx/src/write/story/para.rs"
+],
 "render": true,
 "stale": [
-"main changed write/story/para.rs"
+"main changed read/story/runs.rs, write/bidi.rs, write/story.rs \u2026"
 ]
 },
 {
@@ -11212,9 +12081,13 @@
 "draft": false,
 "head": "188bc8eb64bbe78c5730800318205ddc302ded8c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/math.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/math.rs"
+]
 },
 {
 "n": 6368,
@@ -11267,9 +12140,13 @@
 "draft": false,
 "head": "f00aaa3a6c6e1d8ca28f568c4e6accf28cd2b107",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed write/story/drawing.rs"
+]
 },
 {
 "n": 6381,
@@ -11427,7 +12304,11 @@
 "head": "d8d618ff677806506d3ca2191763c055331c0081",
 "mine": false,
 "conflicts": [
-"crates/docbin/src/drawing.rs"
+"crates/docbin/src/drawing.rs",
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/read/story/drawing.rs",
+"crates/docx/src/write/story/drawing.rs"
 ],
 "render": true,
 "stale": []
@@ -11560,9 +12441,14 @@
 "draft": false,
 "head": "6e405ce7d242b21283ef6a3e54906bff0f1af08c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/embed.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/vml.rs, write/embed.rs"
+]
 },
 {
 "n": 6494,
@@ -11571,9 +12457,13 @@
 "draft": false,
 "head": "5836263e656fcbc3daf040f2f60d331f176e82f8",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/runs.rs"
+],
 "render": true,
-"stale": []
+"stale": [
+"main changed read/story/runs.rs"
+]
 },
 {
 "n": 6497,
@@ -11846,7 +12736,10 @@
 "draft": false,
 "head": "7c97b148de8052a7ec6793463c38a6ba195ede25",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/story/vml.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
 "stale": []
 },
@@ -11857,7 +12750,9 @@
 "draft": false,
 "head": "16f954eb91972a83f975c01eeae87c725b4b667f",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/shape_style.rs"
+],
 "render": true,
 "stale": []
 },
@@ -11989,7 +12884,9 @@
 "draft": false,
 "head": "01b6ca1fe7c3089d4e0cd6544b5cabc743e01662",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/math.rs"
+],
 "render": true,
 "stale": []
 },
@@ -12033,7 +12930,11 @@
 "draft": false,
 "head": "8e9f4788854b44c5cead092591dff9acc49c16d0",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/docx/src/read/diagram.rs",
+"crates/docx/src/read/shape_style.rs",
+"crates/docx/src/write/story/drawing.rs"
+],
 "render": true,
 "stale": []
 }

@@ -9681,7 +9681,7 @@
 "title": "layout: wrap field results across multiple lines within margins (#5838)",
 "author": "batistalucasv",
 "draft": false,
-"head": "35368d98970edef161964b2083da2bc08d53a757",
+"head": "4bcdda77a5b433abd7d3a858ef89826420ae462f",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10659,9 +10659,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6160,
@@ -10683,10 +10681,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed display/page.rs"
-]
+"stale": []
 },
 {
 "n": 6166,
@@ -10843,9 +10838,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6206,
@@ -10889,9 +10882,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed display/page.rs, notes.rs, placed.rs"
-]
+"stale": []
 },
 {
 "n": 6216,
@@ -10924,9 +10915,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed read/props.rs, read/styles.rs, write/styles.rs"
-]
+"stale": []
 },
 {
 "n": 6220,
@@ -10972,9 +10961,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6236,
@@ -11007,10 +10994,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed read/styles.rs, write/styles.rs"
-]
+"stale": []
 },
 {
 "n": 6244,
@@ -11021,9 +11005,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6245,
@@ -11034,10 +11016,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed write/parts.rs, write/story/para.rs"
-]
+"stale": []
 },
 {
 "n": 6246,
@@ -11991,6 +11970,39 @@
 "author": "Menonro",
 "draft": false,
 "head": "80761d3852f11f3e298f4ce2d96ddaa8780fc6fa",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6587,
+"title": "Layout: place negative-offset floats from a first line pushed down by a wrapping float (#6567)",
+"author": "jayzed80",
+"draft": false,
+"head": "c0c42caf9574e2ac0efb81d8cd40c7d28b586a8c",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6589,
+"title": "Layout: the automatic space after a Latin run beside East Asian text follows the Latin face",
+"author": "Nghiathan13",
+"draft": false,
+"head": "8c1c5c60473d73a6d28a52f9f13902173fda8bff",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6590,
+"title": "DOCX: an equation nested more than 32 deep keeps its innermost content (#6071)",
+"author": "Nghiathan13",
+"draft": false,
+"head": "01b6ca1fe7c3089d4e0cd6544b5cabc743e01662",
 "mine": false,
 "conflicts": [],
 "render": true,

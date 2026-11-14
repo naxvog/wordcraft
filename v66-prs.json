@@ -9685,9 +9685,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5852,
@@ -11027,9 +11025,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6248,
@@ -11108,9 +11104,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6305,
@@ -11132,9 +11126,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6315,
@@ -11200,9 +11192,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6361,
@@ -11213,10 +11203,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed floats.rs"
-]
+"stale": []
 },
 {
 "n": 6362,
@@ -11227,9 +11214,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6368,
@@ -11826,7 +11811,7 @@
 "title": "Layout: the room borders take in a table row: double and triple borders, shared edges, every cell of the row (#6540)",
 "author": "Menonro",
 "draft": false,
-"head": "eaa8f284cf12c812f43e3cf32b4568043227bf20",
+"head": "5e81d463ad840fd01fecdc31278baa81c2974d5c",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11881,7 +11866,7 @@
 "title": "Layout: a non-breaking hyphen the font lacks is drawn as Word draws it, on a line no taller (#6570)",
 "author": "Menonro",
 "draft": false,
-"head": "a05ebca275879c953d6a7de6e8a3d6801e4696d2",
+"head": "4eab3963ef4268caa06d560be8f5a1aaf6f828ce",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11892,7 +11877,7 @@
 "title": "Layout: a table cell set not to wrap its text is sized as one unbreakable piece (#6572)",
 "author": "Menonro",
 "draft": false,
-"head": "f47099cd7e2f31250dd57267f9a8d18b6415d545",
+"head": "e4055b329b3a1887b30624cd1cf36c81987d4ed3",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11903,7 +11888,7 @@
 "title": "Layout: percentage cell widths that agree in every row replace a stale grid (#6574)",
 "author": "Menonro",
 "draft": false,
-"head": "6215673b374720ebd69fe6dca41cde856e7fbc8e",
+"head": "6cbbceadddde394da3d4966c6919a134338e2e09",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12003,6 +11988,17 @@
 "author": "Nghiathan13",
 "draft": false,
 "head": "01b6ca1fe7c3089d4e0cd6544b5cabc743e01662",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6594,
+"title": "Layout: a table row at the top of a page opens with the border of a first row (#6592)",
+"author": "Menonro",
+"draft": false,
+"head": "0c7baf91483624da6197f0ac126e24b8cc65c353",
 "mine": false,
 "conflicts": [],
 "render": true,

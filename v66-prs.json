@@ -8884,9 +8884,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5521,
@@ -10019,9 +10017,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5951,
@@ -10032,10 +10028,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed write/story/para.rs"
-]
+"stale": []
 },
 {
 "n": 5953,
@@ -10046,9 +10039,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5954,
@@ -10059,9 +10050,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5968,
@@ -10072,9 +10061,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5969,
@@ -10085,9 +10072,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5971,
@@ -10146,9 +10131,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5986,
@@ -10220,10 +10203,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed write/story/para.rs"
-]
+"stale": []
 },
 {
 "n": 5995,
@@ -11983,6 +11963,39 @@
 "author": "jayzed80",
 "draft": false,
 "head": "8f8bec4ad7838aecea79f029138a77bc4d05b6b3",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6580,
+"title": "Layout: a middle or bottom cell of a split row that goes on is lined up by the text it keeps (#6579)",
+"author": "Menonro",
+"draft": false,
+"head": "3b3c204f1f4174d645b196e2219a5f1ac24ed0c4",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6581,
+"title": "PDF export: tag tables with Table, TR, TH and TD structure elements (#6463)",
+"author": "jayzed80",
+"draft": false,
+"head": "778ccf6db3c2eaa297fa65e9e2fccd874dc79cc8",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6582,
+"title": "Layout: Arabic chart and SmartArt label text is drawn in visual order (#4199)",
+"author": "Nghiathan13",
+"draft": false,
+"head": "46209294db61e0c121b760b47315ef3bca785d9d",
 "mine": false,
 "conflicts": [],
 "render": true,

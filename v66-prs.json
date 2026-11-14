@@ -12827,11 +12827,13 @@
 "title": "PDF export: tag tables with Table, TR, TH and TD structure elements (#6463)",
 "author": "jayzed80",
 "draft": false,
-"head": "778ccf6db3c2eaa297fa65e9e2fccd874dc79cc8",
+"head": "c7b4310dc127eb151f87724e6f31e536fdcda456",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6582,
@@ -12935,6 +12937,30 @@
 "crates/docx/src/read/shape_style.rs",
 "crates/docx/src/write/story/drawing.rs"
 ],
+"render": true,
+"stale": []
+},
+{
+"n": 6606,
+"title": "Layout: a table sized by its columns takes them from its cells and is narrowed to the room it has (#6604)",
+"author": "Menonro",
+"draft": false,
+"head": "c50ff9dd846844b346183348647a52adde10a54c",
+"mine": false,
+"conflicts": [
+"crates/docx/src/read/story/blocks.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 6607,
+"title": "Layout: an equation nested as deep as the model keeps it is drawn whole (#6595)",
+"author": "Nghiathan13",
+"draft": false,
+"head": "7694e2c2c0c206394a93c0460be3da4ff9e49478",
+"mine": false,
+"conflicts": [],
 "render": true,
 "stale": []
 }

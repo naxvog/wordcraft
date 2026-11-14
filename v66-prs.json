@@ -10629,7 +10629,7 @@
 "title": "tools/compare: row-level diff inside surviving tables (#5921)",
 "author": "batistalucasv",
 "draft": false,
-"head": "746ccc23111bb3106ce5fea9933fc946336be213",
+"head": "a4657b8d93e40663483372aa6cc8dc1a834e5155",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11965,7 +11965,7 @@
 "title": "Layout: place negative-offset floats from a first line pushed down by a wrapping float (#6567)",
 "author": "jayzed80",
 "draft": false,
-"head": "c0c42caf9574e2ac0efb81d8cd40c7d28b586a8c",
+"head": "50041c808cac27d947203c98e0a7648988345479",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11998,7 +11998,7 @@
 "title": "Layout: a table row at the top of a page opens with the border of a first row (#6592)",
 "author": "Menonro",
 "draft": false,
-"head": "0c7baf91483624da6197f0ac126e24b8cc65c353",
+"head": "36e1ad117afd094774d71d54770e182477f70f7c",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12013,6 +12013,28 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 6598,
+"title": "#6510: Change All in the spelling pane",
+"author": "Nghiathan13",
+"draft": false,
+"head": "703409221ac7e18c1473cab105eea3aed6b1cb12",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6599,
+"title": "#6391: stars keep their point count, and leftRightArrow and upDownArrow keep both heads",
+"author": "Nghiathan13",
+"draft": false,
+"head": "8e9f4788854b44c5cead092591dff9acc49c16d0",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 }
 ]

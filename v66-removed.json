@@ -558,5 +558,100 @@
 "n": 5269,
 "title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
 "state": "CLOSED"
+},
+{
+"n": 2274,
+"title": "Apply Format Painter on single-click release (#1455)",
+"state": "MERGED"
+},
+{
+"n": 2338,
+"title": "feat(installer): unify Windows setup and completion screens",
+"state": "CLOSED"
+},
+{
+"n": 3305,
+"title": "Fix editing text inside ordinary groups (#1932)",
+"state": "CLOSED"
+},
+{
+"n": 3941,
+"title": "DOCX: a Word file's latent quick styles fill the Styles gallery (#3909)",
+"state": "CLOSED"
+},
+{
+"n": 4826,
+"title": "DOCX: mark Thai pieces complex script on save so Word breaks them by word",
+"state": "CLOSED"
+},
+{
+"n": 5146,
+"title": "Layout: a slanted line's arrowheads sit on its ends and point along it",
+"state": "CLOSED"
+},
+{
+"n": 5172,
+"title": "DOCX: right-to-left pieces keep their font, size, bold and italic in Word",
+"state": "CLOSED"
+},
+{
+"n": 5649,
+"title": "Find and Replace: add Replace All in Selection",
+"state": "CLOSED"
+},
+{
+"n": 5693,
+"title": "Update numeric formatting bug",
+"state": "CLOSED"
+},
+{
+"n": 5731,
+"title": "Render supported native InkML strokes as vectors",
+"state": "CLOSED"
+},
+{
+"n": 5989,
+"title": "Quick Access Toolbar: import and export WordCraft configurations (#5890)",
+"state": "CLOSED"
+},
+{
+"n": 6035,
+"title": "DOCX: preserve namespaces in retained InkML and MathML",
+"state": "CLOSED"
+},
+{
+"n": 6036,
+"title": "Render: isolate native ink widths and mask clipping",
+"state": "CLOSED"
+},
+{
+"n": 6037,
+"title": "DOCX: decode and place bounded native InkML previews",
+"state": "CLOSED"
+},
+{
+"n": 6040,
+"title": "Use Diagram and Decorative Text display names",
+"state": "MERGED"
+},
+{
+"n": 6233,
+"title": "DOCX: a matchSrc altChunk's last paragraph takes our style of the same name, as in Word",
+"state": "CLOSED"
+},
+{
+"n": 6245,
+"title": "DOCX: Thai and Indic text is written w:cs where its formatting differs, so Word draws it as WordCraft does",
+"state": "CLOSED"
+},
+{
+"n": 6362,
+"title": "#6137: equations with tracked changes from Word keep their content",
+"state": "CLOSED"
+},
+{
+"n": 6590,
+"title": "DOCX: an equation nested more than 32 deep keeps its innermost content (#6071)",
+"state": "CLOSED"
 }
 ]

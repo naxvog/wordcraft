@@ -12528,9 +12528,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6576,
@@ -12552,10 +12550,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed exporter.rs, exporter/draw.rs, exporter/text.rs"
-]
+"stale": []
 },
 {
 "n": 6580,
@@ -12566,9 +12561,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6581,
@@ -13211,6 +13204,17 @@
 "author": "vangel76",
 "draft": false,
 "head": "13fe70887abdd932073336695740de8c0f669ae6",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6756,
+"title": "Add screen-only Text Boundaries in View",
+"author": "hsalimi79",
+"draft": false,
+"head": "9fddd3cadb161da3fc57d7cc613abf9644e25083",
 "mine": false,
 "conflicts": [],
 "render": false,

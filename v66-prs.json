@@ -6539,14 +6539,9 @@
 "title": "#4237: Set As Default saves a Normal template (Normal.dotx) that new documents start from",
 "author": "benandez",
 "draft": false,
-"head": "b4c60213fc91bc472891f2f09d451f54fcdb5a37",
+"head": "0dc741d7b1d5568469446ea9af03a376fb43a442",
 "mine": false,
-"conflicts": [
-"craft-i18n.rev",
-"crates/engine/src/cmd/file.rs",
-"crates/engine/src/lib.rs",
-"crates/engine/src/session/run.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9679,9 +9674,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5630,
@@ -10229,9 +10222,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5834,
@@ -10267,9 +10258,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5859,
@@ -10332,10 +10321,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs, model_bridge.rs"
-]
+"stale": []
 },
 {
 "n": 5880,
@@ -10400,9 +10386,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5888,
@@ -10413,10 +10397,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed exporter/text.rs"
-]
+"stale": []
 },
 {
 "n": 5889,
@@ -10535,10 +10516,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 5918,
@@ -10584,9 +10562,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5948,
@@ -11408,17 +11384,6 @@
 "author": "ljkx",
 "draft": false,
 "head": "628b6c94e6b1ee80ecf6b042e264803a6fffbf6a",
-"mine": false,
-"conflicts": [],
-"render": false,
-"stale": []
-},
-{
-"n": 6184,
-"title": "Add Layout Options beside selected pictures",
-"author": "hsalimi79",
-"draft": false,
-"head": "561e2a239afccc4248c464bf427212a89719319d",
 "mine": false,
 "conflicts": [],
 "render": false,

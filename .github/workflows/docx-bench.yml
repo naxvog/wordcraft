@@ -4,9 +4,9 @@ name: docx bench
 #   plan      scan.py: open PRs, what to bench (new, new commits, stale against main), the gate. Runs no PR code.
 #   baseline  main at the round's commit, when it has no run yet. The only job that saves the cargo cache.
 #   bench     one job per PR, 16 at a time: merged into the baseline, built and scored without network (pr.sh)
-#   combine   every PR that raised the score merged together, with and without v66-exclude.txt (combine.sh)
+#   combine   every PR that raised the score merged together, with and without v67-exclude.txt (combine.sh)
 #   publish   checks the results (collect.py), commits them to the bench-results branch, renders issue-body.md
-# State (runs, PR list, v66-exclude.txt, v66-notes.md) lives in the bench-results branch.
+# State (runs, PR list, v67-exclude.txt, v67-notes.md) lives in the bench-results branch.
 # Start a round: gh workflow run docx-bench.yml -R naxvog/wordcraft [-f max=N] [-f all=true]
 # Then post the issue from your machine: .github/docx-bench/post-issue.sh
 
@@ -21,7 +21,7 @@ on:
         type: boolean
         default: false
       only:
-        description: 'Probe: instead of the two combined branches, merge only these PRs (space-separated) into v66-combined-only'
+        description: 'Probe: instead of the two combined branches, merge only these PRs (space-separated) into v67-combined-only'
         default: ''
 
 permissions:
@@ -32,7 +32,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DOCXIDE_REF: d7afc499c1c302502097fa36cc59df17b5a51f8b   # naxvog/docxide-pdf wordcraft-comparison (harness + fixtures)
+  DOCXIDE_REF: 3f4fd97007c43e5834780e354209aad958078e9f   # naxvog/docxide-pdf wordcraft-comparison (harness + fixtures); v66 used tag wordcraft-v66
   FONTS_REF: abb83316d96aa59c1cf64784289e378fe9fa5695     # storytold/craft-fonts (CRAFT_FONTS_DIR)
   GIST: https://gist.githubusercontent.com/naxvog/54e2039e999cdeacfc0ed59b8da3c6e6/raw/69fd1eff58d0937e943fa2dacce535135da43dce
   BENCH_STATE: ${{ github.workspace }}/state
@@ -63,14 +63,14 @@ jobs:
           [[ $MAX =~ ^[0-9]+$ ]] || { echo "max must be a number"; exit 1; }
           (( MAX > 256 )) && MAX=256   # GitHub's limit for one matrix
           python3 -I .github/docx-bench/scan.py $ALL
-          base=v66-main-$(git -C wc rev-parse --short=9 origin/main)
+          base=v67-main-$(git -C wc rev-parse --short=9 origin/main)
           {
             echo "main=$(git -C wc rev-parse origin/main)"
             echo "base=$base"
             [ -f "state/runs/$base/wordcraft_comparison.json" ] && echo need_base=false || echo need_base=true
             echo -n "todo="
-            head -n "$MAX" state/v66-todo.txt | python3 -c 'import json, sys
-          heads = {str(q["n"]): q["head"] for q in json.load(open("state/v66-prs.json"))}
+            head -n "$MAX" state/v67-todo.txt | python3 -c 'import json, sys
+          heads = {str(q["n"]): q["head"] for q in json.load(open("state/v67-prs.json"))}
           print(json.dumps([{"pr": l.strip(), "head": heads[l.strip()]} for l in sys.stdin if l.strip()]))'
           } >> "$GITHUB_OUTPUT"
           tail -4 "$GITHUB_OUTPUT" | cut -c1-300
@@ -78,9 +78,9 @@ jobs:
         with:
           name: plan
           path: |
-            state/v66-prs.json
-            state/v66-removed.json
-            state/v66-todo.txt
+            state/v67-prs.json
+            state/v67-removed.json
+            state/v67-todo.txt
           retention-days: 7
 
   baseline:
@@ -124,7 +124,7 @@ jobs:
         run: .github/docx-bench/pr.sh "$PR" "$HEAD" "$BASE"
       - if: always()
         uses: actions/upload-artifact@v7
-        with: {name: 'run-v66-pr${{ matrix.pr }}', path: 'run/v66-pr${{ matrix.pr }}', retention-days: 7}
+        with: {name: 'run-v67-pr${{ matrix.pr }}', path: 'run/v67-pr${{ matrix.pr }}', retention-days: 7}
 
   combine:
     needs: [plan, baseline, bench]
@@ -152,15 +152,15 @@ jobs:
           python3 -I .github/docx-bench/collect.py art
           [ -f "state/runs/$BASE/wordcraft_comparison.json" ] || { echo "no baseline run for $BASE"; exit 1; }
           echo "$BASE" > state/current-main
-          ex=; [ "$VARIANT" = combined-excl ] && ex=$(cat state/v66-exclude.txt 2>/dev/null)
-          [ "$VARIANT" = combined-excl ] && [ -z "$ex" ] && { echo "v66-exclude.txt is empty: same as combined"; exit 0; }
+          ex=; [ "$VARIANT" = combined-excl ] && ex=$(cat state/v67-exclude.txt 2>/dev/null)
+          [ "$VARIANT" = combined-excl ] && [ -z "$ex" ] && { echo "v67-exclude.txt is empty: same as combined"; exit 0; }
           [ "$VARIANT" = combined-only ] || ONLY=
           [[ "$ONLY" =~ ^[0-9\ ]*$ ]] || { echo "only: PR numbers and spaces"; exit 1; }
           export ONLY
-          .github/docx-bench/combine.sh "v66-$VARIANT" $ex
+          .github/docx-bench/combine.sh "v67-$VARIANT" $ex
       - if: always()
         uses: actions/upload-artifact@v7
-        with: {name: 'run-v66-${{ matrix.variant }}', path: 'run/v66-${{ matrix.variant }}', retention-days: 7}
+        with: {name: 'run-v67-${{ matrix.variant }}', path: 'run/v67-${{ matrix.variant }}', retention-days: 7}
 
   publish:
     needs: [plan, baseline, bench, combine]
@@ -187,9 +187,9 @@ jobs:
           python3 -I .github/docx-bench/collect.py art
           [ -f "state/runs/$BASE/wordcraft_comparison.json" ] && echo "$BASE" > state/current-main
           # what this round didn't get to stays queued for the next one
-          ls art | sed -n 's/^run-v66-pr//p' > done.txt
-          grep -vxFf done.txt state/v66-todo.txt > todo.txt || true
-          mv todo.txt state/v66-todo.txt
+          ls art | sed -n 's/^run-v67-pr//p' > done.txt
+          grep -vxFf done.txt state/v67-todo.txt > todo.txt || true
+          mv todo.txt state/v67-todo.txt
           python3 -I .github/docx-bench/issue.py > state/issue-body.md
           cd state
           git add -A

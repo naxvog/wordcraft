@@ -57,7 +57,8 @@ ok = [q for q in prs if not q['draft'] and not q['conflicts']]
 norender = [q for q in ok if not q['render'] and not load(f"{VER}-pr{q['n']}")]
 conflicting = [q for q in prs if q['conflicts'] and not q['draft']]
 done = {str(q['n']) for q, _ in measured + nochange}
-failed = sorted({l.split(':')[0] for l in open(f'{B}/{VER}-summary.tsv') if ': bench failed' in l} - done)
+_sum = open(f'{B}/{VER}-summary.tsv').readlines() if os.path.exists(f'{B}/{VER}-summary.tsv') else []  # a new suite has none yet
+failed = sorted({l.split(':')[0] for l in _sum if ': bench failed' in l} - done)
 todo = [l.strip() for l in open(f'{B}/{VER}-todo.txt') if l.strip()] if os.path.exists(f'{B}/{VER}-todo.txt') else []
 _rm = json.load(open(f'{B}/{VER}-removed.json')) if os.path.exists(f'{B}/{VER}-removed.json') else []
 removed_txt = '; '.join(f"{lab} {', '.join('#' + str(r['n']) for r in _rm if r['state'] == s)}"

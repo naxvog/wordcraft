@@ -5,7 +5,7 @@ import functools, json, os, re, statistics as st, subprocess
 B = os.environ.get('BENCH_STATE') or os.path.dirname(os.path.abspath(__file__))
 REPO = os.environ.get('BENCH_REPO') or '/home/naxvog/Projects/wordcraft'
 GH = 'storytold/wordcraft'
-VER = 'v66'
+VER = 'v67'
 # Files whose change can move the docxide score. In the 321 runs of the v66 round, no PR that changed none of
 # them changed a single fixture (97 runs would have been skipped). scan.py --all benches the rest too.
 RENDER = re.compile(r'^crates/(docx|layout|render|pdf|fonts)/src/')
@@ -40,7 +40,7 @@ def current_base():
 
 def run_base(run):
     p = f'{B}/runs/{run}/base'
-    return open(p).read().strip() if os.path.exists(p) else f'{VER}-main-e919982fa'
+    return open(p).read().strip() if os.path.exists(p) else 'v66-main-e919982fa'
 
 
 def run_commit(run):

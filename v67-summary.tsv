@@ -6,3 +6,7 @@
 5516: dependencies don't resolve once merged
 4408: bench failed: doesn't build once merged with main
 5451: bench failed: doesn't build once merged with main
+5737: bench failed: doesn't build once merged with main
+6122: bench failed: doesn't build once merged with main
+5950: dependencies don't resolve once merged
+6400: bench failed: doesn't build once merged with main

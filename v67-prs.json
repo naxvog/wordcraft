@@ -989,6 +989,17 @@
 "stale": []
 },
 {
+"n": 1588,
+"title": "Localize checker findings and citation labels after catalog cutover",
+"author": "haranishi",
+"draft": false,
+"head": "fbecfe4a3c5894279b877aaaaef4da8719c2bb26",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
 "n": 1630,
 "title": "Tables without w:tblGrid take their grid from the cells, and widths wider than the page are squeezed like Word",
 "author": "Morzilla",
@@ -12782,10 +12793,10 @@
 },
 {
 "n": 6704,
-"title": "M14: list TIFF in supported picture formats",
+"title": "M14: expose supported TIFF pictures in choosers and errors",
 "author": "MMexicann",
 "draft": false,
-"head": "44b6945afc4017a057eca328c0aa3640bdd02e3f",
+"head": "9f42edb8ea48ed956810dfc5ca9da28ffd698d97",
 "mine": false,
 "conflicts": [],
 "render": false,

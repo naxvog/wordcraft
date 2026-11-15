@@ -7943,9 +7943,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5073,
@@ -8088,9 +8086,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5096,
@@ -8101,9 +8097,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5098,
@@ -8205,10 +8199,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs, pass.rs, export.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5133,
@@ -8423,9 +8414,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5182,
@@ -9328,10 +9317,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed media.rs"
-]
+"stale": []
 },
 {
 "n": 5500,

@@ -33,6 +33,17 @@
 "stale": []
 },
 {
+"n": 3821,
+"title": "Tables: a file with no default table style gives its tables no cell margins",
+"author": "naxvog",
+"draft": false,
+"head": "d5e4e0927256b0be6d5a0d5e96d0647438791a35",
+"mine": true,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
 "n": 3823,
 "title": "Layout: in older documents, tabs behind a float keep their text on the row",
 "author": "naxvog",
@@ -367,6 +378,28 @@
 "stale": []
 },
 {
+"n": 983,
+"title": "Proofing: affix engine and Hunspell discovery come from craft-proof",
+"author": "brzuchal",
+"draft": true,
+"head": "f0912656879a49bec48b20f4e74075f7a6bd7950",
+"mine": false,
+"conflicts": [
+"Cargo.lock",
+"crates/proof/Cargo.toml",
+"crates/proof/src/cs/suggest.rs",
+"crates/proof/src/es/suggest.rs",
+"crates/proof/src/hunspell.rs",
+"crates/proof/src/id/suggest.rs",
+"crates/proof/src/lang.rs",
+"crates/proof/src/lib.rs",
+"crates/proof/src/pl/suggest.rs",
+"crates/proof/src/pt/suggest.rs"
+],
+"render": true,
+"stale": []
+},
+{
 "n": 1024,
 "title": "Fonts: embed Carlito and Caladea for Calibri and Cambria documents",
 "author": "przemek-arch",
@@ -376,6 +409,19 @@
 "conflicts": [
 "crates/fonts/build.rs",
 "crates/fonts/src/lib.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 1033,
+"title": "Zoom: the shared craft-ui ZoomBar and Slider",
+"author": "brzuchal",
+"draft": true,
+"head": "dca96f1d98368d0e0b9ae45df1166bec47eb19ed",
+"mine": false,
+"conflicts": [
+"Cargo.lock"
 ],
 "render": true,
 "stale": []
@@ -535,6 +581,19 @@
 "crates/proof/src/hyphen.rs",
 "crates/proof/src/lang.rs",
 "crates/proof/src/lib.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 1224,
+"title": "File page: the shared navigation column and places panel",
+"author": "brzuchal",
+"draft": true,
+"head": "8ea646b194e80293164c05b724e48714f55b0728",
+"mine": false,
+"conflicts": [
+"Cargo.lock"
 ],
 "render": true,
 "stale": []
@@ -778,6 +837,20 @@
 "stale": []
 },
 {
+"n": 1451,
+"title": "web: opt-in self-hosted update notice and admin-triggered update (feature self-hosted-update)",
+"author": "Dejan-Port",
+"draft": false,
+"head": "4728599419453698b231419903466191c6139b9b",
+"mine": false,
+"conflicts": [
+"Cargo.lock",
+"xtask/src/main.rs"
+],
+"render": true,
+"stale": []
+},
+{
 "n": 1472,
 "title": "fix: resolve open issues and maintain multi-platform build scope",
 "author": "asmodeus-oos",
@@ -871,6 +944,19 @@
 "crates/formats/src/rtf/export.rs"
 ],
 "render": false,
+"stale": []
+},
+{
+"n": 1521,
+"title": "Unify WordCraft dark chrome with ArtCraft palette",
+"author": "pourie-he",
+"draft": false,
+"head": "f94f21fccbdcf013d71f0b8c192786f324f43ae8",
+"mine": false,
+"conflicts": [
+"Cargo.lock"
+],
+"render": true,
 "stale": []
 },
 {
@@ -1178,6 +1264,20 @@
 "Cargo.lock",
 "crates/engine/src/session.rs",
 "crates/fonts/src/lib.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 1897,
+"title": "Add wordcraft-hub: the CraftHub client path (the v3 adapter, spec \u00a73.6 phase C / \u00a718.4 row 2)",
+"author": "hasan-sdaif",
+"draft": true,
+"head": "d8fc332db59f060c983612a6385841f2fd3f510e",
+"mine": false,
+"conflicts": [
+"Cargo.lock",
+"Cargo.toml"
 ],
 "render": true,
 "stale": []
@@ -3992,7 +4092,7 @@
 "head": "61076fecf01c9517e813c437bfa61e9774384529",
 "mine": false,
 "conflicts": [],
-"render": false,
+"render": true,
 "stale": []
 },
 {
@@ -4202,7 +4302,7 @@
 "apps/wordcraft-cli/src/main.rs",
 "xtask/src/layers.rs"
 ],
-"render": false,
+"render": true,
 "stale": []
 },
 {
@@ -4616,6 +4716,19 @@
 "crates/engine/src/cmd/page.rs"
 ],
 "render": false,
+"stale": []
+},
+{
+"n": 3528,
+"title": "feat(linux): add KDE Plasma Global Menu and system appearance",
+"author": "Dexarim",
+"draft": true,
+"head": "87fda8130340e0b0809e4ae7c586f80f69567a4d",
+"mine": false,
+"conflicts": [
+"Cargo.lock"
+],
+"render": true,
 "stale": []
 },
 {
@@ -5767,6 +5880,20 @@
 "stale": []
 },
 {
+"n": 4369,
+"title": "Fix window geometry at interface zoom and restore maximized startup",
+"author": "abdallah-shehawey",
+"draft": false,
+"head": "ab8740874008f6985636caf1d60c54a995f8daee",
+"mine": false,
+"conflicts": [
+"Cargo.lock",
+"Cargo.toml"
+],
+"render": true,
+"stale": []
+},
+{
 "n": 4372,
 "title": "feat(mcp): accept more than one --automation-read-root / --automation-write-root (#3582)",
 "author": "MyAIPlugins",
@@ -5928,6 +6055,28 @@
 "crates/engine/src/session.rs"
 ],
 "render": false,
+"stale": []
+},
+{
+"n": 4454,
+"title": "android: vendored winit with the Android mouse input filled in, and the modifier stamping it implies (part 5 of 6)",
+"author": "Kaedo17",
+"draft": true,
+"head": "093f334c318f75901228cc3e519dfc402e09bcb3",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 4455,
+"title": "ui: a finger pans the page; a still hold belongs to the long-press menu; the port's docs (part 6 of 6)",
+"author": "Kaedo17",
+"draft": true,
+"head": "66128304bdafa523d005210ca2f54d8b0c7915c2",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 },
 {
@@ -6252,6 +6401,17 @@
 "author": "pakiat",
 "draft": false,
 "head": "e4d2f3255a0a56ae334689712aaae740385c36c4",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 4581,
+"title": "macOS: the Emoji & Symbols picker types into the page",
+"author": "sebastian-schmitt",
+"draft": false,
+"head": "c4c11509e37f3d42588fbb61a3cb03cd3eafd305",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -6861,6 +7021,17 @@
 "stale": []
 },
 {
+"n": 4743,
+"title": "Romanian proofing: shared craft-proof integration and conservative context (0.15)",
+"author": "ro-legal-docx",
+"draft": true,
+"head": "83c7202055c1bd282463ab3e37226bd33f62c655",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
 "n": 4747,
 "title": "Equations: text before a fraction stays outside it, arrow keys end the typing undo step",
 "author": "VoiceLessQ",
@@ -6882,6 +7053,17 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 4756,
+"title": "android: the selection fixes from the device passes (part 7 of 7)",
+"author": "Kaedo17",
+"draft": true,
+"head": "4cfc905dde1984d069c0f1eafa4a00f867b4b5c2",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 },
 {
@@ -7376,6 +7558,17 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 4951,
+"title": "Screen readers on Windows: the whole document as one text, as Word exposes it (#3174)",
+"author": "squalorso",
+"draft": true,
+"head": "29309e75a588d7d17296511e29fab33f5d50773e",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 },
 {
@@ -8454,6 +8647,20 @@
 "stale": []
 },
 {
+"n": 5272,
+"title": "Update prompt and Check for Updates card follow the interface language (#5257)",
+"author": "cdhdt",
+"draft": true,
+"head": "1a74e2f0744da600c2272461b231187805aead91",
+"mine": false,
+"conflicts": [
+"Cargo.lock",
+"Cargo.toml"
+],
+"render": true,
+"stale": []
+},
+{
 "n": 5274,
 "title": "Proofing: detect the language of Latin and Cyrillic text on typing, paste and open (#3353)",
 "author": "FPP-Labs",
@@ -8791,6 +8998,20 @@
 "crates/docx/src/write.rs",
 "crates/docx/src/write/parts.rs",
 "crates/docx/src/write/story/para.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 5394,
+"title": "update: pin craft-update to the Windows relaunch fix",
+"author": "solarmaster961",
+"draft": false,
+"head": "a88fb6970ee92dc9a929e5aa0312d33a08881cc2",
+"mine": false,
+"conflicts": [
+"Cargo.lock",
+"Cargo.toml"
 ],
 "render": true,
 "stale": []
@@ -9846,7 +10067,7 @@
 "Cargo.lock",
 "xtask/src/layers.rs"
 ],
-"render": false,
+"render": true,
 "stale": []
 },
 {
@@ -10436,6 +10657,17 @@
 "crates/formats/src/rtf/word.rs"
 ],
 "render": false,
+"stale": []
+},
+{
+"n": 6015,
+"title": "Web host: AutoSave through a page that stores saves in place",
+"author": "dooreelko",
+"draft": true,
+"head": "67293f5ae470ce672e10e0af102864aa7f927509",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 },
 {
@@ -11263,6 +11495,17 @@
 "stale": []
 },
 {
+"n": 6309,
+"title": "Updates: take craft-update from craft-libs main at e98299546",
+"author": "dotCooCoo",
+"draft": false,
+"head": "53e6b06e61f1326f69ef6efaae44c6dc90fe0fe6",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
 "n": 6313,
 "title": "#6059: symbols such as \u25b2 \u203b \u2460 \u2163 \u2103 stand upright in vertical text, as Unicode's vertical orientation says",
 "author": "ljkx",
@@ -11345,6 +11588,17 @@
 "author": "keithcsqueensu",
 "draft": false,
 "head": "f94aecace7a8bd871aed6e0761e6447928a0795a",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6363,
+"title": "Linux: enable native Wayland touchpad pinch zoom (#1688)",
+"author": "helpnoob",
+"draft": false,
+"head": "5d79b0ce56d5f8feb1b5d2d74f05c529e4ac8331",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -12714,6 +12968,17 @@
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 6759,
+"title": "Layout: a paragraph over many pages lays out in linear time (#6757)",
+"author": "RickiNano",
+"draft": true,
+"head": "d53a740be1a179fd0f1e126a27d2110dfffc5df8",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 }
 ]

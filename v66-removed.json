@@ -653,5 +653,10 @@
 "n": 6590,
 "title": "DOCX: an equation nested more than 32 deep keeps its innermost content (#6071)",
 "state": "CLOSED"
+},
+{
+"n": 5972,
+"title": "Charts: draw combo charts (several chart types in one plot area, secondary value axis) and stock charts (#5090)",
+"state": "CLOSED"
 }
 ]

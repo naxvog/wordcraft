@@ -8,9 +8,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 1757,
@@ -999,9 +997,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 1715,
@@ -2756,9 +2752,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2498,
@@ -2798,9 +2792,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2508,
@@ -3296,9 +3288,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2713,
@@ -4861,9 +4851,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed exporter.rs, lib.rs"
-]
+"stale": []
 },
 {
 "n": 3604,
@@ -5489,10 +5477,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed ctx.rs, flow.rs"
-]
+"stale": []
 },
 {
 "n": 4134,
@@ -5758,9 +5743,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 4294,
@@ -5816,10 +5799,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 4320,
@@ -7959,21 +7939,12 @@
 "title": "#5065: a DOCX border without w:sz is an eighth of a point",
 "author": "Nghiathan13",
 "draft": false,
-"head": "7bc3f3bc6c2f7c5cfd0a9f2341c065dd8d5525c0",
+"head": "939f080096c3246489140ee167aa276c60a8dbf0",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs",
-"crates/docx/src/read/styles.rs",
-"crates/formats/src/model/from_doc.rs",
-"crates/formats/src/odt/package.rs",
-"crates/formats/src/odt/styles.rs",
-"crates/formats/src/odt/tests_more/page_setup.rs",
-"crates/formats/src/odt/tests_more/para_borders.rs",
-"crates/formats/src/odt/writer/props.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
-"main changed read/props.rs, read/styles.rs"
+"new commits"
 ]
 },
 {
@@ -10358,7 +10329,7 @@
 "title": "Compare: diff footnote and endnote content (#5842)",
 "author": "batistalucasv",
 "draft": false,
-"head": "84cb7a125619ed8caa64c3ea1b556a290dd21631",
+"head": "ed27bbce56a767f8463081c37dd500c997c633db",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10756,25 +10727,6 @@
 "render": false,
 "stale": [
 "new commits"
-]
-},
-{
-"n": 5972,
-"title": "Charts: draw combo charts (several chart types in one plot area, secondary value axis) and stock charts (#5090)",
-"author": "tpawley2001",
-"draft": false,
-"head": "f13d81e78b600410498db59cf333346a30446b48",
-"mine": false,
-"conflicts": [
-"crates/docx/src/read/chart.rs",
-"crates/docx/src/read/chart/model.rs",
-"crates/docx/src/read/chart/parse.rs",
-"crates/docx/src/read/chart/plot.rs",
-"crates/docx/src/read/chart/polar.rs"
-],
-"render": true,
-"stale": [
-"main changed read/chart.rs, read/chart/model.rs, read/chart/parse.rs \u2026"
 ]
 },
 {

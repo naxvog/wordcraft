@@ -15,6 +15,15 @@ NONCLI = re.compile(r'\.(md|tsv)$|^(docs|contributors|crates/ui-egui|apps/wordcr
                     r'|tests\.rs$|/tests/|^NOTICE$')
 
 
+# A moved git dependency can change every fixture: since #6603 and #6661 the DOCX/RTF readers, the document model, zip
+# and image decoding are storytold/craft-libs crates, pinned by one `rev`. A diff line that sets a rev or a git source.
+GITDEP = re.compile(r'^[-+](?![-+])(.*\brev\s*=|source = "git\+)', re.M)
+assert GITDEP.search('+source = "git+https://github.com/storytold/craft-libs?rev=5a457dda#5a457dda"') and \
+    GITDEP.search('-craft-docx = { git = "https://github.com/storytold/craft-libs", rev = "41fb2275" }') and \
+    not GITDEP.search('+++ b/Cargo.lock\n+version = "1.2"\n+ "zip",')
+DEPFILES = ('Cargo.lock', '*Cargo.toml')
+
+
 def git(*a):
     return subprocess.run(['git', '-C', REPO, *a], capture_output=True, text=True).stdout
 
@@ -32,6 +41,16 @@ def pr_files(n):
     """Files PR n changes against its merge base with main."""
     mb = git('merge-base', f'pr/{n}', 'origin/main').strip()
     return git('diff', '--name-only', mb, f'pr/{n}').split() if mb else []
+
+
+def moves_git_dep(a, b):
+    """Whether going from commit a to b changes a git dependency's rev."""
+    return bool(GITDEP.search(git('diff', a, b, '--', *DEPFILES)))
+
+
+def pr_moves_git_dep(n):
+    mb = git('merge-base', f'pr/{n}', 'origin/main').strip()
+    return bool(mb) and moves_git_dep(mb, f'pr/{n}')
 
 
 def current_base():
@@ -74,6 +93,8 @@ def stale(n, head):
         both = sorted(set(render_files(names(bc, 'origin/main'))) & set(render_files(pr_files(n))))
         if both:
             why.append('main changed ' + ', '.join(f.split('/src/')[-1] for f in both[:3]) + (' …' if len(both) > 3 else ''))
+        if pr_moves_git_dep(n) and moves_git_dep(bc, 'origin/main'):
+            why.append('main moved craft-libs')
     return why
 
 

@@ -214,7 +214,11 @@ next round; {len(conflicting)} conflict with `main`.
   regressions list fixtures that moved by more than 0.5.
 - **Rounds:** a new baseline whenever `main` moves; a PR is rerun when it gets new commits, or when its result
   changed fixtures and `main` has since changed a rendering file it changes too. PRs that change no file in
-  `crates/{{docx,layout,render,pdf,fonts}}/src` aren't benched (in 321 runs, none of them changed a fixture).
+  `crates/{{docx,layout,render,pdf,fonts}}/src` aren't benched (in 321 runs, none of them changed a fixture),
+  unless they move a git dependency. Since #6603 and #6661 the DOCX and RTF readers, zip and image decoding are
+  [craft-libs](https://github.com/storytold/craft-libs) crates that share one `rev`, so a reader fix lands there
+  and reaches WordCraft as a PR that updates that `rev` in `Cargo.toml`/`Cargo.lock`: such a PR is benched like a
+  rendering change, and its run counts as stale once `main` moves craft-libs too.
 - **Safety:** PR code is built and run in containers without network or capabilities, with their own cargo caches,
   seeing the suite read-only; dependencies are downloaded without running any of the PR's code.
 - **Environment:** Linux container, debug build of `wordcraft-cli` (the layout code is the same as release), fonts

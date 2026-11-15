@@ -1,7 +1,7 @@
 """usage: scan.py [--all]
 Refreshes the PR list from GitHub and decides what the next bench round reruns. Writes:
-  <VER>-prs.json     every candidate PR (touches a layout/rendering/reading crate): title, author, head, draft,
-                     conflicts with main in code, render (changes a file that can move the score),
+  <VER>-prs.json     every candidate PR (touches a layout/rendering/reading crate, or moves a git dependency): title, author, head, draft,
+                     conflicts with main in code, render (changes a file or a git dependency that can move the score),
                      stale (reasons its run no longer reflects the PR on today's main)
   <VER>-removed.json PRs that left the list (merged or closed)
   <VER>-todo.txt     PRs to bench now: benchable and never benched, or with new commits, or stale
@@ -9,7 +9,7 @@ Refreshes the PR list from GitHub and decides what the next bench round reruns. 
 --all also benches PRs that change no rendering file (a safety net for the RENDER filter, once per suite version)."""
 import json, os, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # run with -I, which leaves the script's dir out
-from benchlib import B, GH, VER, REPO, NONCLI, git, render_files, stale, load, delta, run_base
+from benchlib import B, GH, VER, REPO, NONCLI, git, render_files, pr_moves_git_dep, stale, load, delta, run_base
 
 ALL = '--all' in sys.argv
 CORE = ('crates/layout/', 'crates/render/', 'crates/pdf/', 'crates/fonts/src/', 'crates/docx/src/', 'crates/doc/src/',
@@ -59,7 +59,9 @@ subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin', 'main'], check=True)
 # shortcut: GitHub lists at most 100 files per PR here; a bigger PR whose rendering changes all sit past the first 100
 # is missed. Upgrade to `gh api repos/.../pulls/N/files --paginate` for PRs with 100 files if that ever matters.
 P = open_prs()
-cand = [p for p in P if any(f['path'].startswith(CORE) and code(f['path']) for f in p['files'])]
+core = {p['number'] for p in P if any(f['path'].startswith(CORE) and code(f['path']) for f in p['files'])}
+cargo = [p for p in P if p['number'] not in core and any(f['path'].endswith(('Cargo.toml', 'Cargo.lock')) for f in p['files'])]
+cand = [p for p in P if p['number'] in core]
 
 old_path = f'{B}/{VER}-prs.json'
 old = {q['n']: q for q in json.load(open(old_path))} if os.path.exists(old_path) else {}
@@ -70,11 +72,13 @@ gone = [n for n in old if n not in open_n and n not in {r['n'] for r in removed}
 for n in gone:
     removed.append(dict(n=n, title=old[n]['title'], state=gh('pr', 'view', str(n), '-R', GH, '--json', 'state', '-q', '.state').strip()))
 
-refetch = [p['number'] for p in cand if git('rev-parse', '-q', '--verify', f"pr/{p['number']}").strip() != p['headRefOid']]
+refetch = [p['number'] for p in cand + cargo if git('rev-parse', '-q', '--verify', f"pr/{p['number']}").strip() != p['headRefOid']]
 for i in range(0, len(refetch), 100):
     subprocess.run(['git', '-C', REPO, 'fetch', '-q', '-f', 'origin',
                     *[f'+pull/{n}/head:refs/heads/pr/{n}' for n in refetch[i:i + 100]]], check=True)
 
+# PRs that change no reading or rendering code but move a git dependency (a craft-libs update) are candidates too
+cand += [p for p in cargo if pr_moves_git_dep(p['number'])]
 failed = dict(l.split() for l in open(f'{B}/{VER}-failed.txt')) if os.path.exists(f'{B}/{VER}-failed.txt') else {}
 Q, todo = [], []
 for p in cand:
@@ -84,7 +88,7 @@ for p in cand:
     q = dict(n=n, title=p['title'], author=p['author']['login'], draft=p['isDraft'],
              head=head, mine=p['author']['login'] == 'naxvog',
              conflicts=[f for f in conf if not NONCLI.search(f)],
-             render=bool(render_files([f['path'] for f in p['files']])))
+             render=bool(render_files([f['path'] for f in p['files']])) or pr_moves_git_dep(n))
     run = load(f'{VER}-pr{n}')
     q['stale'] = stale(n, head) if run else []
     if not q['draft'] and not q['conflicts'] and (q['render'] or ALL):

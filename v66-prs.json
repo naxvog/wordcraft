@@ -10637,9 +10637,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5968,
@@ -11615,17 +11613,6 @@
 "stale": []
 },
 {
-"n": 6241,
-"title": "Fix Page Width zoom in Draft view",
-"author": "hsalimi79",
-"draft": false,
-"head": "5c49e300bd1068d06013626169de083cadf905b6",
-"mine": false,
-"conflicts": [],
-"render": false,
-"stale": []
-},
-{
 "n": 6243,
 "title": "DOCX: keep each style's semiHidden, unhideWhenUsed and hidden flags, aliases, Automatically update and e-mail style flags on save",
 "author": "tpawley2001",
@@ -11840,9 +11827,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6361,
@@ -11961,9 +11946,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"main changed lib.rs, exporter.rs"
-]
+"stale": []
 },
 {
 "n": 6399,
@@ -12097,9 +12080,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6458,
@@ -12110,9 +12091,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6459,
@@ -12123,9 +12102,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 6470,

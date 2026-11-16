@@ -10,7 +10,7 @@ from benchlib import B, VER, load, means, delta, run_base, current_base
 prev, runs = sys.argv[1], sys.argv[2:]
 base = current_base()
 bm = means(load(base))
-print(f"Baseline {base.split('-')[-1]}: SSIM {bm['ssim']:.2f}" + (' (unchanged)' if base == prev else f" (new; was {prev.split('-')[-1]})"))
+print(f"Baseline {base.split('-', 2)[2]}: SSIM {bm['ssim']:.2f}" + (' (unchanged)' if base == prev else f" (new; was {prev.split('-', 2)[2]})"))
 for c in (f'{VER}-combined-excl', f'{VER}-combined', f'{VER}-combined-only'):
     if (r := load(c)) and run_base(c) == base:
         merged = open(f'{B}/runs/{c}/merged').read().split()

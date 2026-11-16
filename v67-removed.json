@@ -1,1 +1,27 @@
-[]
+[
+{
+"n": 1791,
+"title": "docx: documentProtection without w:enforcement is enforced, as in Word, and survives a save",
+"state": "CLOSED"
+},
+{
+"n": 5073,
+"title": "geom: satisfy Clippy pedantic lints (M14)",
+"state": "MERGED"
+},
+{
+"n": 5702,
+"title": "ODT: a style or list change keeps the file's other definitions (gap 19)",
+"state": "CLOSED"
+},
+{
+"n": 5703,
+"title": "ODT: a page setup change keeps the file's other page definitions (gap 19)",
+"state": "CLOSED"
+},
+{
+"n": 5723,
+"title": "ODT: a list item's further paragraphs stay paragraphs (gap 19)",
+"state": "CLOSED"
+}
+]

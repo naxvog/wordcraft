@@ -8,7 +8,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 1757,
@@ -19,7 +21,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2552,
@@ -30,7 +34,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3821,
@@ -41,7 +47,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3823,
@@ -52,7 +60,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4635,
@@ -120,7 +130,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5443,
@@ -131,7 +143,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5455,
@@ -142,7 +156,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5457,
@@ -153,7 +169,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5458,
@@ -164,7 +182,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6003,
@@ -175,7 +195,9 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 108,
@@ -890,7 +912,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 1489,
@@ -997,7 +1021,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 1630,
@@ -1076,7 +1102,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 1715,
@@ -1087,7 +1115,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 1753,
@@ -1122,19 +1152,6 @@
 "mine": false,
 "conflicts": [],
 "render": false,
-"stale": []
-},
-{
-"n": 1791,
-"title": "docx: documentProtection without w:enforcement is enforced, as in Word, and survives a save",
-"author": "midasmatterhorn",
-"draft": false,
-"head": "7e148cceb1ed76dfac972035ef3b5b3e9ab9fa27",
-"mine": false,
-"conflicts": [
-"crates/docx/src/read/meta.rs"
-],
-"render": true,
 "stale": []
 },
 {
@@ -1552,11 +1569,9 @@
 "title": "Copy puts list numbers and bullets in the clipboard's text (#2015)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "7659c561821b3652ad4cfcb713a51b67c8bdc62d",
+"head": "1575ef8825c2a9e52a43857c2521e381821fdce8",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/paste.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -1691,7 +1706,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2065,
@@ -1832,7 +1849,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2120,
@@ -2355,7 +2374,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2356,
@@ -2366,7 +2387,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2368,
@@ -2592,7 +2615,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2455,
@@ -2657,7 +2682,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2465,
@@ -2668,7 +2695,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2468,
@@ -2774,7 +2803,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2493,
@@ -2785,7 +2816,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2496,
@@ -2796,7 +2829,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2498,
@@ -2832,11 +2867,14 @@
 "title": "Layout: a square-wrapped logo in the default header is drawn and pushes the body down",
 "author": "midasmatterhorn",
 "draft": false,
-"head": "9de723f64cf395ab791b2248614569644c0e91b9",
+"head": "7e7b401689e280efcf628b2325aa761fbd741427",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2508,
@@ -2847,7 +2885,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2512,
@@ -2869,7 +2909,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2518,
@@ -2908,11 +2950,14 @@
 "title": "Text frames in the body go where their frame puts them (#2406)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "5ae4585263f6a8482359d868f49e3f877c97954f",
+"head": "58da58bf859fe0b7d16ce329a6bac28dda7eef1a",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2533,
@@ -2923,7 +2968,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2535,
@@ -3049,7 +3096,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2606,
@@ -3207,14 +3256,9 @@
 "title": "Floating objects stack in Word's order, not the text's (#2638)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "3d077806077c9eaf68e73b2276be33ab85bce09d",
+"head": "2b9347bd488a1e2f5089f72fea41e5200bac8351",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/story/drawing.rs",
-"crates/docx/src/write.rs",
-"crates/docx/src/write/parts.rs",
-"crates/docx/src/write/story/drawing.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -3227,7 +3271,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2664,
@@ -3264,7 +3310,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2707,
@@ -3304,7 +3352,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2711,
@@ -3315,7 +3365,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2713,
@@ -3355,7 +3407,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2721,
@@ -3505,7 +3559,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2834,
@@ -3516,7 +3572,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 2838,
@@ -3815,7 +3873,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3024,
@@ -3998,7 +4058,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3154,
@@ -4090,7 +4152,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3198,
@@ -4101,7 +4165,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3200,
@@ -4285,7 +4351,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3337,
@@ -4548,7 +4616,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3465,
@@ -4570,7 +4640,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3473,
@@ -4789,7 +4861,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3566,
@@ -4842,7 +4916,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3604,
@@ -4853,7 +4929,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3764,
@@ -5119,7 +5197,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3833,
@@ -5130,7 +5210,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3834,
@@ -5141,7 +5223,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3858,
@@ -5166,7 +5250,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3884,
@@ -5253,7 +5339,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 3960,
@@ -5404,7 +5492,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4066,
@@ -5442,7 +5532,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4134,
@@ -5453,7 +5545,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4136,
@@ -5502,7 +5596,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4186,
@@ -5513,7 +5609,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4188,
@@ -5603,7 +5701,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4265,
@@ -5702,7 +5802,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4294,
@@ -5754,11 +5856,14 @@
 "title": "Proofing: hide spelling or grammar errors in this document only",
 "author": "dotCooCoo",
 "draft": false,
-"head": "4eeac27b3a320e9128e322f0b1e20aede6f774b6",
+"head": "dd557d1e06b1f13481552ebb9e7c6074876718b5",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4320,
@@ -5804,7 +5909,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4339,
@@ -5943,7 +6050,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4432,
@@ -6038,7 +6147,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4449,
@@ -6153,11 +6264,9 @@
 "title": "Insert \u203a Page Number: \"Page X of Y\" in the document's language (#4466)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "94be7e99252044312e4a3d653615325bac5b6012",
+"head": "85d1e9c15cdbaab80757acea7d221a748f7bcff0",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/insert/items.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -6223,7 +6332,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4494,
@@ -6317,7 +6428,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4532,
@@ -6335,14 +6448,9 @@
 "title": "Borders: preserve dashSmallGap and align border previews",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "2fef96870e9b8d9524108f0ac1c5154a1a409f00",
+"head": "4b596c77f468b6b8ad1b2323998c0171347cf5b5",
 "mine": false,
-"conflicts": [
-"crates/docbin/src/fmt.rs",
-"crates/formats/src/odt/writer/props.rs",
-"crates/formats/src/rtf/export.rs",
-"crates/formats/src/rtf/word.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -6368,7 +6476,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4565,
@@ -6379,7 +6489,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4571,
@@ -6390,7 +6502,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4580,
@@ -6401,7 +6515,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4581,
@@ -6412,7 +6528,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4582,
@@ -6425,6 +6543,17 @@
 "Cargo.lock",
 "crates/fonts/src/lib.rs"
 ],
+"render": true,
+"stale": []
+},
+{
+"n": 4593,
+"title": "RTF: preserve per-section headers and footers on export",
+"author": "ro-legal-docx",
+"draft": false,
+"head": "8cc502ae9fb5dcd8a6cac852d2d2080077ba7023",
+"mine": false,
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -6461,7 +6590,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4615,
@@ -6511,7 +6642,7 @@
 "title": "#4237: Set As Default saves a Normal template (Normal.dotx) that new documents start from",
 "author": "benandez",
 "draft": false,
-"head": "27ed4316832294425bb992c0efc9328f3c5b0fe0",
+"head": "dedd3f5fb2e5ebadc17b06ac2a4f84960b96c678",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -6575,7 +6706,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4640,
@@ -6702,7 +6835,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4661,
@@ -6835,12 +6970,9 @@
 "title": "DOCX: preserve table-only footer placement after save",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "c51e94cae028a474800596d52f560029a9a5cddc",
+"head": "8cef4ef86595b28ffca1b3230fecfc850e4cbf94",
 "mine": false,
-"conflicts": [
-"crates/docx/src/write/parts.rs",
-"crates/docx/src/write/story/blocks.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -6971,7 +7103,7 @@
 "title": "Lists: inherit numbering and align hanging paragraph indents",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "830d702b4d7c51577ecfd5ad4dbba93f842c510d",
+"head": "c045f81cde44240ffa9dbe1efd1f290017b2e144",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7022,7 +7154,7 @@
 "title": "Romanian proofing: shared craft-proof integration and conservative context (0.15)",
 "author": "ro-legal-docx",
 "draft": true,
-"head": "83c7202055c1bd282463ab3e37226bd33f62c655",
+"head": "3410e4ed46e41ae8b288a9f115e62b7687886647",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -7068,7 +7200,7 @@
 "title": "Table Design \u203a Borders: Line Style, Line Weight and Pen Color, the pen Draw Table and Borders draw with (#4589)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "3a2136aa2d3909f92abb90685c6376a1b7dd771d",
+"head": "b2884bff077e31655c73c065b8896218a1fd8624",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7146,7 +7278,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4795,
@@ -7157,7 +7291,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4797,
@@ -7224,11 +7360,14 @@
 "title": "Track Changes: a deleted list item's number is drawn as deleted text (#4828)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "1ae02e2c0b1a9b5292bf80a18b5d4ff8f0e299cf",
+"head": "350ad40fcd95539c8ccfd79eea28c395ee1aa5f2",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4839,
@@ -7252,11 +7391,14 @@
 "title": "Layout: continue oversized cantSplit rows across pages",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "f7196220a260b74defd4997d02c037dc1419cab4",
+"head": "ef226410efe2e4a3fc57fa903ca309e3cc8b42a1",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4845,
@@ -7399,7 +7541,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4871,
@@ -7424,7 +7568,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4875,
@@ -7492,14 +7638,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4912,
 "title": "engine: a research report template per GOST 7.32-2017",
 "author": "Bra1nZ",
 "draft": false,
-"head": "1fb4d0e2c58a44745f057b0d31b945a50d976f37",
+"head": "1e16d928fd36b4d87f0b51ae6428a19c2c9dddac",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7544,7 +7692,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 4934,
@@ -7644,7 +7794,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5003,
@@ -7655,7 +7807,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5004,
@@ -7666,7 +7820,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5005,
@@ -7814,7 +7970,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5061,
@@ -7858,13 +8016,9 @@
 "title": "DOCX: a Word 2007 locked canvas shows its shapes and WordArt, not just its picture (#5060)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "cc0d20788101c6ac3fa39bbc952d2d7ea741a208",
+"head": "d8de766aa0e3671fdbd846e6515a32ba0398370f",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/story.rs",
-"crates/docx/src/read/story/drawing.rs",
-"crates/docx/src/xml.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -7877,20 +8031,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
-},
-{
-"n": 5073,
-"title": "geom: satisfy Clippy pedantic lints (M14)",
-"author": "AxylumRust",
-"draft": false,
-"head": "0aefd4d025dfb9ca1682c90f65307fac2ab376ee",
-"mine": false,
-"conflicts": [
-"crates/geom/src/picture.rs"
-],
-"render": false,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5074,
@@ -7901,7 +8044,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5076,
@@ -8016,7 +8161,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5096,
@@ -8027,7 +8174,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5098,
@@ -8051,7 +8200,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5112,
@@ -8122,7 +8273,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5133,
@@ -8144,7 +8297,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5139,
@@ -8207,7 +8362,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5154,
@@ -8259,7 +8416,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5160,
@@ -8283,18 +8442,23 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5170,
 "title": "Layout: ignore trailing spacing after footnote separators",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "45accdb299d030a01efd97dbf1792e737046e8e2",
+"head": "8a954b90a35b4f2f717835cd1d52ed5f2ace66c0",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5176,
@@ -8305,7 +8469,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5177,
@@ -8316,7 +8482,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5181,
@@ -8327,7 +8495,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5182,
@@ -8409,7 +8579,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5201,
@@ -8596,16 +8768,9 @@
 "title": "DOCX: keep bookmarks placed directly in table rows (cell-range bookmarks)",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "e0787f67ad593a0eec44f8cdbeaea82c592415ba",
+"head": "6f83ee71fc23fc72c4e2b5482800d1d4af679afa",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/story.rs",
-"crates/docx/src/read/story/blocks.rs",
-"crates/docx/src/write.rs",
-"crates/docx/src/write/parts.rs",
-"crates/docx/src/write/story/blocks.rs",
-"crates/docx/src/write/story/object.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -8681,7 +8846,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5293,
@@ -8692,7 +8859,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5302,
@@ -8703,7 +8872,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5307,
@@ -8781,7 +8952,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5324,
@@ -8943,14 +9116,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5378,
 "title": "Save As: a name typed without an extension is saved with the format's, as Word adds .docx (#5368)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "718052f25f9cd25435a32b899bfcce76eb81f058",
+"head": "8f1ee4891130cb02059961b04b88feb03abc9325",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9047,7 +9222,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5427,
@@ -9093,7 +9270,7 @@
 "title": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "0697eab3a9ba7472a37dca192e1f7745ae910033",
+"head": "51176dcc50b612ae4f7b1dd089676d86a424ed45",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9146,7 +9323,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5463,
@@ -9170,7 +9349,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5483,
@@ -9204,11 +9385,14 @@
 "title": "Render: keep a metafile with huge bitmaps in the cache instead of parsing it on every repaint",
 "author": "vangel76",
 "draft": false,
-"head": "a37e404afdb0db7bd2f1e939ca37e3d92c481162",
+"head": "3e758d4e89c87922666aa0230653a4b487f20c70",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5500,
@@ -9316,7 +9500,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5546,
@@ -9327,14 +9513,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5554,
 "title": "Context menu: Accept Change and Reject Change on a tracked change",
 "author": "jimprince",
 "draft": false,
-"head": "6faa6da68980e93279a7d56fa213139cab849002",
+"head": "8ef4f8d6c5972c5a59b095d901ca243503ee2a8a",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9360,7 +9548,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5560,
@@ -9459,11 +9649,14 @@
 "title": "Tables in a header or footer: borders, handles, selection arrows, pen and eraser work while it is edited (#5558)",
 "author": "D13GOOOO",
 "draft": false,
-"head": "ba59f6c291d73d048733946eeb001ee95ba7d6ff",
+"head": "606969e0948c08d3c3768a90c5b26249a030358c",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5590,
@@ -9504,10 +9697,21 @@
 "title": "fix(clipboard): copied paragraphs keep their spacing and indents in other programs (#5537)",
 "author": "marcwgls",
 "draft": false,
-"head": "f0cf4ebbd3a6cb81e2f84acee84da94f94ba1fa8",
+"head": "f709ed18bfa3a701895bca5755fd401ec6fd5ab5",
 "mine": false,
 "conflicts": [],
 "render": false,
+"stale": []
+},
+{
+"n": 5601,
+"title": "Header pictures: while editing the header, a click selects its Behind Text picture wherever no header text covers it",
+"author": "benandez",
+"draft": false,
+"head": "1a0ce5cff52c62e6f2c525e6433fe385bd6d487b",
+"mine": false,
+"conflicts": [],
+"render": true,
 "stale": []
 },
 {
@@ -9526,7 +9730,7 @@
 "title": "Ctrl/Cmd+Shift+V pastes text only when no formatting was copied, as in Word (#1537)",
 "author": "benandez",
 "draft": false,
-"head": "b2450692f2e515e1f46d88ad7bcf29aee8974b3f",
+"head": "1e45749fdbc3b2baa8106f5bbfaf9a76ae7a6616",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9541,7 +9745,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5630,
@@ -9552,7 +9758,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5631,
@@ -9577,7 +9785,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5638,
@@ -9588,7 +9798,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5639,
@@ -9705,40 +9917,6 @@
 "stale": []
 },
 {
-"n": 5702,
-"title": "ODT: a style or list change keeps the file's other definitions (gap 19)",
-"author": "alehel",
-"draft": false,
-"head": "9e3ab5b0d39ee968df0a49fb034c36077f6ea377",
-"mine": false,
-"conflicts": [
-"crates/formats/src/odt/import.rs",
-"crates/formats/src/odt/kept.rs",
-"crates/formats/src/odt/package.rs",
-"crates/formats/src/odt/tests_more/kept.rs",
-"crates/formats/src/odt/tests_more/lossless.rs"
-],
-"render": false,
-"stale": []
-},
-{
-"n": 5703,
-"title": "ODT: a page setup change keeps the file's other page definitions (gap 19)",
-"author": "alehel",
-"draft": false,
-"head": "29373e1ac1a66e505b7b902294d371c19f293f1f",
-"mine": false,
-"conflicts": [
-"crates/formats/src/odt/import.rs",
-"crates/formats/src/odt/kept.rs",
-"crates/formats/src/odt/package.rs",
-"crates/formats/src/odt/tests_more/lossless.rs",
-"crates/formats/src/odt/tests_more/page_setup.rs"
-],
-"render": false,
-"stale": []
-},
-{
 "n": 5707,
 "title": "fix(file): rename keeps existing extension",
 "author": "GabrielMatozo",
@@ -9746,28 +9924,6 @@
 "head": "be6ec972c2721e5c22932e61ffc574e146031119",
 "mine": false,
 "conflicts": [],
-"render": false,
-"stale": []
-},
-{
-"n": 5723,
-"title": "ODT: a list item's further paragraphs stay paragraphs (gap 19)",
-"author": "alehel",
-"draft": false,
-"head": "b9b44f809695e778f2784c02394ac4937e075f5b",
-"mine": false,
-"conflicts": [
-"crates/formats/src/html/export.rs",
-"crates/formats/src/markdown/blocks.rs",
-"crates/formats/src/markdown/export.rs",
-"crates/formats/src/model.rs",
-"crates/formats/src/model/from_doc.rs",
-"crates/formats/src/model/to_doc.rs",
-"crates/formats/src/model/types.rs",
-"crates/formats/src/odt/body.rs",
-"crates/formats/src/odt/tests_more/lists.rs",
-"crates/formats/src/odt/writer.rs"
-],
 "render": false,
 "stale": []
 },
@@ -9949,7 +10105,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5791,
@@ -9960,7 +10118,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5808,
@@ -9971,14 +10131,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5810,
 "title": "Review \u203a Language: set the whole document's proofing language (#3518)",
 "author": "benandez",
 "draft": false,
-"head": "8042d9d3bb1b28055314e50a09e923924ea033bb",
+"head": "36a899eccfbe9fb1a02655504d6beb7cfe34f9dc",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10051,7 +10213,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5834,
@@ -10072,11 +10236,14 @@
 "title": "layout: wrap field results across multiple lines within margins (#5838)",
 "author": "batistalucasv",
 "draft": false,
-"head": "4bcdda77a5b433abd7d3a858ef89826420ae462f",
+"head": "5421914a5b5598906eb57825f4eb010cfbf0958b",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5852,
@@ -10087,7 +10254,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5859,
@@ -10116,7 +10285,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "9077be62c83c03a6c5a2cfe57496ef806bec62a0",
+"head": "3aa60354cba2ee4ff26f9925311f24e20e75877c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10138,11 +10307,14 @@
 "title": "Compare: diff style definitions as property-change revisions (#5841)",
 "author": "batistalucasv",
 "draft": false,
-"head": "382216a25a8d1f74056be4623f9d4b6fed189de5",
+"head": "6983a75540936bec8af2f2f47f53215bfe1f123e",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5880,
@@ -10195,11 +10367,14 @@
 "title": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847)",
 "author": "batistalucasv",
 "draft": false,
-"head": "bd24de1f58addf92d14eda389eea1725d3c6bf90",
+"head": "1b0ff27a26c9c8bc816cc2be4f63235eb07b322d",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5888,
@@ -10210,7 +10385,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5889,
@@ -10236,7 +10413,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5893,
@@ -10278,7 +10457,7 @@
 "title": "Dialogs: add paragraph indentation and alignment to Modify Style (#5833)",
 "author": "batistalucasv",
 "draft": false,
-"head": "e7990fd76793b5b7df4b314bd7be0ea457917bab",
+"head": "52235017e12fd1e96373c34104c150ed638f66f2",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10289,7 +10468,7 @@
 "title": "Tables: text wrapping options in Table Properties (#5884)",
 "author": "batistalucasv",
 "draft": false,
-"head": "e762dbef7f39debc8ad632b12aae587a4dd0e147",
+"head": "992072593df5ffb31d1f288bfb099d29937f3ac4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10317,11 +10496,14 @@
 "title": "Layout: accept German coordinated compounds with ellipsis (#5903)",
 "author": "batistalucasv",
 "draft": false,
-"head": "efe4f17b611348756545dd84b38dbec3196da716",
+"head": "e9ce7a5599133bd8c8c03ad657cca955cfd1b5c8",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5918,
@@ -10339,7 +10521,7 @@
 "title": "Format Shape: add Line and Layout settings for shapes and text boxes (#5896)",
 "author": "batistalucasv",
 "draft": false,
-"head": "dba5a146ec72918a534af237444b85678d14752b",
+"head": "09ee230aab4221e1b4bedd6a7e418fad37962568",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10354,7 +10536,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5940,
@@ -10365,7 +10549,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5948,
@@ -10429,7 +10615,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5968,
@@ -10527,7 +10715,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 5988,
@@ -10616,7 +10806,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6009,
@@ -10698,7 +10890,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6053,
@@ -10716,7 +10910,7 @@
 "title": "Shape text: typing with a shape selected types into it (#5911)",
 "author": "LimaLuma-gme",
 "draft": false,
-"head": "ca29c6a90539076f5031acc4d3267c82a99362eb",
+"head": "68fdd70aa5ac9a2ba2a88cec5541058eaa77f826",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10731,7 +10925,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6080,
@@ -10818,7 +11014,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6092,
@@ -10860,7 +11058,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6103,
@@ -10871,7 +11071,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6107,
@@ -10882,7 +11084,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6112,
@@ -10906,7 +11110,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6122,
@@ -10989,7 +11195,7 @@
 "title": "tools/compare: row-level diff inside surviving tables (#5921)",
 "author": "batistalucasv",
 "draft": false,
-"head": "9019bea7804d55de68f1f5465ce4b318d75913f2",
+"head": "987a51af71b47f69d1550c74ab3c9eac7e3ff33c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11016,11 +11222,14 @@
 "title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
 "author": "batistalucasv",
 "draft": false,
-"head": "f29d6e1257b3b3191c4bc883c9753c070948cba5",
+"head": "7c049bb26f9717e9fb7159cb07866a340092c47a",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6160,
@@ -11089,7 +11298,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6173,
@@ -11193,7 +11404,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6203,
@@ -11234,7 +11447,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6214,
@@ -11429,7 +11644,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6286,
@@ -11478,7 +11695,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6305,
@@ -11500,7 +11719,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6313,
@@ -11511,7 +11732,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6315,
@@ -11577,7 +11800,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6361,
@@ -11588,7 +11813,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6363,
@@ -11599,7 +11826,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6368,
@@ -11678,7 +11907,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6390,
@@ -11703,7 +11934,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6399,
@@ -11714,7 +11947,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6400,
@@ -11736,7 +11971,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6404,
@@ -11758,7 +11995,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6422,
@@ -11769,7 +12008,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6425,
@@ -11780,7 +12021,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6442,
@@ -11833,7 +12076,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6458,
@@ -11844,7 +12089,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6459,
@@ -11855,7 +12102,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6470,
@@ -11877,7 +12126,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6474,
@@ -11921,7 +12172,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6487,
@@ -11932,7 +12185,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6489,
@@ -11943,7 +12198,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6494,
@@ -11967,7 +12224,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6501,
@@ -11978,7 +12237,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6505,
@@ -12000,7 +12261,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6507,
@@ -12022,7 +12285,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6511,
@@ -12088,7 +12353,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6524,
@@ -12099,7 +12366,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6525,
@@ -12110,7 +12379,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6526,
@@ -12121,7 +12392,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6527,
@@ -12132,7 +12405,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6528,
@@ -12143,7 +12418,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6529,
@@ -12154,7 +12431,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6530,
@@ -12176,7 +12455,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6538,
@@ -12187,7 +12468,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6542,
@@ -12198,7 +12481,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6545,
@@ -12209,7 +12494,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6547,
@@ -12231,7 +12518,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6569,
@@ -12255,7 +12544,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6573,
@@ -12266,7 +12557,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6575,
@@ -12277,7 +12570,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6576,
@@ -12288,7 +12583,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6578,
@@ -12299,7 +12596,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6580,
@@ -12310,7 +12609,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6581,
@@ -12321,7 +12622,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6582,
@@ -12332,7 +12635,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6586,
@@ -12343,7 +12648,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6587,
@@ -12354,7 +12661,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6589,
@@ -12365,7 +12674,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6594,
@@ -12376,7 +12687,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6597,
@@ -12426,7 +12739,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6607,
@@ -12437,7 +12752,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6611,
@@ -12448,7 +12765,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6614,
@@ -12459,7 +12778,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6616,
@@ -12470,7 +12791,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6620,
@@ -12481,7 +12804,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6622,
@@ -12492,7 +12817,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6625,
@@ -12503,7 +12830,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6628,
@@ -12514,7 +12843,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6632,
@@ -12525,7 +12856,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6634,
@@ -12536,7 +12869,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6637,
@@ -12558,7 +12893,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6642,
@@ -12569,7 +12906,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6646,
@@ -12580,7 +12919,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6649,
@@ -12591,7 +12932,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6652,
@@ -12602,7 +12945,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6654,
@@ -12613,7 +12958,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6657,
@@ -12635,7 +12982,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6659,
@@ -12646,7 +12995,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6662,
@@ -12657,7 +13008,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6665,
@@ -12668,7 +13021,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6666,
@@ -12690,7 +13045,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6678,
@@ -12701,7 +13058,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6690,
@@ -12719,7 +13078,7 @@
 "title": "Automation roots: refuse a network, device or non-disk verbatim path before the file system is asked about it",
 "author": "adikshan11",
 "draft": false,
-"head": "7a047a22d9133e53ba62de34d323cee4b057006d",
+"head": "0dbd1804166aff24d8375279485a5b7659ebbdc9",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12771,10 +13130,10 @@
 },
 {
 "n": 6701,
-"title": "M6: describe accepted page size and column arguments",
+"title": "M6: describe accepted page layout command inputs",
 "author": "MMexicann",
 "draft": false,
-"head": "ba03bc3a2279740523277559abcdf6230ec6f025",
+"head": "9eeffe87719502a24c9e21d22d1673725ef0d409",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12796,7 +13155,7 @@
 "title": "M14: expose supported TIFF pictures in choosers and errors",
 "author": "MMexicann",
 "draft": false,
-"head": "9f42edb8ea48ed956810dfc5ca9da28ffd698d97",
+"head": "f7959f1fb2f2e45389777c58eb6d969357fc879f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12844,7 +13203,9 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6724,
@@ -12888,14 +13249,16 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6740,
 "title": "Copied text keeps its footnotes and endnotes when pasted in WordCraft",
 "author": "vangel76",
 "draft": false,
-"head": "967a4c19fca6b3508e763e51a27da10d2b282cb0",
+"head": "f1fadde0a73ccb9c7fcc61ad7706ed2e470c8059",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12917,7 +13280,7 @@
 "title": "Pasting a copied table in a table cell inserts rows or overwrites cells, as Word does",
 "author": "vangel76",
 "draft": false,
-"head": "97dba71012080d82356b49310b11c9f7c31c2fc2",
+"head": "04722a839e85a666972ec8953abf5a3f87af94d1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12928,11 +13291,14 @@
 "title": "Outline view: Expand shows headings level by level and body text last",
 "author": "vangel76",
 "draft": false,
-"head": "d978212face6746fa73e3e4bb2534ab33d218331",
+"head": "fad31b7d3a43bbcaac9fe573583e956289e1be10",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits",
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6745,
@@ -12950,7 +13316,7 @@
 "title": "Find and Replace can search and replace by formatting and style",
 "author": "vangel76",
 "draft": false,
-"head": "13fe70887abdd932073336695740de8c0f669ae6",
+"head": "c55b63ae951a451f5f84784177d0ec84db593c63",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12961,7 +13327,7 @@
 "title": "Add screen-only Text Boundaries in View",
 "author": "hsalimi79",
 "draft": false,
-"head": "9fddd3cadb161da3fc57d7cc613abf9644e25083",
+"head": "f47467bc8192d8940bc520b1a490923aecb7f537",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12976,14 +13342,291 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"measured with its own craft-libs pins"
+]
 },
 {
 "n": 6772,
 "title": "Shapes: a thick line's stroke ends inside its arrowheads (#6767)",
 "author": "RickiNano",
-"draft": true,
+"draft": false,
 "head": "37e5849e58e170b59204fd4f5c44bf9e53b33596",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6776,
+"title": "M14: describe encrypted OpenDocument command support",
+"author": "MMexicann",
+"draft": false,
+"head": "df4e60393ddcef471577063cdaa302cd2433aa1c",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6783,
+"title": "Mailings: bound sparse recipient expansion without silently dropping records",
+"author": "dylanmtaylor",
+"draft": false,
+"head": "97ee78977e279252b5d52532edfda15b9dcf3f88",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6784,
+"title": "Insert \u203a Library: a side pane of pictures from your own folders (#2868)",
+"author": "psperera",
+"draft": true,
+"head": "00aa6e25c9dea782eb1fc01f720b1991a245eb90",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6785,
+"title": "doc: cut legacy encoding tables over to craft-codepage",
+"author": "dylanmtaylor",
+"draft": false,
+"head": "cd839d35b65a0467dcf687ecd4a1d487ce2fd63d",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6789,
+"title": "M14: explain hyperlink URL input limits",
+"author": "MMexicann",
+"draft": false,
+"head": "11d863c328e1dd4f4fb443d4b4a1caac64a68a8b",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6792,
+"title": "fix: Page numbering acts on the section of the page being edited",
+"author": "muhammadRidha-15",
+"draft": false,
+"head": "b8f49ae5cb8a9a291ed97052f7d6e15f60e9575c",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6793,
+"title": "Enter in a paragraph with a drop cap no longer copies the drop cap",
+"author": "vangel76",
+"draft": false,
+"head": "95daa3a4f73aa54ed0c3f7708ac674239905b8b7",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6795,
+"title": "Honor preferred cell widths with mismatched table grids",
+"author": "TheGalitube",
+"draft": false,
+"head": "d3793ce158225c654f46320e958c15e83d377a67",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6796,
+"title": "i18n: Hebrew (he) interface, #6107 rebased onto main, with SF Hebrew on macOS",
+"author": "tcbr10",
+"draft": false,
+"head": "380f9a15ddb732d3bbf1f491691003d7a3663100",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6798,
+"title": "Insert \u203a Library \u203a Add Folder\u2026 opens a folder dialog (#2868)",
+"author": "psperera",
+"draft": true,
+"head": "6803c626d38a1207b01f240ad3860de63cccc9fb",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6799,
+"title": "Library: WMF and EMF pictures, with vector thumbnails (#2868)",
+"author": "psperera",
+"draft": true,
+"head": "3781de42f29bb82098cf195bf45475071e98d26e",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6802,
+"title": "M14: list null among supported spreadsheet cell values",
+"author": "MMexicann",
+"draft": false,
+"head": "d04acc85739d0dea0836ee735074cb142262513d",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6806,
+"title": "DATE fields: Italian month and weekday names (#6280)",
+"author": "gmrmad1",
+"draft": false,
+"head": "930b58f125c75451fb82db81d43e723383e6d849",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6807,
+"title": "Library pane: draw thumbnails off the UI thread (#2868)",
+"author": "psperera",
+"draft": true,
+"head": "fe4fc24096c329e2cc6f86108be7581391293bdc",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6808,
+"title": "Persian and Arabic text in a font that is not installed now has the same line height as in Word, so pages break in the same place",
+"author": "vangel76",
+"draft": false,
+"head": "fec79d8ad08a99fbda7cabca020c74020892164c",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6809,
+"title": "A header with a logo and title in an older-layout document no longer pushes the page body down, as in Word",
+"author": "vangel76",
+"draft": false,
+"head": "e5df9ed6506c20d2c9c247fa68f708931d82391b",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6812,
+"title": "M14: explain rejected custom table separators",
+"author": "MMexicann",
+"draft": false,
+"head": "42f3351c42c66b70c86f82b006e60b035640004d",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6813,
+"title": "Page images and Print preview: draw headers at full strength (#6267)",
+"author": "gmrmad1",
+"draft": false,
+"head": "5f77076adb3e4bb3d4e4babab4959de3e3a13d37",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6814,
+"title": "M14: trim author whitespace exposed by removed controls",
+"author": "MMexicann",
+"draft": false,
+"head": "822ecabba72b5982b70cd4988b26f8c532214286",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6818,
+"title": "Reuse shared Base64 encoding for engine payloads",
+"author": "dylanmtaylor",
+"draft": false,
+"head": "86352d5cf3efb9a9623f038b366c39f359e4bcb7",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6825,
+"title": "M14: prevent selection occurrence wrap on 32-bit targets",
+"author": "MMexicann",
+"draft": false,
+"head": "4b2de337922e7653f0fafa9aa21c7183126d9d4f",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6826,
+"title": "Fonts: tell where a missing font can be downloaded (Get the Missing Fonts)",
+"author": "alehel",
+"draft": false,
+"head": "fb13c51b2d7c18d965a6a65ca8feaec5765ba6e8",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6827,
+"title": "A table row split across pages no longer runs off the bottom of the page",
+"author": "vangel76",
+"draft": false,
+"head": "48bca16ad484c3c3d4cad25678f4e130040a3f6f",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6828,
+"title": "Newspaper columns keep a paragraph's last lines together, as Word does",
+"author": "vangel76",
+"draft": false,
+"head": "7f828c46284a12b9002aae8c5dd7a1dc7131fd80",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6835,
+"title": "No empty page before the next section when a section's last paragraph has Keep with next",
+"author": "vangel76",
+"draft": false,
+"head": "de59eddefcfd9513263897ddaf2603463317ae77",
 "mine": false,
 "conflicts": [],
 "render": true,

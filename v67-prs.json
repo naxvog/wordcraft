@@ -30,9 +30,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3821,
@@ -43,9 +41,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3823,
@@ -56,9 +52,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4635,
@@ -126,9 +120,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5443,
@@ -139,9 +131,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5455,
@@ -152,9 +142,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5457,
@@ -165,9 +153,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5458,
@@ -178,9 +164,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 6003,
@@ -908,9 +892,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 1489,
@@ -2611,9 +2593,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2455,
@@ -2678,9 +2658,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2465,
@@ -2691,9 +2669,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2468,
@@ -2799,9 +2775,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2493,
@@ -2812,9 +2786,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2496,
@@ -2867,10 +2839,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2508,
@@ -2881,9 +2850,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2512,
@@ -2950,10 +2917,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2533,
@@ -2964,9 +2928,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2535,
@@ -3092,9 +3054,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2606,
@@ -3267,9 +3227,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2664,
@@ -3306,9 +3264,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2707,
@@ -3348,9 +3304,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2711,
@@ -3568,9 +3522,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2838,
@@ -4612,9 +4564,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3465,
@@ -4857,9 +4807,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3566,
@@ -4912,9 +4860,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3604,
@@ -4925,9 +4871,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3764,
@@ -5193,9 +5137,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3833,
@@ -5206,9 +5148,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3834,
@@ -5219,9 +5159,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3858,
@@ -5488,9 +5426,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4066,
@@ -5605,9 +5541,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4188,
@@ -5856,10 +5790,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4320,
@@ -6472,9 +6403,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4565,
@@ -6586,9 +6515,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4615,
@@ -6702,9 +6629,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4640,
@@ -7360,10 +7285,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4839,
@@ -7391,10 +7313,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4845,
@@ -7537,9 +7456,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4871,
@@ -7803,9 +7720,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5004,
@@ -8040,9 +7955,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5076,
@@ -8157,9 +8070,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5096,
@@ -8170,9 +8081,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5098,
@@ -8196,9 +8105,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5112,
@@ -8269,9 +8176,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5133,
@@ -8438,9 +8343,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5170,
@@ -8451,10 +8354,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5176,
@@ -8465,9 +8365,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5177,
@@ -8491,9 +8389,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5182,
@@ -9319,9 +9215,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5463,
@@ -9385,10 +9279,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5500,
@@ -9509,9 +9400,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5554,
@@ -9649,10 +9538,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5590,
@@ -10218,12 +10104,9 @@
 "title": "Real-time collaboration: authoritative sync server, document adapter, client core",
 "author": "copoka",
 "draft": false,
-"head": "9c6e343ae17ea09c69ac12d72f8bea748c51982b",
+"head": "e6f34e8cb0ea22c7ab2727d5771bf26cf5fce9bc",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"xtask/src/layers.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -11202,14 +11085,9 @@
 "title": "Compare: emit w:numberingChange for numbering-only differences (#5836)",
 "author": "batistalucasv",
 "draft": false,
-"head": "6551359055147b116b57723290b05c7139245502",
+"head": "7a8b65bd05289888d3e6e7bbf802d7d250ba7669",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read.rs",
-"crates/docx/src/read/story/blocks.rs",
-"crates/docx/src/write/props.rs",
-"crates/docx/src/write/story/para.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -13412,7 +13290,7 @@
 "n": 6792,
 "title": "fix: Page numbering acts on the section of the page being edited",
 "author": "muhammadRidha-15",
-"draft": false,
+"draft": true,
 "head": "b8f49ae5cb8a9a291ed97052f7d6e15f60e9575c",
 "mine": false,
 "conflicts": [],

@@ -8,9 +8,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 1757,
@@ -21,9 +19,7 @@
 "mine": true,
 "conflicts": [],
 "render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 2552,
@@ -9385,7 +9381,7 @@
 "title": "Render: keep a metafile with huge bitmaps in the cache instead of parsing it on every repaint",
 "author": "vangel76",
 "draft": false,
-"head": "3e758d4e89c87922666aa0230653a4b487f20c70",
+"head": "130ed87f91242b058ac94333f50e20eeb07ac4e3",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13269,7 +13265,7 @@
 "title": "Orientation with text selected turns only that text",
 "author": "vangel76",
 "draft": false,
-"head": "5d1e818621d1a5763240d0ff85e9cd18bf0d047a",
+"head": "63dfe4af1da138d1d860df828f0415955446138d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13291,7 +13287,7 @@
 "title": "Outline view: Expand shows headings level by level and body text last",
 "author": "vangel76",
 "draft": false,
-"head": "fad31b7d3a43bbcaac9fe573583e956289e1be10",
+"head": "a31a4fe9b230b4fada5ba5cf16bf1b445dd48e66",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13316,7 +13312,7 @@
 "title": "Find and Replace can search and replace by formatting and style",
 "author": "vangel76",
 "draft": false,
-"head": "c55b63ae951a451f5f84784177d0ec84db593c63",
+"head": "5431c6aacaff9ae923bcc5441e0469c32b3074f0",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13516,7 +13512,7 @@
 "title": "Persian and Arabic text in a font that is not installed now has the same line height as in Word, so pages break in the same place",
 "author": "vangel76",
 "draft": false,
-"head": "fec79d8ad08a99fbda7cabca020c74020892164c",
+"head": "cf3719e8d82f3247f38c7c3dd95e06fbd080f4d1",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13527,7 +13523,7 @@
 "title": "A header with a logo and title in an older-layout document no longer pushes the page body down, as in Word",
 "author": "vangel76",
 "draft": false,
-"head": "e5df9ed6506c20d2c9c247fa68f708931d82391b",
+"head": "7c95b71a4bf76ce4af6b79c0e1e8b73e2baf765a",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13615,7 +13611,7 @@
 "title": "Newspaper columns keep a paragraph's last lines together, as Word does",
 "author": "vangel76",
 "draft": false,
-"head": "7f828c46284a12b9002aae8c5dd7a1dc7131fd80",
+"head": "fccfc520776c4527494d1b43274b46743fb10d9d",
 "mine": false,
 "conflicts": [],
 "render": true,

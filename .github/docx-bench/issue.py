@@ -12,7 +12,10 @@ DROP = 5.0  # a fixture losing more SSIM points than this puts the PR under "Nee
 
 prs = json.load(open(f'{B}/{VER}-prs.json'))
 base_run = current_base()
-MAIN = base_run.split('-')[-1]
+# v67-main-<main>-libs-<craft-libs>: main with every craft-libs crate at one craft-libs commit; plain: main's own pins
+_parts = base_run.split('-')
+MAIN, LIBS = _parts[2], (_parts[4] if len(_parts) > 4 else None)
+plain = load(f'{VER}-main-{MAIN}') if LIBS else None
 base = load(base_run)
 bm, dm = means(base), means(base, 'docxide')
 bases = {base_run: base}
@@ -58,7 +61,9 @@ norender = [q for q in ok if not q['render'] and not load(f"{VER}-pr{q['n']}")]
 conflicting = [q for q in prs if q['conflicts'] and not q['draft']]
 done = {str(q['n']) for q, _ in measured + nochange}
 _sum = open(f'{B}/{VER}-summary.tsv').readlines() if os.path.exists(f'{B}/{VER}-summary.tsv') else []  # a new suite has none yet
-failed = sorted({l.split(':')[0] for l in _sum if ': bench failed' in l} - done)
+last = dict(l.rstrip('\n').split(': ', 1) for l in _sum if ': ' in l)  # a PR's latest outcome
+failed = sorted(n for n, s in last.items() if s.startswith('bench failed') and 'craft-libs' not in s and n not in done)
+libs_failed = sorted(n for n, s in last.items() if s.startswith('bench failed') and 'craft-libs' in s and n not in done)
 todo = [l.strip() for l in open(f'{B}/{VER}-todo.txt') if l.strip()] if os.path.exists(f'{B}/{VER}-todo.txt') else []
 _rm = json.load(open(f'{B}/{VER}-removed.json')) if os.path.exists(f'{B}/{VER}-removed.json') else []
 removed_txt = '; '.join(f"{lab} {', '.join('#' + str(r['n']) for r in _rm if r['state'] == s)}"
@@ -144,7 +149,9 @@ rendering, fonts, DOCX reading or PDF export does to that score. It's regenerate
 ## Summary for reviewers
 
 `main` {MAIN} scores **{bm['ssim']:.2f}** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores {dm['ssim']:.2f}
-({gap:.1f} points ahead)."""
+({gap:.1f} points ahead).""" + (f""" That's with every craft-libs crate at craft-libs `main` {LIBS}, as for every PR below;
+with the craft-libs versions `main` pins it scores {means(plain)['ssim']:.2f}, so {bm['ssim'] - means(plain)['ssim']:+.2f} waits in craft-libs
+for a PR that updates the pins.""" if plain else '')
        + (f""" Merging the {len(order)} PRs {'under *Merge next* and *Not ready yet*' if blocked else 'below'}, in this order, gives **{bm['ssim'] + cd['ssim']:.2f} ({cd['ssim']:+.2f})**,
 measured on one branch with all of them merged (see *Combined branch*)."""
           if cd else '') + f"""
@@ -207,18 +214,21 @@ next round; {len(conflicting)} conflict with `main`.
 - **Line match:** [textcmp.py]({GIST}) compares the text lines of both PDFs.
 - **Scores** are means over all fixtures, strict: a page WordCraft doesn't produce counts as 0. Deltas are in
   percentage points of that mean, so a fix that perfects one fixture moves it by at most ~0.1.
-- **Per PR:** the PR is merged into the round's baseline (`main` at the start of the round) and the whole suite is
-  rerun; its delta is against that baseline. Conflicts in files `wordcraft-cli` doesn't build (documentation,
+- **Per PR:** the PR is merged into the round's baseline (`main` at the start of the round, with craft-libs as below)
+  and the whole suite is rerun; its delta is against that baseline. Conflicts in files `wordcraft-cli` doesn't build (documentation,
   translation catalogs, the UI crate, the desktop and web apps, tests) take main's side, which can't change a PDF;
   PRs with conflicts in anything else are not benched. A fixture counts as changed at ±0.1 SSIM points; gains and
   regressions list fixtures that moved by more than 0.5.
 - **Rounds:** a new baseline whenever `main` moves; a PR is rerun when it gets new commits, or when its result
   changed fixtures and `main` has since changed a rendering file it changes too. PRs that change no file in
   `crates/{{docx,layout,render,pdf,fonts}}/src` aren't benched (in 321 runs, none of them changed a fixture),
-  unless they move a git dependency. Since #6603 and #6661 the DOCX and RTF readers, zip and image decoding are
-  [craft-libs](https://github.com/storytold/craft-libs) crates that share one `rev`, so a reader fix lands there
-  and reaches WordCraft as a PR that updates that `rev` in `Cargo.toml`/`Cargo.lock`: such a PR is benched like a
-  rendering change, and its run counts as stale once `main` moves craft-libs too.
+  unless they move a git dependency.
+- **craft-libs:** since #6603 and #6661 the DOCX and RTF readers, zip and image decoding are
+  [craft-libs](https://github.com/storytold/craft-libs) crates, so a reader fix lands there and reaches WordCraft
+  through a PR that moves the craft-libs pins in `Cargo.toml`. Every run (baseline, PRs, combined branches) builds
+  with all craft-libs crates at the craft-libs `main` commit of the round's start, so a PR is measured on its own
+  code, not on craft-libs changes its pins carry; the summary says how much craft-libs `main` adds to the versions
+  `main` pins. A PR that builds only with other craft-libs versions is listed under *Not benched*.
 - **Safety:** PR code is built and run in containers without network or capabilities, with their own cargo caches,
   seeing the suite read-only; dependencies are downloaded without running any of the PR's code.
 - **Environment:** Linux container, debug build of `wordcraft-cli` (the layout code is the same as release), fonts
@@ -301,6 +311,7 @@ out.append(f"""
 - **Code conflicts with `main`** ({len(conflicting)} PRs): not rerun until rebased.
 - **Change no rendering file** ({len(norender)}): not benched.
 - **Doesn't build once merged with `main`:** {', '.join('#' + n for n in failed) or '–'}.
+- **Doesn't build with craft-libs `main`** (builds with the craft-libs versions it pins): {', '.join('#' + n for n in libs_failed) or '–'}.
 - **Removed from this list** since they're no longer open: {removed_txt}.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output
   (#3083, #4300), `/Suspects` in `/MarkInfo` (#3410), tracked-change colours with markup

@@ -15,8 +15,9 @@ NONCLI = re.compile(r'\.(md|tsv)$|^(docs|contributors|crates/ui-egui|apps/wordcr
                     r'|tests\.rs$|/tests/|^NOTICE$')
 
 
-# A moved git dependency can change every fixture: since #6603 and #6661 the DOCX/RTF readers, the document model, zip
-# and image decoding are storytold/craft-libs crates, pinned by one `rev`. A diff line that sets a rev or a git source.
+# A PR that moves a git dependency is benched too: since #6603 and #6661 the DOCX/RTF readers, zip and image decoding
+# are storytold/craft-libs crates. Runs force craft-libs to one commit (lib.sh libs), so its bench shows whether it
+# still builds that way. A diff line that sets a rev or a git source.
 GITDEP = re.compile(r'^[-+](?![-+])(.*\brev\s*=|source = "git\+)', re.M)
 assert GITDEP.search('+source = "git+https://github.com/storytold/craft-libs?rev=5a457dda#5a457dda"') and \
     GITDEP.search('-craft-docx = { git = "https://github.com/storytold/craft-libs", rev = "41fb2275" }') and \
@@ -87,14 +88,14 @@ def stale(n, head):
     ph = pr_head(n)
     if ph and head and not ph.startswith(head[:9]):
         why.append('new commits')
+    if '-libs-' not in run_base(run):  # measured before runs forced craft-libs to one commit (lib.sh libs)
+        why.append('measured with its own craft-libs pins')
     bc = run_commit(run_base(run))
     if bc:
         # file level: main touches crates/layout almost daily, so a crate-level test would rerun every PR every day
         both = sorted(set(render_files(names(bc, 'origin/main'))) & set(render_files(pr_files(n))))
         if both:
             why.append('main changed ' + ', '.join(f.split('/src/')[-1] for f in both[:3]) + (' …' if len(both) > 3 else ''))
-        if pr_moves_git_dep(n) and moves_git_dep(bc, 'origin/main'):
-            why.append('main moved craft-libs')
     return why
 
 

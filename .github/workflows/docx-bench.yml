@@ -2,8 +2,11 @@ name: docx bench
 
 # PR score tracking for storytold/wordcraft#5711 with the docxide-pdf suite, on GitHub's free runners. A round:
 #   plan      scan.py: open PRs, what to bench (new, new commits, stale against main), the gate. Runs no PR code.
-#   baseline  main at the round's commit, when it has no run yet. The only job that saves the cargo cache.
-#   bench     one job per PR, 16 at a time: merged into the baseline, built and scored without network (pr.sh)
+#   baseline  main at the round's commit, when it has no run yet: with every craft-libs crate at the round's craft-libs
+#             main (the base PRs are measured on), and with main's own craft-libs pins (plain, for what waits in
+#             craft-libs). The only job that saves the cargo cache.
+#   bench     one job per PR, 16 at a time: merged into the baseline, craft-libs forced as there, built and scored
+#             without network (pr.sh)
 #   combine   every PR that raised the score merged together, with and without v67-exclude.txt (combine.sh)
 #   publish   checks the results (collect.py), commits them to the bench-results branch, renders issue-body.md
 # State (runs, PR list, v67-exclude.txt, v67-notes.md) lives in the bench-results branch.
@@ -22,6 +25,9 @@ on:
         default: false
       only:
         description: 'Probe: instead of the two combined branches, merge only these PRs (space-separated) into v67-combined-only'
+        default: ''
+      libs:
+        description: craft-libs commit every run builds with (default its main at the start of the round)
         default: ''
 
 permissions:
@@ -46,6 +52,9 @@ jobs:
       main: ${{ steps.plan.outputs.main }}
       base: ${{ steps.plan.outputs.base }}
       need_base: ${{ steps.plan.outputs.need_base }}
+      plain: ${{ steps.plan.outputs.plain }}
+      need_plain: ${{ steps.plan.outputs.need_plain }}
+      libs: ${{ steps.plan.outputs.libs }}
       todo: ${{ steps.plan.outputs.todo }}
     steps:
       - uses: actions/checkout@v7
@@ -59,21 +68,27 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ALL: ${{ inputs.all && '--all' || '' }}
           MAX: ${{ inputs.max }}
+          LIBS: ${{ inputs.libs }}
         run: |
           [[ $MAX =~ ^[0-9]+$ ]] || { echo "max must be a number"; exit 1; }
+          # every run builds with all craft-libs crates at one craft-libs commit, so no PR is credited with craft-libs
+          # changes its pins carry; plain is main with its own pins, for what waits in craft-libs
+          [ -n "$LIBS" ] || LIBS=$(git ls-remote https://github.com/storytold/craft-libs refs/heads/main | cut -f1)
+          [[ $LIBS =~ ^[0-9a-f]{40}$ ]] || { echo "libs must be a full commit hash"; exit 1; }
           (( MAX > 256 )) && MAX=256   # GitHub's limit for one matrix
           python3 -I .github/docx-bench/scan.py $ALL
-          base=v67-main-$(git -C wc rev-parse --short=9 origin/main)
+          plain=v67-main-$(git -C wc rev-parse --short=9 origin/main); base=$plain-libs-${LIBS:0:9}
           {
             echo "main=$(git -C wc rev-parse origin/main)"
-            echo "base=$base"
+            echo "base=$base"; echo "plain=$plain"; echo "libs=$LIBS"
             [ -f "state/runs/$base/wordcraft_comparison.json" ] && echo need_base=false || echo need_base=true
+            [ -f "state/runs/$plain/wordcraft_comparison.json" ] && echo need_plain=false || echo need_plain=true
             echo -n "todo="
             head -n "$MAX" state/v67-todo.txt | python3 -c 'import json, sys
           heads = {str(q["n"]): q["head"] for q in json.load(open("state/v67-prs.json"))}
           print(json.dumps([{"pr": l.strip(), "head": heads[l.strip()]} for l in sys.stdin if l.strip()]))'
           } >> "$GITHUB_OUTPUT"
-          tail -4 "$GITHUB_OUTPUT" | cut -c1-300
+          tail -7 "$GITHUB_OUTPUT" | cut -c1-300
       - uses: actions/upload-artifact@v7
         with:
           name: plan
@@ -85,25 +100,41 @@ jobs:
 
   baseline:
     needs: plan
-    if: needs.plan.outputs.need_base == 'true'
+    if: needs.plan.outputs.need_base == 'true' || needs.plan.outputs.need_plain == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v7
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
       - uses: ./.github/docx-bench/setup
         with: {ref: '${{ needs.plan.outputs.main }}', save-images: 'true'}
-      - env: {BASE: '${{ needs.plan.outputs.base }}'}
+      - env:
+          BASE: ${{ needs.plan.outputs.base }}
+          PLAIN: ${{ needs.plan.outputs.plain }}
+          NEED_BASE: ${{ needs.plan.outputs.need_base }}
+          NEED_PLAIN: ${{ needs.plan.outputs.need_plain }}
+          LIBS: ${{ needs.plan.outputs.libs }}
         run: |
           . .github/docx-bench/lib.sh
-          .github/docx-bench/score.sh wc "run/$BASE"
-          meta "run/$BASE" name="$BASE" commit="$(g rev-parse HEAD)" status=ok
+          if [ "$NEED_PLAIN" = true ]; then
+            .github/docx-bench/score.sh wc "run/$PLAIN"
+            meta "run/$PLAIN" name="$PLAIN" commit="$(g rev-parse HEAD)" status=ok
+          fi
+          if [ "$NEED_BASE" = true ]; then
+            { libs && fetch "$W/wc" rw && { g diff --quiet || g commit -qam "bench: craft-libs main $LIBS"; }; } || exit 1
+            .github/docx-bench/score.sh wc "run/$BASE"
+            meta "run/$BASE" name="$BASE" commit="$(g rev-parse HEAD)" status=ok
+          fi
       - uses: actions/cache/save@v6
         with:
           path: ~/c
           key: docx-cargo-v2-${{ hashFiles('wc/Cargo.lock', 'dx/Cargo.lock') }}
       - uses: actions/upload-artifact@v7
+        if: needs.plan.outputs.need_base == 'true'
         with: {name: 'run-${{ needs.plan.outputs.base }}', path: 'run/${{ needs.plan.outputs.base }}', retention-days: 7}
+      - uses: actions/upload-artifact@v7
+        if: needs.plan.outputs.need_plain == 'true'
+        with: {name: 'run-${{ needs.plan.outputs.plain }}', path: 'run/${{ needs.plan.outputs.plain }}', retention-days: 7}
 
   bench:
     needs: plan
@@ -120,7 +151,7 @@ jobs:
         with: {sparse-checkout: .github/docx-bench, persist-credentials: false}
       - uses: ./.github/docx-bench/setup
         with: {ref: '${{ needs.plan.outputs.main }}'}
-      - env: {PR: '${{ matrix.pr }}', HEAD: '${{ matrix.head }}', BASE: '${{ needs.plan.outputs.base }}'}
+      - env: {PR: '${{ matrix.pr }}', HEAD: '${{ matrix.head }}', BASE: '${{ needs.plan.outputs.base }}', LIBS: '${{ needs.plan.outputs.libs }}'}
         run: .github/docx-bench/pr.sh "$PR" "$HEAD" "$BASE"
       - if: always()
         uses: actions/upload-artifact@v7
@@ -146,7 +177,7 @@ jobs:
         with: {pattern: 'run-*', path: art}
       - uses: actions/download-artifact@v8
         with: {name: plan, path: state}
-      - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}', ONLY: '${{ inputs.only }}'}
+      - env: {BASE: '${{ needs.plan.outputs.base }}', VARIANT: '${{ matrix.variant }}', ONLY: '${{ inputs.only }}', LIBS: '${{ needs.plan.outputs.libs }}'}
         run: |
           mkdir -p art
           python3 -I .github/docx-bench/collect.py art

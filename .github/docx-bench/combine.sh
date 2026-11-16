@@ -2,8 +2,8 @@
 # usage: combine.sh <name> [<excluded pr>...]   (in a combine job, after collect.py put this round's runs in $BENCH_STATE)
 # With ONLY="<pr>..." (a probe for an interaction), only those of the PRs below are merged.
 # Merges every open PR whose run raised the suite's SSIM (against that run's baseline) into the current baseline, in
-# descending order of gain, at the head scan.py planned; after each merge `cargo check -p wordcraft-cli`
-# must pass (no network) or the merge is undone. Records why PRs were left out, then scores the result into $W/run/<name>.
+# descending order of gain, at the head scan.py planned; after each merge `cargo check -p wordcraft-cli` (craft-libs at
+# the round's craft-libs main, as everywhere) must pass (no network) or the merge is undone. Records why PRs were left out, then scores the result into $W/run/<name>.
 set -uo pipefail; . "$(dirname "$0")/lib.sh"
 name=$1; shift; EX="$*"; D=$W/run/$name; base=$(cat "$BENCH_STATE/current-main")
 # two lines: the merge order as pr=head pairs, PRs that conflict with main
@@ -28,11 +28,9 @@ PY
 )
 [ ${#plan[@]} = 2 ] || { echo "could not work out the merge order"; exit 1; }
 cmain=(${plan[1]}); moved=(); merged=(); heads=(); cprs=(); broken=()
-check() {
-  fetch "$W/wc" rw >/dev/null 2>&1 &&
-  docker run --rm "${USR[@]}" "${OFF[@]}" -v "$W/wc:/src:ro" -w /src -v "$HOME/c/wc-target:/target" -v "$W/fonts:/fonts:ro" \
-    -e CRAFT_FONTS_DIR=/fonts -e CARGO_TARGET_DIR=/target/check docx-bench cargo check -q --locked -p wordcraft-cli >/dev/null 2>&1
-}
+# merges happen on main's own craft-libs pins (forced pins would make a PR's dependency lines conflict); each merge
+# must build with craft-libs at the round's craft-libs main, as the PR's own run did
+check() { libs && builds "$W/wc"; local ok=$?; g checkout -q -- . && return $ok; }
 for ph in ${plan[0]}; do
   p=${ph%%=*}; h=${ph#*=}
   { g fetch -q origin "pull/$p/head:refs/heads/pr/$p" && [ "$(g rev-parse "pr/$p")" = "$h" ]; } || { moved+=("$p"); continue; }
@@ -44,11 +42,13 @@ for ph in ${plan[0]}; do
     g checkout -q --ours -- $u && g add $u && g commit -q --no-edit || { g reset -q --hard "$pre"; cprs+=("$p"); continue; }
   fi
   if ! check; then g reset -q --hard "$pre"; broken+=("$p"); continue; fi
-  g diff --quiet || g commit -qam "bench: refresh Cargo.lock after #$p"
+  fetch "$W/wc" rw >/dev/null 2>&1 && { g diff --quiet || g commit -qam "bench: refresh Cargo.lock after #$p"; } || {
+    g reset -q --hard "$pre"; broken+=("$p"); continue; }
   merged+=("$p"); heads+=("$p=$h")
 done
 echo "merged: ${merged[*]}"; echo "conflict with main: ${cmain[*]}"; echo "conflict with earlier PRs: ${cprs[*]}"
 echo "doesn't compile with them: ${broken[*]}"; echo "moved since the plan: ${moved[*]}"
+{ libs && fetch "$W/wc" rw >/dev/null && { g diff --quiet || g commit -qam "bench: craft-libs main"; }; } || exit 1
 "$S/score.sh" "$W/wc" "$D"; rc=$?
 [ $rc = 0 ] || [ $rc = 2 ] || exit 1
 meta "$D" name="$name" base="$base" commit="$(g rev-parse HEAD)" status="$([ $rc = 0 ] && echo ok || echo 'bench failed: does not build')" \

@@ -16,5 +16,17 @@ fetch() { local m=ro lk=--locked; [ "${2:-}" = rw ] && m=rw lk=
   docker run --rm "${USR[@]}" -v "$HOME/c/cargo:/cargo" -v "$1:/src:$m" -w /tmp \
     -e RUSTUP_TOOLCHAIN=1.99.0 -e RUSTC=/opt/cargo/bin/rustc -e RUSTC_WRAPPER= docx-bench \
     bash -c "cargo metadata -q $lk --format-version 1 --manifest-path /src/Cargo.toml >/dev/null && cargo fetch -q --manifest-path /src/Cargo.toml"; }
+# libs: point every craft-libs git dependency in wc/ at $LIBS, the craft-libs main commit the plan pinned for the
+# round, so a PR is measured on its own code and not on the craft-libs changes its pins happen to carry. sed only
+# edits text (it replaces a symlink with a file rather than following it); the caller re-resolves Cargo.lock.
+libs() { [[ "${LIBS:-}" =~ ^[0-9a-f]{40}$ ]] || { echo "LIBS: not a commit"; return 1; }
+  g ls-files -z -- 'Cargo.toml' '*/Cargo.toml' | (cd "$W/wc" && xargs -0 -r sed -i -E \
+    "/github\.com\/storytold\/craft-libs/ s/rev *= *\"[0-9a-f]{7,40}\"/rev = \"$LIBS\"/"); }
+# builds <tree>: whether wordcraft-cli compiles (no network), re-resolving a stale Cargo.lock first
+builds() {
+  fetch "$1" rw >/dev/null 2>&1 &&
+  docker run --rm "${USR[@]}" "${OFF[@]}" -v "$1:/src:ro" -w /src -v "$HOME/c/wc-target:/target" -v "$W/fonts:/fonts:ro" \
+    -e CRAFT_FONTS_DIR=/fonts -e CARGO_TARGET_DIR=/target/check docx-bench cargo check -q --locked -p wordcraft-cli >/dev/null 2>&1
+}
 # meta <run dir> key=value...: the run's meta.json (collect.py validates it)
 meta() { local d=$1; shift; mkdir -p "$d"; python3 -c 'import json,sys,time; m=dict(a.split("=",1) for a in sys.argv[2:]); m["date"]=str(int(time.time())); json.dump(m,open(sys.argv[1]+"/meta.json","w"))' "$d" "$@"; }

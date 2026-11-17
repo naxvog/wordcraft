@@ -97,14 +97,16 @@ fn an_empty_paragraph_below_a_full_width_leading_float_takes_no_space_before() {
 
 #[test]
 fn web_view_and_a_floating_table_on_a_later_page_keep_the_space_before() {
-    // Web view lays floating tables out in the text: the paragraph after one keeps its space before.
+    // Web view lays floating tables out in the text (`table_flow` drops the float), so the rule never
+    // sees one: the paragraph after it keeps its space before.
     let web = |before| {
         let opts = LayoutOptions { view: ViewMode::Web, web_width: 500.0, ..Default::default() };
         line_at(&layout(&document(Some(200.0), &Content::Empty, before), &mut LayoutCache::new(), &opts), 2).1
     };
     assert!(web(12.0) > web(0.0) + KEPT, "web view: after it with 12 pt before at {}, with none at {}", web(12.0), web(0.0));
     // A filler paragraph whose space after leaves less room than the table needs: the table goes to
-    // the top of page two with its empty anchor, which isn't the document's leading float.
+    // the top of page two with its empty anchor, which isn't the document's leading float, so the
+    // anchor isn't block 1 and keeps its space before.
     let body_h = lay(&Document::new()).pages[0].body.h;
     let later = |before| {
         let mut d = document(Some(200.0), &Content::Empty, before);

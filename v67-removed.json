@@ -23,5 +23,275 @@
 "n": 5723,
 "title": "ODT: a list item's further paragraphs stay paragraphs (gap 19)",
 "state": "CLOSED"
+},
+{
+"n": 2860,
+"title": "#2786: Home \u203a Bullets: Define New Bullet\u2026 dialog and Change List Level \u203a",
+"state": "MERGED"
+},
+{
+"n": 3024,
+"title": "Render: small text in a minified picture stays crisp",
+"state": "CLOSED"
+},
+{
+"n": 3587,
+"title": "#3584: patterned shading (w:shd pctN, solid) is drawn as the colour it averages to",
+"state": "CLOSED"
+},
+{
+"n": 3933,
+"title": "#3917: Text Outline and Shape Outline \u203a Weight show a line sample for each weight",
+"state": "MERGED"
+},
+{
+"n": 4393,
+"title": "Shapes: lines move by their body and resize by their ends",
+"state": "MERGED"
+},
+{
+"n": 4460,
+"title": "Critical batch: some approved, CI-green PRs merged together",
+"state": "CLOSED"
+},
+{
+"n": 4474,
+"title": "inspect_document marks the page fields of headers and footers (#4467)",
+"state": "MERGED"
+},
+{
+"n": 4836,
+"title": "Track Changes: a deleted list item's number is drawn as deleted text (#4828)",
+"state": "MERGED"
+},
+{
+"n": 5062,
+"title": "Field dialog: text fields have a Format list for capitalization",
+"state": "MERGED"
+},
+{
+"n": 5187,
+"title": "WMF preview text for MathType equations and CJK UI file names",
+"state": "CLOSED"
+},
+{
+"n": 5462,
+"title": "layout: a field result in more than one font keeps a cluster per font",
+"state": "CLOSED"
+},
+{
+"n": 5494,
+"title": "Render: keep a metafile with huge bitmaps in the cache instead of parsing it on every repaint",
+"state": "MERGED"
+},
+{
+"n": 5569,
+"title": "Compare: preserve per-segment formatting in word_diff (#3749, stage 0)",
+"state": "MERGED"
+},
+{
+"n": 5601,
+"title": "Header pictures: while editing the header, a click selects its Behind Text picture wherever no header text covers it",
+"state": "MERGED"
+},
+{
+"n": 5616,
+"title": "Ctrl/Cmd+Shift+V pastes text only when no formatting was copied, as in Word (#1537)",
+"state": "MERGED"
+},
+{
+"n": 5665,
+"title": "docx: a package-wide XML element budget bounds hostile files' tree memory",
+"state": "CLOSED"
+},
+{
+"n": 5810,
+"title": "Review \u203a Language: set the whole document's proofing language (#3518)",
+"state": "MERGED"
+},
+{
+"n": 5824,
+"title": "#3720: budget hostile large parameters, and cap the TOC title",
+"state": "MERGED"
+},
+{
+"n": 5880,
+"title": "geom: fix Rect collapse, sanitize deserialized Rect, accept non-ASCII\u2026",
+"state": "MERGED"
+},
+{
+"n": 5940,
+"title": "Layout: Word 2003's indent rules start a line right after a float before the indent (#5939)",
+"state": "CLOSED"
+},
+{
+"n": 5971,
+"title": "References: TOC, index, table of figures and page cross-references use the section's page number format (#3856)",
+"state": "MERGED"
+},
+{
+"n": 5995,
+"title": "DOCX: draw EQ fields' formulas (\\f fractions, \\r radicals) from their code",
+"state": "CLOSED"
+},
+{
+"n": 6048,
+"title": "Table borders no longer look blue and uneven",
+"state": "MERGED"
+},
+{
+"n": 6085,
+"title": "Equations: an empty shown n-ary limit survives linear text (#6076)",
+"state": "MERGED"
+},
+{
+"n": 6207,
+"title": "Layout: typing in a long document is about 5 times faster with proofing on",
+"state": "MERGED"
+},
+{
+"n": 6218,
+"title": "ODT: keep Mirror margins and the hyphenation options (zone, consecutive hyphens, words in capitals) on open and save",
+"state": "CLOSED"
+},
+{
+"n": 6309,
+"title": "Updates: take craft-update from craft-libs main at e98299546",
+"state": "CLOSED"
+},
+{
+"n": 6458,
+"title": "Layout: a line may break before a slash standing alone between spaces, as in Word",
+"state": "CLOSED"
+},
+{
+"n": 6477,
+"title": "#6438: a right-to-left table's move handle sits at its top-right corner, and dragging it moves the whole table",
+"state": "MERGED"
+},
+{
+"n": 6507,
+"title": "#6503: a straight \" in Find also finds curly double quotes",
+"state": "MERGED"
+},
+{
+"n": 6527,
+"title": "Layout: a page-break-only paragraph past the page foot moves on",
+"state": "CLOSED"
+},
+{
+"n": 6547,
+"title": "Shapes: a rounded rectangle without a corner size of its own takes the preset's default (#6546)",
+"state": "MERGED"
+},
+{
+"n": 6589,
+"title": "Layout: the automatic space after a Latin run beside East Asian text follows the Latin face",
+"state": "MERGED"
+},
+{
+"n": 6654,
+"title": "fix(layout): draw right-to-left chart labels in visual order (#6651)",
+"state": "CLOSED"
+},
+{
+"n": 6658,
+"title": "Metafiles: draw EMF+ bitmaps, pattern fills, clips and pen styles from craft-metafile (#6636)",
+"state": "MERGED"
+},
+{
+"n": 6666,
+"title": "Recovery: removing a record's folder waits for files Windows is still deleting",
+"state": "MERGED"
+},
+{
+"n": 6690,
+"title": "M7: document the explicit stop flag for protection",
+"state": "MERGED"
+},
+{
+"n": 6695,
+"title": "M14: document the selection collapse end parameter",
+"state": "MERGED"
+},
+{
+"n": 6696,
+"title": "M3: describe the 32-bit comment identifier limit",
+"state": "MERGED"
+},
+{
+"n": 6698,
+"title": "M3: explain invalid font name values",
+"state": "MERGED"
+},
+{
+"n": 6703,
+"title": "M14: expose required command inputs in discovery",
+"state": "MERGED"
+},
+{
+"n": 6706,
+"title": "M14: explain the bookmark name rules in validation errors",
+"state": "MERGED"
+},
+{
+"n": 6709,
+"title": "M14: clarify dictionary-folder auto reset",
+"state": "MERGED"
+},
+{
+"n": 6714,
+"title": "M14: describe canvas member listing without an index",
+"state": "MERGED"
+},
+{
+"n": 6719,
+"title": "M14: distinguish font file and unpacked size limits in errors",
+"state": "MERGED"
+},
+{
+"n": 6724,
+"title": "M14: describe all accepted mail-merge sort forms",
+"state": "MERGED"
+},
+{
+"n": 6725,
+"title": "M14: explain invalid field code values",
+"state": "MERGED"
+},
+{
+"n": 6759,
+"title": "Layout: a paragraph over many pages lays out in linear time (#6757)",
+"state": "MERGED"
+},
+{
+"n": 6776,
+"title": "M14: describe encrypted OpenDocument command support",
+"state": "MERGED"
+},
+{
+"n": 6785,
+"title": "doc: cut legacy encoding tables over to craft-codepage",
+"state": "MERGED"
+},
+{
+"n": 6789,
+"title": "M14: explain hyperlink URL input limits",
+"state": "MERGED"
+},
+{
+"n": 6793,
+"title": "Enter in a paragraph with a drop cap no longer copies the drop cap",
+"state": "MERGED"
+},
+{
+"n": 6818,
+"title": "Reuse shared Base64 encoding for engine payloads",
+"state": "MERGED"
+},
+{
+"n": 6826,
+"title": "Fonts: tell where a missing font can be downloaded (Get the Missing Fonts)",
+"state": "MERGED"
 }
 ]

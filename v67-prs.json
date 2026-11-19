@@ -6,18 +6,10 @@
 "draft": false,
 "head": "dd4ef8d0f2807fb5b908f6c0f995df9824b20356",
 "mine": true,
-"conflicts": [],
-"render": true,
-"stale": []
-},
-{
-"n": 1757,
-"title": "Borders: lines meet in closed corners, as in Word",
-"author": "naxvog",
-"draft": false,
-"head": "8c689e9730229d78d815c51712503ac65373065f",
-"mine": true,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs",
+"crates/layout/src/flow.rs"
+],
 "render": true,
 "stale": []
 },
@@ -886,9 +878,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 1489,
@@ -977,13 +967,13 @@
 },
 {
 "n": 1563,
-"title": "Cloud documents, sharing and working together",
+"title": "Open, Save and Share against cloud storage",
 "author": "wdunn001",
 "draft": false,
-"head": "19518fe4bcc0a9a05cb1469814be62005c0a6135",
+"head": "261a9930c355199aeb768905426de9ba74af6b9a",
 "mine": false,
 "conflicts": [],
-"render": false,
+"render": true,
 "stale": []
 },
 {
@@ -991,27 +981,15 @@
 "title": "Localize checker findings and citation labels after catalog cutover",
 "author": "haranishi",
 "draft": false,
-"head": "fbecfe4a3c5894279b877aaaaef4da8719c2bb26",
+"head": "404199c01e1eace924e30ba6851281a1da6eabbb",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
-"main changed fontdb/face.rs"
+"main changed fontdb/face.rs, fontdb/fallback.rs, fontdb/fallback_data.rs"
 ]
-},
-{
-"n": 1630,
-"title": "Tables without w:tblGrid take their grid from the cells, and widths wider than the page are squeezed like Word",
-"author": "Morzilla",
-"draft": false,
-"head": "34c0369d46fcc7124c427c628bcaf1a2a06eff94",
-"mine": false,
-"conflicts": [
-"crates/docx/src/read/story/blocks.rs"
-],
-"render": true,
-"stale": []
 },
 {
 "n": 1647,
@@ -1079,7 +1057,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed para/lines.rs"
+"main changed para/builder.rs, para/lines.rs, para/model.rs \u2026"
 ]
 },
 {
@@ -1092,7 +1070,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -1502,6 +1481,7 @@
 "crates/formats/src/rtf/export.rs",
 "crates/pdf/src/picture.rs",
 "crates/render/Cargo.toml",
+"crates/render/src/lib.rs",
 "xtask/src/layers.rs"
 ],
 "render": true,
@@ -1575,6 +1555,7 @@
 "crates/docx/src/write/story/drawing.rs",
 "crates/formats/src/model/to_doc.rs",
 "crates/metafile/src/place.rs",
+"crates/render/src/lib.rs",
 "crates/render/src/media.rs"
 ],
 "render": true,
@@ -1668,48 +1649,6 @@
 "crates/fonts/src/lib.rs"
 ],
 "render": true,
-"stale": []
-},
-{
-"n": 2063,
-"title": "Tables: Hangul-style Create Table",
-"author": "BBQ-MAN",
-"draft": false,
-"head": "2ba898b630e223a3b719886925bda9480a13aea6",
-"mine": false,
-"conflicts": [],
-"render": false,
-"stale": []
-},
-{
-"n": 2064,
-"title": "Korean interface: recovery and link strings, Korean fonts and list numbering",
-"author": "BBQ-MAN",
-"draft": false,
-"head": "5301ebb0d6411556790edd075957d574e21b125b",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"measured with its own craft-libs pins"
-]
-},
-{
-"n": 2065,
-"title": "Open HWPX (Hangul) documents",
-"author": "BBQ-MAN",
-"draft": false,
-"head": "18234bf5e04eebbe9f3e2ae3d55526b158d9ed1b",
-"mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs",
-"crates/engine/src/io.rs",
-"crates/formats/src/lib.rs",
-"crates/formats/src/odt.rs",
-"crates/formats/src/odt/import.rs",
-"crates/formats/src/odt/xml.rs"
-],
-"render": false,
 "stale": []
 },
 {
@@ -1838,7 +1777,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed lib.rs"
+"main changed headers.rs, lib.rs, pass.rs"
 ]
 },
 {
@@ -1846,12 +1785,9 @@
 "title": "PDF export can write fillable form fields, as an export option",
 "author": "Morzilla",
 "draft": false,
-"head": "56d921d2df30e3b298cbd1d5d48d24a78e53244f",
+"head": "0145ac2d89376f1910fedda41d3f535927f443a3",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -2330,11 +2266,9 @@
 "title": "fix(doc): format hex number format as uppercase hex and support millions in cardinal text",
 "author": "divyanshu2074",
 "draft": false,
-"head": "ab35bfa94647f69d1ce20b49388e3e38fa97b547",
+"head": "d789f82465fe4c28d1d15c87f38254ffb4b5c1d3",
 "mine": false,
-"conflicts": [
-"crates/doc/src/section.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -2350,21 +2284,6 @@
 ],
 "render": false,
 "stale": []
-},
-{
-"n": 2345,
-"title": "Fonts: fallback no longer keeps unneeded font families in memory",
-"author": "arcanii",
-"draft": false,
-"head": "951fbfb23deb10e2ebd0bed3c4138748695932c3",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed fontdb/names.rs"
-]
 },
 {
 "n": 2356,
@@ -2482,6 +2401,7 @@
 "mine": false,
 "conflicts": [
 "crates/doc/src/para.rs",
+"crates/doc/src/styles.rs",
 "crates/docx/src/read/props.rs"
 ],
 "render": true,
@@ -2529,7 +2449,8 @@
 "crates/docx/src/read/story/blocks.rs",
 "crates/docx/src/write/settings.rs",
 "crates/docx/src/write/settings_merge.rs",
-"crates/docx/src/write/story/section.rs"
+"crates/docx/src/write/story/section.rs",
+"crates/layout/src/pass.rs"
 ],
 "render": true,
 "stale": []
@@ -2666,11 +2587,13 @@
 "title": "Layout: a paragraph-anchored floating table that doesn't fit runs on across pages (#2359)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "a7ca977ee493aa894f5158eca7a862c5df885cc4",
+"head": "dcf186c7fb8b13f41e13ea260810432208e8022c",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2465,
@@ -2784,11 +2707,13 @@
 "title": "Layout: In Front of Text objects draw over the whole page's text (#1993)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "732bb67be6f04df0844e77c25cd3efe018186523",
+"head": "d69845dfd5dbaddd66934bd43c8d15c9882a87cc",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 2493,
@@ -2806,13 +2731,16 @@
 "title": "Text boxes: Wrap text in shape off, and a box that fits such text takes its size (part of #2191)",
 "author": "Nghiathan13",
 "draft": false,
-"head": "dc76a1bd07d618d99c4ccd9e6b1264b3aa669506",
+"head": "fb5dde0b76aa7d2c914df17f090fb524a891a5a5",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/ctx.rs"
+],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
-"main changed floats.rs"
+"main changed boxes.rs, cache.rs, ctx.rs \u2026"
 ]
 },
 {
@@ -2864,9 +2792,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2512,
@@ -2890,7 +2816,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed fontdb/names.rs, fontdb/user.rs"
+"main changed fontdb.rs, fontdb/names.rs, fontdb/user.rs"
 ]
 },
 {
@@ -2934,9 +2860,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 2533,
@@ -2945,7 +2869,9 @@
 "draft": false,
 "head": "8073a90093103af16c6907d961018bed91c419cd",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs"
+],
 "render": true,
 "stale": []
 },
@@ -3128,6 +3054,7 @@
 "crates/engine/src/cmd/file.rs",
 "crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
+"crates/engine/src/session/layout.rs",
 "crates/engine/src/session/views.rs",
 "crates/layout/src/hit.rs",
 "crates/layout/src/lib.rs",
@@ -3299,8 +3226,10 @@
 "crates/engine/src/cmd/citations/generated.rs",
 "crates/engine/src/cmd/index.rs",
 "crates/engine/src/cmd/references/toc.rs",
+"crates/layout/src/boxes.rs",
 "crates/layout/src/display/page.rs",
 "crates/layout/src/hit.rs",
+"crates/layout/src/page.rs",
 "crates/layout/src/placed.rs"
 ],
 "render": true,
@@ -3330,20 +3259,6 @@
 "conflicts": [],
 "render": true,
 "stale": []
-},
-{
-"n": 2711,
-"title": "#2702: a missing font is drawn in its font table's altName, as Word does",
-"author": "Nghiathan13",
-"draft": false,
-"head": "e712dc56747b05ec665082865e7b6f5a8ebed6ec",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
 },
 {
 "n": 2713,
@@ -3421,8 +3336,10 @@
 "crates/layout/src/ctx.rs",
 "crates/layout/src/floats.rs",
 "crates/layout/src/flow.rs",
+"crates/layout/src/lib.rs",
 "crates/layout/src/para/lines.rs",
-"crates/layout/src/para/paragraph.rs"
+"crates/layout/src/para/paragraph.rs",
+"crates/layout/src/pass.rs"
 ],
 "render": true,
 "stale": []
@@ -3435,6 +3352,7 @@
 "head": "b4322cb3b3b5e51c4f951032f1bc819dfd550fd4",
 "mine": false,
 "conflicts": [
+"crates/layout/src/lib.rs",
 "crates/layout/src/pass.rs"
 ],
 "render": true,
@@ -3482,7 +3400,10 @@
 "conflicts": [
 "crates/engine/src/session.rs",
 "crates/engine/src/session/documents.rs",
-"crates/engine/src/session/lifecycle.rs"
+"crates/engine/src/session/lifecycle.rs",
+"crates/layout/src/display.rs",
+"crates/layout/src/display/page.rs",
+"crates/layout/src/table.rs"
 ],
 "render": true,
 "stale": []
@@ -3586,8 +3507,10 @@
 "crates/engine/src/cmd/citations/generated.rs",
 "crates/engine/src/cmd/index.rs",
 "crates/engine/src/cmd/references/toc.rs",
+"crates/layout/src/boxes.rs",
 "crates/layout/src/display/page.rs",
 "crates/layout/src/hit.rs",
+"crates/layout/src/page.rs",
 "crates/layout/src/placed.rs"
 ],
 "render": true,
@@ -3598,7 +3521,7 @@
 "title": "#2787: Home \u203a Numbering \u203a Define New Number Format\u2026 dialog",
 "author": "Nghiathan13",
 "draft": false,
-"head": "0b8002c88596dcfce9f3a565476e3d30f6b06144",
+"head": "c9e6d7ae7fc464fbde16913a96bab99ca7ad39c2",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -3845,38 +3768,13 @@
 "stale": []
 },
 {
-"n": 3022,
-"title": "IME: the composition is drawn in the text's font and size, and CJK in it no longer shows boxes",
-"author": "arcanii",
-"draft": false,
-"head": "ece21a2c9bad174431efa8274b84c6fa7549b60b",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed hit.rs"
-]
-},
-{
 "n": 3072,
 "title": "Add Thai Distributed and Khmer Justify paragraph alignments",
 "author": "inmean",
 "draft": false,
-"head": "bd7eab8067a659aa5509b0347198d082e02ade10",
+"head": "80d0aeaac8275904096807c31abf7f8b9cc32c9f",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs",
-"crates/docx/src/write/props.rs",
-"crates/docx/src/xml.rs",
-"crates/formats/src/html/export.rs",
-"crates/formats/src/odt/writer.rs",
-"crates/formats/src/odt/writer/props.rs",
-"crates/formats/src/rtf/export.rs",
-"crates/formats/src/rtf/styles.rs",
-"crates/formats/src/rtf/word.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -3925,11 +3823,9 @@
 "title": "Saving and exporting: SOURCE_DATE_EPOCH stands in for the clock",
 "author": "Hamza0101",
 "draft": false,
-"head": "531a0d1f1d9b7a109af15c7f1660c463edb9bee7",
+"head": "a3758cd90cc66a6ab3656e2c9c9b9639b06405c6",
 "mine": false,
-"conflicts": [
-"crates/engine/src/io_ext.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -3965,11 +3861,9 @@
 "title": "M1: EPUB import (#3117)",
 "author": "MichaelMuClaude",
 "draft": false,
-"head": "5018fbe3cc1edcf2f9d9f312188f2efaa93ba804",
+"head": "5d123c8c2ad3e8bb9067cc05902a7ddb93aed0c5",
 "mine": false,
-"conflicts": [
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -4021,13 +3915,14 @@
 "head": "093506e7bbfc88b47ccbebd7c6f5c576bc2f6e5f",
 "mine": false,
 "conflicts": [
-"crates/engine/src/cmd/citations/generated.rs"
+"crates/engine/src/cmd/citations/generated.rs",
+"crates/layout/src/headers.rs"
 ],
 "render": true,
 "stale": [
 "new commits",
 "measured with its own craft-libs pins",
-"main changed hit.rs"
+"main changed headers.rs, hit.rs"
 ]
 },
 {
@@ -4136,10 +4031,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3200,
@@ -4239,14 +4131,10 @@
 "n": 3253,
 "title": "Subpixel (LCD) page text on Linux and the BSDs",
 "author": "mikael2",
-"draft": true,
-"head": "e1dee9f4b3abea882dfcf6f4c380d56419f1be85",
+"draft": false,
+"head": "dca3e2cc5143214d74a4f906c6efadee0fb3867d",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"crates/fonts/src/fontdb.rs",
-"crates/render/src/lib.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -4323,10 +4211,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3337,
@@ -4572,12 +4457,9 @@
 "title": "PDF export can turn blanks drawn with underscores into fillable fields",
 "author": "Morzilla",
 "draft": true,
-"head": "c7db68a38c333529c5d57ac4def6d57e86b3e1de",
+"head": "c6da9eea25c9d668b8cc94d2f0c0bf6bedb2139e",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -4586,11 +4468,13 @@
 "title": "Layout: hanging punctuation (overflowPunct) and line-start punctuation compression (topLinePunct)",
 "author": "midasdf",
 "draft": false,
-"head": "cb235350e91eab4c7496d6949b1d9a14dce21402",
+"head": "61a16a5d803ab0d8e6a7b1796867662ff29f61a7",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 3465,
@@ -4834,9 +4718,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3566,
@@ -4874,11 +4756,11 @@
 "draft": false,
 "head": "739f2962d5b5d47b02da03e75d8e9a6c34455f15",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/display.rs"
+],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 3604,
@@ -4889,27 +4771,6 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
-},
-{
-"n": 3764,
-"title": "Open HWP 5 (Hangul) documents",
-"author": "BBQ-MAN",
-"draft": false,
-"head": "875e266dd1124b2811f110ae312e1a5c29b5e368",
-"mine": false,
-"conflicts": [
-"apps/wordcraft-cli/src/main.rs",
-"crates/engine/src/io.rs",
-"crates/formats/Cargo.toml",
-"crates/formats/src/lib.rs",
-"crates/formats/src/odt.rs",
-"crates/formats/src/odt/import.rs",
-"crates/formats/src/odt/xml.rs"
-],
-"render": false,
 "stale": []
 },
 {
@@ -5083,6 +4944,7 @@
 "crates/engine/src/cmd/file.rs",
 "crates/engine/src/io_ext.rs",
 "crates/engine/src/print.rs",
+"crates/engine/src/session/layout.rs",
 "crates/engine/src/session/views.rs",
 "crates/layout/src/hit.rs",
 "crates/layout/src/lib.rs",
@@ -5202,10 +5064,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3884,
@@ -5281,10 +5140,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 3960,
@@ -5349,11 +5205,9 @@
 "title": "Join resolved paragraph marks in one pass on Accept/Reject All",
 "author": "Silvertree2010",
 "draft": false,
-"head": "225a7d55e57ff16ae558a25cdea6807018984978",
+"head": "328c9c8cb0573c610c4335286965b0cc1d4e6802",
 "mine": false,
-"conflicts": [
-"Cargo.toml"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -5447,7 +5301,9 @@
 "head": "6a8bc2f4bd0179321f9ae72a5e8e09b4957b422c",
 "mine": false,
 "conflicts": [
-"crates/layout/src/flow.rs"
+"crates/engine/src/session/layout.rs",
+"crates/layout/src/flow.rs",
+"crates/layout/src/lib.rs"
 ],
 "render": true,
 "stale": []
@@ -5471,14 +5327,12 @@
 "title": "Paragraph spacing in lines: read w:beforeLines / w:afterLines and lay them out like Word",
 "author": "pakiat",
 "draft": false,
-"head": "72d8c6b78aad087a4b0aa1b9ac684f2b4708bf9c",
+"head": "96abcf1a306a8f55da1fdf19c3357b768211031f",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed ctx.rs"
+"new commits"
 ]
 },
 {
@@ -5486,14 +5340,12 @@
 "title": "Layout: a paragraph with a hidden mark is shown on one line with the next one (#3986)",
 "author": "Menonro",
 "draft": false,
-"head": "43ac0c050f7b25946dcd4261c78fcbc3f89fb47b",
+"head": "45beccfd4b223676360c462125ccfa586dc76b19",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed ctx.rs, hit.rs, para/lines.rs"
+"new commits"
 ]
 },
 {
@@ -5543,10 +5395,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 4186,
@@ -5580,19 +5429,10 @@
 "draft": false,
 "head": "aeac8a528f430c1be9950d260d05e428ef786f9a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/hit.rs"
+],
 "render": true,
-"stale": []
-},
-{
-"n": 4219,
-"title": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198)",
-"author": "ovezthaking",
-"draft": false,
-"head": "329ba1640ea33256f52f93975e0864859ae0f35a",
-"mine": false,
-"conflicts": [],
-"render": false,
 "stale": []
 },
 {
@@ -5647,7 +5487,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed display/lines.rs"
+"main changed display.rs, display/lines.rs"
 ]
 },
 {
@@ -5733,6 +5573,7 @@
 "mine": false,
 "conflicts": [
 "crates/layout/src/display.rs",
+"crates/layout/src/hit.rs",
 "crates/layout/src/para.rs"
 ],
 "render": true,
@@ -5743,14 +5584,12 @@
 "title": "Draw the caret after a trailing page break on the next page",
 "author": "Silvertree2010",
 "draft": false,
-"head": "12cc5e7ff248393441ea53060d65f2fee8528dbc",
+"head": "91e5e60d1bf57fb58a28c49773172641e9b96c65",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed hit.rs"
+"new commits"
 ]
 },
 {
@@ -5804,26 +5643,13 @@
 "title": "Proofing: hide spelling or grammar errors in this document only",
 "author": "dotCooCoo",
 "draft": false,
-"head": "04d3eeec92079d09dae2428520bafc501f846191",
+"head": "f7fef8cec5aa91b0828fceeb053519dac9283b0a",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
 "new commits"
 ]
-},
-{
-"n": 4320,
-"title": "Fix #4299: DOCX reader cumulative attribute budget across elements",
-"author": "ovezthaking",
-"draft": false,
-"head": "69f732207b55325a1a46126259b0addc7c9466a8",
-"mine": false,
-"conflicts": [
-"crates/docx/src/xml.rs"
-],
-"render": true,
-"stale": []
 },
 {
 "n": 4321,
@@ -5857,7 +5683,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed fontdb.rs, fontdb/fallback.rs, fontdb/fallback_data.rs"
 ]
 },
 {
@@ -5865,7 +5692,7 @@
 "title": "feat(fonts,layout,ui): add Hebrew font catalog, serif/sans substitution, and mixed RTL/LTR BiDi support",
 "author": "hrb9",
 "draft": false,
-"head": "b122237e6ba6b4c59451c4db300caf7f2c3efdcf",
+"head": "d9e1cffb790538f162eb9a282d5b3abc4f2a1c41",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -5931,20 +5758,6 @@
 "stale": []
 },
 {
-"n": 4369,
-"title": "Fix window geometry at interface zoom and restore maximized startup",
-"author": "abdallah-shehawey",
-"draft": false,
-"head": "ab8740874008f6985636caf1d60c54a995f8daee",
-"mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
-"render": true,
-"stale": []
-},
-{
 "n": 4372,
 "title": "feat(mcp): accept more than one --automation-read-root / --automation-write-root (#3582)",
 "author": "MyAIPlugins",
@@ -5982,13 +5795,12 @@
 "title": "Fields: FILESIZE, TEMPLATE and INFO update with the other fields",
 "author": "dotCooCoo",
 "draft": false,
-"head": "3c059daa438c75ef3c26d632d2f332e6a9662a18",
+"head": "a474496d2497be24154b12c82806bdf50f061b2b",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins"
+"new commits"
 ]
 },
 {
@@ -6071,7 +5883,9 @@
 "draft": false,
 "head": "db6b81333a1345875321046b2e6249b9f4f23657",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/doc/src/styles.rs"
+],
 "render": false,
 "stale": []
 },
@@ -6189,6 +6003,7 @@
 "head": "4cb990efd4ca58bb8367124d6061ebfba62d63f5",
 "mine": false,
 "conflicts": [
+"crates/doc/src/styles.rs",
 "crates/engine/src/cmd/para/styles.rs"
 ],
 "render": false,
@@ -6234,7 +6049,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed display/objects.rs"
+"main changed display.rs, display/objects.rs"
 ]
 },
 {
@@ -6292,7 +6107,8 @@
 "crates/formats/src/rtf/reader.rs",
 "crates/formats/src/rtf/text.rs",
 "crates/formats/src/rtf/word.rs",
-"crates/layout/src/display/objects.rs"
+"crates/layout/src/display/objects.rs",
+"crates/render/src/lib.rs"
 ],
 "render": true,
 "stale": []
@@ -6352,12 +6168,9 @@
 "title": "Borders: preserve dashSmallGap and align border previews",
 "author": "ro-legal-docx",
 "draft": true,
-"head": "275b9283fdae87dda976a2cfd8dd0b66520cc4e4",
+"head": "6b5c023a45648f7ac31858cc0702df691716a790",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -6396,11 +6209,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 4571,
@@ -6412,7 +6221,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed fields.rs"
 ]
 },
 {
@@ -6420,14 +6230,12 @@
 "title": "Shapes: dashed outlines keep square and round caps inside each dash, as in Word",
 "author": "pakiat",
 "draft": false,
-"head": "b6a0a4e3c5edbbabe87e65ae9c3d692f399d052c",
+"head": "0ee0558a6659f25db6c48d0d56ad6bc509e1a552",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed display/objects.rs, lib.rs"
+"new commits"
 ]
 },
 {
@@ -6464,12 +6272,9 @@
 "title": "RTF: preserve per-section headers and footers on export",
 "author": "ro-legal-docx",
 "draft": true,
-"head": "8ea69a5e2d39c9ecf89bd3a2f3860ea0e242276a",
+"head": "6dd8ddeea17e2e6277c5bb0dcc02a5b117ddd719",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -6508,9 +6313,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 4615,
@@ -6596,7 +6399,7 @@
 "title": "Equations: a \\name finishes where it can't continue (fixes #4255)",
 "author": "ayozetr",
 "draft": false,
-"head": "ea8ad98d47010864e1e04e8e6349f74a05e8efcc",
+"head": "71c0139327439c118c95a2be156c7bf76a16c68b",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -6620,11 +6423,13 @@
 "title": "Fonts: Japanese text falls back to a Japanese font, not a Chinese one",
 "author": "arcanii",
 "draft": false,
-"head": "018794e921b87c999e97d338a4d043b1bb3faaaf",
+"head": "fe30bfbfea055f8cd590f5d765760deae643fcff",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 4640,
@@ -6886,12 +6691,9 @@
 "title": "DOCX: preserve table-only footer placement after save",
 "author": "ro-legal-docx",
 "draft": true,
-"head": "5af33413d8e878284e0ed02e511e429a98695b02",
+"head": "35823820c59dac24ee43f10385176e03ada971d7",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -7024,7 +6826,7 @@
 "title": "Lists: inherit numbering and align hanging paragraph indents",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "c045f81cde44240ffa9dbe1efd1f290017b2e144",
+"head": "9808d83be07ef2a21e72c26a7e95d2e74dca795c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7077,12 +6879,9 @@
 "title": "Romanian proofing: shared craft-proof integration and conservative context (0.15)",
 "author": "ro-legal-docx",
 "draft": true,
-"head": "3410e4ed46e41ae8b288a9f115e62b7687886647",
+"head": "0774e1c98e120c0293c04ffa5639f7eaabc96433",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -7137,7 +6936,7 @@
 "title": "Screen readers: move by the caret's words; links and wrapped lines start a word (#3173)",
 "author": "squalorso",
 "draft": false,
-"head": "0578df7ed6a89e47b60f1dc0a036348560ea7d90",
+"head": "744d6fcc8eb8f564c91e4495da3cd8324860cbb1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7205,7 +7004,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed flow.rs"
 ]
 },
 {
@@ -7213,11 +7013,12 @@
 "title": "Layout: walk comment highlight objects once per line (#3614)",
 "author": "OPUZZLES",
 "draft": false,
-"head": "d77c531003f4fd00d976f18e1cc90c71b7e7718f",
+"head": "f5b518e2f1038102262f7b648a5d745793bc38ae",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
 "main changed display/lines.rs"
 ]
@@ -7305,11 +7106,13 @@
 "title": "Layout: continue oversized cantSplit rows across pages",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "ef226410efe2e4a3fc57fa903ca309e3cc8b42a1",
+"head": "5307ce5a052c3e102d51f42fc5b0a6b10a130dfb",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 4845,
@@ -7440,7 +7243,8 @@
 "crates/doc/src/settings.rs",
 "crates/docx/src/read/meta.rs",
 "crates/docx/src/write/settings.rs",
-"crates/docx/src/write/settings_merge.rs"
+"crates/docx/src/write/settings_merge.rs",
+"crates/layout/src/display/lines.rs"
 ],
 "render": true,
 "stale": []
@@ -7481,7 +7285,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed ctx.rs"
+"main changed ctx.rs, flow.rs"
 ]
 },
 {
@@ -7544,7 +7348,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed page.rs, pass.rs"
 ]
 },
 {
@@ -7640,17 +7445,6 @@
 "stale": []
 },
 {
-"n": 4964,
-"title": "fix(engine): a drag between narrow columns leaves them as they are",
-"author": "tsw2k",
-"draft": false,
-"head": "210fe76f0c91e9fa272c26f26e91fcb51f014713",
-"mine": false,
-"conflicts": [],
-"render": false,
-"stale": []
-},
-{
 "n": 4972,
 "title": "#4971: chart titles keep the file's manual position, size, weight and colour",
 "author": "nikor30",
@@ -7700,10 +7494,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5003,
@@ -7714,9 +7505,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5004,
@@ -7727,10 +7516,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5005,
@@ -7741,7 +7527,8 @@
 "mine": false,
 "conflicts": [
 "crates/docx/src/read/props.rs",
-"crates/docx/src/write/props.rs"
+"crates/docx/src/write/props.rs",
+"crates/layout/src/para/builder.rs"
 ],
 "render": true,
 "stale": []
@@ -7875,14 +7662,12 @@
 "title": "Fonts: TH SarabunIT\u0e59 no longer stands in for TH SarabunPSK",
 "author": "pakiat",
 "draft": false,
-"head": "d9448b99f5b3742cd39117acf38b95946bf87c82",
+"head": "30b390a9f689c417e6a8b3779bb3525cdb6f4806",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed fontdb/names.rs, fontdb/user.rs"
+"new commits"
 ]
 },
 {
@@ -7890,7 +7675,7 @@
 "title": "AutoFormat: a new list item's lead-in takes the formatting of the one before it",
 "author": "dotCooCoo",
 "draft": false,
-"head": "fd8f508d9caf29e019740b313c1246f1ab16edb2",
+"head": "d4e04a4e453e8ff663df5b27aaf6d4cacfcc4f46",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -7920,9 +7705,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5071,
@@ -7931,25 +7714,15 @@
 "draft": false,
 "head": "75e71a89f14e773f1d71321007deb9d971edfc7d",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs",
+"crates/layout/src/display.rs",
+"crates/layout/src/display/page.rs",
+"crates/layout/src/flow.rs",
+"crates/layout/src/page.rs"
+],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
-},
-{
-"n": 5074,
-"title": "Tables: percentage cell widths size their columns whichever rows give them",
-"author": "pakiat",
-"draft": false,
-"head": "900430161a80321859ab6af383ea39214958a342",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5076,
@@ -8004,6 +7777,7 @@
 "conflicts": [
 "crates/doc/src/document.rs",
 "crates/doc/src/text_walk.rs",
+"crates/layout/src/display/lines.rs",
 "crates/layout/src/para/paragraph.rs",
 "crates/layout/src/para/proof.rs"
 ],
@@ -8026,6 +7800,7 @@
 "crates/docx/src/write/props.rs",
 "crates/docx/src/write/settings.rs",
 "crates/docx/src/write/settings_merge.rs",
+"crates/layout/src/cache.rs",
 "crates/layout/src/para/lines.rs"
 ],
 "render": true,
@@ -8069,19 +7844,6 @@
 "stale": []
 },
 {
-"n": 5096,
-"title": "Layout: no line break after the '?' of a query, nor after a slash before an underscore",
-"author": "dfgodvan",
-"draft": false,
-"head": "d4b5c688336ccadc8c7d7e572fe3841a5a739314",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits"
-]
-},
-{
 "n": 5098,
 "title": "DOCX: an English default style flagged beside a localized one keeps its w:default",
 "author": "dfgodvan",
@@ -8103,9 +7865,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5112,
@@ -8168,19 +7928,6 @@
 "stale": []
 },
 {
-"n": 5129,
-"title": "Fields: PDFs and prints show body PAGEREF pages, as Word fills them in",
-"author": "pakiat",
-"draft": false,
-"head": "1bad85d1b05e59d6f37fb77fccf3e9fab3be8af0",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits"
-]
-},
-{
 "n": 5133,
 "title": "Keyboard: Ctrl+< and Ctrl+Shift+< change the font size on European keyboards",
 "author": "squalorso",
@@ -8196,11 +7943,9 @@
 "title": "Layout: right and centre tabs past the right margin end at the right indent from Word 2013",
 "author": "pakiat",
 "draft": false,
-"head": "f11d286d70872a6e72b76dc166f5ac8f7c57dff2",
+"head": "c723e30ed8fd9148231f3f8fbedb8ab5fa99b435",
 "mine": false,
-"conflicts": [
-"crates/layout/src/para/lines.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits",
@@ -8271,7 +8016,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed display/lines.rs, lib.rs"
+"main changed display.rs, display/lines.rs, lib.rs"
 ]
 },
 {
@@ -8325,7 +8070,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed flow.rs"
 ]
 },
 {
@@ -8357,18 +8103,20 @@
 "title": "Layout: ignore trailing spacing after footnote separators",
 "author": "ro-legal-docx",
 "draft": false,
-"head": "8a954b90a35b4f2f717835cd1d52ed5f2ace66c0",
+"head": "140af517ca7cff5f1458e9d71def1c7e8c193ce9",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5176,
 "title": "Tables: a percentage-width table before Word 2013 adds its outer cell margins",
 "author": "pakiat",
 "draft": false,
-"head": "b2d7fe7f996b70c90a33dc033c2f168b17d04368",
+"head": "7e0f9556f68193ff8ecf1560372d7bedc13e4d64",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -8381,13 +8129,12 @@
 "title": "Line breaking: a slash with Thai on either side is a place to break after",
 "author": "pakiat",
 "draft": false,
-"head": "adba23f8472fb96440210ca89327ecb19ab4c028",
+"head": "0affb5248c32bb5e05c38a8eaf1a208b7ccac831",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins"
+"new commits"
 ]
 },
 {
@@ -8395,7 +8142,7 @@
 "title": "Tables: a percentage-width table from Word 2013 takes its share after its outer borders",
 "author": "pakiat",
 "draft": false,
-"head": "1d4be23ad74b3bf50230d84108500b16b504300a",
+"head": "1f8c020fce9da79f5d470f5a15c1b9251b3df3a1",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -8408,7 +8155,7 @@
 "title": "Fields: F9 finds REF and PAGEREF bookmarks outside the body",
 "author": "pakiat",
 "draft": false,
-"head": "83fb2e058ce61095408217e547bb41b14da18552",
+"head": "19db75248fa0226eb493b3dde01a27284c99f31e",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8419,7 +8166,7 @@
 "title": "Fields: F9 evaluates IF fields as Word does",
 "author": "pakiat",
 "draft": false,
-"head": "9e2c45d817e2023cfc8e28702097ee355ea41e0a",
+"head": "42049112fcae044e5ef78991bbc8a8ed56992184",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8448,8 +8195,10 @@
 "crates/engine/src/cmd/edit.rs",
 "crates/formats/src/rtf/export.rs",
 "crates/formats/src/rtf/word.rs",
+"crates/layout/src/boxes.rs",
 "crates/layout/src/display/page.rs",
 "crates/layout/src/notes.rs",
+"crates/layout/src/page.rs",
 "crates/pdf/src/exporter/draw.rs",
 "crates/render/src/lib.rs"
 ],
@@ -8461,14 +8210,12 @@
 "title": "Justified lines: a word after a run of spaces fits as in Word",
 "author": "pakiat",
 "draft": false,
-"head": "6831d1b6097bb60fdac9aaa46bfda41e1a24918a",
+"head": "f56d156640fed55a6e8a4f9f7c4b8add15cc4cf0",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed para/lines.rs"
+"new commits"
 ]
 },
 {
@@ -8476,7 +8223,7 @@
 "title": "#5175: Line Spacing menu labels follow the paragraph's spacing",
 "author": "ravikirankalal",
 "draft": false,
-"head": "fc71cbc72726b6b556088b03e26891c1a315bdc1",
+"head": "a01e3960a15be2f050342e22ec0bc8e7587413bd",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -8521,11 +8268,9 @@
 "title": "#3622: control-channel automation can't change saved preferences",
 "author": "ravikirankalal",
 "draft": false,
-"head": "ee3a753265e7c5e88b22a273f647f9ae857b0bf1",
+"head": "2db813e3280522995280f3311b57434f37f6a7ac",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/options.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -8654,13 +8399,9 @@
 "title": "DOCX: keep bookmarks placed directly in table rows (cell-range bookmarks)",
 "author": "ro-legal-docx",
 "draft": true,
-"head": "70c49a66336cfb871dbd06f1b567f6f56e6bfa48",
+"head": "811377b247f785046dd4003460281bdf31dc1aed",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml",
-"crates/docx/src/model_bridge.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -8739,11 +8480,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed fontdb/face.rs, fontdb/user.rs"
-]
+"stale": []
 },
 {
 "n": 5293,
@@ -8755,7 +8492,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed flow.rs, page.rs, pass.rs"
 ]
 },
 {
@@ -8767,10 +8505,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5307,
@@ -8858,13 +8593,10 @@
 "title": "Gap 14: Save As Word 97-2003 Document (.doc writer)",
 "author": "ljkx",
 "draft": false,
-"head": "7764b0094a0993762f6009e37f79ed16bae393cf",
+"head": "cd44aa7c2ff703a1b24fa61b9dfcdbad17f3239e",
 "mine": false,
-"conflicts": [
-"Cargo.lock",
-"Cargo.toml"
-],
-"render": true,
+"conflicts": [],
+"render": false,
 "stale": []
 },
 {
@@ -8987,7 +8719,8 @@
 "conflicts": [
 "Cargo.lock",
 "Cargo.toml",
-"crates/doc/Cargo.toml"
+"crates/doc/Cargo.toml",
+"crates/layout/src/para/paragraph.rs"
 ],
 "render": true,
 "stale": []
@@ -8999,10 +8732,13 @@
 "draft": false,
 "head": "ae2216c2f6d14ed8937477349e7d1b879c50bfef",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs"
+],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed boxes.rs"
 ]
 },
 {
@@ -9111,7 +8847,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed display/lines.rs"
+"main changed display.rs, display/lines.rs"
 ]
 },
 {
@@ -9226,11 +8962,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed fontdb/face.rs, fontdb/names.rs, fontdb/user.rs \u2026"
-]
+"stale": []
 },
 {
 "n": 5483,
@@ -9303,22 +9035,22 @@
 "title": "docx: preserve picture outline, effects, and out-of-unit crops",
 "author": "neilcawse",
 "draft": false,
-"head": "9f0ac8467904e2b1753632c0afafb2cbfe8b3299",
+"head": "d76fce359eab3305acfbdcb72757603d5845f326",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5521,
 "title": "Lists: reject invalid explicit IDs (#5517)",
 "author": "OPUZZLES",
 "draft": false,
-"head": "23ffd0d510045487609dc230c63010dd50765e28",
+"head": "024c8c7497df2b99dda424eee3243c0a60668510",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/lists.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9338,12 +9070,9 @@
 "title": "Table Sort: refuse vertical merges before rows move (#5535)",
 "author": "OPUZZLES",
 "draft": false,
-"head": "b8c699aa40387ac4cfdc9f042fcead39a78accc3",
+"head": "7aa6bd94e43f30abeb189b66e66bd1affad65abb",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/table.rs",
-"crates/engine/src/cmd/table/convert.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9367,11 +9096,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed ctx.rs, floats.rs"
-]
+"stale": []
 },
 {
 "n": 5546,
@@ -9382,16 +9107,14 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5554,
 "title": "Context menu: Accept Change and Reject Change on a tracked change",
 "author": "jimprince",
 "draft": false,
-"head": "3a905e71f2a941dbf7dafc46f1b06f9b6add4373",
+"head": "bba06b88c4715ff5a13d24c274f7d9e392e59c0b",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9402,7 +9125,7 @@
 "title": "Convert Text to Table: preserve sections, controls and selection",
 "author": "OPUZZLES",
 "draft": false,
-"head": "a43fe2b1b909a11108ceb0ad845b94f861663a81",
+"head": "b70a41dc2bb94857274e80ed6d3e46cc16a5bf54",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9415,10 +9138,13 @@
 "draft": false,
 "head": "cd826cd96289030e8d9fc561ec118b43ea677311",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/fields.rs"
+],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed fields.rs, para/paragraph.rs"
 ]
 },
 {
@@ -9496,11 +9222,9 @@
 "title": "Paragraph Sort: preserve section boundaries, controls and selection",
 "author": "OPUZZLES",
 "draft": false,
-"head": "643ac084c4e02e86fda8a655fed01d5c8f8c7ea7",
+"head": "45abeaea7b94cb682e120b456351d06e7848dfda",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/para/outline.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -9513,9 +9237,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits"
-]
+"stale": []
 },
 {
 "n": 5590,
@@ -9556,7 +9278,7 @@
 "title": "fix(clipboard): copied paragraphs keep their spacing and indents in other programs (#5537)",
 "author": "marcwgls",
 "draft": false,
-"head": "bf4932704c89c97abe424999f6d7652879b1d806",
+"head": "5f740b9770fd777d88750d0a4ef50a0055f3c7d3",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9582,10 +9304,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins"
-]
+"stale": []
 },
 {
 "n": 5630,
@@ -9594,7 +9313,9 @@
 "draft": false,
 "head": "e434154317f6ecab77b04b14790e84685ab81320",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs"
+],
 "render": true,
 "stale": []
 },
@@ -9619,24 +9340,11 @@
 "draft": false,
 "head": "a224da94dccfce68228eb2490f60884075da4eee",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/table.rs"
+],
 "render": true,
 "stale": []
-},
-{
-"n": 5638,
-"title": "Say in the placeholder when a picture is too large to decode",
-"author": "Silvertree2010",
-"draft": false,
-"head": "d482ed0b1e9f98a566c9a519c2c7ed74a801b883",
-"mine": false,
-"conflicts": [],
-"render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed lib.rs, media.rs"
-]
 },
 {
 "n": 5639,
@@ -9684,7 +9392,7 @@
 "title": "REF paragraph numbers as Word shows them, in output too",
 "author": "pakiat",
 "draft": false,
-"head": "a57e214a9de09f5ea47ae895b25a142d81fa743f",
+"head": "61645118bcd33672cfb4af2c3ca2d7b0fee503d4",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9785,7 +9493,8 @@
 "crates/formats/src/odt/tests_more/headers.rs",
 "crates/formats/src/odt/writer.rs",
 "crates/formats/src/odt/writer/drawing.rs",
-"crates/formats/src/odt/xml.rs"
+"crates/formats/src/odt/xml.rs",
+"crates/render/src/media.rs"
 ],
 "render": true,
 "stale": []
@@ -9829,20 +9538,12 @@
 },
 {
 "n": 5764,
-"title": "docx: a table or cell border without w:sz is width 0, not 1/2 pt",
+"title": "Table borders of width 0: layout and Table Style Modify (DOCX/ODT/RTF half in craft-libs#2203)",
 "author": "kevinj24fr",
 "draft": false,
-"head": "9e964b7b6916fa2a4d2896dead5a23a55b372233",
+"head": "f566b0647e4cb4a343aabe1b50a767eb59e45e53",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs",
-"crates/docx/src/read/styles.rs",
-"crates/formats/src/odt/body/tables.rs",
-"crates/formats/src/odt/tests_more/tables.rs",
-"crates/formats/src/odt/writer/props.rs",
-"crates/formats/src/odt/writer/tables.rs",
-"crates/formats/src/rtf/export.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -9851,28 +9552,21 @@
 "title": "docx: keep a table style's w:tblInd on save",
 "author": "kevinj24fr",
 "draft": false,
-"head": "76ea3e155786dab5f1d47c804e496de107037692",
+"head": "5671d5e83b718b52f7abf43c3abf0765d3e307d9",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/styles.rs",
-"crates/docx/src/write/styles.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
 {
 "n": 5772,
-"title": "docx: keep theme font slots (East Asian, complex-script, Latin) on save",
+"title": "Theme font slots: model and font/style commands (DOCX half in craft-libs#2197)",
 "author": "kevinj24fr",
 "draft": false,
-"head": "d07cf7a09cc22142db49e62a843da75f56f929aa",
+"head": "5cca787cd0c54104aebe0690367497fc4f479deb",
 "mine": false,
-"conflicts": [
-"crates/docx/src/read/props.rs",
-"crates/docx/src/write/parts.rs",
-"crates/docx/src/write/props.rs"
-],
-"render": true,
+"conflicts": [],
+"render": false,
 "stale": []
 },
 {
@@ -9880,7 +9574,7 @@
 "title": "chore(deps): bump the hayro group across 1 directory with 3 updates",
 "author": "dependabot",
 "draft": false,
-"head": "52577f0848f622a503295dec6e00a46ded0cf522",
+"head": "338d1a20966e707bad42ecb88d3cb0cc98fd06d7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -9922,23 +9616,27 @@
 "title": "Layout: a line of only pictures takes its paragraph mark's height (#3984 follow-up)",
 "author": "kevinj24fr",
 "draft": false,
-"head": "1150e076497815ec4bb9155cd8437bdaee3239ee",
+"head": "ad320eccc70e592512b4839dc69279937be04504",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5791,
 "title": "fonts: embed the metric-compatible Office substitutes from craft-fonts",
 "author": "kevinj24fr",
 "draft": false,
-"head": "2eeeb3ec84f83df64648b8d6aa05e1cbd4d59127",
+"head": "e1d416da8c26c5b0f959427a0ba1e2f6a6b3ad63",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"new commits",
+"measured with its own craft-libs pins",
+"main changed word.rs"
 ]
 },
 {
@@ -9946,11 +9644,13 @@
 "title": "Layout: an exactly spaced line puts its baseline 0.8 of its height down",
 "author": "kevinj24fr",
 "draft": false,
-"head": "5757973999d51e58e85aac137fd7c3d54f505234",
+"head": "ff079766e3dfdf22c529c0207f9737c58abeb7b2",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5819,
@@ -10008,11 +9708,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed hit.rs"
-]
+"stale": []
 },
 {
 "n": 5834,
@@ -10034,12 +9730,9 @@
 "title": "layout: wrap field results across multiple lines within margins (#5838)",
 "author": "batistalucasv",
 "draft": false,
-"head": "74e449d3208cbcb5108dd85985d15763df867898",
+"head": "394405a53f8b98ff32ac06a6219ac6a4683b0b19",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/references/toc.rs",
-"crates/layout/src/para/lines.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -10050,14 +9743,12 @@
 "title": "SmartArt: CJK text in diagrams maintains consistent fallback font family (#5672)",
 "author": "batistalucasv",
 "draft": false,
-"head": "308db2ea85c2e1682e5f7d3dbfaf0c79ceac0491",
+"head": "1230d98efc430f7002bce8b1b7d1658c6269c164",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed fontdb/face.rs, fontdb/user.rs, display/objects.rs"
+"new commits"
 ]
 },
 {
@@ -10065,7 +9756,7 @@
 "title": "Fix: enable copy and paste for custom text boxes and frames",
 "author": "batistalucasv",
 "draft": false,
-"head": "2535c7ef19af05e4053090f1ba484b792778964c",
+"head": "a13116ca9054af1202ec00f12545bec2de99921c",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10089,7 +9780,7 @@
 "title": "Fix: edit Start at and resolve active section in Page Number Format (#5855)",
 "author": "batistalucasv",
 "draft": false,
-"head": "f5ebab1ce28ad0e4df5ece384e0941476c6aca82",
+"head": "c1cb5d53dbf0daa8c0724d00b2549e11733eb09f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10100,11 +9791,9 @@
 "title": "Compare: diff footnote and endnote content (#5842)",
 "author": "batistalucasv",
 "draft": false,
-"head": "9688598d079ebca25e03d6923384476642963ce0",
+"head": "21c630d3862df1622dc09e5c25e45e774a4a1ef8",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -10113,11 +9802,9 @@
 "title": "Compare: diff style definitions as property-change revisions (#5841)",
 "author": "batistalucasv",
 "draft": false,
-"head": "ad96b60aa9d6efb37cf1de4afa6a9422fd223ffa",
+"head": "dbfdac2ce7421ecc51a5271d3e38103e5dd062ba",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
 "new commits"
@@ -10163,7 +9850,7 @@
 "title": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847)",
 "author": "batistalucasv",
 "draft": false,
-"head": "6fac1b8e913822c82251ee1eae2f0b95bef734b1",
+"head": "0e006257e66769e8ad8ab3013758652233bb16bb",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10180,11 +9867,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed exporter/text.rs"
-]
+"stale": []
 },
 {
 "n": 5889,
@@ -10212,7 +9895,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed ctx.rs, para/lines.rs"
+"main changed ctx.rs, flow.rs, para/lines.rs \u2026"
 ]
 },
 {
@@ -10231,7 +9914,7 @@
 "title": "Proofing: support freestanding custom.dic dictionary files (#5840)",
 "author": "batistalucasv",
 "draft": false,
-"head": "0aa37470228b4f229ab4a73a7291c1624f3f4407",
+"head": "35b2de745cc792e8657b1a871ab49524b378f4d3",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10257,7 +9940,9 @@
 "draft": false,
 "head": "13c4319d01c9204bed11d90460967f8de3722bf1",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/para/styles.rs"
+],
 "render": false,
 "stale": []
 },
@@ -10266,7 +9951,7 @@
 "title": "Tables: text wrapping options in Table Properties (#5884)",
 "author": "batistalucasv",
 "draft": false,
-"head": "75fcfb0c0e8b56fbc1ed44037dd58f54013c8532",
+"head": "3089fa39940f75b82d355c97bb19acf3831f68c3",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10277,7 +9962,7 @@
 "title": "Table: preserve table structure on copy and paste (#5906)",
 "author": "batistalucasv",
 "draft": false,
-"head": "75a092192df73e479eed5f9ffcf96c72bbe17949",
+"head": "4522249d0c3d6ac6eaa03a3cc284094018b729bf",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10292,11 +9977,7 @@
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": [
-"new commits",
-"measured with its own craft-libs pins",
-"main changed lib.rs"
-]
+"stale": []
 },
 {
 "n": 5918,
@@ -10316,7 +9997,7 @@
 "title": "Format Shape: add Line and Layout settings for shapes and text boxes (#5896)",
 "author": "batistalucasv",
 "draft": false,
-"head": "c385579ce88290c166cddf5b7bb60d2a31cecae4",
+"head": "072f50e5816c95dc0190f221ae2580ac12b162b1",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10354,46 +10035,54 @@
 "title": "docx, engine: preserve and resolve row/cell ins/del and tblPrExChange revisions",
 "author": "neilcawse",
 "draft": false,
-"head": "8a6d6053a7cc31d4134eae3aef7218f4646c7484",
+"head": "cc437f7079fd8ab89c5de85a2ed2236e639dfb38",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5951,
 "title": "docx, engine: update range fields and preserve revisions and ffData in field results",
 "author": "neilcawse",
 "draft": false,
-"head": "ce1aa0e610535ee5ab4cd5e4512deb855c5468fb",
+"head": "41b67e6c6256458b2f708fc80783e07e3307a7f3",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5953,
 "title": "docx: round fractional file-unit measures and raise group nesting depth to 64",
 "author": "neilcawse",
 "draft": false,
-"head": "bcd2e0782f171aec79bceed285a9d85dc21b5eb1",
+"head": "c0500670d596d7e340f4b16b1be6925bd2a791e0",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 5954,
 "title": "fonts: check family cmap coverage before loading fallback fonts and clear caches on rescan",
 "author": "neilcawse",
 "draft": false,
-"head": "fa3eb9f30357fb4f6b26d79e0b09dfde36b59f20",
+"head": "74345b2e25ced95b2d472f0d2b7c2988e4049782",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/fonts/src/fontdb/fallback.rs",
+"crates/fonts/src/fontdb/fallback_data.rs"
+],
 "render": true,
 "stale": [
-"new commits",
-"measured with its own craft-libs pins"
+"new commits"
 ]
 },
 {
@@ -10483,7 +10172,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed fontdb/face.rs, fontdb/names.rs"
+"main changed fontdb/face.rs, fontdb/names.rs, para/model.rs"
 ]
 },
 {
@@ -10493,7 +10182,9 @@
 "draft": false,
 "head": "a2b534cb8b3ad737ceb167dcaf4824faa5e13360",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/lib.rs"
+],
 "render": false,
 "stale": []
 },
@@ -10543,7 +10234,7 @@
 "title": "Tables: right-to-left start edges, mode 14 end edges and style parts' inner lines as Word",
 "author": "pakiat",
 "draft": false,
-"head": "1f4795b2f64bf215ea4a2f5d57d0648249b7eb0a",
+"head": "4005e1edef2a360806cb70b7dbd12a4159bb2f2f",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10621,7 +10312,7 @@
 "title": "Tables: Word gives a table nothing from Normal Table, and Table Grid is based on it",
 "author": "pakiat",
 "draft": false,
-"head": "556a7a399386277070c7ebe9b01764be8b22ac52",
+"head": "76a7280f4ebcf6cf7ed7f606ca64f494ce67d1db",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10750,11 +10441,12 @@
 "title": "Lowered pictures: the comment and the gap note say what layout does now",
 "author": "Morzilla",
 "draft": false,
-"head": "f9e43775dfa4a40f0d47ce089288ea6d6cbf72c1",
+"head": "296270360ba0089775c26ca04ad0165385116ab4",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
 "main changed para/lines.rs"
 ]
@@ -10764,7 +10456,7 @@
 "title": "Tables: a table style's shading is what Word paints",
 "author": "pakiat",
 "draft": false,
-"head": "6c8173a163eb5c37cd4b4e6459352d9782ffa6d1",
+"head": "fbe73497322ea4dfb58035d71afbb20bacad92fc",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10798,7 +10490,8 @@
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed para/paragraph.rs"
 ]
 },
 {
@@ -10819,11 +10512,12 @@
 "title": "i18n: Hebrew (he) interface on the Arabic right-to-left layout",
 "author": "yonatan-langer83",
 "draft": false,
-"head": "dcd0b8192541f61517380a560300cfb7f7889d70",
+"head": "5c022167f8ecc61e5a16d051b04319db85108efc",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
 "main changed lib.rs"
 ]
@@ -10833,7 +10527,7 @@
 "title": "Tables: a table style's bands fall as in Word",
 "author": "pakiat",
 "draft": false,
-"head": "5ac562d8adf20ace123c1c0dd4ce68fde2559b61",
+"head": "f5277d0551a9dd2ca48c0da9fbdb29281fb507ab",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10844,22 +10538,22 @@
 "title": "Fix/footnote continued bottom",
 "author": "kevinj24fr",
 "draft": false,
-"head": "6997afcc346e44c0990b1b5f7ef94b7e093e0e03",
+"head": "4afcb2812f24acef29d7b8a4572584d5f3fc0fc2",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6122,
 "title": "Compare: diff header and footer content across sections (#5837)",
 "author": "batistalucasv",
 "draft": false,
-"head": "bdc579d8152457cd4a292219f9fabc3988e07eeb",
+"head": "d35eaf7e797cceaded71cc13cf87459647ca9c82",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": []
 },
@@ -10868,7 +10562,7 @@
 "title": "Compare: detect replaced image bytes when size and extents are unchanged (#6086)",
 "author": "batistalucasv",
 "draft": false,
-"head": "997f810ace5f94e7a469a6696b3a4fd2b151db8f",
+"head": "14539e43b7a4d2baefffa7a666a91366a79c16c3",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10930,10 +10624,10 @@
 },
 {
 "n": 6141,
-"title": "tools/compare: row-level diff inside surviving tables (#5921)",
+"title": "tools/compare: diff cells inside surviving matched-row tables (#5921)",
 "author": "batistalucasv",
 "draft": false,
-"head": "beda60883d26e8c57981fe46a87c71ced0bfe6d3",
+"head": "e2b2e8aa21cfa055416fbc0fda80dd70935c3739",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -10944,7 +10638,7 @@
 "title": "Compare: emit w:numberingChange for numbering-only differences (#5836)",
 "author": "batistalucasv",
 "draft": false,
-"head": "04c9df4baf167879e29ba4ad0cdd1e526eae5c22",
+"head": "0906164eeb7894cb309d421a04159a496a22c2ef",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10957,7 +10651,7 @@
 "title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
 "author": "batistalucasv",
 "draft": false,
-"head": "b8f0f39b648bd5618811972c0426cde8862f4548",
+"head": "51f9e2ed86cf8ecc3398253452d750fd0f487f2d",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -10978,10 +10672,10 @@
 },
 {
 "n": 6162,
-"title": "fix(render): frame shapes draw with a hole; header drawings aren't dimmed",
+"title": "fix(render): frame shapes draw with a hole; frame presets open as frames",
 "author": "tsw2k",
 "draft": false,
-"head": "450e7c60e5b8d37465c0b1969153653e033e6477",
+"head": "8d25795427716e2ff85370b31a334eab86c40323",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11022,7 +10716,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed fontdb/face.rs"
+"main changed fontdb/face.rs, fontdb/fallback.rs, fontdb/fallback_data.rs"
 ]
 },
 {
@@ -11123,7 +10817,7 @@
 "title": "Tables: a nested table wider than its cell is cut off at the cell's edges",
 "author": "pakiat",
 "draft": false,
-"head": "3441eceeb5e3bea07717c6e7cd5a7a02cb4c5e6a",
+"head": "fda9bbb95432b224490312443c8b6ee48bb909ef",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -11186,7 +10880,10 @@
 "crates/formats/src/odt/tests_more/tables.rs",
 "crates/formats/src/odt/writer/props.rs",
 "crates/formats/src/odt/writer/tables.rs",
-"crates/formats/src/rtf/export.rs"
+"crates/formats/src/rtf/export.rs",
+"crates/layout/src/boxes.rs",
+"crates/layout/src/display/page.rs",
+"crates/layout/src/page.rs"
 ],
 "render": true,
 "stale": []
@@ -11342,7 +11039,9 @@
 "draft": false,
 "head": "c82e61eaf60116fb769ad9a3b7a15821a4b9353c",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/para/chars.rs"
+],
 "render": true,
 "stale": []
 },
@@ -11351,7 +11050,7 @@
 "title": "A first start takes the system account's name as the user name (#2209)",
 "author": "johanneswilm",
 "draft": false,
-"head": "da8953db960540d9a14276fb7334865b9762597e",
+"head": "8b1798940e2528ac2bde772825662ac82bac2beb",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11483,11 +11182,15 @@
 "draft": false,
 "head": "f96f6f4f11c49bd1ab2643b2b9cf9649dec5abbb",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/cmd/references/fields.rs",
+"crates/engine/src/io_ext.rs"
+],
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed cache.rs, headers.rs"
 ]
 },
 {
@@ -11503,7 +11206,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed floats.rs, para/grid.rs, para/lines.rs"
+"main changed boxes.rs, floats.rs, para/grid.rs \u2026"
 ]
 },
 {
@@ -11602,7 +11305,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed lib.rs"
+"main changed headers.rs, lib.rs"
 ]
 },
 {
@@ -11652,7 +11355,9 @@
 "draft": false,
 "head": "3d3c885f5a942b34bd7cb67192647cd8c2b3d2d0",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/display.rs"
+],
 "render": true,
 "stale": []
 },
@@ -11692,7 +11397,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed display/lines.rs"
+"main changed display/lines.rs, display/page.rs"
 ]
 },
 {
@@ -11708,7 +11413,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed display/lines.rs"
+"main changed display/lines.rs, para/paragraph.rs"
 ]
 },
 {
@@ -11722,7 +11427,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed lib.rs"
+"main changed headers.rs, lib.rs, pass.rs"
 ]
 },
 {
@@ -11741,11 +11446,9 @@
 "title": "File > Export to DOCX, ODT or RTF writes a copy and keeps the document's file (#6131)",
 "author": "jayzed80",
 "draft": false,
-"head": "833082618a425e028fa341c76334d3cce2916289",
+"head": "c93359d997ba89e69742f121d10c567b4808d034",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/file.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -11778,7 +11481,8 @@
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed para/paragraph.rs"
 ]
 },
 {
@@ -11799,11 +11503,9 @@
 "title": "Compare: a field whose result changed stays a live field (#6268)",
 "author": "jayzed80",
 "draft": false,
-"head": "8ef8a7ba60fc32ae4a5063f1a7102f5c8b5897e3",
+"head": "842224f69c67c09998b5bf0a1f5bbefa8948e109",
 "mine": false,
-"conflicts": [
-"crates/engine/src/cmd/tools/compare.rs"
-],
+"conflicts": [],
 "render": false,
 "stale": []
 },
@@ -11818,7 +11520,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed lib.rs"
+"main changed lib.rs, table.rs"
 ]
 },
 {
@@ -11826,7 +11528,7 @@
 "title": "picture: borders and frames keep a transparent background (#6444)",
 "author": "HEOJUNFO",
 "draft": false,
-"head": "0988b930a7fdabfe2b0baaca26522101ca1cf00b",
+"head": "29641cf8073001cab3f5935b8427fd2d612a5e3d",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -11853,7 +11555,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed boxes.rs, flow.rs, table.rs"
 ]
 },
 {
@@ -11881,7 +11584,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed boxes.rs"
 ]
 },
 {
@@ -11990,7 +11694,7 @@
 "title": "Compare: keep the revised IF field when only its condition changed (#6271)",
 "author": "jayzed80",
 "draft": false,
-"head": "92fbdc4f722dcd13cbd0a66ede608d7ec0c3b530",
+"head": "c0bd217334c00d769de066a3b3d6c0f415e030e7",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12001,7 +11705,7 @@
 "title": "#6518: typing after Backspace keeps the deleted character's formatting",
 "author": "Higgs32584",
 "draft": false,
-"head": "d066750b8b74bcb17d8bc6e696533c0d7045037d",
+"head": "92b68d21445bb573c54e5872c8cc131a2cff1d1e",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12030,7 +11734,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed boxes.rs"
 ]
 },
 {
@@ -12040,11 +11745,14 @@
 "draft": false,
 "head": "d6e76955385db0435af039d3ed41395ddc2d9d47",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/table.rs"
+],
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -12069,7 +11777,8 @@
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -12082,7 +11791,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -12127,11 +11837,13 @@
 "title": "Layout: the room borders take in a table row: double and triple borders, shared edges, every cell of the row (#6540)",
 "author": "Menonro",
 "draft": false,
-"head": "5e81d463ad840fd01fecdc31278baa81c2974d5c",
+"head": "e353018fa8f249cdad0a60d18715687371cd8c72",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6545,
@@ -12143,7 +11855,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -12191,20 +11904,23 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
 "n": 6575,
-"title": "Layout: percentage cell widths that agree in every row replace a stale grid (#6574)",
+"title": "Layout: percentage cell widths are whole twentieths of the table's own width, whatever the grid says (#6574)",
 "author": "Menonro",
 "draft": false,
-"head": "edecb8e4bcfd1413f6aca662f3081dbe4fab78c9",
+"head": "7d242091cf590022fde93a5a98363836423dbca0",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"new commits",
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -12231,7 +11947,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed exporter/draw.rs, exporter/text.rs"
+"main changed export.rs, exporter/draw.rs, exporter/text.rs"
 ]
 },
 {
@@ -12244,7 +11960,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed table.rs"
 ]
 },
 {
@@ -12291,11 +12008,13 @@
 "title": "Layout: place negative-offset floats from a first line pushed down by a wrapping float (#6567)",
 "author": "jayzed80",
 "draft": false,
-"head": "50041c808cac27d947203c98e0a7648988345479",
+"head": "4e79e6753439a46ea87b4a0d5a8fe5a5e9d56bf3",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6594,
@@ -12308,7 +12027,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed ctx.rs"
+"main changed ctx.rs, pass.rs, table.rs"
 ]
 },
 {
@@ -12355,11 +12074,13 @@
 "title": "Layout: a table sized by its columns takes them from its cells and is narrowed to the room it has (#6604)",
 "author": "Menonro",
 "draft": false,
-"head": "e36f309750a4b8efe7d74b8c855bb893c68bd41e",
+"head": "5c6446fe022b7266ba117b0b182a6107e6580866",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6607,
@@ -12385,7 +12106,8 @@
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed para/paragraph.rs"
 ]
 },
 {
@@ -12399,7 +12121,7 @@
 "render": true,
 "stale": [
 "measured with its own craft-libs pins",
-"main changed para/lines.rs"
+"main changed para/lines.rs, para/model.rs"
 ]
 },
 {
@@ -12412,7 +12134,8 @@
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed boxes.rs, table.rs"
 ]
 },
 {
@@ -12455,11 +12178,12 @@
 "title": "Layout: a left tab past the right indent beside a float moves clear of it (#6577)",
 "author": "jayzed80",
 "draft": false,
-"head": "7f8283a77f13457c09b4d6eabab5b3074814b33f",
+"head": "ec29711caf393d138b2e490461992b2ddf3db939",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
 "main changed para/lines.rs"
 ]
@@ -12480,15 +12204,14 @@
 "title": "Layout: no automatic space beside an ideograph its run's installed East Asian font lacks (#6591)",
 "author": "jayzed80",
 "draft": false,
-"head": "104fa6133d45f0964460bfe7af266bc3ba61551d",
+"head": "f674177095a0437769372710815a2a07664817da",
 "mine": false,
-"conflicts": [
-"crates/layout/src/para/grid.rs"
-],
+"conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
-"main changed para/grid.rs"
+"main changed para/grid.rs, para/paragraph.rs"
 ]
 },
 {
@@ -12518,12 +12241,14 @@
 "title": "Layout: a linesAndChars document grid keeps automatic spacing, as Word has it (#6584)",
 "author": "jayzed80",
 "draft": false,
-"head": "8ac30026538f32364625ccaac1d53fdd03bff6e5",
+"head": "b922877d1f0b078ddf0370db120600b63a031d32",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"new commits",
+"measured with its own craft-libs pins",
+"main changed para/paragraph.rs"
 ]
 },
 {
@@ -12542,12 +12267,14 @@
 "title": "Layout: a keep-with-next chain too long for a page breaks at the page bottom (#6593)",
 "author": "jayzed80",
 "draft": false,
-"head": "f19bed0c9699d3928f708ede272a5924b419fa99",
+"head": "6f5f835b65cff66ecd41dd2a4064792143cc8d94",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
-"measured with its own craft-libs pins"
+"new commits",
+"measured with its own craft-libs pins",
+"main changed flow.rs"
 ]
 },
 {
@@ -12555,11 +12282,13 @@
 "title": "Tables: a cell's text stays clear of a side border wider than twice its margin",
 "author": "pakiat",
 "draft": false,
-"head": "d526f6645e2343e11f639654f9a7dcb9deee70bf",
+"head": "18462f684799b77652522dbda1137592dff3d2d3",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6657,
@@ -12588,13 +12317,14 @@
 "title": "Draw: ink keeps a readable colour on a dark page (#6548)",
 "author": "jayzed80",
 "draft": false,
-"head": "a270d5ed235cb27b4b32b1783783b851ca0896b8",
+"head": "15819f08722f682be25eda20782df21f8393950c",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
-"main changed lib.rs"
+"main changed display.rs, display/objects.rs, exporter/draw.rs \u2026"
 ]
 },
 {
@@ -12602,13 +12332,14 @@
 "title": "Layout: from Word 2013 a paragraph with a hidden mark has the indents, tab stops and list level of the paragraph that ends its group (#6664)",
 "author": "Menonro",
 "draft": false,
-"head": "2c92e2fba147860d1ea360e615188c128bb1c7e0",
+"head": "3378b39e0c84c225ffba8f764bcc7da5cd1fe306",
 "mine": false,
 "conflicts": [],
 "render": true,
 "stale": [
+"new commits",
 "measured with its own craft-libs pins",
-"main changed ctx.rs, hit.rs, para/lines.rs"
+"main changed boxes.rs, cache.rs, ctx.rs \u2026"
 ]
 },
 {
@@ -12616,22 +12347,26 @@
 "title": "Layout: text set out of its table cell is cut off at the cell's edges (#6670)",
 "author": "Menonro",
 "draft": false,
-"head": "5f4bfe87ae5aeca77bd3929649bbcda6e8fabaef",
+"head": "66f4ab36c00156c47c7227dc666f1d0d79eac0f5",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6678,
 "title": "fix(layout): a right tab stop past the right indent keeps its text on the page (#6447)",
 "author": "jayzed80",
 "draft": false,
-"head": "594c59fc224e855011d77c61d3e76e9d321b72bf",
+"head": "987103d90aaf8a3a37cdf40b7453bede901a6612",
 "mine": false,
 "conflicts": [],
 "render": true,
-"stale": []
+"stale": [
+"new commits"
+]
 },
 {
 "n": 6692,
@@ -12671,7 +12406,7 @@
 "title": "M14: expose supported TIFF pictures in choosers and errors",
 "author": "MMexicann",
 "draft": false,
-"head": "1ccf8d4f5fd7bed48d06c64dba3f5ca9e7540074",
+"head": "8783d603eed3a44d120410bfb201f009db4d62b6",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -12695,11 +12430,14 @@
 "draft": false,
 "head": "a454582a3e9642635bd92cb685f7b0e62a791c51",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs"
+],
 "render": true,
 "stale": [
 "new commits",
-"measured with its own craft-libs pins"
+"measured with its own craft-libs pins",
+"main changed boxes.rs"
 ]
 },
 {
@@ -12777,7 +12515,7 @@
 "title": "Add screen-only Text Boundaries in View",
 "author": "hsalimi79",
 "draft": false,
-"head": "01b9f01112900110e4b3c3b95c1081055541122c",
+"head": "629a60edaf8ffb353d4ff124e8b90d949d8f29e9",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13035,7 +12773,11 @@
 "draft": false,
 "head": "413454e9192f41bbaa8992f3dd073d48b6fad91a",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/engine/src/session/layout.rs",
+"crates/layout/src/lib.rs",
+"crates/layout/src/pass.rs"
+],
 "render": true,
 "stale": []
 },
@@ -13123,7 +12865,7 @@
 "title": "Ctrl+arrows and Ctrl+Backspace/Delete take a typographic apostrophe inside a word (#6588)",
 "author": "NguyenDuc2309",
 "draft": false,
-"head": "9f8a267e3a7d9b8ddb387a4afd13d09b5703fa9f",
+"head": "dfa5a564abeb16e7cb1cf23109876f28f5036f31",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13158,7 +12900,9 @@
 "draft": false,
 "head": "0d5470e8f633b0ada96d8ad9774437e52bae0bbb",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/para/paragraph.rs"
+],
 "render": true,
 "stale": []
 },
@@ -13202,7 +12946,11 @@
 "draft": false,
 "head": "b01c9b40757f15953af04eee8fac22cb8a49de18",
 "mine": false,
-"conflicts": [],
+"conflicts": [
+"crates/layout/src/boxes.rs",
+"crates/layout/src/flow.rs",
+"crates/layout/src/page.rs"
+],
 "render": true,
 "stale": []
 },
@@ -13211,7 +12959,7 @@
 "title": "Hangul documents: open, edit and save .hwp and .hwpx (#1935)",
 "author": "WhyEichiO",
 "draft": false,
-"head": "92499455e380242bee4eb697619a9a349df3ab4b",
+"head": "208c9c3a24c4a937a639bac89723f1cea53716c8",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13222,7 +12970,7 @@
 "title": "Fix IME composition reflowing the text to its right",
 "author": "kevin2y",
 "draft": false,
-"head": "9c95f43d4f060dc95a018b856a3a7c83036c5c99",
+"head": "4d25152a97790580b18c6427ad1cf5f04e2d2f1f",
 "mine": false,
 "conflicts": [],
 "render": false,
@@ -13269,7 +13017,9 @@
 "head": "60c11b50b106ee5d6bc4b371600b03706c678eaa",
 "mine": false,
 "conflicts": [
-"crates/layout/src/lib.rs"
+"crates/engine/src/session/layout.rs",
+"crates/layout/src/lib.rs",
+"crates/layout/src/pass.rs"
 ],
 "render": true,
 "stale": []
@@ -13301,7 +13051,7 @@
 "title": "Tables: a right-to-left table keeps its cell margins on the sides they name",
 "author": "pakiat",
 "draft": false,
-"head": "b946229d3808b222fee92c4f9a3cf71192cbfa3e",
+"head": "514a95b80f41fc6a49f211e8f7e6b578a427240c",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13312,7 +13062,7 @@
 "title": "Tables: a floating table placed by an offset takes its indent before Word 2013, half its border from it",
 "author": "pakiat",
 "draft": false,
-"head": "a761f276d53b7b6724a55e0e6e74171e0736bebe",
+"head": "0f83ea9cf443b19321e25f32ac0fe23c49af5644",
 "mine": false,
 "conflicts": [],
 "render": true,
@@ -13357,6 +13107,188 @@
 "author": "zfgf11",
 "draft": false,
 "head": "039114bee617179926cbfa43c2a246da5bceb210",
+"mine": false,
+"conflicts": [
+"crates/fonts/src/fontdb/fallback.rs",
+"crates/fonts/src/word.rs",
+"crates/layout/src/para/builder.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 6974,
+"title": "Compare clears a foreign del from an inserted paragraph's mark (#6899)",
+"author": "jayzed80",
+"draft": false,
+"head": "c158887d9a9525f939a409ebd2e8d1d0d9e81b00",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6979,
+"title": "DOCX: a frame shape in a note separator opens as a rectangle",
+"author": "dotCooCoo",
+"draft": false,
+"head": "b73210feeb2719ee69b78b06e554af47298738a7",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6980,
+"title": "#6829: balanced columns keep a continued paragraph's end with the next paragraph (#6829)",
+"author": "jayzed80",
+"draft": false,
+"head": "8619e257a7a2653feb5741385215a9b2134869ff",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 6986,
+"title": "Charts: number formats keep a trailing space that is part of the code",
+"author": "dotCooCoo",
+"draft": false,
+"head": "741d74b3faf7e53ba6df5d564aa99ac6e862b1af",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 6991,
+"title": "Fonts: draw Segoe UI in Selawik, with Segoe UI's line height",
+"author": "jorgenbruntveit",
+"draft": false,
+"head": "cfde58e1859e606c12b82db201c4561fb8727367",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7004,
+"title": "Layout: Thai breaks around punctuation, and plain Thai in Word files only at spaces (follow-up to #1713)",
+"author": "pakiat",
+"draft": true,
+"head": "7049a809155eec73cf9e119e18e90c2babbd6a03",
+"mine": false,
+"conflicts": [
+"crates/layout/src/para/paragraph.rs"
+],
+"render": true,
+"stale": []
+},
+{
+"n": 7006,
+"title": "Layout: at-least spacing, a line of only pictures takes no descent below them",
+"author": "kevinj24fr",
+"draft": false,
+"head": "fca3ee07680a28c71d9db79d551c92dc3bb943b1",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7007,
+"title": "Layout: a justified line takes one more word by a share that depends on its spaces",
+"author": "kevinj24fr",
+"draft": false,
+"head": "9892ab2a3810c84c287ad449613cc843fa220ea5",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7008,
+"title": "Layout: the mark kept with a closing page break takes no line number",
+"author": "kevinj24fr",
+"draft": false,
+"head": "b53859e512a4e9f8311d773ddc5696115310a6b2",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7009,
+"title": "IME: the composition takes the formatting typing takes, and the text's East Asian font",
+"author": "arcanii",
+"draft": false,
+"head": "e90a97d9d2aa042ced9b8b70c52965e01f14b913",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7027,
+"title": "M14: accept fullwidth signs in measurements",
+"author": "MMexicann",
+"draft": false,
+"head": "5048f823432fbee6de8d4e6650dc851629fffc00",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 7030,
+"title": "M14: preserve saturation in point-to-twip conversion",
+"author": "MMexicann",
+"draft": false,
+"head": "8276f860e09bbb45bb03405436d5a67ba4805839",
+"mine": false,
+"conflicts": [],
+"render": false,
+"stale": []
+},
+{
+"n": 7050,
+"title": "Add the request-signatures dialog from craft-ui's esign feature",
+"author": "wdunn001",
+"draft": false,
+"head": "5e16fbc13cc9e50a30507020f9ce735e3b6a973c",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7055,
+"title": "Layout: a paragraph opening with a column break has its space before in the next column (#7053, #7054)",
+"author": "mmazzieri",
+"draft": false,
+"head": "a9c850e1020230e348d0fcc556fee82a365d5dc0",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7060,
+"title": "Layout: a private-use character its font lacks draws that font's missing glyph (#7058, #7059)",
+"author": "mmazzieri",
+"draft": false,
+"head": "ec271b31a96e9d7d1798130e1945d94d52ab48b2",
+"mine": false,
+"conflicts": [],
+"render": true,
+"stale": []
+},
+{
+"n": 7061,
+"title": "Lists: a number after a leading column break goes with the text to the next column (#7057)",
+"author": "mmazzieri",
+"draft": false,
+"head": "68b6ff441652dcc05bb4ac86ceb1c084b5a2ceeb",
 "mine": false,
 "conflicts": [],
 "render": true,

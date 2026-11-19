@@ -293,5 +293,80 @@
 "n": 6826,
 "title": "Fonts: tell where a missing font can be downloaded (Get the Missing Fonts)",
 "state": "MERGED"
+},
+{
+"n": 1757,
+"title": "Borders: lines meet in closed corners, as in Word",
+"state": "MERGED"
+},
+{
+"n": 1630,
+"title": "Tables without w:tblGrid take their grid from the cells, and widths wider than the page are squeezed like Word",
+"state": "CLOSED"
+},
+{
+"n": 2063,
+"title": "Tables: Hangul-style Create Table",
+"state": "CLOSED"
+},
+{
+"n": 2064,
+"title": "Korean interface: recovery and link strings, Korean fonts and list numbering",
+"state": "CLOSED"
+},
+{
+"n": 2065,
+"title": "Open HWPX (Hangul) documents",
+"state": "CLOSED"
+},
+{
+"n": 2345,
+"title": "Fonts: fallback no longer keeps unneeded font families in memory",
+"state": "MERGED"
+},
+{
+"n": 2711,
+"title": "#2702: a missing font is drawn in its font table's altName, as Word does",
+"state": "MERGED"
+},
+{
+"n": 3022,
+"title": "IME: the composition is drawn in the text's font and size, and CJK in it no longer shows boxes",
+"state": "MERGED"
+},
+{
+"n": 3764,
+"title": "Open HWP 5 (Hangul) documents",
+"state": "CLOSED"
+},
+{
+"n": 4219,
+"title": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198)",
+"state": "MERGED"
+},
+{
+"n": 4964,
+"title": "fix(engine): a drag between narrow columns leaves them as they are",
+"state": "MERGED"
+},
+{
+"n": 5074,
+"title": "Tables: percentage cell widths size their columns whichever rows give them",
+"state": "MERGED"
+},
+{
+"n": 5096,
+"title": "Layout: no line break after the '?' of a query, nor after a slash before an underscore",
+"state": "MERGED"
+},
+{
+"n": 5129,
+"title": "Fields: PDFs and prints show body PAGEREF pages, as Word fills them in",
+"state": "MERGED"
+},
+{
+"n": 5638,
+"title": "Say in the placeholder when a picture is too large to decode",
+"state": "MERGED"
 }
 ]

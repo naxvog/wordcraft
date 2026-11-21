@@ -70,7 +70,11 @@ rem_path = f'{B}/{VER}-removed.json'
 removed = json.load(open(rem_path)) if os.path.exists(rem_path) else []
 gone = [n for n in old if n not in open_n and n not in {r['n'] for r in removed}]
 for n in gone:
-    removed.append(dict(n=n, title=old[n]['title'], state=gh('pr', 'view', str(n), '-R', GH, '--json', 'state', '-q', '.state').strip()))
+    try:
+        state = gh('pr', 'view', str(n), '-R', GH, '--json', 'state', '-q', '.state').strip()
+    except subprocess.CalledProcessError:  # GitHub deletes spam PRs outright, so they no longer resolve
+        state = 'DELETED'
+    removed.append(dict(n=n, title=old[n]['title'], state=state))
 
 refetch = [p['number'] for p in cand + cargo if git('rev-parse', '-q', '--verify', f"pr/{p['number']}").strip() != p['headRefOid']]
 for i in range(0, len(refetch), 100):

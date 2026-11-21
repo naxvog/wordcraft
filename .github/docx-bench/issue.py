@@ -67,7 +67,7 @@ libs_failed = sorted(n for n, s in last.items() if s.startswith('bench failed') 
 todo = [l.strip() for l in open(f'{B}/{VER}-todo.txt') if l.strip()] if os.path.exists(f'{B}/{VER}-todo.txt') else []
 _rm = json.load(open(f'{B}/{VER}-removed.json')) if os.path.exists(f'{B}/{VER}-removed.json') else []
 removed_txt = '; '.join(f"{lab} {', '.join('#' + str(r['n']) for r in _rm if r['state'] == s)}"
-                        for s, lab in (('MERGED', 'merged'), ('CLOSED', 'closed without merging'))
+                        for s, lab in (('MERGED', 'merged'), ('CLOSED', 'closed without merging'), ('DELETED', 'deleted'))
                         if any(r['state'] == s for r in _rm)) or 'none'
 
 

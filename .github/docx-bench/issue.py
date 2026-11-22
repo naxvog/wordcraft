@@ -149,7 +149,7 @@ rendering, fonts, DOCX reading or PDF export does to that score. It's regenerate
 ## Summary for reviewers
 
 `main` {MAIN} scores **{bm['ssim']:.2f}** SSIM against Word's PDFs; docxide-pdf, in the same setup, scores {dm['ssim']:.2f}
-({gap:.1f} points ahead).""" + (f""" That's with every craft-libs crate at craft-libs `main` {LIBS}, as for every PR below;
+({gap:.1f} points ahead).""" + (f""" That's with every craft-libs crate at craft-libs `next` {LIBS}, as for every PR below;
 with the craft-libs versions `main` pins it scores {means(plain)['ssim']:.2f}, so {bm['ssim'] - means(plain)['ssim']:+.2f} waits in craft-libs
 for a PR that updates the pins.""" if plain else '')
        + (f""" Merging the {len(order)} PRs {'under *Merge next* and *Not ready yet*' if blocked else 'below'}, in this order, gives **{bm['ssim'] + cd['ssim']:.2f} ({cd['ssim']:+.2f})**,
@@ -226,8 +226,8 @@ next round; {len(conflicting)} conflict with `main`.
 - **craft-libs:** since #6603 and #6661 the DOCX and RTF readers, zip and image decoding are
   [craft-libs](https://github.com/storytold/craft-libs) crates, so a reader fix lands there and reaches WordCraft
   through a PR that moves the craft-libs pins in `Cargo.toml`. Every run (baseline, PRs, combined branches) builds
-  with all craft-libs crates at the craft-libs `main` commit of the round's start, so a PR is measured on its own
-  code, not on craft-libs changes its pins carry; the summary says how much craft-libs `main` adds to the versions
+  with all craft-libs crates at the craft-libs `next` commit of the round's start, so a PR is measured on its own
+  code, not on craft-libs changes its pins carry; the summary says how much craft-libs `next` adds to the versions
   `main` pins. A PR that builds only with other craft-libs versions is listed under *Not benched*.
 - **Safety:** PR code is built and run in containers without network or capabilities, with their own cargo caches,
   seeing the suite read-only; dependencies are downloaded without running any of the PR's code.
@@ -311,7 +311,7 @@ out.append(f"""
 - **Code conflicts with `main`** ({len(conflicting)} PRs): not rerun until rebased.
 - **Change no rendering file** ({len(norender)}): not benched.
 - **Doesn't build once merged with `main`:** {', '.join('#' + n for n in failed) or '–'}.
-- **Doesn't build with craft-libs `main`** (builds with the craft-libs versions it pins): {', '.join('#' + n for n in libs_failed) or '–'}.
+- **Doesn't build with craft-libs `next`** (builds with the craft-libs versions it pins): {', '.join('#' + n for n in libs_failed) or '–'}.
 - **Removed from this list** since they're no longer open: {removed_txt}.
 - **PDF export issues the bench can't see** (it compares rendered pages): file size (#5309), reproducible output
   (#3083, #4300), `/Suspects` in `/MarkInfo` (#3410), tracked-change colours with markup

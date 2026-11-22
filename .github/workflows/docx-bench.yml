@@ -3,7 +3,7 @@ name: docx bench
 # PR score tracking for storytold/wordcraft#5711 with the docxide-pdf suite, on GitHub's free runners. A round:
 #   plan      scan.py: open PRs, what to bench (new, new commits, stale against main), the gate. Runs no PR code.
 #   baseline  main at the round's commit, when it has no run yet: with every craft-libs crate at the round's craft-libs
-#             main (the base PRs are measured on), and with main's own craft-libs pins (plain, for what waits in
+#             next (the base PRs are measured on), and with main's own craft-libs pins (plain, for what waits in
 #             craft-libs). The only job that saves the cargo cache.
 #   bench     one job per PR, 16 at a time: merged into the baseline, craft-libs forced as there, built and scored
 #             without network (pr.sh)
@@ -27,7 +27,7 @@ on:
         description: 'Probe: instead of the two combined branches, merge only these PRs (space-separated) into v67-combined-only'
         default: ''
       libs:
-        description: craft-libs commit every run builds with (default its main at the start of the round)
+        description: craft-libs commit every run builds with (default its next at the start of the round, the branch WordCraft pins)
         default: ''
 
 permissions:
@@ -73,7 +73,7 @@ jobs:
           [[ $MAX =~ ^[0-9]+$ ]] || { echo "max must be a number"; exit 1; }
           # every run builds with all craft-libs crates at one craft-libs commit, so no PR is credited with craft-libs
           # changes its pins carry; plain is main with its own pins, for what waits in craft-libs
-          [ -n "$LIBS" ] || LIBS=$(git ls-remote https://github.com/storytold/craft-libs refs/heads/main | cut -f1)
+          [ -n "$LIBS" ] || LIBS=$(git ls-remote https://github.com/storytold/craft-libs refs/heads/next | cut -f1)
           [[ $LIBS =~ ^[0-9a-f]{40}$ ]] || { echo "libs must be a full commit hash"; exit 1; }
           (( MAX > 256 )) && MAX=256   # GitHub's limit for one matrix
           python3 -I .github/docx-bench/scan.py $ALL
@@ -121,7 +121,7 @@ jobs:
             meta "run/$PLAIN" name="$PLAIN" commit="$(g rev-parse HEAD)" status=ok
           fi
           if [ "$NEED_BASE" = true ]; then
-            { libs && fetch "$W/wc" rw && { g diff --quiet || g commit -qam "bench: craft-libs main $LIBS"; }; } || exit 1
+            { libs && fetch "$W/wc" rw && { g diff --quiet || g commit -qam "bench: craft-libs next $LIBS"; }; } || exit 1
             .github/docx-bench/score.sh wc "run/$BASE"
             meta "run/$BASE" name="$BASE" commit="$(g rev-parse HEAD)" status=ok
           fi

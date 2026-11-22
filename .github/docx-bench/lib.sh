@@ -16,7 +16,7 @@ fetch() { local m=ro lk=--locked; [ "${2:-}" = rw ] && m=rw lk=
   docker run --rm "${USR[@]}" -v "$HOME/c/cargo:/cargo" -v "$1:/src:$m" -w /tmp \
     -e RUSTUP_TOOLCHAIN=1.99.0 -e RUSTC=/opt/cargo/bin/rustc -e RUSTC_WRAPPER= docx-bench \
     bash -c "cargo metadata -q $lk --format-version 1 --manifest-path /src/Cargo.toml >/dev/null && cargo fetch -q --manifest-path /src/Cargo.toml"; }
-# libs: point every craft-libs git dependency in wc/ at $LIBS, the craft-libs main commit the plan pinned for the
+# libs: point every craft-libs git dependency in wc/ at $LIBS, the craft-libs next commit the plan pinned for the
 # round, so a PR is measured on its own code and not on the craft-libs changes its pins happen to carry. sed only
 # edits text (it replaces a symlink with a file rather than following it); the caller re-resolves Cargo.lock.
 libs() { [[ "${LIBS:-}" =~ ^[0-9a-f]{40}$ ]] || { echo "LIBS: not a commit"; return 1; }

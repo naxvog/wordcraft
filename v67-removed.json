@@ -368,5 +368,95 @@
 "n": 5638,
 "title": "Say in the placeholder when a picture is too large to decode",
 "state": "MERGED"
+},
+{
+"n": 3198,
+"title": "Layout: a paragraph of only a page break moves when it doesn't fit",
+"state": "MERGED"
+},
+{
+"n": 4852,
+"title": "DOCX: a run marked w:cs is bold and italic only by w:bCs and w:iCs",
+"state": "MERGED"
+},
+{
+"n": 5325,
+"title": "collab: the frozen allowlist and a stable paragraph id (#4639, PR 1 of two)",
+"state": "DELETED"
+},
+{
+"n": 5351,
+"title": "fix(clipboard): preserve images when copying and pasting across docum\u2026",
+"state": "CLOSED"
+},
+{
+"n": 5778,
+"title": "chore(deps): bump the hayro group across 1 directory with 3 updates",
+"state": "CLOSED"
+},
+{
+"n": 5899,
+"title": "Proofing: support freestanding custom.dic dictionary files (#5840)",
+"state": "MERGED"
+},
+{
+"n": 6081,
+"title": "DOCX save: keep an equation's kept OMML only when it is one well-formed m:oMath (#6072)",
+"state": "CLOSED"
+},
+{
+"n": 6082,
+"title": "DOCX save: no m:sty or m:scr on normal text in an equation (#6073)",
+"state": "CLOSED"
+},
+{
+"n": 6107,
+"title": "i18n: Hebrew (he) interface on the Arabic right-to-left layout",
+"state": "CLOSED"
+},
+{
+"n": 6144,
+"title": "PDF export: tracked changes take the Track Changes Options colours (#5232)",
+"state": "MERGED"
+},
+{
+"n": 6162,
+"title": "fix(render): frame shapes draw with a hole; frame presets open as frames",
+"state": "MERGED"
+},
+{
+"n": 6522,
+"title": "#6518: typing after Backspace keeps the deleted character's formatting",
+"state": "MERGED"
+},
+{
+"n": 6704,
+"title": "M14: expose supported TIFF pictures in choosers and errors",
+"state": "MERGED"
+},
+{
+"n": 6809,
+"title": "A header with a logo and title in an older-layout document no longer pushes the page body down, as in Word",
+"state": "MERGED"
+},
+{
+"n": 6827,
+"title": "A table row split across pages no longer runs off the bottom of the page",
+"state": "MERGED"
+},
+{
+"n": 6828,
+"title": "Newspaper columns keep a paragraph's last lines together, as Word does",
+"state": "MERGED"
+},
+{
+"n": 6835,
+"title": "No empty page before the next section when a section's last paragraph has Keep with next",
+"state": "MERGED"
+},
+{
+"n": 6856,
+"title": "A row of hyphens now wraps at any hyphen, like in Word, instead of jumping to the next line whole",
+"state": "MERGED"
 }
 ]

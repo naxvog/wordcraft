@@ -69,3 +69,4 @@
 5954: dependencies don't resolve once merged
 5953: dependencies don't resolve once merged
 7103: dependencies don't resolve once merged
+6361: bench failed: doesn't build once merged with main

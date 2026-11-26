@@ -458,5 +458,155 @@
 "n": 6856,
 "title": "A row of hyphens now wraps at any hyphen, like in Word, instead of jumping to the next line whole",
 "state": "MERGED"
+},
+{
+"n": 1528,
+"title": "Windows: mirror native title-bar buttons for RTL interfaces",
+"state": "CLOSED"
+},
+{
+"n": 1953,
+"title": " right click menu for shapes + Add text (main context menu)",
+"state": "CLOSED"
+},
+{
+"n": 3077,
+"title": "Keep page border offsetFrom, display and zOrder on save",
+"state": "CLOSED"
+},
+{
+"n": 3960,
+"title": "Pick free drawing ids when a shape already uses u32::MAX",
+"state": "CLOSED"
+},
+{
+"n": 3961,
+"title": "Don't add a second index when the INDEX field is in a table cell",
+"state": "CLOSED"
+},
+{
+"n": 3964,
+"title": "Apply Page Borders to the caret's section when in a header or footer",
+"state": "CLOSED"
+},
+{
+"n": 3980,
+"title": "Join resolved paragraph marks in one pass on Accept/Reject All",
+"state": "CLOSED"
+},
+{
+"n": 3993,
+"title": "Share one table-formula budget per Update Fields pass, charge by size",
+"state": "CLOSED"
+},
+{
+"n": 4134,
+"title": "Layout: a paragraph with a hidden mark is shown on one line with the next one (#3986)",
+"state": "CLOSED"
+},
+{
+"n": 4183,
+"title": "Draw no shading for an empty paragraph closing a section mid-page",
+"state": "CLOSED"
+},
+{
+"n": 4186,
+"title": "Draw in-front-of-text pictures above tables laid out after them",
+"state": "CLOSED"
+},
+{
+"n": 4278,
+"title": "Draw the caret after a trailing page break on the next page",
+"state": "CLOSED"
+},
+{
+"n": 4688,
+"title": "Fix LaTeX export of function names with subscripts or superscripts",
+"state": "CLOSED"
+},
+{
+"n": 4874,
+"title": "Renumber list items after a deleted item in No Markup",
+"state": "CLOSED"
+},
+{
+"n": 5407,
+"title": "Show a selected paragraph break in its own paragraph's font size",
+"state": "CLOSED"
+},
+{
+"n": 5670,
+"title": "Place bottom-aligned floating tables with no vertAnchor at the margin",
+"state": "CLOSED"
+},
+{
+"n": 5834,
+"title": "Real-time collaboration: authoritative sync server, document adapter, client core",
+"state": "CLOSED"
+},
+{
+"n": 5852,
+"title": "SmartArt: CJK text in diagrams maintains consistent fallback font family (#5672)",
+"state": "MERGED"
+},
+{
+"n": 5859,
+"title": "Fix: enable copy and paste for custom text boxes and frames",
+"state": "MERGED"
+},
+{
+"n": 5916,
+"title": "Table: preserve table structure on copy and paste (#5906)",
+"state": "MERGED"
+},
+{
+"n": 5919,
+"title": "Format Shape: add Line and Layout settings for shapes and text boxes (#5896)",
+"state": "MERGED"
+},
+{
+"n": 6077,
+"title": "fix(layout): keep hit test within clicked table cell bounds (#6067)",
+"state": "MERGED"
+},
+{
+"n": 6123,
+"title": "Compare: detect replaced image bytes when size and extents are unchanged (#6086)",
+"state": "MERGED"
+},
+{
+"n": 6160,
+"title": "HTML paste: container background does not leak into character shading (#6157)",
+"state": "MERGED"
+},
+{
+"n": 6178,
+"title": "Ribbon: three-band card parity at 1024x768",
+"state": "CLOSED"
+},
+{
+"n": 6742,
+"title": "Pasting a copied table in a table cell inserts rows or overwrites cells, as Word does",
+"state": "MERGED"
+},
+{
+"n": 6813,
+"title": "Page images and Print preview: draw headers at full strength (#6267)",
+"state": "CLOSED"
+},
+{
+"n": 6913,
+"title": "Layout: a paragraph with a hidden mark is shown on one line with the next one (#3986)",
+"state": "MERGED"
+},
+{
+"n": 7166,
+"title": "Build: clear Cargo's manifest warnings (unused dependencies, patches and fields)",
+"state": "CLOSED"
+},
+{
+"n": 7179,
+"title": "Rulers: use the productivity component set",
+"state": "MERGED"
 }
 ]
